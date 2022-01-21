@@ -1,0 +1,137 @@
+/* 
+Theme Name: Hockeyshop Theme
+Theme URI: https://github.com/borahh/hockeyshop/
+Description: Hockeyshop Theme is a child theme of Hello Elementor, created by borahh
+Author: Himanshu Borah
+Author URI: https://himanshuborah.in/
+Template: hello-elementor
+Version: 1.0.1
+Text Domain: hockeyshop-theme
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+/*
+    Add your custom styles here
+*/
+
+/*
+    Woocommerce checkout styling
+*/
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+  background-color: #0c65d5;
+  color: #fff;
+  font-family: 'Social Gothic', Sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+  background-color: #04489e;
+  border-radius: 0;
+}
+
+.cross-sells h2,
+.cart_totals h2 {
+  font-size: 26px !important;
+  margin-bottom: 40px;
+}
+
+.cart-collaterals {
+  margin-top: 80px;
+}
+
+.woocommerce table.shop_table {
+  border-radius: 0;
+}
+
+[type='button'],
+[type='submit'],
+button {
+  border-radius: 0 !important;
+}
+
+input[type='date'],
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+select,
+textarea {
+  border-radius: 0 !important;
+}
+
+.woocommerce #payment #place_order,
+.woocommerce-page #payment #place_order {
+  float: left;
+  padding: 24px;
+  margin-top: 28px;
+}
+
+.woocommerce-message {
+  border-top-color: #0c65d5;
+}
+
+.woocommerce-message::before {
+  color: #0c65d5 !important;
+}
+
+.woocommerce a.button {
+  border-radius: 0;
+  font-family: 'Social Gothic', Sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 3px;
+  color: #ffffff;
+  background-color: #0c65d5;
+  padding: 16px 22px 16px 22px;
+}
+
+/*
+    Jet burger menu
+*/
+
+body.admin-bar[data-elementor-device-mode='mobile']
+  .jet-mobile-menu__instance--slide-out-layout.fixed-right-toggle-position
+  .jet-mobile-menu__toggle,
+body.admin-bar[data-elementor-device-mode='mobile']
+  .jet-mobile-menu__instance--slide-out-layout.fixed-left-toggle-position
+  .jet-mobile-menu__toggle {
+  top: 50px !important;
+}
+
+/*
+    Space between prices
+*/
+
+.ywcrbp_regular_price {
+  margin-right: 8px;
+}
+
+/*
+    Webshipper
+*/
+
+#webshipper-selected-drop-point {
+  text-align: left;
+}
+
+.woo-variation-swatches.wvs-attr-behavior-blur
+  .variable-item:not(.radio-variable-item).disabled
+  .variable-item-contents:after {
+  -webkit-transform: rotate(-30deg) !important;
+  transform: rotate(-30deg) !important;
+  height: 2px !important;
+  background-color: #cfcfcf !important;
+}
