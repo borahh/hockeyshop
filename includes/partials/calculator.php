@@ -1,1 +1,3 @@
-<div class="bg-white">Hi</div>
+<div class="calculator">
+    <div class="calculator__accordion"></div>
+</div>

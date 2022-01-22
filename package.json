@@ -4,13 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build:css": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/main.css --watch"
+    "build:css": "cross-env TAILWIND_MODE=watch postcss ./assets/css/tailwind.css -o ./assets/css/main.css --watch"
   },
   "devDependencies": {
+    "@types/tailwindcss": "^3.0.2",
     "autoprefixer": "^10.4.2",
+    "cross-env": "^7.0.3",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^8.0.0",
     "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
     "tailwindcss": "^3.0.15"
   },
   "dependencies": {

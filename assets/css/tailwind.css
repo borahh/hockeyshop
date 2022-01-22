@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .calculator {
+    @apply font-serif mt-10 max-w-[500px] bg-slate-300;
+
+    &__accordion {
+      @apply text-sm;
+    }
+  }
+}
