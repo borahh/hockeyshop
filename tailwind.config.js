@@ -1,9 +1,35 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
-  content: ['./includes/**/*.php', './assets/js/**/*.js'],
+  content: ['./includes/**/*.html', './assets/js/**/*.js'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        light: '#f3f4f6',
+        accent: '#1768d2',
+      },
+      fontFamily: {
+        'social-gothic': 'Social Gothic, sans-serif',
+        'gt-america': 'GT America',
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ theme, addComponents }) {
+      addComponents({
+        '.btn-nav': {
+          display: 'flex',
+          width: 'fit-content',
+          lineHeight: '30px',
+          fontSize: '21px',
+          alignItems: 'center',
+          color: theme('colors')['accent'],
+          whiteSpace: 'wrap',
+        },
+        // ...
+      });
+    }),
+  ],
   corePlugins: {
     preflight: false,
   },

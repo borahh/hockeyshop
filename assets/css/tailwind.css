@@ -4,10 +4,66 @@
 
 @layer components {
   .calculator {
-    @apply font-serif mt-10 max-w-[500px] bg-slate-300;
+    @apply font-social-gothic mt-10 max-w-[500px] bg-light;
 
     &__accordion {
-      @apply text-sm;
+      @apply flex items-center justify-between p-4 text-sm cursor-pointer;
+
+      &__info {
+        @apply flex items-center justify-start;
+
+        &__icon {
+          @apply w-6 mr-3;
+        }
+
+        &__label {
+          @apply font-gt-america after:rotate-90;
+        }
+      }
+
+      &__result {
+        @apply flex font-bold uppercase text-accent;
+      }
+
+      &__toggle {
+        @apply relative w-4 h-full after:absolute after:top-1/2 after:block after:h-[2px] after:w-full after:-translate-y-1/2 after:bg-black after:transition-transform after:duration-150;
+
+        span {
+          @apply block w-full h-[2px] my-auto bg-black;
+        }
+      }
+    }
+
+    &__wraper {
+      @apply overflow-hidden transition-all duration-150 max-h-0;
+
+      &__content {
+        @apply container p-4 pt-10 sm:p-5;
+
+        &__form {
+          @apply relative min-h-[300px];
+        }
+
+        &__nav {
+          @apply grid items-center grid-cols-3 text-base uppercase mt-7 justify-items-center;
+
+          a {
+            @apply btn-nav;
+
+            svg {
+              @apply w-4 fill-current;
+            }
+          }
+
+          &__step {
+            @apply text-sm font-gt-america;
+          }
+        }
+
+        &__end {
+          @apply p-2;
+        }
+      }
     }
   }
 }

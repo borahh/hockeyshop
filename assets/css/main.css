@@ -46,10 +46,149 @@
     margin-top: 2.5rem;
     max-width: 500px;
     --tw-bg-opacity: 1;
-    background-color: rgb(203 213 225 / var(--tw-bg-opacity));
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+    font-family: Social Gothic, sans-serif
 }
 .calculator__accordion {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
     font-size: 0.875rem;
     line-height: 1.25rem
+}
+.calculator__accordion__info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+.calculator__accordion__info__icon {
+    margin-right: 0.75rem;
+    width: 1.5rem
+}
+.calculator__accordion__info__label {
+    font-family: GT America
+}
+.calculator__accordion__info__label::after {
+    content: var(--tw-content);
+    --tw-rotate: 90deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+.calculator__accordion__result {
+    display: flex;
+    font-weight: 700;
+    text-transform: uppercase;
+    --tw-text-opacity: 1;
+    color: rgb(23 104 210 / var(--tw-text-opacity))
+}
+.calculator__accordion__toggle {
+    position: relative;
+    height: 100%;
+    width: 1rem
+}
+.calculator__accordion__toggle::after {
+    position: absolute;
+    top: 50%;
+    display: block;
+    height: 2px;
+    width: 100%;
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    content: var(--tw-content);
+    transition-duration: 150ms
+}
+.calculator__accordion__toggle span {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+    height: 2px;
+    width: 100%;
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity))
+}
+.calculator__wraper {
+    max-height: 0px;
+    overflow: hidden;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms
+}
+.calculator__wraper__content {
+    width: 100%
+}
+@media (min-width: 640px) {
+    .calculator__wraper__content {
+        max-width: 640px
+    }
+}
+@media (min-width: 768px) {
+    .calculator__wraper__content {
+        max-width: 768px
+    }
+}
+@media (min-width: 1024px) {
+    .calculator__wraper__content {
+        max-width: 1024px
+    }
+}
+@media (min-width: 1280px) {
+    .calculator__wraper__content {
+        max-width: 1280px
+    }
+}
+@media (min-width: 1536px) {
+    .calculator__wraper__content {
+        max-width: 1536px
+    }
+}
+.calculator__wraper__content {
+    padding: 1rem;
+    padding-top: 2.5rem
+}
+@media (min-width: 640px) {
+    .calculator__wraper__content {
+        padding: 1.25rem
+    }
+}
+.calculator__wraper__content__form {
+    position: relative;
+    min-height: 300px
+}
+.calculator__wraper__content__nav {
+    margin-top: 1.75rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    justify-items: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-transform: uppercase
+}
+.calculator__wraper__content__nav a {
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    line-height: 30px;
+    font-size: 21px;
+    align-items: center;
+    color: #1768d2;
+    white-space: wrap
+}
+.calculator__wraper__content__nav a svg {
+    width: 1rem;
+    fill: currentColor
+}
+.calculator__wraper__content__nav__step {
+    font-family: GT America;
+    font-size: 0.875rem;
+    line-height: 1.25rem
+}
+.calculator__wraper__content__end {
+    padding: 0.5rem
 }
