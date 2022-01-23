@@ -1,6 +1,6 @@
 <?php
 
-class ProductGuideBase {
+class BorahCalculatorBase {
 
     private $accordionLabels = ['I tvivl om din størrelse?', 'Prøv størrelsesguiden'];
     private $navigationLabels = ['Tilbage', 'Næste']
