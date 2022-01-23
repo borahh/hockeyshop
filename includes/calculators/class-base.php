@@ -1,6 +1,6 @@
 <?php
 
-class BorahCalculatorBase {
+class BorahhCalculatorBase {
 
     private $accordionLabels = ['I tvivl om din størrelse?', 'Prøv størrelsesguiden'];
     private $navigationLabels = ['Tilbage', 'Næste']
@@ -11,12 +11,15 @@ class BorahCalculatorBase {
     protected function enqueueScripts() {
 
     }
-    constructor() {
-
-    }
+    
 
     // Steps Data
     protected function stepsData() {}
+
+    // Available Variations
+    private function availableVariations() {
+        
+    }
 
     // Matched Variations
     protected function onMatchedVariations() {

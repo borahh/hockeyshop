@@ -8,7 +8,7 @@
 
 function borahh_calculator_types() {
     return {
-        'bauer_icehockey_skates': 'BAUER_ICEHOCKEY_SKATES'
+        'bauer_icehockey_skates': 'BauerIcehockeySkates',
     }
 }
 
