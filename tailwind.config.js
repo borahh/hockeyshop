@@ -1,7 +1,7 @@
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
-  content: ['./includes/**/*.html', './assets/js/**/*.js'],
+  content: ['./includes/**/*.{html,php}', './assets/js/**/*.js'],
   theme: {
     extend: {
       colors: {
@@ -26,7 +26,6 @@ module.exports = {
           color: theme('colors')['accent'],
           whiteSpace: 'wrap',
         },
-        // ...
       });
     }),
   ],
