@@ -14,6 +14,10 @@
     /** Full Width Product Layout */
     .product {
       @apply w-full my-0 mx-auto mt-[50px];
+
+      .price {
+        @apply mb-[30px];
+      }
     }
 
     /** Add backround color to the Variation form **/

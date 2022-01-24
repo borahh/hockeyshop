@@ -15,6 +15,10 @@
     width: 100%;
 }
 
+      .single.single-product .product .price {
+    margin-bottom: 30px;
+}
+
     /** Add backround color to the Variation form **/
     .single.single-product table tbody > tr:nth-child(odd) > td, .single.single-product table tbody > tr:nth-child(odd) > th {
     --tw-bg-opacity: 1;
