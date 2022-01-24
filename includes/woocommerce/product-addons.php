@@ -1,7 +1,7 @@
 <?php
 
 
-function hbdv_sharpening_options() {
+function borahh_sharpening_options() {
 	
 	// Default Option
 	$default = '<option value="no" selected>Ingen slibning</option>';
@@ -38,10 +38,10 @@ add_action( 'woocommerce_single_variation', function() {
     if ( $sharpening == true ) {
 	
     $value = isset( $_POST['product_sharpening'] ) ? sanitize_text_field( $_POST['product_sharpening'] ) : '';
-    echo '<div class="hbdv_addon_sharpening"><label for="product_sharpening" style="font-weight: bold;">Tilvælg slibning</label> 
+    echo '<div class="borahh_addon_sharpening"><label for="product_sharpening" style="font-weight: bold;">Tilvælg slibning</label> 
 		<p>
 			<select id="product_sharpening" name="product_sharpening" style="margin: 5px 0px 5px 0px;">'
-			   .  hbdv_sharpening_options() .
+			   .  borahh_sharpening_options() .
 			'</select>
 		</p>
 	</div>';
