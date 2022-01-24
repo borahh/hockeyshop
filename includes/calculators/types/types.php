@@ -8,8 +8,8 @@ echo 'Should Work Now .............';
  */
 
 function borahh_calculator_types() {
-    return {
-        'bauer_icehockey_skates': 'BauerIcehockeySkates',
-    };
+    return (object) array(
+        'bauer_icehockey_skates' => 'BauerIcehockeySkates',
+    );
 }
 
