@@ -24,6 +24,6 @@ if ( ! defined( 'BORAHH_HOCKEYSHOP_URL' ) ) {
 
 
 // Include Files
-// include BORAHH_HOCKEYSHOP_DIR_CALCULATORS . 'index.php';    
-// include BORAHH_HOCKEYSHOP_DIR_WOO . 'index.php';    
+include BORAHH_HOCKEYSHOP_DIR_CALCULATORS . 'index.php';    
+include BORAHH_HOCKEYSHOP_DIR_WOO . 'index.php';    
 
