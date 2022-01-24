@@ -2,6 +2,7 @@ const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   content: ['./includes/**/*.{html,php}', './assets/js/**/*.js'],
+  safelist: ['single', 'single-product'],
   theme: {
     extend: {
       colors: {

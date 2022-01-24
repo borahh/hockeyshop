@@ -15,7 +15,7 @@ function borahh_get_calculator() {
     }
 
     $availableCalculators = borahh_calculator_types();
-    $calculator = $availableCalculators[$value];
+    $calculator = $availableCalculators->$value;
 
     if(!$calculator) {
         return;

@@ -2,6 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .single.single-product {
+    /** Full Width Product Layout */
+    .product {
+      @apply w-full;
+    }
+
+    /** Add backround color to the Variation form **/
+    table tbody > tr:nth-child(odd) > td,
+    table tbody > tr:nth-child(odd) > th {
+      @apply bg-white;
+    }
+
+    /** Remove Tabs from single product pages **/
+    .woocommerce-tabs.wc-tabs-wrapper ul {
+      @apply hidden !important;
+    }
+    .woocommerce-tabs.wc-tabs-wrapper div {
+      @apply hidden !important;
+    }
+  }
+
+  .single-product {
+    .product_title.entry-title {
+      @apply text-3xl font-semibold leading-8 text-left font-social-gothic;
+      font-style: normal;
+      letter-spacing: 0em;
+    }
+
+    .price .ywcrbp_regular_price {
+      @apply text-base font-normal leading-8 text-black line-through uppercase font-social-gothic;
+      font-style: normal;
+    }
+
+    .summary .ywcrbp_sale_price {
+      @apply text-xl font-normal leading-8 text-left text-black uppercase font-social-gothic;
+      font-style: normal;
+      letter-spacing: 0em;
+    }
+
+    .ywcrbp_sale_price span {
+      @apply font-semibold;
+    }
+
+    .woocommerce-product-details__short-description p {
+      @apply font-gt-america text-base font-normal leading-[22px] text-left;
+      font-style: normal;
+      letter-spacing: 0em;
+    }
+
+    .variations label {
+      @apply text-base font-normal leading-6 uppercase font-social-gothic;
+      font-style: normal;
+      letter-spacing: 0em;
+    }
+
+    div.hbdv_addon_sharpening label {
+      @apply text-base font-normal leading-6 uppercase font-social-gothic;
+      font-style: normal;
+      letter-spacing: 0em;
+    }
+
+    .hbdv_addon_sharpening {
+      @apply mb-[50px] !important;
+    }
+
+    .variations td.value.woo-variation-items-wrapper {
+      @apply pt-0 !important;
+    }
+
+    table.variations {
+      @apply mb-0 !important;
+    }
+
+    select#product_sharpening {
+      @apply p-[5px] w-3/4;
+    }
+  }
+
+  .summary {
+    .woocommerce-variation-price .ywcrbp_sale_price {
+      @apply text-xl font-normal leading-8 text-left text-black uppercase font-social-gothic;
+      font-style: normal;
+      letter-spacing: 0em;
+    }
+  }
+
+  .woocommerce-variation-price {
+    .price .ywcrbp_regular_price {
+      @apply text-base font-normal leading-8 text-black line-through uppercase font-social-gothic;
+      font-style: normal;
+    }
+  }
+}
+
 @layer components {
   .calculator {
     @apply font-social-gothic mt-10 max-w-[500px] bg-light;
