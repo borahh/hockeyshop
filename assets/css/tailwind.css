@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+  .onsale {
+    @apply hidden;
+  }
+
+  .woocommerce-product-gallery--with-images {
+    max-width: 350px;
+  }
   .single.single-product {
     /** Full Width Product Layout */
     .product {

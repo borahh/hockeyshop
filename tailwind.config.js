@@ -7,6 +7,8 @@ module.exports = {
     'single-product',
     'woocommerce-variation-price',
     'summary',
+    'onsale',
+    'woocommerce-product-gallery--with-images',
   ],
   theme: {
     extend: {
