@@ -18,7 +18,7 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
  * 
  */
 add_action( 'woocommerce_single_product_summary', function() {
-	echo '<div class="product_content__wrap product_content__wrap--hidden">';
+	echo '<div class="product_content__wrap product_content--hidden">';
 });
 
 
