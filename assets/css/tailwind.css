@@ -23,7 +23,7 @@
     /** Add backround color to the Variation form **/
     table tbody > tr:nth-child(odd) > td,
     table tbody > tr:nth-child(odd) > th {
-      @apply bg-white hover:bg-white;
+      @apply bg-white;
     }
 
     /** Remove Tabs from single product pages **/
@@ -40,6 +40,11 @@
       @apply text-3xl font-semibold leading-8 text-left font-social-gothic;
       font-style: normal;
       letter-spacing: 0em;
+    }
+
+    table tbody tr:hover > td,
+    table tbody tr:hover > th {
+      @apply bg-white !important;
     }
 
     .price .ywcrbp_regular_price {
@@ -64,7 +69,7 @@
     }
 
     .variations label {
-      @apply text-base font-normal leading-6 uppercase font-social-gothic;
+      @apply text-base font-normal leading-6 uppercase font-social-gothic !important;
       font-style: normal !important;
       letter-spacing: 0em;
     }

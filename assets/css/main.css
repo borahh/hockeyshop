@@ -24,10 +24,6 @@
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-    .single.single-product table tbody > tr:nth-child(odd) > td:hover, .single.single-product table tbody > tr:nth-child(odd) > th:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
 
     /** Remove Tabs from single product pages **/
     .single.single-product .woocommerce-tabs.wc-tabs-wrapper ul {
@@ -44,6 +40,11 @@
     line-height: 2rem;
       font-style: normal;
       letter-spacing: 0em;
+}
+
+    .single-product table tbody tr:hover > td, .single-product table tbody tr:hover > th {
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
 }
 
     .single-product .price .ywcrbp_regular_price {
@@ -88,11 +89,11 @@
 }
 
     .single-product .variations label {
-    font-family: Social Gothic, sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    line-height: 1.5rem;
+    font-family: Social Gothic, sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    text-transform: uppercase !important;
+    line-height: 1.5rem !important;
       font-style: normal !important;
       letter-spacing: 0em;
 }
