@@ -23,7 +23,7 @@
     /** Add backround color to the Variation form **/
     table tbody > tr:nth-child(odd) > td,
     table tbody > tr:nth-child(odd) > th {
-      @apply bg-white;
+      @apply bg-white hover:bg-white;
     }
 
     /** Remove Tabs from single product pages **/
@@ -65,7 +65,7 @@
 
     .variations label {
       @apply text-base font-normal leading-6 uppercase font-social-gothic;
-      font-style: normal;
+      font-style: normal !important;
       letter-spacing: 0em;
     }
 
