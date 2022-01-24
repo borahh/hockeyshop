@@ -177,6 +177,70 @@
   border-bottom: 2px solid #f3f3f3;
 }
 
+/** 
+   *
+   * Variation Swatches 
+   *
+   **/
+.woo-variation-swatches
+  .variable-items-wrapper
+  .variable-item:not(.radio-variable-item) {
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  width: 73px !important;
+  text-align: center !important;
+  font-family: GT America !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  line-height: 1.25rem !important;
+  --tw-shadow: 0 0 #0000 !important;
+  --tw-shadow-colored: 0 0 #0000 !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+  border-right: 2px solid #cfcfcf;
+  letter-spacing: 0em;
+}
+.woo-variation-swatches
+  .variable-items-wrapper
+  .variable-item:not(.radio-variable-item).selected {
+  background-color: #808080d1;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.woo-variation-swatches.wvs-attr-behavior-blur
+  .variable-item:not(.radio-variable-item).disabled
+  .variable-item-contents:before {
+  display: none !important;
+}
+
+.woo-variation-swatches.wvs-attr-behavior-blur
+  .variable-item:not(.radio-variable-item).disabled
+  .variable-item-contents:after {
+  transform: rotate(-30deg) !important;
+  height: 2px !important;
+  background-color: #cfcfcf !important;
+}
+
+.woo-variation-swatches.wvs-style-squared
+  .variable-items-wrapper
+  .variable-item.button-variable-item
+  .variable-item-span {
+  font-family: GT America;
+  font-size: 16px;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.woo-variation-swatches.wvs-style-squared
+  .variable-items-wrapper
+  .variable-item.button-variable-item.selected
+  .variable-item-span {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 *,
 ::before,
 ::after {
