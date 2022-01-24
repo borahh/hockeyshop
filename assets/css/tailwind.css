@@ -117,6 +117,19 @@
   .hbdv_content_hidden {
     -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent);
   }
+
+  .hbdv_reveal_more {
+    @apply font-gt-america pt-[1px] pb-[10px] cursor-pointer text-[14px] font-normal leading-4 text-center hover:text-[#808080d1];
+    font-style: normal;
+    letter-spacing: 0em;
+    border-bottom: 2px solid #f3f3f3;
+  }
+  .hbdv_reveal_less {
+    @apply font-gt-america pt-[1px] pb-[10px] cursor-pointer text-[14px] font-normal leading-4 text-center hover:text-[#808080d1];
+    font-style: normal;
+    letter-spacing: 0em;
+    border-bottom: 2px solid #f3f3f3;
+  }
 }
 
 @layer components {

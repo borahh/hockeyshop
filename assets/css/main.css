@@ -155,6 +155,45 @@
     -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent);
   }
 
+  .hbdv_reveal_more {
+    cursor: pointer;
+    padding-top: 1px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: GT America;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+  .hbdv_reveal_more:hover {
+    color: #808080d1;
+}
+
+  .hbdv_reveal_more {
+    font-style: normal;
+    letter-spacing: 0em;
+    border-bottom: 2px solid #f3f3f3;
+  }
+  .hbdv_reveal_less {
+    cursor: pointer;
+    padding-top: 1px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: GT America;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1rem;
+}
+  .hbdv_reveal_less:hover {
+    color: #808080d1;
+}
+  .hbdv_reveal_less {
+    font-style: normal;
+    letter-spacing: 0em;
+    border-bottom: 2px solid #f3f3f3;
+  }
+
 *, ::before, ::after {
     --tw-translate-x: 0;
     --tw-translate-y: 0;
