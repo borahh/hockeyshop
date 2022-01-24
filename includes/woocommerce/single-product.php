@@ -18,7 +18,7 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
  * 
  */
 add_action( 'woocommerce_single_product_summary', function() {
-	echo '<div class="hbdv_content_wrap hbdv_content_hidden">';
+	echo '<div class="product_content__wrap product_content__wrap--hidden">';
 });
 
 
@@ -33,8 +33,8 @@ add_action( 'woocommerce_before_add_to_cart_form', function () {
 	echo '</div>';
 
     // Read More
-    echo '<div class="hbdv_reveal_more">Læs mere</div>';
-    echo '<div class="hidden hbdv_reveal_less">Læs mindre</div>';
+    echo '<div class="product_content__reveal--more">Læs mere</div>';
+    echo '<div class="hidden product_content__reveal--less">Læs mindre</div>';
 
 	// Get the Calculator Instance
     $calculator = borahh_get_calculator();

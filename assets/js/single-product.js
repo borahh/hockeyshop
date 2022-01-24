@@ -22,8 +22,8 @@ function getAbsoluteHeight(el) {
 function handleOnClick() {
   revealMoreEl.classList.toggle('hidden');
   revealLessEl.classList.toggle('hidden');
-  limitedEl.classList.toggle('hbdv_content_hidden');
-  limitedEl.classList.toggle('hbdv_content_full');
+  limitedEl.classList.toggle('product_content--hidden');
+  limitedEl.classList.toggle('product_content--full');
 }
 
 var galleryHeight = document.querySelector(
@@ -31,14 +31,14 @@ var galleryHeight = document.querySelector(
 ).clientHeight;
 var titleHeight = getAbsoluteHeight('.product_title');
 var priceHeight = getAbsoluteHeight('p.price');
-var revealHeight = getAbsoluteHeight('.hbdv_reveal_more');
+var revealHeight = getAbsoluteHeight('.product_content__reveal--more');
 
 var heightRemaining = galleryHeight - titleHeight - priceHeight - revealHeight;
 
-var hidden = document.querySelector('.hbdv_content_hidden');
-var limitedEl = document.querySelector('.hbdv_content_wrap');
-var revealMoreEl = document.querySelector('.hbdv_reveal_more');
-var revealLessEl = document.querySelector('.hbdv_reveal_less');
+var hidden = document.querySelector('.product_content--hidden');
+var limitedEl = document.querySelector('.product_content__wrap');
+var revealMoreEl = document.querySelector('.product_content__reveal--more');
+var revealLessEl = document.querySelector('.product_content__reveal--less');
 
 if (
   document.querySelector('.woocommerce-product-details__short-description')
@@ -46,8 +46,8 @@ if (
 ) {
   revealMoreEl.style.display = 'none';
   revealLessEl.style.display = 'none';
-  limitedEl.classList.remove('hbdv_content_hidden');
-  limitedEl.classList.add('hbdv_content_full');
+  limitedEl.classList.remove('product_content--hidden');
+  limitedEl.classList.add('product_content--full');
 }
 
 if (hidden) {
