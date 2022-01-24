@@ -1,2 +1,2 @@
 <?php
-include get_stylesheet_directory (). '/types/index.php';
+include get_stylesheet_directory(__FILE__). '/types/index.php';
