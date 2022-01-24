@@ -10,6 +10,6 @@ echo 'Should Work Now .............';
 function borahh_calculator_types() {
     return {
         'bauer_icehockey_skates': 'BauerIcehockeySkates',
-    }
+    };
 }
 
