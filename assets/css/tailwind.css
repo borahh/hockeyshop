@@ -108,7 +108,7 @@
   }
 
   .hbdv_content_wrap {
-    @apply overflow-hidden;
+    @apply overflow-hidden transition-[height] duration-300;
   }
   .hbdv_content_full {
     @apply h-auto !important;
