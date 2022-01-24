@@ -33,6 +33,14 @@
     .woocommerce-tabs.wc-tabs-wrapper div {
       @apply hidden !important;
     }
+    .woocommerce-variation-add-to-cart {
+      @apply lg:inline-flex;
+
+      input[type='number'] {
+        @apply font-social-gothic font-bold uppercase text-black bg-white border-solid border-[1px] border-[#eeeef5]
+        rounded-none py-[23px] pr-[5px] pl-0 inline-block m-0 float-none text-center w-[236px];
+      }
+    }
   }
 
   .single-product {
