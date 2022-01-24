@@ -1,6 +1,10 @@
 
     /** Full Width Product Layout */
     .single.single-product .product {
+      margin-bottom: 0px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
       width: 100%
 }
 

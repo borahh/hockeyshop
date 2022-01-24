@@ -6,7 +6,7 @@
   .single.single-product {
     /** Full Width Product Layout */
     .product {
-      @apply w-full;
+      @apply w-full my-0 mx-auto mt-[50px];
     }
 
     /** Add backround color to the Variation form **/
