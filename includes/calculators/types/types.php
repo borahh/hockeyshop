@@ -1,6 +1,5 @@
 <?php 
 
-echo 'Should Work Now Again .............';
 /*
  *
  *  Set the available calculators

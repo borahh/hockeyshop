@@ -6,3 +6,4 @@ if ( ! defined( 'BORAHH_HOCKEYSHOP_DIR_CALCULATORS_TYPES' ) ) {
 }
 
 include BORAHH_HOCKEYSHOP_DIR_CALCULATORS_TYPES . 'index.php';    
+include BORAHH_HOCKEYSHOP_DIR_CALCULATORS . 'helpers.php';
