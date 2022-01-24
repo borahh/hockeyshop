@@ -17,6 +17,9 @@
 
       .single.single-product .product .price {
     margin-bottom: 30px;
+    font-weight: 700;
+    --tw-text-opacity: 1;
+    color: rgb(84 89 95 / var(--tw-text-opacity));
 }
 
     /** Add backround color to the Variation form **/
