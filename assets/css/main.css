@@ -144,6 +144,17 @@
       font-style: normal;
 }
 
+  .hbdv_content_wrap {
+    overflow: hidden;
+}
+  .hbdv_content_full {
+    height: auto !important;
+}
+
+  .hbdv_content_hidden {
+    -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent);
+  }
+
 *, ::before, ::after {
     --tw-translate-x: 0;
     --tw-translate-y: 0;

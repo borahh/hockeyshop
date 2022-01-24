@@ -34,6 +34,7 @@ add_action( 'woocommerce_before_add_to_cart_form', function () {
 
     // Read More
     echo '<div class="hbdv_reveal_more">Læs mere</div>';
+    echo '<div class="hbdv_reveal_less" style="display: none;">Læs mindre</div>';
 
 	// Get the Calculator Instance
     $calculator = borahh_get_calculator();
