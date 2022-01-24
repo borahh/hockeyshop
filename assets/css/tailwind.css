@@ -40,6 +40,10 @@
         @apply font-social-gothic font-bold uppercase text-black bg-white border-solid border-[1px] border-[#eeeef5]
         rounded-none py-[23px] pr-[5px] pl-0 inline-block m-0 float-none text-center w-[236px];
       }
+      .single_add_to_cart_button {
+        @apply font-social-gothic text-base font-bold leading-5 text-white inline-block rounded-none py-[26px] px-[62px] m-0 ml-[10px] !important;
+        background-color: rgb(12, 101, 213) !important;
+      }
     }
   }
 
