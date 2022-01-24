@@ -7,19 +7,14 @@ class BorahhCalculatorBase {
     protected $numSteps;
 
 
-    // Register Scripts 
-    protected function enqueueScripts() {
-
-    }
+    // Scripts 
+    protected function scripts() {}
     
+    // Loaders
+    protected function loaders() {}
 
-    // Steps Data
-    protected function stepsData() {}
-
-    // Available Variations
-    private function availableVariations() {
-        
-    }
+    // Steps 
+    protected function steps() {}
 
     // Matched Variations
     protected function onMatchedVariations() {
