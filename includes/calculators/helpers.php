@@ -17,11 +17,11 @@ function borahh_get_calculator() {
     $availableCalculators = borahh_calculator_types();
     $calculator = $availableCalculators->$value;
 
-    if(!$calculator) {
-        return;
-    }
+    // if(!$calculator) {
+    //     return;
+    // }
 
-    return new $calculator();
+    // return new $calculator();
 
 
 }

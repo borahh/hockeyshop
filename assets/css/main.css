@@ -116,6 +116,18 @@
       font-style: normal;
       letter-spacing: 0em
 }
+    .woocommerce-variation-price .price .ywcrbp_regular_price {
+      font-family: Social Gothic, sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      line-height: 2rem;
+      --tw-text-opacity: 1;
+      color: rgb(0 0 0 / var(--tw-text-opacity));
+      -webkit-text-decoration-line: line-through;
+              text-decoration-line: line-through;
+      font-style: normal
+}
 *, ::before, ::after {
       --tw-translate-x: 0;
       --tw-translate-y: 0;
