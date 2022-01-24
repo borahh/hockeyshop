@@ -20,6 +20,8 @@ function getAbsoluteHeight(el) {
  */
 
 function handleOnClick() {
+  revealMoreEl.classList.toggle('hidden');
+  revealLessEl.classList.toggle('hidden');
   limitedEl.classList.toggle('hbdv_content_hidden');
   limitedEl.classList.toggle('hbdv_content_full');
 }
