@@ -1,331 +1,337 @@
-
-    /** Full Width Product Layout */
-    .single.single-product .product {
-      margin-bottom: 0px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 50px;
-      width: 100%
+/** Full Width Product Layout */
+.single.single-product .product {
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 100%;
 }
 
-    /** Add backround color to the Variation form **/
-    .single.single-product table tbody > tr:nth-child(odd) > td, .single.single-product table tbody > tr:nth-child(odd) > th {
-      --tw-bg-opacity: 1;
-      background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+/** Add backround color to the Variation form **/
+.single.single-product table tbody > tr:nth-child(odd) > td,
+.single.single-product table tbody > tr:nth-child(odd) > th {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-    /** Remove Tabs from single product pages **/
-    .single.single-product .woocommerce-tabs.wc-tabs-wrapper ul {
-      display: none !important
+/** Remove Tabs from single product pages **/
+.single.single-product .woocommerce-tabs.wc-tabs-wrapper ul {
+  display: none !important;
 }
-    .single.single-product .woocommerce-tabs.wc-tabs-wrapper div {
-      display: none !important
+.single.single-product .woocommerce-tabs.wc-tabs-wrapper div {
+  display: none !important;
 }
-    .single-product .product_title.entry-title {
-      text-align: left;
-      font-family: Social Gothic, sans-serif;
-      font-size: 1.875rem;
-      font-weight: 600;
-      line-height: 2rem;
-      font-style: normal;
-      letter-spacing: 0em
-}
-
-    .single-product .price .ywcrbp_regular_price {
-      font-family: Social Gothic, sans-serif;
-      font-size: 1rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      line-height: 2rem;
-      --tw-text-opacity: 1;
-      color: rgb(0 0 0 / var(--tw-text-opacity));
-      -webkit-text-decoration-line: line-through;
-              text-decoration-line: line-through;
-      font-style: normal
+.single-product .product_title.entry-title {
+  text-align: left;
+  font-family: Social Gothic, sans-serif;
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 2rem;
+  font-style: normal;
+  letter-spacing: 0em;
 }
 
-    .single-product .summary .ywcrbp_sale_price {
-      text-align: left;
-      font-family: Social Gothic, sans-serif;
-      font-size: 1.25rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      line-height: 2rem;
-      --tw-text-opacity: 1;
-      color: rgb(0 0 0 / var(--tw-text-opacity));
-      font-style: normal;
-      letter-spacing: 0em
+.single-product .price .ywcrbp_regular_price {
+  font-family: Social Gothic, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  -webkit-text-decoration-line: line-through;
+  text-decoration-line: line-through;
+  font-style: normal;
 }
 
-    .single-product .ywcrbp_sale_price span {
-      font-weight: 600
+.single-product .summary .ywcrbp_sale_price {
+  text-align: left;
+  font-family: Social Gothic, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  font-style: normal;
+  letter-spacing: 0em;
 }
 
-    .single-product .woocommerce-product-details__short-description p {
-      text-align: left;
-      font-family: GT America;
-      font-size: 1rem;
-      line-height: 1.5rem;
-      font-weight: 400;
-      line-height: 22px;
-      font-style: normal;
-      letter-spacing: 0em
+.single-product .ywcrbp_sale_price span {
+  font-weight: 600;
 }
 
-    .single-product .variations label {
-      font-family: Social Gothic, sans-serif;
-      font-size: 1rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      line-height: 1.5rem;
-      font-style: normal;
-      letter-spacing: 0em
+.single-product .woocommerce-product-details__short-description p {
+  text-align: left;
+  font-family: GT America;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  line-height: 22px;
+  font-style: normal;
+  letter-spacing: 0em;
 }
 
-    .single-product div.hbdv_addon_sharpening label {
-      font-family: Social Gothic, sans-serif;
-      font-size: 1rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      line-height: 1.5rem;
-      font-style: normal;
-      letter-spacing: 0em
+.single-product .variations label {
+  font-family: Social Gothic, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.5rem;
+  font-style: normal;
+  letter-spacing: 0em;
 }
 
-    .single-product .hbdv_addon_sharpening {
-      margin-bottom: 50px !important
+.single-product div.hbdv_addon_sharpening label {
+  font-family: Social Gothic, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.5rem;
+  font-style: normal;
+  letter-spacing: 0em;
 }
 
-    .single-product .variations td.value.woo-variation-items-wrapper {
-      padding-top: 0px !important
+.single-product .hbdv_addon_sharpening {
+  margin-bottom: 50px !important;
 }
 
-    .single-product table.variations {
-      margin-bottom: 0px !important
+.single-product .variations td.value.woo-variation-items-wrapper {
+  padding-top: 0px !important;
 }
 
-    .single-product select#product_sharpening {
-      width: 75%;
-      padding: 5px
+.single-product table.variations {
+  margin-bottom: 0px !important;
 }
-    .summary .woocommerce-variation-price .ywcrbp_sale_price {
-      text-align: left;
-      font-family: Social Gothic, sans-serif;
-      font-size: 1.25rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      line-height: 2rem;
-      --tw-text-opacity: 1;
-      color: rgb(0 0 0 / var(--tw-text-opacity));
-      font-style: normal;
-      letter-spacing: 0em
+
+.single-product select#product_sharpening {
+  width: 75%;
+  padding: 5px;
 }
-    .woocommerce-variation-price .price .ywcrbp_regular_price {
-      font-family: Social Gothic, sans-serif;
-      font-size: 1rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      line-height: 2rem;
-      --tw-text-opacity: 1;
-      color: rgb(0 0 0 / var(--tw-text-opacity));
-      -webkit-text-decoration-line: line-through;
-              text-decoration-line: line-through;
-      font-style: normal
+.summary .woocommerce-variation-price .ywcrbp_sale_price {
+  text-align: left;
+  font-family: Social Gothic, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  font-style: normal;
+  letter-spacing: 0em;
 }
-*, ::before, ::after {
-      --tw-translate-x: 0;
-      --tw-translate-y: 0;
-      --tw-rotate: 0;
-      --tw-skew-x: 0;
-      --tw-skew-y: 0;
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-pan-x:  ;
-      --tw-pan-y:  ;
-      --tw-pinch-zoom:  ;
-      --tw-scroll-snap-strictness: proximity;
-      --tw-ordinal:  ;
-      --tw-slashed-zero:  ;
-      --tw-numeric-figure:  ;
-      --tw-numeric-spacing:  ;
-      --tw-numeric-fraction:  ;
-      --tw-ring-inset:  ;
-      --tw-ring-offset-width: 0px;
-      --tw-ring-offset-color: #fff;
-      --tw-ring-color: rgb(59 130 246 / 0.5);
-      --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-ring-shadow: 0 0 #0000;
-      --tw-shadow: 0 0 #0000;
-      --tw-shadow-colored: 0 0 #0000;
-      --tw-blur:  ;
-      --tw-brightness:  ;
-      --tw-contrast:  ;
-      --tw-grayscale:  ;
-      --tw-hue-rotate:  ;
-      --tw-invert:  ;
-      --tw-saturate:  ;
-      --tw-sepia:  ;
-      --tw-drop-shadow:  ;
-      --tw-backdrop-blur:  ;
-      --tw-backdrop-brightness:  ;
-      --tw-backdrop-contrast:  ;
-      --tw-backdrop-grayscale:  ;
-      --tw-backdrop-hue-rotate:  ;
-      --tw-backdrop-invert:  ;
-      --tw-backdrop-opacity:  ;
-      --tw-backdrop-saturate:  ;
-      --tw-backdrop-sepia:  
+.woocommerce-variation-price .price .ywcrbp_regular_price {
+  font-family: Social Gothic, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  -webkit-text-decoration-line: line-through;
+  text-decoration-line: line-through;
+  font-style: normal;
+}
+*,
+::before,
+::after {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x: ;
+  --tw-pan-y: ;
+  --tw-pinch-zoom: ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal: ;
+  --tw-slashed-zero: ;
+  --tw-numeric-figure: ;
+  --tw-numeric-spacing: ;
+  --tw-numeric-fraction: ;
+  --tw-ring-inset: ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur: ;
+  --tw-brightness: ;
+  --tw-contrast: ;
+  --tw-grayscale: ;
+  --tw-hue-rotate: ;
+  --tw-invert: ;
+  --tw-saturate: ;
+  --tw-sepia: ;
+  --tw-drop-shadow: ;
+  --tw-backdrop-blur: ;
+  --tw-backdrop-brightness: ;
+  --tw-backdrop-contrast: ;
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: ;
+  --tw-backdrop-saturate: ;
+  --tw-backdrop-sepia: ;
 }
 .calculator {
-      margin-top: 2.5rem;
-      max-width: 500px;
-      --tw-bg-opacity: 1;
-      background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-      font-family: Social Gothic, sans-serif
+  margin-top: 2.5rem;
+  max-width: 500px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+  font-family: Social Gothic, sans-serif;
 }
 .calculator__accordion {
-      display: flex;
-      cursor: pointer;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem;
-      font-size: 0.875rem;
-      line-height: 1.25rem
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 .calculator__accordion__info {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 .calculator__accordion__info__icon {
-      margin-right: 0.75rem;
-      width: 1.5rem
+  margin-right: 0.75rem;
+  width: 1.5rem;
 }
 .calculator__accordion__info__label {
-      font-family: GT America
+  font-family: GT America;
 }
 .calculator__accordion__info__label::after {
-      content: var(--tw-content);
-      --tw-rotate: 90deg;
-      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+  content: var(--tw-content);
+  --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .calculator__accordion__result {
-      display: flex;
-      font-weight: 700;
-      text-transform: uppercase;
-      --tw-text-opacity: 1;
-      color: rgb(23 104 210 / var(--tw-text-opacity))
+  display: flex;
+  font-weight: 700;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(23 104 210 / var(--tw-text-opacity));
 }
 .calculator__accordion__toggle {
-      position: relative;
-      height: 100%;
-      width: 1rem
+  position: relative;
+  height: 100%;
+  width: 1rem;
 }
 .calculator__accordion__toggle::after {
-      position: absolute;
-      top: 50%;
-      display: block;
-      height: 2px;
-      width: 100%;
-      --tw-translate-y: -50%;
-      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-      --tw-bg-opacity: 1;
-      background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-      transition-property: transform;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      content: var(--tw-content);
-      transition-duration: 150ms
+  position: absolute;
+  top: 50%;
+  display: block;
+  height: 2px;
+  width: 100%;
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  content: var(--tw-content);
+  transition-duration: 150ms;
 }
 .calculator__accordion__toggle span {
-      margin-top: auto;
-      margin-bottom: auto;
-      display: block;
-      height: 2px;
-      width: 100%;
-      --tw-bg-opacity: 1;
-      background-color: rgb(0 0 0 / var(--tw-bg-opacity))
+  margin-top: auto;
+  margin-bottom: auto;
+  display: block;
+  height: 2px;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 .calculator__wraper {
-      max-height: 0px;
-      overflow: hidden;
-      transition-property: all;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      transition-duration: 150ms
+  max-height: 0px;
+  overflow: hidden;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 .calculator__wraper__content {
-      width: 100%
+  width: 100%;
 }
 @media (min-width: 640px) {
-      .calculator__wraper__content {
-            max-width: 640px
-      }
+  .calculator__wraper__content {
+    max-width: 640px;
+  }
 }
 @media (min-width: 768px) {
-      .calculator__wraper__content {
-            max-width: 768px
-      }
+  .calculator__wraper__content {
+    max-width: 768px;
+  }
 }
 @media (min-width: 1024px) {
-      .calculator__wraper__content {
-            max-width: 1024px
-      }
+  .calculator__wraper__content {
+    max-width: 1024px;
+  }
 }
 @media (min-width: 1280px) {
-      .calculator__wraper__content {
-            max-width: 1280px
-      }
+  .calculator__wraper__content {
+    max-width: 1280px;
+  }
 }
 @media (min-width: 1536px) {
-      .calculator__wraper__content {
-            max-width: 1536px
-      }
+  .calculator__wraper__content {
+    max-width: 1536px;
+  }
 }
 .calculator__wraper__content {
-      padding: 1rem;
-      padding-top: 2.5rem
+  padding: 1rem;
+  padding-top: 2.5rem;
 }
 @media (min-width: 640px) {
-      .calculator__wraper__content {
-            padding: 1.25rem
-      }
+  .calculator__wraper__content {
+    padding: 1.25rem;
+  }
 }
 .calculator__wraper__content__form {
-      position: relative;
-      min-height: 300px
+  position: relative;
+  min-height: 300px;
 }
 .calculator__wraper__content__nav {
-      margin-top: 1.75rem;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      align-items: center;
-      justify-items: center;
-      font-size: 1rem;
-      line-height: 1.5rem;
-      text-transform: uppercase
+  margin-top: 1.75rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  justify-items: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
 }
 .calculator__wraper__content__nav a {
-      display: flex;
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
-      width: fit-content;
-      line-height: 30px;
-      font-size: 21px;
-      align-items: center;
-      color: #1768d2;
-      white-space: wrap
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  line-height: 30px;
+  font-size: 21px;
+  align-items: center;
+  color: #1768d2;
+  white-space: wrap;
 }
 .calculator__wraper__content__nav a svg {
-      width: 1rem;
-      fill: currentColor
+  width: 1rem;
+  fill: currentColor;
 }
 .calculator__wraper__content__nav__step {
-      font-family: GT America;
-      font-size: 0.875rem;
-      line-height: 1.25rem
+  font-family: GT America;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 .calculator__wraper__content__end {
-      padding: 0.5rem
+  padding: 0.5rem;
 }
 .hidden {
-      display: none
+  display: none;
 }
