@@ -131,3 +131,4 @@ class BorahhCalculatorBase {
 }
 
 
+new BorahhCalculatorBase();
