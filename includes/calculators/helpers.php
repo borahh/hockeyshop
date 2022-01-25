@@ -22,7 +22,7 @@ function borahh_get_calculator() {
     }
 
     // return new $calculator();
-    return $calculator();
+    return $calculator;
 
 
 }
