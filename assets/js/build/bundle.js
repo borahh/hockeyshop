@@ -4170,16 +4170,10 @@ function calculatorUI() {
     open: false,
     toggle: function toggle() {
       this.open = !this.open;
-      $scrollHeight = $refs.wraper.scrollHeight;
-      $offsetHeight = $refs.wraper.offsetHeight;
-
-      if ($offsetHeight) {
-        $refs.wraper.style.maxHeight = 300 + $scrollHeight + 'px';
-      } else {
-        $refs.wraper.style.maxHeight = null;
-      }
     },
-    toggleWraper: function toggleWraper() {}
+    toggleWraper: function toggleWraper() {
+      console.log(this.open);
+    }
   };
 }
 },{}],"calculator.js":[function(require,module,exports) {

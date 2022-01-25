@@ -81,7 +81,7 @@ class BorahhCalculatorBase {
             </div>
 
             <!-- Calculator Wraper -->
-            <div class="calculator__wraper" x-ref="wraper">
+            <div class="calculator__wraper" x-effect="toggleWraper">
                 <div class="calculator__wraper__content">
                     <!-- Calculator Form -->
                     <form class="calculator__wraper__content__form"></form>
