@@ -49,11 +49,11 @@ class BorahhCalculatorBase {
         ?>
         
         <!-- Calculator Wraper -->
-        <div class="calculator">
+        <div class="calculator" x-data='calculator-ui'>
 
         
             <!-- Calculator Accordion  -->
-            <div class="calculator__accordion">
+            <div class="calculator__accordion" @click="toggle">
                 <!-- Calculator Accordion Info -->
                 <span class="calculator__accordion__info">
                     <img
@@ -79,7 +79,7 @@ class BorahhCalculatorBase {
             </div>
 
             <!-- Calculator Wraper -->
-            <div class="calculator__wraper">
+            <div class="calculator__wraper" :class="open ? 'h-screen' : ''">
                 <div class="calculator__wraper__content">
                     <!-- Calculator Form -->
                     <form class="calculator__wraper__content__form"></form>
