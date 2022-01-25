@@ -116,7 +116,9 @@ class BorahhCalculatorBase {
                     </div>
 
                     <!-- Calculator End Tab -->
-                    <div class="calculator__wraper__content__end"></div>
+                    <div class="calculator__wraper__content__end">
+                        <?php $this->onUnmatchedVariations() ;?>
+                    </div>
                 </div>
             </div>
             
