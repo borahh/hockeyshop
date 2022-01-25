@@ -3,19 +3,19 @@
 class BorahhCalculatorBase {
 
     private $accordionLabels = ['I tvivl om din størrelse?', 'Prøv størrelsesguiden'];
-    private $navigationLabels = ['Tilbage', 'Næste']
+    private $navigationLabels = ['Tilbage', 'Næste'];
 
     public function __construct() {
         add_action('wp_footer', array($this, 'enqueue_scripts'));
     }
 
     // Scripts 
-    protected function enqueue_scripts() {
+    public function enqueue_scripts() {
         wp_register_script(
             'borahh-calculator-ui',
             BORAHH_HOCKEYSHOP_JS_URL . 'calculators/ui/main.js',
             array(),
-            '1.0.0'
+            '1.0.0',
             true
         );
         wp_enqueue_script('borahh-calculator-ui');
