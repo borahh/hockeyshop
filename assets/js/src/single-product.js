@@ -1,5 +1,5 @@
 var limitedEl = document.querySelector('.product_content__wrap');
-console.log(limitedEl);
+
 if (limitedEl) {
   /**
    *

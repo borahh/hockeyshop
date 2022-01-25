@@ -60,6 +60,14 @@ function hockeyshop_enqueue_scripts() {
 		'1.0.0',
         false
 	);
+
+	wp_enqueue_script(
+		'borahh-single-product',
+		BORAHH_HOCKEYSHOP_JS_URL . 'single-product.js',
+		array(),
+		'1.0.0',
+        true
+	);
     
 }
 add_action( 'wp_enqueue_scripts', 'hockeyshop_enqueue_scripts', 999 );
