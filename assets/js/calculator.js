@@ -1,4 +1,4 @@
-import { Alpine } from 'alpinejs';
-import { calculatorUI } from './calculators/ui/main';
+const { Alpine } = require('alpinejs');
+const { calculatorUI } = require('./calculators/ui/main');
 
 Alpine.data('calculator-ui', calculatorUI);
