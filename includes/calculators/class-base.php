@@ -13,6 +13,23 @@ class BorahhCalculatorBase {
     
     // Unmatched Variations
     protected function onUnmatchedVariations() {
+        if (isset($_POST['enquiryVariation'])){	
+            $to = 'lars@skatertown.dk';
+            $subject = 'Variation Enquiry for' . ' ' . get_the_title();
+            
+            // Lines
+            $dataName = 'Name: ' . $_POST['name'] . '<br/><br/><br/>';
+            $dataEmail = 'Email: ' . $_POST['email'] . '<br/>';
+            $dataPhone = 'Phone: ' . $_POST['phone'] . '<br/>';
+            $dataVariationLength = 'Length: ' . $_POST['variationLength'] . '<br/>';
+            $dataVariationWidth = 'Width: ' . $_POST['variationWidth'] . '<br/>';
+            
+            $body = $dataVariationLength . $dataVariationWidth . $dataName . $dataEmail . $dataPhone;
+
+            $headers = array('Content-Type: text/html; charset=UTF-8','From: HockeyShop <hockeyshop@hockeyshop.dk>');
+
+            wp_mail( $to, $subject, $body, $headers );
+        }
         ob_start(); ?>
         <form class="calculator__wraper__content__end__unmatched" id="endTabForm" method="POST">
             <input type="text" name="name" placeholder='__("Navn", "hockeyshop-theme")' required>
