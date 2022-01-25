@@ -1,9 +1,6 @@
 <?php
 
 class BorahhCalculatorBase {
-    public function __construct() {
-        add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
-    }
 
     // Scripts 
     public function enqueue_scripts() {
@@ -117,7 +114,7 @@ class BorahhCalculatorBase {
 
                     <!-- Calculator End Tab -->
                     <div class="calculator__wraper__content__end">
-                        <?php echo $this->onUnmatchedVariations() ;?>
+                        <?php echo $this->onUnmatchedVariations(); ?>
                     </div>
                 </div>
             </div>
