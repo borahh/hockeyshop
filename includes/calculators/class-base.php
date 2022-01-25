@@ -1,10 +1,6 @@
 <?php
 
 class BorahhCalculatorBase {
-
-    public $accordionLabels = ['I tvivl om din størrelse?', 'Prøv størrelsesguiden'];
-    public $navigationLabels = ['Tilbage', 'Næste'];
-
     public function __construct() {
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
     }
@@ -65,9 +61,9 @@ class BorahhCalculatorBase {
                         alt
                     />
                     <span class="calculator__accordion__info__label">
-                        <?php _e($this->accordionLabel[0], "hockeyshop-theme"); ?>
+                        <?php _e("I tvivl om din størrelse?", "hockeyshop-theme"); ?>
                         <u>
-                            <?php _e($this->accordionLabel[1], "hockeyshop-theme"); ?>
+                            <?php _e('Prøv størrelsesguiden', "hockeyshop-theme"); ?>
                         </u>
                     </span>
                 </span>
@@ -97,7 +93,7 @@ class BorahhCalculatorBase {
                                 ></path>
                             </svg>
                             <span>
-                                <?php _e($this->navigationLabels[0], "hockeyshop-theme"); ?>
+                                <?php _e("Tilbage", "hockeyshop-theme"); ?>
                             </span>
                         </a>
                         
@@ -111,7 +107,7 @@ class BorahhCalculatorBase {
                         <!-- Next Step -->
                         <a id="next" href="#">
                             <span>
-                                <?php _e($this->navigationLabels[1], "hockeyshop-theme"); ?>                             
+                                <?php _e("Næste", "hockeyshop-theme"); ?>                             
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>
