@@ -37,7 +37,7 @@ class BorahhCalculatorBase {
             <input type="text" name="phone" placeholder='<?php _e("Telefon", "hockeyshop-theme"); ?>' required>
             <input type="hidden" name="variationLength">
             <input type="hidden" name="variationWidth">
-            <input type="submit" name="enquiryVariation" style="display: none" value='<?php _e("Send forespørgsel", "hockeyshop-theme"); ?>'>
+            <input type="submit" name="enquiryVariation" value='<?php _e("Send forespørgsel", "hockeyshop-theme"); ?>'>
         </form>
         <?php
         return ob_get_clean();
