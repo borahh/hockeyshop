@@ -2,8 +2,8 @@
 
 class BorahhCalculatorBase {
 
-    private $accordionLabels = ['I tvivl om din størrelse?', 'Prøv størrelsesguiden'];
-    private $navigationLabels = ['Tilbage', 'Næste'];
+    public $accordionLabels = ['I tvivl om din størrelse?', 'Prøv størrelsesguiden'];
+    public $navigationLabels = ['Tilbage', 'Næste'];
 
     public function __construct() {
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
