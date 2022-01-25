@@ -29,7 +29,17 @@ class BorahhCalculatorBase {
     
     // Unmatched Variations
     protected function onUnmatchedVariations() {
-        return 'Here';
+        ob_start(); ?>
+        <form class="calculator__wraper__content__end__unmatched" id="endTabForm" method="POST">
+            <input type="text" name="name" placeholder='__("Navn", "hockeyshop-theme")' required>
+            <input type="text" name="email" placeholder="E-mail" required>
+            <input type="text" name="phone" placeholder='__("Telefon", "hockeyshop-theme")' required>
+            <input type="hidden" name="variationLength">
+            <input type="hidden" name="variationWidth">
+            <input type="submit" name="enquiryVariation" style="display: none" value='__("Send forespørgsel", "hockeyshop-theme")'>
+        </form>
+        <?php
+        return ob_get_clean();
     }
 
     // Render
@@ -107,7 +117,7 @@ class BorahhCalculatorBase {
 
                     <!-- Calculator End Tab -->
                     <div class="calculator__wraper__content__end">
-                        <?php $this->onUnmatchedVariations() ;?>
+                        <?php echo $this->onUnmatchedVariations() ;?>
                     </div>
                 </div>
             </div>
