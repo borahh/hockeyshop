@@ -55,10 +55,18 @@ function hockeyshop_enqueue_scripts() {
 
 	wp_enqueue_script(
 		'borahh-single-product',
-		BORAHH_HOCKEYSHOP_URL . '/assets/js/single-product.js',
+		BORAHH_HOCKEYSHOP_JS_URL . 'single-product.js',
 		array(),
 		'1.0.0',
         true
+	);
+
+	wp_enqueue_script(
+		'borahh-calculator-ui',
+		BORAHH_HOCKEYSHOP_JS_URL . 'calculators/ui/main.js',
+		array(),
+		'1.0.0',
+		true
 	);
     
 }

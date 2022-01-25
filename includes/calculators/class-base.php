@@ -1,19 +1,6 @@
 <?php
 
 class BorahhCalculatorBase {
-
-    // Scripts 
-    public function enqueue_scripts() {
-        wp_register_script(
-            'borahh-calculator-ui',
-            BORAHH_HOCKEYSHOP_JS_URL . 'calculators/ui/main.js',
-            array(),
-            '1.0.0',
-            true
-        );
-        wp_enqueue_script('borahh-calculator-ui');
-    }
-    
     // Loaders
     protected function loaders() {}
 
