@@ -218,7 +218,7 @@
         @apply relative w-4 h-full after:content-[''] after:rotate-90 after:absolute after:top-1/2 after:block after:h-[2px] after:w-full after:-translate-y-1/2 after:bg-black after:transition-transform after:duration-150;
 
         &--active {
-          @apply after:rotate-90;
+          @apply after:rotate-180;
         }
 
         &__icon {
