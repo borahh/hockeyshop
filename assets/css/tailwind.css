@@ -86,13 +86,13 @@
       letter-spacing: 0em;
     }
 
-    div.hbdv_addon_sharpening label {
+    .borahh_addon_sharpening label {
       @apply text-base font-normal leading-6 uppercase font-social-gothic;
       font-style: normal;
       letter-spacing: 0em;
     }
 
-    .hbdv_addon_sharpening {
+    .borahh_addon_sharpening {
       @apply mb-[50px] !important;
     }
 

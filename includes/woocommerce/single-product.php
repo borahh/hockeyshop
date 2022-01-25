@@ -24,7 +24,6 @@ add_action( 'woocommerce_single_product_summary', function() {
 
 
 
-
 /** Include Content **/
 add_action( 'woocommerce_before_add_to_cart_form', function () {
     echo the_content();
