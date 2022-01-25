@@ -22,7 +22,7 @@ function borahh_get_calculator() {
     }
 
     // Instanciate base calculator class
-    $base = BorahhCalculatorBase();
+    $base = new BorahhCalculatorBase();
 
     return new $calculator($base);
 
