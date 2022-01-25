@@ -251,6 +251,14 @@
 
         &__end {
           @apply p-2;
+
+          &__unmatched {
+            @apply p-5;
+
+            input {
+              @apply p-[10px] uppercase bg-white max-w-[350px] my-0 mx-auto border-none outline-none text-base block mb-4;
+            }
+          }
         }
       }
     }

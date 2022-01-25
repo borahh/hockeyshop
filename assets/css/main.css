@@ -489,6 +489,27 @@
 .calculator__wraper__content__end {
     padding: 0.5rem;
 }
+.calculator__wraper__content__end__unmatched {
+    padding: 1.25rem;
+}
+.calculator__wraper__content__end__unmatched input {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    display: block;
+    max-width: 350px;
+    border-style: none;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    padding: 10px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
 .table {
     display: table;
 }
