@@ -28,7 +28,7 @@ if ( ! defined( 'BORAHH_HOCKEYSHOP_CSS_URL' ) ) {
 
 // Define theme assets url.
 if ( ! defined( 'BORAHH_HOCKEYSHOP_JS_URL' ) ) {
-	define( 'BORAHH_HOCKEYSHOP_JS_URL', get_stylesheet_directory_uri(). '/assets/js/' );
+	define( 'BORAHH_HOCKEYSHOP_JS_URL', get_stylesheet_directory_uri(). '/assets/js/build/' );
 }
 
 
@@ -54,19 +54,11 @@ function hockeyshop_enqueue_scripts() {
 	);
 
 	wp_enqueue_script(
-		'borahh-single-product',
-		BORAHH_HOCKEYSHOP_JS_URL . 'single-product.js',
+		'borahh',
+		BORAHH_HOCKEYSHOP_JS_URL . 'bundle.js',
 		array(),
 		'1.0.0',
         true
-	);
-
-	wp_enqueue_script(
-		'borahh-calculator-ui',
-		BORAHH_HOCKEYSHOP_JS_URL . 'calculator.js',
-		array(),
-		'1.0.0',
-		true
 	);
     
 }
