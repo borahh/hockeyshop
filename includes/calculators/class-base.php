@@ -73,13 +73,13 @@ class BorahhCalculatorBase {
                 <span class="calculator__accordion__result"></span>
 
                 <!-- Calculator Toggle -->
-                <span class="calculator__accordion__toggle">
+                <span class="calculator__accordion__toggle" :class="open ? '' : 'calculator__accordion__toggle--active'">
                     <span class="calculator__accordion__toggle__icon"></span>
                 </span>
             </div>
 
             <!-- Calculator Wraper -->
-            <div class="calculator__wraper" :class="open ? 'h-screen' : ''">
+            <div class="calculator__wraper">
                 <div class="calculator__wraper__content">
                     <!-- Calculator Form -->
                     <form class="calculator__wraper__content__form"></form>
