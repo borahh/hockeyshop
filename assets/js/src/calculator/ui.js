@@ -4,12 +4,12 @@ export function calculatorUI() {
     toggle() {
       this.open = !this.open;
 
-      $scrollHeight = $el.scrollHeight;
-      $offsetHeight = $el.offsetHeight;
+      $scrollHeight = $refs.wraper.scrollHeight;
+      $offsetHeight = $refs.wraper.offsetHeight;
       if ($offsetHeight) {
-        $el.style.maxHeight = 300 + $scrollHeight + 'px';
+        $refs.wraper.style.maxHeight = 300 + $scrollHeight + 'px';
       } else {
-        $el.style.maxHeight = null;
+        $refs.wraper.style.maxHeight = null;
       }
     },
     toggleWraper() {},
