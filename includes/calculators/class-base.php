@@ -14,8 +14,8 @@ class BorahhCalculatorBase {
         wp_register_script(
             'borahh-calculator-ui',
             BORAHH_HOCKEYSHOP_JS_URL . 'calculators/ui/main.js',
-            '',
-            ''
+            array(),
+            '1.0.0'
             true
         );
         wp_enqueue_script('borahh-calculator-ui');
@@ -131,3 +131,4 @@ class BorahhCalculatorBase {
 }
 
 
+new BorahhCalculatorBase();
