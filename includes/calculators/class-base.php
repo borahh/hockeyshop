@@ -6,7 +6,7 @@ class BorahhCalculatorBase {
     private $navigationLabels = ['Tilbage', 'Næste'];
 
     public function __construct() {
-        add_action('wp_footer', array($this, 'enqueue_scripts'));
+        add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
     }
 
     // Scripts 
