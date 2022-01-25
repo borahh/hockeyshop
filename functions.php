@@ -63,7 +63,7 @@ function hockeyshop_enqueue_scripts() {
 
 	wp_enqueue_script(
 		'borahh-calculator-ui',
-		BORAHH_HOCKEYSHOP_JS_URL . 'calculators/calculator.js',
+		BORAHH_HOCKEYSHOP_JS_URL . 'calculator.js',
 		array(),
 		'1.0.0',
 		true
