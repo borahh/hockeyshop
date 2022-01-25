@@ -53,7 +53,7 @@ class BorahhCalculatorBase {
 
         
             <!-- Calculator Accordion  -->
-            <div class="calculator__accordion" @click="toggle" x-effect="console.log(open)">
+            <div class="calculator__accordion" @click="toggle">
                 <!-- Calculator Accordion Info -->
                 <span class="calculator__accordion__info">
                     <img
