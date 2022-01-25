@@ -207,6 +207,10 @@
 
         &__label {
           @apply font-gt-america after:rotate-90;
+
+          span {
+            @apply uppercase;
+          }
         }
       }
 

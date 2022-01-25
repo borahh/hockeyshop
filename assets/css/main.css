@@ -370,6 +370,9 @@
     --tw-rotate: 90deg;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.calculator__accordion__info__label span {
+    text-transform: uppercase;
+}
 .calculator__accordion__result {
     display: flex;
     font-weight: 700;

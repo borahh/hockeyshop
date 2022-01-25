@@ -62,7 +62,9 @@ class BorahhCalculatorBase {
                         alt
                     />
                     <span class="calculator__accordion__info__label">
-                        <?php _e("I tvivl om din størrelse?", "hockeyshop-theme"); ?>
+                        <span>
+                            <?php _e("I tvivl om din størrelse?", "hockeyshop-theme"); ?>
+                        </span>
                         <u>
                             <?php _e('Prøv størrelsesguiden', "hockeyshop-theme"); ?>
                         </u>
