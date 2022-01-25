@@ -58,7 +58,7 @@ function hockeyshop_enqueue_scripts() {
 		BORAHH_HOCKEYSHOP_JS_URL . 'bundle.js',
 		array(),
 		'1.0.0',
-        true
+        false
 	);
     
 }
