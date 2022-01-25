@@ -21,8 +21,7 @@ function borahh_get_calculator() {
         return;
     }
 
-    // return new $calculator();
-    return $calculator;
+    return new $calculator();
 
 
 }
