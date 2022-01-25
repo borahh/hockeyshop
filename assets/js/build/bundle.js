@@ -4236,6 +4236,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 if (_alpinejs.default) {
   _alpinejs.default.data('calculator-ui', _ui.calculatorUI);
+
+  _alpinejs.default.start();
 }
 },{"alpinejs":"../../../node_modules/alpinejs/dist/module.esm.js","./calculator/ui":"calculator/ui.js"}],"index.js":[function(require,module,exports) {
 "use strict";
