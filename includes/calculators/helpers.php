@@ -21,7 +21,10 @@ function borahh_get_calculator() {
         return;
     }
 
-    return new $calculator();
+    // Instanciate base calculator class
+    $base = BorahhCalculatorBase();
+
+    return new $calculator($base);
 
 
 }

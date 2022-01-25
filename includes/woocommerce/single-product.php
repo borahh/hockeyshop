@@ -38,10 +38,11 @@ add_action( 'woocommerce_before_add_to_cart_form', function () {
 	// Get the Calculator Instance
     $calculator = borahh_get_calculator();
 
+    
     if (!$calculator) {
         return;
-    } else {
-        var_dump($calculator->render());
+    } else {    
+        var_dump($calculator);
         return $calculator->render();
     }
 });
