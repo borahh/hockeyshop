@@ -49,7 +49,7 @@ class BorahhCalculatorBase {
         ?>
         
         <!-- Calculator Wraper -->
-        <div class="calculator" x-data='calculator-ui'>
+        <div class="calculator" x-data='calculatorUI'>
 
         
             <!-- Calculator Accordion  -->

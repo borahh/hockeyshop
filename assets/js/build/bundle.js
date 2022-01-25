@@ -4235,7 +4235,7 @@ var _ui = require("./calculator/ui");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 if (_alpinejs.default) {
-  _alpinejs.default.data('calculator-ui', _ui.calculatorUI);
+  _alpinejs.default.data('calculatorUI', _ui.calculatorUI);
 
   _alpinejs.default.start();
 }
