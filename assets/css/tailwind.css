@@ -87,7 +87,7 @@
     }
 
     .borahh_addon_sharpening label {
-      @apply text-base font-normal leading-6 uppercase font-social-gothic;
+      @apply text-base font-normal leading-6 uppercase font-social-gothic !important;
       font-style: normal;
       letter-spacing: 0em;
     }
