@@ -41,6 +41,7 @@ add_action( 'woocommerce_before_add_to_cart_form', function () {
     if (!$calculator) {
         return;
     } else {
+        var_dump($calculator);
         return $calculator->render();
     }
 });
