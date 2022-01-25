@@ -217,7 +217,7 @@
       &__toggle {
         @apply relative w-4 h-full;
 
-        span {
+        &__icon {
           @apply block w-full h-[2px] my-auto bg-black after:absolute after:top-1/2 after:block after:h-[2px] after:w-full after:-translate-y-1/2 after:bg-black after:transition-transform after:duration-150;
         }
       }

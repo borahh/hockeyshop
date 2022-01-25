@@ -74,7 +74,7 @@ class BorahhCalculatorBase {
 
                 <!-- Calculator Toggle -->
                 <span class="calculator__accordion__toggle">
-                    <span></span>
+                    <span class="calculator__accordion__toggle__icon"></span>
                 </span>
             </div>
 
