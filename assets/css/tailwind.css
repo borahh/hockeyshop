@@ -274,7 +274,7 @@
             @apply grid grid-cols-2 gap-8 mt-5 text-center uppercase;
 
             div {
-              @apply cursor-pointer w-full px-5 py-2 mx-auto rounded-full bg-white text-[gray] whitespace-normal last:text-white last:bg-accent last:self-center;
+              @apply cursor-pointer w-full px-5 py-2 mx-auto rounded-full first:bg-white first:text-[gray] first:whitespace-nowrap text-white bg-accent self-center whitespace-normal;
             }
           }
         }
