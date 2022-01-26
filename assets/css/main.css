@@ -543,6 +543,10 @@
         font-size: 2rem;
     }
 }
+.calculator__wraper__content__end__unmatched__content div span {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
 .calculator__wraper__content__end__unmatched form {
     padding-top: 1.25rem;
 }
