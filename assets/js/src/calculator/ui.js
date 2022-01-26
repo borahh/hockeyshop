@@ -41,6 +41,9 @@ export const calculatorUI = {
   showNext() {
     return this.currentStep !== this.maxStep;
   },
+  showMax() {
+    return this.currentStep == this.maxStep;
+  },
   onNext() {
     this.currentStep++;
   },

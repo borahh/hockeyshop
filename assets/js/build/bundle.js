@@ -4203,6 +4203,9 @@ var calculatorUI = {
   showNext: function showNext() {
     return this.currentStep !== this.maxStep;
   },
+  showMax: function showMax() {
+    return this.currentStep == this.maxStep;
+  },
   onNext: function onNext() {
     this.currentStep++;
   }

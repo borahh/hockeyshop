@@ -123,6 +123,13 @@ class BorahhCalculatorBase {
                                 <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>
                             </svg>
                         </div>
+
+                        <!-- Final Step -->
+                        <div class="calculator__wraper__content__nav__control" x-show="showMax" @click="onNext">
+                            <span>
+                                <?php _e("Vis resultat", "hockeyshop-theme"); ?>                             
+                            </span>
+                        </div>
                     </div>
 
                     
