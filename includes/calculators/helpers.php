@@ -14,7 +14,10 @@ function borahh_resolve_deps($id, $deps) {
             $j = array_column($i, $dep->get);
             $k .= implode(',', $j);
         }
-        $l[$dep->name] = $k;
+        $l[$dep->name]['name'] = $dep->name;
+        $l[$dep->name]['list'] = $dep->list;
+        $l[$dep->name]['value'] = $k;
+
         
     }
     return $l;
