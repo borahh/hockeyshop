@@ -685,6 +685,18 @@
 .invisible {
     visibility: hidden;
 }
+.absolute {
+    position: absolute;
+}
+.relative {
+    position: relative;
+}
+.top-1\/2 {
+    top: 50%;
+}
+.left-1\/2 {
+    left: 50%;
+}
 .inline {
     display: inline;
 }
