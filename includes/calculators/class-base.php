@@ -111,7 +111,7 @@ class BorahhCalculatorBase {
             <div class="calculator__wraper" x-effect="onToggleOpen">
                 <div class="calculator__wraper__content">
                     <!-- Calculator Form -->
-                    <form class="calculator__wraper__content__form"></form>
+                    <form class="calculator__wraper__content__form" x-show="!onSubmit"></form>
 
                     <!-- Calculator End Tab -->
                     <div class="calculator__wraper__content__end" x-show="onSubmit">
