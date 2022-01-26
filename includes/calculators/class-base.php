@@ -53,7 +53,7 @@ class BorahhCalculatorBase {
 
         
             <!-- Calculator Accordion  -->
-            <div class="calculator__accordion" @click="toggle">
+            <div class="calculator__accordion" @click="toggleOpen">
                 <!-- Calculator Accordion Info -->
                 <span class="calculator__accordion__info">
                     <img
@@ -81,14 +81,14 @@ class BorahhCalculatorBase {
             </div>
 
             <!-- Calculator Wraper -->
-            <div class="calculator__wraper" x-effect="toggleWraper">
+            <div class="calculator__wraper" x-effect="onToggleOpen">
                 <div class="calculator__wraper__content">
                     <!-- Calculator Form -->
                     <form class="calculator__wraper__content__form"></form>
 
                     <!-- Calculator End Tab -->
                     <div class="calculator__wraper__content__end">
-                        <div class="calculator__wraper__content__end__unmatched" x-show="!matchedVariations">
+                        <div class="calculator__wraper__content__end__unmatched" x-show="matchedVariations">
                             <?php echo $this->onUnmatchedVariations(); ?>
                         </div>
                     </div>
@@ -96,7 +96,7 @@ class BorahhCalculatorBase {
                     <!-- Calculator Nav -->
                     <div class="calculator__wraper__content__nav">
                         <!-- Previous Step -->
-                        <a id="prev" href="#">
+                        <a id="prev" href="#" x-show="showPrev" @click="onPrev">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path
                                 d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"
@@ -109,13 +109,13 @@ class BorahhCalculatorBase {
                         
                         <!-- Step Count -->
                         <div class="calculator__wraper__content__nav__step">
-                            <span>2</span>
+                            <span x-text="currentStep">2</span>
                             <span>/</span>
-                            <span>4</span>
+                            <span x-text="maxStep">4</span>
                         </div>
                         
                         <!-- Next Step -->
-                        <a id="next" href="#">
+                        <a id="next" href="#" x-show="showNext" @click="onNext">
                             <span>
                                 <?php _e("Næste", "hockeyshop-theme"); ?>                             
                             </span>

@@ -4165,17 +4165,35 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.calculatorUI = void 0;
 var calculatorUI = {
+  // State to manage current step
+  currentStep: 0,
+  maxStep: 0,
+  // Step to manage variations matching
   matchedVariations: false,
+  // State to manage wraper state
   open: false,
-  toggle: function toggle() {
+  // Handler to manage wraper state
+  toggleOpen: function toggleOpen() {
     this.open = !this.open;
   },
-  toggleWraper: function toggleWraper() {
+  onToggleOpen: function onToggleOpen() {
     if (this.open) {
       this.$el.style.maxHeight = 300 + this.$el.scrollHeight + 'px';
     } else {
       this.$el.style.maxHeight = null;
     }
+  },
+  showPrev: function showPrev() {
+    return this.currentStep !== 0;
+  },
+  onPrev: function onPrev() {
+    this.currentStep--;
+  },
+  showNext: function showNext() {
+    return this.currentStep !== this.maxStep;
+  },
+  onNext: function onNext() {
+    this.currentStep++;
   }
 };
 exports.calculatorUI = calculatorUI;
