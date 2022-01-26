@@ -6,7 +6,7 @@ const extReplace = require('gulp-ext-replace');
 gulp.task('build:images', function () {
   return gulp
     .src('src/images/*.{jpg,png}')
-    .pipe(imagemin([imageminWebp({ quality: 70 })]))
+    .pipe(imagemin([imageminWebp({ quality: 10 })]))
     .pipe(extReplace('.webp'))
     .pipe(gulp.dest('assets/images'));
 });
