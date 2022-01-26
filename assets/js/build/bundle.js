@@ -4163,23 +4163,21 @@ exports.default = module_default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.calculatorUI = calculatorUI;
-
-function calculatorUI() {
-  return {
-    open: false,
-    toggle: function toggle() {
-      this.open = !this.open;
-    },
-    toggleWraper: function toggleWraper() {
-      if (this.open) {
-        this.$el.style.maxHeight = 300 + this.$el.scrollHeight + 'px';
-      } else {
-        this.$el.style.maxHeight = null;
-      }
+exports.calculatorUI = void 0;
+var calculatorUI = {
+  open: false,
+  toggle: function toggle() {
+    this.open = !this.open;
+  },
+  toggleWraper: function toggleWraper() {
+    if (this.open) {
+      this.$el.style.maxHeight = 300 + this.$el.scrollHeight + 'px';
+    } else {
+      this.$el.style.maxHeight = null;
     }
-  };
-}
+  }
+};
+exports.calculatorUI = calculatorUI;
 },{}],"calculator/types/BauerIcehockeySkates.js":[function(require,module,exports) {
 "use strict";
 
