@@ -50,7 +50,7 @@ export const calculatorUI = {
   },
   handleFinal() {
     this.final == true;
-    console.log(final);
+    console.log(this.final);
   },
   showOnFinal() {
     return !this.final;

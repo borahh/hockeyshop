@@ -4212,7 +4212,7 @@ var calculatorUI = {
   },
   handleFinal: function handleFinal() {
     this.final == true;
-    console.log(final);
+    console.log(this.final);
   },
   showOnFinal: function showOnFinal() {
     return !this.final;
