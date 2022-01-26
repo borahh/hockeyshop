@@ -259,8 +259,14 @@
           &__unmatched {
             @apply p-5;
 
-            form input {
-              @apply p-[10px] uppercase bg-white max-w-[350px] my-0 mx-auto border-none outline-none text-base block mb-4;
+            form {
+              input {
+                @apply p-[10px] uppercase bg-white max-w-[350px] my-0 mx-auto border-none outline-none text-base block mb-4;
+              }
+
+              input[type='submit'] {
+                @apply hidden;
+              }
             }
           }
         }
