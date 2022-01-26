@@ -13,11 +13,13 @@ function borahh_calculator_types() {
             'dependencies' => [
                 (object) array(
                     'name' => 'length',
-                    'list' =>  ['pa_skoejte-stoerrelse-yth', 'pa_skoejte-stoerrelse-jr', 'pa_skoejte-stoerrelse-sr', 'pa_skoejter-stoerrelse-int']
+                    'list' =>  array('pa_skoejte-stoerrelse-yth', 'pa_skoejte-stoerrelse-jr', 'pa_skoejte-stoerrelse-sr', 'pa_skoejter-stoerrelse-int'),
+                    'get'  => 'name'
                ),
                 (object) array(
                     'name' => 'width',
-                    'list' =>  ['pa_skoejte-bredde',]
+                    'list' =>  array('pa_skoejte-bredde'),
+                    'get'  => 'slug'
                )
             ]
         ),
