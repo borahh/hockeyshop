@@ -99,7 +99,7 @@ class BorahhCalculatorBase {
                             <div>
                                 <?php _e("Send forespørgsel", "hockeyshop-theme"); ?>
                             </div>
-                            <div>
+                            <div @click="toggleOpen">
                                 <?php _e("Forstået", "hockeyshop-theme"); ?>
                             </div>
                         </div>

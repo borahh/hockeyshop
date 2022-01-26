@@ -537,6 +537,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    cursor: pointer;
     white-space: normal;
     border-radius: 9999px;
     --tw-bg-opacity: 1;
