@@ -49,7 +49,7 @@ export const calculatorUI = {
     return this.currentStep == this.maxStep;
   },
   handleFinal() {
-    this.final == true;
+    this.final === true;
     console.log(this.final);
   },
   showOnFinal() {
