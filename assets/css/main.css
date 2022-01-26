@@ -487,6 +487,7 @@
     align-items: center;
     color: #1768d2;
     white-space: wrap;
+    cursor: pointer;
 }
 .calculator__wraper__content__nav__control svg {
     width: 1rem;

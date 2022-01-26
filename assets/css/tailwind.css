@@ -241,7 +241,7 @@
           @apply grid items-center grid-cols-3 text-base uppercase mt-7 justify-items-center;
 
           &__control {
-            @apply btn-nav;
+            @apply cursor-pointer btn-nav;
 
             svg {
               @apply w-4 fill-current;
