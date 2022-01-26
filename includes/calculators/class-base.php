@@ -5,7 +5,7 @@ class BorahhCalculatorBase {
     // Variation dependencies
     public $dependencies = [''];
 
-    public function __construct($dependencies) {
+    public function __construct($dependencies = ['']) {
         $this->dependencies = $dependencies;
     }
 
