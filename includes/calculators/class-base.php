@@ -13,8 +13,7 @@ class BorahhCalculatorBase {
     protected function loaders() {
         ob_start();
         ?>
-            <span id="AvailableVariationsLoader" data-variations=""></span>
-            
+            <span id="AvailableVariationsLoader" data-variations="<?php json_encode($this->dependencies); ?>"></span>
         <?php
         return ob_get_clean();
     }
@@ -62,11 +61,12 @@ class BorahhCalculatorBase {
     public function render() {
         ob_start();
         ?>
+
+        <?php echo $this->loaders; ?>
         
         <!-- Calculator Wraper -->
         <div class="calculator" x-data='BauerIcehockeySkates'>
 
-            <?php var_dump($this->dependencies); ?>
             <!-- Calculator Accordion  -->
             <div class="calculator__accordion" @click="toggleOpen">
                 <!-- Calculator Accordion Info -->
