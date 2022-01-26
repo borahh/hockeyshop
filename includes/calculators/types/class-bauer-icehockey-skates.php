@@ -11,15 +11,13 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
         foreach($options as $index=>$option) {
         ?>
         <div class="calculator__wraper__content__form__tab--height__option">
+            <input class="peer" type="radio" name="foot-height" id="<?php echo 'height_' . $option; ?>" value="<?php echo $index; ?>"/>
             <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'grid-floor.webp'; ?>" alt=""/>
             <img class="calculator__wraper__content__form__tab--height__option__img_inactive" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'foot-height-' . $option . '-inactive.webp'; ?>" alt="" />
             <img class="calculator__wraper__content__form__tab--height__option__img_active" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'foot-height-' . $option . '-active.webp'; ?>" alt="" />
-            <div class="calculator__wraper__content__form__tab--height__option__input"> 
-                <input class="peer" type="radio" name="foot-height" id="<?php echo 'height_' . $option; ?>" value="<?php echo $index; ?>"/>
-                <label for="<?php echo 'height_' . $option; ?>" class="peer-checked:bg-accent peer-checked:text-white"> 
+            <label for="<?php echo 'height_' . $option; ?>" class="peer-checked:bg-accent peer-checked:text-white"> 
                     <?php _e($labels[$index], "hockeyshop-theme"); ?>
                 </label>
-            </div>
         </div>
         
         <?php
