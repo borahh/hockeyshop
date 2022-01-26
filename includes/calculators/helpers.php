@@ -5,20 +5,20 @@
  * Resolve Dependencies
  * 
  */
- function borahh_resolve_deps($id, $deps) {
-
-    $m = ''
-    foreach ($deps as $dep) {
-        $l = '';
-        foreach ($dep->list as $attrName) {
+function borahh_resolve_deps($id, $deps) {
+    
+    foreach ($deps as $dep) { 
+        $k = '';
+        foreach ($dep->list as $attrName) {      
             $i = wp_get_post_terms( $id, $attrName);
             $j = array_column($i, $dep->get);
-            $l .= implode(',', $l);
+            $k .= implode(',', $j);
         }
-        $m .= $l;
+        $l[$dep->name] = $k;
+        
     }
+    return $l;
     
-    retrun $m;
  }
 
 
