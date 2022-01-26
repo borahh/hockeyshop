@@ -240,7 +240,7 @@
         &__nav {
           @apply grid items-center grid-cols-3 text-base uppercase mt-7 justify-items-center;
 
-          a {
+          &__control {
             @apply btn-nav;
 
             svg {

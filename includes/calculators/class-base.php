@@ -96,7 +96,7 @@ class BorahhCalculatorBase {
                     <!-- Calculator Nav -->
                     <div class="calculator__wraper__content__nav">
                         <!-- Previous Step -->
-                        <a id="prev" href="#" :class="showPrev ? '' : 'invisible'" @click="onPrev">
+                        <div class="calculator__wraper__content__nav__control" :class="showPrev ? '' : 'invisible'" @click="onPrev">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path
                                 d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"
@@ -105,7 +105,7 @@ class BorahhCalculatorBase {
                             <span>
                                 <?php _e("Tilbage", "hockeyshop-theme"); ?>
                             </span>
-                        </a>
+                        </div>
                         
                         <!-- Step Count -->
                         <div class="calculator__wraper__content__nav__step">
@@ -115,14 +115,14 @@ class BorahhCalculatorBase {
                         </div>
                         
                         <!-- Next Step -->
-                        <a id="next" href="#" x-show="showNext" @click="onNext">
+                        <div class="calculator__wraper__content__nav__control" x-show="showNext" @click="onNext">
                             <span>
                                 <?php _e("Næste", "hockeyshop-theme"); ?>                             
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>
                             </svg>
-                        </a>
+                        </div>
                     </div>
 
                     

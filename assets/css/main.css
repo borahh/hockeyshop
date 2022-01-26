@@ -477,7 +477,7 @@
     line-height: 1.5rem;
     text-transform: uppercase;
 }
-.calculator__wraper__content__nav a {
+.calculator__wraper__content__nav__control {
     display: flex;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -488,7 +488,7 @@
     color: #1768d2;
     white-space: wrap;
 }
-.calculator__wraper__content__nav a svg {
+.calculator__wraper__content__nav__control svg {
     width: 1rem;
     fill: currentColor;
 }
