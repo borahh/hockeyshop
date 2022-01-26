@@ -17,7 +17,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
             <img class="calculator__wraper__content__form__tab--height__option__img_active" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'foot-height-' . $option . '-active.webp'; ?>" alt="" />
             <label for="<?php echo 'height_' . $option; ?>" class="peer-checked:bg-accent peer-checked:text-white"> 
                     <?php _e($labels[$index], "hockeyshop-theme"); ?>
-                </label>
+            </label>
         </div>
         
         <?php
