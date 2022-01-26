@@ -19,10 +19,12 @@ class BorahhCalculatorBase {
     }
 
     // Steps 
-    protected function steps() {}
-
-    // Matched Variations
-    protected function onMatchedVariations() {
+    protected function steps() {
+        ob_start();
+        ?>
+            <div class="calculator__wraper__content__form__tab">Extend this base class to add steps</div>
+        <?php
+        return ob_get_clean();
     }
     
     // Unmatched Variations
@@ -116,7 +118,9 @@ class BorahhCalculatorBase {
             <div class="calculator__wraper" x-effect="onToggleOpen">
                 <div class="calculator__wraper__content">
                     <!-- Calculator Form -->
-                    <form class="calculator__wraper__content__form" x-show="!onSubmit"></form>
+                    <form class="calculator__wraper__content__form" x-show="!onSubmit">
+                        <?php echo $this->steps(); ?>
+                    </form>
 
                     <!-- Calculator End Tab -->
                     <div class="calculator__wraper__content__end" x-show="onSubmit">
