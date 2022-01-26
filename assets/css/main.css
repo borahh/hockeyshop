@@ -524,6 +524,9 @@
 .visible {
     visibility: visible;
 }
+.invisible {
+    visibility: hidden;
+}
 .inline {
     display: inline;
 }
