@@ -23,36 +23,14 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
                 <h2>
                     <?php _e("Væld din fodhøjde", "hockeyshop-theme"); ?>
                 </h2>
-                <div>
-                    <img
-                        src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/grid-floor.png"
-                        alt=""
-                    />
-                    <img
-                        class="inactive-image"
-                        src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/foot-height-low-inactive.png"
-                        alt=""
-                    />
-                    <img
-                        class="opacity-0 foot-height-image-active"
-                        src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/foot-height-low-active.png"
-                        alt=""
-                    />
-                    <div class="input-field">
-                        <input
-                        class="peer"
-                        type="radio"
-                        name="foot-height"
-                        id="low-height-feet"
-                        value="0"
-                        data-id="low"
-                        checked=""
-                        />
-                        <label
-                        for="low-height-feet"
-                        class="bg-white peer-checked:bg-blue-400 peer-checked:text-white"
-                        >
-                        Lav
+                <div class="calculator__wraper__content__form__tab--height__option">
+                    <img src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/grid-floor.png" alt=""/>
+                    <img class="calculator__wraper__content__form__tab--height__option__img_active" src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/foot-height-low-inactive.png" alt="" />
+                    <img class="calculator__wraper__content__form__tab--height__option__img_active" src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/foot-height-low-active.png" alt="" />
+                    <div class="calculator__wraper__content__form__tab--height__option__input"> 
+                        <input class="peer" type="radio" name="foot-height" id="low-height-feet" value="0" data-id="low" checked="" />
+                        <label for="low-height-feet" class="bg-white peer-checked:bg-blue-400 peer-checked:text-white" > 
+                            Lav 
                         </label>
                     </div>
                 </div>
