@@ -4211,10 +4211,10 @@ var calculatorUI = {
     return this.currentStep == this.maxStep;
   },
   handleFinal: function handleFinal() {
-    this.final == !this.final;
+    this.final === true;
   },
   showOnFinal: function showOnFinal() {
-    return !this.final;
+    return this.final;
   }
 };
 exports.calculatorUI = calculatorUI;
