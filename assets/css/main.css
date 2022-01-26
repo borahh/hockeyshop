@@ -537,6 +537,9 @@
         font-size: 2rem;
     }
 }
+.calculator__wraper__content__end__unmatched form {
+    padding-top: 1.25rem;
+}
 .calculator__wraper__content__end__unmatched form input {
                 margin: 0 auto;
                 border: none;

@@ -263,7 +263,7 @@
               @apply mb-4 text-base leading-7 text-center uppercase lg:text-xl;
 
               p {
-                @apply my-1 uppercase;
+                @apply my-1 uppercase lg:text-[20.8px];
               }
 
               div {
@@ -272,6 +272,8 @@
             }
 
             form {
+              @apply pt-5;
+
               input {
                 margin: 0 auto;
                 border: none;
