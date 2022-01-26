@@ -721,3 +721,7 @@
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
+.peer:checked ~ .peer-checked\:opacity-100 {
+    opacity: 1;
+}
