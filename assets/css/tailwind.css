@@ -259,6 +259,18 @@
           &__unmatched {
             @apply p-5;
 
+            &__content {
+              @apply mb-4 text-base leading-7 text-center uppercase lg:text-xl;
+
+              p {
+                @apply my-1 uppercase;
+              }
+
+              div {
+                @apply mt-6 mb-12 text-accent text-2xl lg:text-[2rem];
+              }
+            }
+
             form {
               input {
                 margin: 0 auto;
