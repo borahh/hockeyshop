@@ -523,6 +523,12 @@
     margin-bottom: 0.25rem;
     text-transform: uppercase;
 }
+@media (min-width: 1024px) {
+
+    .calculator__wraper__content__end__unmatched__content p {
+        font-size: 20.8px;
+    }
+}
 .calculator__wraper__content__end__unmatched__content div {
     margin-top: 1.5rem;
     margin-bottom: 3rem;
