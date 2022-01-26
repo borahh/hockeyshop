@@ -6,9 +6,9 @@ export function calculatorUI() {
     },
     toggleWraper() {
       if (this.open) {
-        $el.style.maxHeight = 300 + $el.scrollHeight + 'px';
+        this.$el.style.maxHeight = 300 + this.$el.scrollHeight + 'px';
       } else {
-        $el.style.maxHeight = null;
+        this.$el.style.maxHeight = null;
       }
     },
   };

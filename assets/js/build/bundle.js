@@ -4173,9 +4173,9 @@ function calculatorUI() {
     },
     toggleWraper: function toggleWraper() {
       if (this.open) {
-        $el.style.maxHeight = 300 + $el.scrollHeight + 'px';
+        this.$el.style.maxHeight = 300 + this.$el.scrollHeight + 'px';
       } else {
-        $el.style.maxHeight = null;
+        this.$el.style.maxHeight = null;
       }
     }
   };
@@ -4226,7 +4226,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57078" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64380" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
