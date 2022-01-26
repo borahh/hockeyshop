@@ -4,6 +4,29 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
         $this->dependencies = $dependencies;
     }
 
+    protected function heightOptions($options) {
+        ob_start();
+
+        $labels = ['Lav', 'Mellem', 'Høj']
+        foreach($options as $index=>$option) {
+        ?>
+        <div class="calculator__wraper__content__form__tab--height__option">
+            <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'grid-floor.webp'; ?>" alt=""/>
+            <img class="calculator__wraper__content__form__tab--height__option__img_active" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'foot-height-' . $option . '-inactive.webp'; ?>" alt="" />
+            <img class="calculator__wraper__content__form__tab--height__option__img_inactive" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'foot-height-' . $option . '-active.webp'; ?>" alt="" />
+            <div class="calculator__wraper__content__form__tab--height__option__input"> 
+                <input class="peer" type="radio" name="foot-height" id="<?php echo 'height_' . $option; ?>" value="<?php echo $index; ?>"/>
+                <label for="<?php echo 'height_' . $option; ?>"> 
+                    <?php _e($labels[$index], "hockeyshop-theme"); ?>
+                </label>
+            </div>
+        </div>
+        
+        <?php
+        }
+        return ob_get_clean();
+    }
+
      // Steps 
      protected function steps() {
         ob_start();
@@ -23,39 +46,8 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
                 <h2>
                     <?php _e("Væld din fodhøjde", "hockeyshop-theme"); ?>
                 </h2>
-                <div class="calculator__wraper__content__form__tab--height__option">
-                    <img src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/grid-floor.png" alt=""/>
-                    <img class="calculator__wraper__content__form__tab--height__option__img_active" src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/foot-height-low-inactive.png" alt="" />
-                    <img class="calculator__wraper__content__form__tab--height__option__img_inactive" src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/foot-height-low-active.png" alt="" />
-                    <div class="calculator__wraper__content__form__tab--height__option__input"> 
-                        <input class="peer" type="radio" name="foot-height" value="0"/>
-                        <label> 
-                            <?php _e("Lav", "hockeyshop-theme"); ?>
-                        </label>
-                    </div>
-                </div>
-                <div class="calculator__wraper__content__form__tab--height__option">
-                    <img src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/grid-floor.png" alt=""/>
-                    <img class="calculator__wraper__content__form__tab--height__option__img_active" src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/foot-height-low-inactive.png" alt="" />
-                    <img class="calculator__wraper__content__form__tab--height__option__img_inactive" src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/foot-height-low-active.png" alt="" />
-                    <div class="calculator__wraper__content__form__tab--height__option__input"> 
-                        <input class="peer" type="radio" name="foot-height" value="1"/>
-                        <label> 
-                            <?php _e("Mellem", "hockeyshop-theme"); ?>
-                        </label>
-                    </div>
-                </div>
-                <div class="calculator__wraper__content__form__tab--height__option">
-                    <img src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/grid-floor.png" alt=""/>
-                    <img class="calculator__wraper__content__form__tab--height__option__img_active" src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/foot-height-low-inactive.png" alt="" />
-                    <img class="calculator__wraper__content__form__tab--height__option__img_inactive" src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/foot-height-low-active.png" alt="" />
-                    <div class="calculator__wraper__content__form__tab--height__option__input"> 
-                        <input class="peer" type="radio" name="foot-height" value="2"/>
-                        <label> 
-                            <?php _e("Høj", "hockeyshop-theme"); ?>
-                        </label>
-                    </div>
-                </div>
+                <?php echo $this->heightOptions(array('low', 'medium', 'high')); ?>
+                
 
             </div>
         <?php

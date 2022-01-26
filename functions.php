@@ -31,6 +31,11 @@ if ( ! defined( 'BORAHH_HOCKEYSHOP_JS_URL' ) ) {
 	define( 'BORAHH_HOCKEYSHOP_JS_URL', get_stylesheet_directory_uri(). '/assets/js/build/' );
 }
 
+// Define theme assets img.
+if ( ! defined( 'BORAHH_HOCKEYSHOP_IMG_URL' ) ) {
+	define( 'BORAHH_HOCKEYSHOP_IMG_URL', get_stylesheet_directory_uri(). '/assets/images/' );
+}
+
 
 /**
  * Load child theme css and optional scripts
