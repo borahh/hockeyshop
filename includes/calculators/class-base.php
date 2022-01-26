@@ -65,7 +65,7 @@ class BorahhCalculatorBase {
             <input type="text" name="phone" placeholder='<?php _e("Telefon", "hockeyshop-theme"); ?>' required>
             <input type="hidden" name="variationLength">
             <input type="hidden" name="variationWidth">
-            <input type="submit" name="enquiryVariation" value='<?php _e("Send forespørgsel", "hockeyshop-theme"); ?>'>
+            <input type="submit" name="enquiryVariation" x-ref='enquiryVariation'>
         </form>
         <?php
         return ob_get_clean();
@@ -128,7 +128,7 @@ class BorahhCalculatorBase {
                             <div @click="restart">
                                 <?php _e("Größe wiederfinden", "hockeyshop-theme"); ?>
                             </div>
-                            <div x-show="!matchedVariations">
+                            <div x-show="!matchedVariations" @click="$refs.enquiryVariation.click()">
                                 <?php _e("Send forespørgsel", "hockeyshop-theme"); ?>
                             </div>
                             <div x-show="matchedVariations" @click="toggleOpen">
