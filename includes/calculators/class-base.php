@@ -181,7 +181,7 @@ class BorahhCalculatorBase {
             <div class="calculator__wraper" x-effect="onToggleOpen">
                 <div class="calculator__wraper__content">
                     <!-- Calculator Form -->
-                    <form class="calculator__wraper__content__form" x-show="!onSubmit">
+                    <form class="calculator__wraper__content__form" id="calculatorForm" x-show="!onSubmit">
                         <?php echo $this->steps(); ?>
                     </form>
 
