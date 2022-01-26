@@ -4191,7 +4191,11 @@ var calculatorUI = {
     }
   },
   showPrev: function showPrev() {
-    return this.currentStep !== 0;
+    if (this.currentStep == 0) {
+      return 'invisible';
+    } else {
+      return 'visible';
+    }
   },
   onPrev: function onPrev() {
     this.currentStep--;

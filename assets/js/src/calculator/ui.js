@@ -29,7 +29,11 @@ export const calculatorUI = {
     }
   },
   showPrev() {
-    return this.currentStep !== 0;
+    if (this.currentStep == 0) {
+      return 'invisible';
+    } else {
+      return 'visible';
+    }
   },
   onPrev() {
     this.currentStep--;
