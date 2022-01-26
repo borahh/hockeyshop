@@ -75,7 +75,7 @@ class BorahhCalculatorBase {
                 <span class="calculator__accordion__result"></span>
 
                 <!-- Calculator Toggle -->
-                <span class="calculator__accordion__toggle" :class="open ? '' : 'calculator__accordion__toggle--active'">
+                <span class="calculator__accordion__toggle" :class="open ? 'calculator__accordion__toggle--active' : ''">
                     <span class="calculator__accordion__toggle__icon"></span>
                 </span>
             </div>

@@ -5,7 +5,11 @@ export function calculatorUI() {
       this.open = !this.open;
     },
     toggleWraper() {
-      console.log(this.open);
+      if (this.open) {
+        $el.style.maxHeight = 300 + $el.scrollHeight + 'px';
+      } else {
+        $el.style.maxHeight = null;
+      }
     },
   };
 }
