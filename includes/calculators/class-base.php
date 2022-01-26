@@ -22,7 +22,7 @@ class BorahhCalculatorBase {
     protected function steps() {
         ob_start();
         ?>
-            <div class="calculator__wraper__content__form__tab">Extend this base class to add steps</div>
+            <div class="calculator__wraper__content__form__tab">Extend this method to include steps</div>
         <?php
         return ob_get_clean();
     }
@@ -53,11 +53,11 @@ class BorahhCalculatorBase {
                 <span>6.5</span>/ <span>fit1</span>
             </div>
         </div>
-
+        
         <div class="calculator__wraper__content__end__unmatched__info">
-            <p>DEN ANBEFALEDE STØRRELSE ER IKKE PÅ LAGER. </p>
-            <p>OFTE KAN VI BESTILLE VAREN HJEM I LØBET AF FÅ DAGE.</p>
-            <p>ØNSKER DU AT BLIVE KONTAKTET HEROM?</p>
+            <p><?php _e("Den anbefalede størrelse er ikke på lager.", "hockeyshop-theme"); ?></p>
+            <p><?php _e("Ofte kan vi bestille varen hjem i løbet af få dage.", "hockeyshop-theme"); ?></p>
+            <p><?php _e("Onsker du at blive kontaktet herom?", "hockeyshop-theme"); ?></p>
         </div>
         
 
@@ -69,6 +69,69 @@ class BorahhCalculatorBase {
             <input type="hidden" name="variationWidth">
             <input type="submit" name="enquiryVariation" x-ref='enquiryVariation'>
         </form>
+        <?php
+        return ob_get_clean();
+    }
+
+
+    // Step Navigtion
+    protected function navigation() {
+        ob_start();
+        ?>
+
+        <!-- Previous Step -->
+        <div class="calculator__wraper__content__nav__control" :class="showPrevHandler" @click="handlePrev">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"
+                ></path>
+            </svg>
+            <span>
+                <?php _e("Tilbage", "hockeyshop-theme"); ?>
+            </span>
+        </div>
+        
+        <!-- Step Count -->
+        <div class="calculator__wraper__content__nav__step">
+            <span x-text="getCurrentStep"></span>
+            <span>/</span>
+            <span x-text="getMaxStep"></span>
+        </div>
+        
+        <!-- Next Step -->
+        <div class="calculator__wraper__content__nav__control" x-show="showNextHandler" @click="handleNext">
+            <span>
+                <?php _e("Næste", "hockeyshop-theme"); ?>                             
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>
+            </svg>
+        </div>
+
+        <!-- Final Step -->
+        <div class="calculator__wraper__content__nav__control" x-show="showFinalHandler" @click="handleFinal">
+            <span>
+                <?php _e("Vis resultat", "hockeyshop-theme"); ?>                             
+            </span>
+        </div>
+
+        <?php
+        return ob_get_clean():
+    }
+
+    // Handlers 
+    protected function handlers() {
+        ob_start();
+        ?>
+            <div @click="restart">
+                <?php _e("Größe wiederfinden", "hockeyshop-theme"); ?>
+            </div>
+            <div x-show="!matchedVariations" @click="$refs.enquiryVariation.click()">
+                <?php _e("Send forespørgsel", "hockeyshop-theme"); ?>
+            </div>
+            <div x-show="matchedVariations" @click="toggleOpen">
+                <?php _e("Forstået", "hockeyshop-theme"); ?>
+            </div>
         <?php
         return ob_get_clean();
     }
@@ -129,55 +192,13 @@ class BorahhCalculatorBase {
                         </div>
 
                         <div class="calculator__wraper__content__end__handlers">
-                            <div @click="restart">
-                                <?php _e("Größe wiederfinden", "hockeyshop-theme"); ?>
-                            </div>
-                            <div x-show="!matchedVariations" @click="$refs.enquiryVariation.click()">
-                                <?php _e("Send forespørgsel", "hockeyshop-theme"); ?>
-                            </div>
-                            <div x-show="matchedVariations" @click="toggleOpen">
-                                <?php _e("Forstået", "hockeyshop-theme"); ?>
-                            </div>
+                            <?php echo $this->handlers(); ?>             
                         </div>
                     </div>
                     
                     <!-- Calculator Nav -->
                     <div class="calculator__wraper__content__nav" x-show="!onSubmit">
-                        <!-- Previous Step -->
-                        <div class="calculator__wraper__content__nav__control" :class="showPrevHandler" @click="handlePrev">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path
-                                d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"
-                                ></path>
-                            </svg>
-                            <span>
-                                <?php _e("Tilbage", "hockeyshop-theme"); ?>
-                            </span>
-                        </div>
-                        
-                        <!-- Step Count -->
-                        <div class="calculator__wraper__content__nav__step">
-                            <span x-text="getCurrentStep"></span>
-                            <span>/</span>
-                            <span x-text="getMaxStep"></span>
-                        </div>
-                        
-                        <!-- Next Step -->
-                        <div class="calculator__wraper__content__nav__control" x-show="showNextHandler" @click="handleNext">
-                            <span>
-                                <?php _e("Næste", "hockeyshop-theme"); ?>                             
-                            </span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>
-                            </svg>
-                        </div>
-
-                        <!-- Final Step -->
-                        <div class="calculator__wraper__content__nav__control" x-show="showFinalHandler" @click="handleFinal">
-                            <span>
-                                <?php _e("Vis resultat", "hockeyshop-theme"); ?>                             
-                            </span>
-                        </div>
+                        <?php echo $this->navigation(); ?>             
                     </div>
 
                     
