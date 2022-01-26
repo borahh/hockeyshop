@@ -11,4 +11,8 @@ gulp.task('build:images', function () {
     .pipe(gulp.dest('assets/images'));
 });
 
-gulp.task('default', gulp.series('build:images'));
+gulp.task('copy:svg', function () {
+  return gulp.src('src/images/*.svg').pipe(gulp.dest('assets/images'));
+});
+
+gulp.task('default', gulp.series('build:images', 'copy:svg'));
