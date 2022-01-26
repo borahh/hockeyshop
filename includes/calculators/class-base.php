@@ -87,14 +87,14 @@ class BorahhCalculatorBase {
                     <form class="calculator__wraper__content__form"></form>
 
                     <!-- Calculator End Tab -->
-                    <div class="calculator__wraper__content__end" x-show="final">
+                    <div class="calculator__wraper__content__end" x-effect="console.log(onSubmit)">
                         <div class="calculator__wraper__content__end__unmatched" x-show="matchedVariations">
                             <?php echo $this->onUnmatchedVariations(); ?>
                         </div>
                     </div>
                     
                     <!-- Calculator Nav -->
-                    <div class="calculator__wraper__content__nav" x-show="!final">
+                    <div class="calculator__wraper__content__nav" >
                         <!-- Previous Step -->
                         <div class="calculator__wraper__content__nav__control" :class="showPrevHandler" @click="handlerPrev">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

@@ -2,7 +2,7 @@ export const calculatorUI = {
   // State to manage current step
   currentStep: 0,
   maxStep: 0,
-  final: false,
+  onSubmit: false,
 
   // Step to manage variations matching
   matchedVariations: false,
@@ -49,6 +49,6 @@ export const calculatorUI = {
     return this.currentStep == this.maxStep;
   },
   handleFinal() {
-    this.final == !this.final;
+    this.onSubmit == true;
   },
 };

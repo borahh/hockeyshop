@@ -4168,7 +4168,7 @@ var calculatorUI = {
   // State to manage current step
   currentStep: 0,
   maxStep: 0,
-  final: false,
+  onSubmit: false,
   // Step to manage variations matching
   matchedVariations: false,
   // State to manage wraper state
@@ -4211,7 +4211,7 @@ var calculatorUI = {
     return this.currentStep == this.maxStep;
   },
   handleFinal: function handleFinal() {
-    this.final == !this.final;
+    this.onSubmit == true;
   }
 };
 exports.calculatorUI = calculatorUI;
