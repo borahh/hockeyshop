@@ -21,7 +21,7 @@ function borahh_get_calculator() {
         return;
     }
 
-    $instance = new $calculator();
+    $instance = new $calculator(['xxx']);
 
     return $instance->render();
 
