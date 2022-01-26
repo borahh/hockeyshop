@@ -50,13 +50,13 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
                     <img class="calculator__wraper__content__form__tab--height__option__img_active" src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/foot-height-low-inactive.png" alt="" />
                     <img class="calculator__wraper__content__form__tab--height__option__img_inactive" src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/foot-height-low-active.png" alt="" />
                     <div class="calculator__wraper__content__form__tab--height__option__input"> 
-                        <input class="peer" type="radio" name="foot-height" value="2" x-ref="height2" />
+                        <input class="peer" type="radio" name="foot-height" value="2" x-ref="height2" x-model="text" />
                         <label @click="$refs.height2.click()"> 
                             <?php _e("Høj", "hockeyshop-theme"); ?>
                         </label>
                     </div>
                 </div>
-               
+               <span x-text="test"></span>
 
             </div>
         <?php
