@@ -235,6 +235,12 @@
 
         &__form {
           @apply relative min-h-[300px];
+
+          &__tab {
+            h2 {
+              @apply mb-10 text-2xl font-normal leading-6 text-center;
+            }
+          }
         }
 
         &__nav {
