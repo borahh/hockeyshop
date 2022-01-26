@@ -1,17 +1,7 @@
 <?php
 
 
-/*
- * Get Calculator dependencies
- * 
- */
 
-function borahh_get_dependencies($type) {
-    return (object) array(
-        'bauer_icehockey_skates' => 'BauerIcehockeySkates',
-    );
-
-}
 
 /*
  *  Return the calculator instance 
@@ -34,7 +24,7 @@ function borahh_get_calculator() {
         return;
     }
 
-    $instance = new $calculator(['xxx']);
+    $instance = new $calculator($availableCalculators->$value->dependencies);
 
     return $instance->render();
 
