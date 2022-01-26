@@ -251,7 +251,7 @@
                 }
 
                 &__img_active {
-                  @apply absolute top-0 left-0 transition-opacity duration-200 opacity-0;
+                  @apply absolute top-0 left-0 transition-opacity duration-200;
                 }
                 &__img_inactive {
                   @apply absolute top-0 left-0;
