@@ -261,7 +261,7 @@
                   }
 
                   label {
-                    @apply block w-[100px] rounded-full border-[1px] border-[rgba(209,213,219)] uppercase cursor-pointer py-3 md:py-4 bg-white;
+                    @apply block w-[100px] rounded-full border-[1px] border-[rgba(209,213,219)] uppercase cursor-pointer py-3 md:py-4 bg-white peer-checked:bg-accent peer-checked:text-white;
                   }
                 }
               }

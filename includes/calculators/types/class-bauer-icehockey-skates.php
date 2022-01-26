@@ -28,8 +28,8 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
                     <img class="calculator__wraper__content__form__tab--height__option__img_active" src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/foot-height-low-inactive.png" alt="" />
                     <img class="calculator__wraper__content__form__tab--height__option__img_inactive" src="https://hockeyshop.dk/wp-content/themes/hockeyshop-theme/assets/images/foot-height-low-active.png" alt="" />
                     <div class="calculator__wraper__content__form__tab--height__option__input"> 
-                        <input class="peer" type="radio" name="foot-height" value="0" />
-                        <label class="peer-checked:bg-accent peer-checked:text-white"> 
+                        <input class="peer" type="radio" name="foot-height" value="0" id="height_0" />
+                        <label for="height_0"> 
                             <?php _e("Lav", "hockeyshop-theme"); ?>
                         </label>
                     </div>
