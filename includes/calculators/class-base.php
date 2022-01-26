@@ -91,6 +91,18 @@ class BorahhCalculatorBase {
                         <div class="calculator__wraper__content__end__unmatched" x-show="matchedVariations">
                             <?php echo $this->onUnmatchedVariations(); ?>
                         </div>
+
+                        <div class="calculator__wraper__content__end__handlers">
+                            <div>
+                                <?php _e("Größe wiederfinden", "hockeyshop-theme"); ?>
+                            </div>
+                            <div>
+                                <?php _e("Send forespørgsel", "hockeyshop-theme"); ?>
+                            </div>
+                            <div>
+                                <?php _e("Forstået", "hockeyshop-theme"); ?>
+                            </div>
+                        </div>
                     </div>
                     
                     <!-- Calculator Nav -->

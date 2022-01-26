@@ -269,6 +269,14 @@
               }
             }
           }
+
+          &__handler {
+            @apply grid grid-cols-2 gap-8 mt-5 text-center uppercase;
+
+            div {
+              @apply w-full px-5 py-2 mx-auto rounded-full bg-white text-[gray] whitespace-normal last:text-white last:bg-accent last:self-center;
+            }
+          }
         }
       }
     }
