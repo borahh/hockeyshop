@@ -62,11 +62,14 @@ class BorahhCalculatorBase {
         ob_start();
         ?>
 
-        <?php echo $this->loaders(); ?>
+        
         
         <!-- Calculator Wraper -->
         <div class="calculator" x-data='BauerIcehockeySkates'>
 
+            <!-- Calculator Loaders -->
+            <?php echo $this->loaders(); ?>
+            
             <!-- Calculator Accordion  -->
             <div class="calculator__accordion" @click="toggleOpen">
                 <!-- Calculator Accordion Info -->
@@ -103,7 +106,7 @@ class BorahhCalculatorBase {
 
                     <!-- Calculator End Tab -->
                     <div class="calculator__wraper__content__end" x-show="onSubmit">
-                        <div class="calculator__wraper__content__end__unmatched" x-show="matchedVariations">
+                        <div class="calculator__wraper__content__end__unmatched" x-show="!matchedVariations">
                             <?php echo $this->onUnmatchedVariations(); ?>
                         </div>
 
@@ -111,7 +114,7 @@ class BorahhCalculatorBase {
                             <div @click="restart">
                                 <?php _e("Größe wiederfinden", "hockeyshop-theme"); ?>
                             </div>
-                            <div>
+                            <div x-show="!matchedVariations">
                                 <?php _e("Send forespørgsel", "hockeyshop-theme"); ?>
                             </div>
                             <div @click="toggleOpen">
