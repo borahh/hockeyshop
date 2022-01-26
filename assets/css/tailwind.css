@@ -262,7 +262,7 @@
             &__content {
               @apply mb-4 text-base leading-7 text-center uppercase lg:text-xl;
 
-              p {
+              h6 {
                 @apply my-1 uppercase;
               }
 

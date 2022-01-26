@@ -46,11 +46,16 @@ class BorahhCalculatorBase {
         }
         ob_start(); ?>
         <div class="calculator__wraper__content__end__unmatched__content">
-            <p><?php _e("Din anbefalede størrelse er", "hockeyshop-theme"); ?></p>
+            <h6><?php _e("Din anbefalede størrelse er", "hockeyshop-theme"); ?></h6>
             <div>
                 <span>6.5</span>/ <span>fit1</span>
             </div>
         </div>
+        
+        <p>DEN ANBEFALEDE STØRRELSE ER IKKE PÅ LAGER. </p>
+        <p>OFTE KAN VI BESTILLE VAREN HJEM I LØBET AF FÅ DAGE.</p>
+        <p>ØNSKER DU AT BLIVE KONTAKTET HEROM?</p>
+
         <form id="endTabForm" method="POST">
             <input type="text" name="name" placeholder='<?php _e("Navn", "hockeyshop-theme"); ?>' required>
             <input type="text" name="email" placeholder='<?php _e("E-mail", "hockeyshop-theme"); ?>' required>
@@ -59,9 +64,6 @@ class BorahhCalculatorBase {
             <input type="hidden" name="variationWidth">
             <input type="submit" name="enquiryVariation" value='<?php _e("Send forespørgsel", "hockeyshop-theme"); ?>'>
         </form>
-        <p>DEN ANBEFALEDE STØRRELSE ER IKKE PÅ LAGER. </p>
-        <p>OFTE KAN VI BESTILLE VAREN HJEM I LØBET AF FÅ DAGE.</p>
-        <p>ØNSKER DU AT BLIVE KONTAKTET HEROM?</p>
         <?php
         return ob_get_clean();
     }
