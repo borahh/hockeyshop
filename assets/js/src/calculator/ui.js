@@ -9,6 +9,14 @@ export const calculatorUI = {
   // State to manage wraper state
   open: false,
 
+  // Getters
+  getCurrentStep() {
+    return this.currentStep + 1;
+  },
+  getMaxStep() {
+    return this.maxStep + 1;
+  },
+
   // Handler to manage wraper state
   toggleOpen() {
     this.open = !this.open;

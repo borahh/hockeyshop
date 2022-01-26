@@ -109,9 +109,9 @@ class BorahhCalculatorBase {
                         
                         <!-- Step Count -->
                         <div class="calculator__wraper__content__nav__step">
-                            <span x-text="currentStep"></span>
+                            <span x-text="getCurrentStep"></span>
                             <span>/</span>
-                            <span x-text="maxStep"></span>
+                            <span x-text="getMaxStep"></span>
                         </div>
                         
                         <!-- Next Step -->

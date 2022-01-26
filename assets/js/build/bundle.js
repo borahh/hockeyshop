@@ -4172,6 +4172,13 @@ var calculatorUI = {
   matchedVariations: false,
   // State to manage wraper state
   open: false,
+  // Getters
+  getCurrentStep: function getCurrentStep() {
+    return this.currentStep + 1;
+  },
+  getMaxStep: function getMaxStep() {
+    return this.maxStep + 1;
+  },
   // Handler to manage wraper state
   toggleOpen: function toggleOpen() {
     this.open = !this.open;
@@ -4214,7 +4221,9 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function BauerIcehockeySkates() {
-  return _objectSpread({}, _ui.calculatorUI);
+  return _objectSpread(_objectSpread({}, _ui.calculatorUI), {}, {
+    maxStep: 3
+  });
 }
 },{"../ui":"calculator/ui.js"}],"calculator.js":[function(require,module,exports) {
 "use strict";
