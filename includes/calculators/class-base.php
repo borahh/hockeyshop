@@ -31,7 +31,7 @@ class BorahhCalculatorBase {
             wp_mail( $to, $subject, $body, $headers );
         }
         ob_start(); ?>
-        <form class="calculator__wraper__content__end__unmatched" id="endTabForm" method="POST">
+        <form id="endTabForm" method="POST">
             <input type="text" name="name" placeholder='<?php _e("Navn", "hockeyshop-theme"); ?>' required>
             <input type="text" name="email" placeholder='<?php _e("E-mail", "hockeyshop-theme"); ?>' required>
             <input type="text" name="phone" placeholder='<?php _e("Telefon", "hockeyshop-theme"); ?>' required>
@@ -88,7 +88,9 @@ class BorahhCalculatorBase {
 
                     <!-- Calculator End Tab -->
                     <div class="calculator__wraper__content__end">
-                        <?php echo $this->onUnmatchedVariations(); ?>
+                        <div class="calculator__wraper__content__end__unmatched" x-show="!matchedVariations">
+                            <?php echo $this->onUnmatchedVariations(); ?>
+                        </div>
                     </div>
                     
                     <!-- Calculator Nav -->

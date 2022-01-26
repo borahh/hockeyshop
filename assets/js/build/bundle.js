@@ -4165,6 +4165,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.calculatorUI = void 0;
 var calculatorUI = {
+  matchedVariations: false,
   open: false,
   toggle: function toggle() {
     this.open = !this.open;

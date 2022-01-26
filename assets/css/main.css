@@ -503,7 +503,7 @@
 .calculator__wraper__content__end__unmatched {
     padding: 1.25rem;
 }
-.calculator__wraper__content__end__unmatched input {
+.calculator__wraper__content__end__unmatched form input {
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: auto;

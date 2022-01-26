@@ -1,4 +1,5 @@
 export const calculatorUI = {
+  matchedVariations: false,
   open: false,
   toggle() {
     this.open = !this.open;
