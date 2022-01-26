@@ -7,7 +7,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
     protected function heightOptions($options) {
         ob_start();
 
-        $labels = ['Lav', 'Mellem', 'Høj']
+        $labels = ['Lav', 'Mellem', 'Høj'];
         foreach($options as $index=>$option) {
         ?>
         <div class="calculator__wraper__content__form__tab--height__option">
@@ -16,7 +16,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
             <img class="calculator__wraper__content__form__tab--height__option__img_inactive" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'foot-height-' . $option . '-active.webp'; ?>" alt="" />
             <div class="calculator__wraper__content__form__tab--height__option__input"> 
                 <input class="peer" type="radio" name="foot-height" id="<?php echo 'height_' . $option; ?>" value="<?php echo $index; ?>"/>
-                <label for="<?php echo 'height_' . $option; ?>"> 
+                <label for="<?php echo 'height_' . $option; ?>" class="peer-checked:bg-accent peer-checked:text-white"> 
                     <?php _e($labels[$index], "hockeyshop-theme"); ?>
                 </label>
             </div>
