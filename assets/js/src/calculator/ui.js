@@ -49,6 +49,6 @@ export const calculatorUI = {
     return this.currentStep == this.maxStep;
   },
   handleFinal() {
-    !this.onSubmit;
+    this.onSubmit = true;
   },
 };

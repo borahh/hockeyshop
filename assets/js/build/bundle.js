@@ -4211,7 +4211,7 @@ var calculatorUI = {
     return this.currentStep == this.maxStep;
   },
   handleFinal: function handleFinal() {
-    !this.onSubmit;
+    this.onSubmit = true;
   }
 };
 exports.calculatorUI = calculatorUI;
