@@ -59,6 +59,9 @@ class BorahhCalculatorBase {
             <input type="hidden" name="variationWidth">
             <input type="submit" name="enquiryVariation" value='<?php _e("Send forespørgsel", "hockeyshop-theme"); ?>'>
         </form>
+        <p>DEN ANBEFALEDE STØRRELSE ER IKKE PÅ LAGER. </p>
+        <p>OFTE KAN VI BESTILLE VAREN HJEM I LØBET AF FÅ DAGE.</p>
+        <p>ØNSKER DU AT BLIVE KONTAKTET HEROM?</p>
         <?php
         return ob_get_clean();
     }

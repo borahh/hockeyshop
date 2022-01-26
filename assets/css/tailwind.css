@@ -285,6 +285,14 @@
                 @apply hidden;
               }
             }
+
+            p:nth-child(1) {
+              @apply mt-0 mb-[0.9rem] uppercase lg:text-base;
+            }
+
+            p {
+              @apply my-1 uppercase lg:text-base;
+            }
           }
 
           &__handlers {
