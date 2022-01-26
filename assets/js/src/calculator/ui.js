@@ -51,7 +51,4 @@ export const calculatorUI = {
   handleFinal() {
     this.final == !this.final;
   },
-  showOnFinal() {
-    return this.final;
-  },
 };

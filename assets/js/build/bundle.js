@@ -4212,9 +4212,6 @@ var calculatorUI = {
   },
   handleFinal: function handleFinal() {
     this.final == !this.final;
-  },
-  showOnFinal: function showOnFinal() {
-    return this.final;
   }
 };
 exports.calculatorUI = calculatorUI;
