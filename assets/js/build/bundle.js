@@ -4168,6 +4168,7 @@ var calculatorUI = {
   // State to manage current step
   currentStep: 0,
   maxStep: 0,
+  final: false,
   // Step to manage variations matching
   matchedVariations: false,
   // State to manage wraper state
@@ -4190,24 +4191,30 @@ var calculatorUI = {
       this.$el.style.maxHeight = null;
     }
   },
-  showPrev: function showPrev() {
+  showPrevHandler: function showPrevHandler() {
     if (this.currentStep == 0) {
       return 'invisible';
     } else {
       return 'visible';
     }
   },
-  onPrev: function onPrev() {
+  handlePrev: function handlePrev() {
     this.currentStep--;
   },
-  showNext: function showNext() {
+  showNextHandler: function showNextHandler() {
     return this.currentStep !== this.maxStep;
   },
-  showMax: function showMax() {
+  handleNext: function handleNext() {
+    this.currentStep++;
+  },
+  showFinalHandler: function showFinalHandler() {
     return this.currentStep == this.maxStep;
   },
-  onNext: function onNext() {
-    this.currentStep++;
+  handleFinal: function handleFinal() {
+    this.final == true;
+  },
+  showOnFinal: function showOnFinal() {
+    return !this.final;
   }
 };
 exports.calculatorUI = calculatorUI;

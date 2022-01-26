@@ -2,6 +2,7 @@ export const calculatorUI = {
   // State to manage current step
   currentStep: 0,
   maxStep: 0,
+  final: false,
 
   // Step to manage variations matching
   matchedVariations: false,
@@ -28,23 +29,29 @@ export const calculatorUI = {
       this.$el.style.maxHeight = null;
     }
   },
-  showPrev() {
+  showPrevHandler() {
     if (this.currentStep == 0) {
       return 'invisible';
     } else {
       return 'visible';
     }
   },
-  onPrev() {
+  handlePrev() {
     this.currentStep--;
   },
-  showNext() {
+  showNextHandler() {
     return this.currentStep !== this.maxStep;
   },
-  showMax() {
+  handleNext() {
+    this.currentStep++;
+  },
+  showFinalHandler() {
     return this.currentStep == this.maxStep;
   },
-  onNext() {
-    this.currentStep++;
+  handleFinal() {
+    this.final == true;
+  },
+  showOnFinal() {
+    return !this.final;
   },
 };

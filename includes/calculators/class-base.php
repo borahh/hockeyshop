@@ -87,16 +87,16 @@ class BorahhCalculatorBase {
                     <form class="calculator__wraper__content__form"></form>
 
                     <!-- Calculator End Tab -->
-                    <div class="calculator__wraper__content__end">
+                    <div class="calculator__wraper__content__end" x-show="showOnFinal">
                         <div class="calculator__wraper__content__end__unmatched" x-show="matchedVariations">
                             <?php echo $this->onUnmatchedVariations(); ?>
                         </div>
                     </div>
                     
                     <!-- Calculator Nav -->
-                    <div class="calculator__wraper__content__nav">
+                    <div class="calculator__wraper__content__nav" x-show="showOnFinal">
                         <!-- Previous Step -->
-                        <div class="calculator__wraper__content__nav__control" :class="showPrev" @click="onPrev">
+                        <div class="calculator__wraper__content__nav__control" :class="showPrevHandler" @click="handlerPrev">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path
                                 d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"
@@ -115,7 +115,7 @@ class BorahhCalculatorBase {
                         </div>
                         
                         <!-- Next Step -->
-                        <div class="calculator__wraper__content__nav__control" x-show="showNext" @click="onNext">
+                        <div class="calculator__wraper__content__nav__control" x-show="showNextHandler" @click="handleNext">
                             <span>
                                 <?php _e("Næste", "hockeyshop-theme"); ?>                             
                             </span>
@@ -125,7 +125,7 @@ class BorahhCalculatorBase {
                         </div>
 
                         <!-- Final Step -->
-                        <div class="calculator__wraper__content__nav__control" x-show="showMax" @click="onNext">
+                        <div class="calculator__wraper__content__nav__control" x-show="showFinalHandler" @click="handleFinal">
                             <span>
                                 <?php _e("Vis resultat", "hockeyshop-theme"); ?>                             
                             </span>
