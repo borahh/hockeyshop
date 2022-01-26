@@ -13,7 +13,7 @@ class BorahhCalculatorBase {
     protected function loaders() {
         ob_start();
         ?>
-            <span id="AvailableVariationsLoader" data-variations="<?php json_encode($this->dependencies); ?>"></span>
+            <span id="AvailableVariationsLoader" data-variations="<?php echo json_encode($this->dependencies); ?>"></span>
         <?php
         return ob_get_clean();
     }
