@@ -62,7 +62,7 @@ class BorahhCalculatorBase {
         ob_start();
         ?>
 
-        <?php echo $this->loaders; ?>
+        <?php echo $this->loaders(); ?>
         
         <!-- Calculator Wraper -->
         <div class="calculator" x-data='BauerIcehockeySkates'>
