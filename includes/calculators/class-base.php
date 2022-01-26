@@ -93,7 +93,7 @@ class BorahhCalculatorBase {
                         </div>
 
                         <div class="calculator__wraper__content__end__handlers">
-                            <div @click="handleFinal">
+                            <div @click="restart">
                                 <?php _e("Größe wiederfinden", "hockeyshop-theme"); ?>
                             </div>
                             <div>
