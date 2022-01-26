@@ -240,6 +240,11 @@
             h2 {
               @apply mb-10 text-2xl font-normal leading-6 text-center;
             }
+
+            /** Bauer Icehockey Skate Steps Start **/
+            &--height {
+            }
+            /** Bauer Icehockey Skate Steps End **/
           }
         }
 

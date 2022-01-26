@@ -467,6 +467,9 @@
     position: relative;
     min-height: 300px;
 }
+.calculator__wraper__content__form__tab {
+            /** Bauer Icehockey Skate Steps End **/
+          }
 .calculator__wraper__content__form__tab h2 {
     margin-bottom: 2.5rem;
     text-align: center;
@@ -474,6 +477,9 @@
     font-weight: 400;
     line-height: 1.5rem;
 }
+/** Bauer Icehockey Skate Steps Start **/
+.calculator__wraper__content__form__tab--height {
+            }
 .calculator__wraper__content__nav {
     margin-top: 1.75rem;
     display: grid;
