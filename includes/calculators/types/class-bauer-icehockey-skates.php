@@ -4,6 +4,27 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
         $this->dependencies = $dependencies;
     }
 
+    protected function widthOptions($options) {
+        ob_start();
+
+        $labels = ['Small', 'Mellem', 'Bred'];
+        foreach($options as $index=>$option) {
+        ?>
+        <div class="calculator__wraper__content__form__tab--height__option">
+            <input class="peer" type="radio" name="foot-height" id="<?php echo 'height_' . $option; ?>" value="<?php echo $index; ?>"/>
+            <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'grid-floor.webp'; ?>" alt=""/>
+            <img class="calculator__wraper__content__form__tab--height__option__img_inactive" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'foot-height-' . $option . '-inactive.webp'; ?>" alt="" />
+            <img class="opacity-0 calculator__wraper__content__form__tab--height__option__img_active peer-checked:opacity-100" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'foot-height-' . $option . '-active.webp'; ?>" alt="" />
+            <label for="<?php echo 'height_' . $option; ?>" class="calculator__wraper__content__form__tab--height__option__input peer-checked:bg-accent peer-checked:text-white"> 
+                <?php _e($labels[$index], "hockeyshop-theme"); ?>
+            </label>
+        </div>
+        
+        <?php
+        }
+        return ob_get_clean();
+    }
+
     protected function heightOptions($options) {
         ob_start();
 
@@ -39,14 +60,13 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
                 <h2>
                     <?php _e("Vælg din fodbredde", "hockeyshop-theme"); ?>
                 </h2>
+                <?php echo $this->widthOptions(array('low', 'medium', 'high')); ?>
             </div>
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--height" x-show="currentStep === 3">
                 <h2>
                     <?php _e("Væld din fodhøjde", "hockeyshop-theme"); ?>
                 </h2>
                 <?php echo $this->heightOptions(array('low', 'medium', 'high')); ?>
-                
-
             </div>
         <?php
         return ob_get_clean();
