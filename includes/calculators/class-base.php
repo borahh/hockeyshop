@@ -49,7 +49,7 @@ class BorahhCalculatorBase {
         ?>
         
         <!-- Calculator Wraper -->
-        <div class="calculator" x-data='calculatorUI'>
+        <div class="calculator" x-data='BauerIcehockeySkates'>
 
         
             <!-- Calculator Accordion  -->
@@ -86,6 +86,11 @@ class BorahhCalculatorBase {
                     <!-- Calculator Form -->
                     <form class="calculator__wraper__content__form"></form>
 
+                    <!-- Calculator End Tab -->
+                    <div class="calculator__wraper__content__end">
+                        <?php echo $this->onUnmatchedVariations(); ?>
+                    </div>
+                    
                     <!-- Calculator Nav -->
                     <div class="calculator__wraper__content__nav">
                         <!-- Previous Step -->
@@ -118,10 +123,7 @@ class BorahhCalculatorBase {
                         </a>
                     </div>
 
-                    <!-- Calculator End Tab -->
-                    <div class="calculator__wraper__content__end">
-                        <?php echo $this->onUnmatchedVariations(); ?>
-                    </div>
+                    
                 </div>
             </div>
             

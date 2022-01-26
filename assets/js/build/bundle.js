@@ -4163,38 +4163,71 @@ exports.default = module_default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.calculatorUI = calculatorUI;
+exports.calculatorUI = void 0;
 
-function calculatorUI() {
-  return {
-    open: false,
-    toggle: function toggle() {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var calculatorUI = /*#__PURE__*/function () {
+  function calculatorUI() {
+    _classCallCheck(this, calculatorUI);
+
+    _defineProperty(this, "open", false);
+  }
+
+  _createClass(calculatorUI, [{
+    key: "toggle",
+    value: function toggle() {
       this.open = !this.open;
-    },
-    toggleWraper: function toggleWraper() {
+    }
+  }, {
+    key: "toggleWraper",
+    value: function toggleWraper() {
       if (this.open) {
         this.$el.style.maxHeight = 300 + this.$el.scrollHeight + 'px';
       } else {
         this.$el.style.maxHeight = null;
       }
     }
-  };
+  }]);
+
+  return calculatorUI;
+}();
+
+exports.calculatorUI = calculatorUI;
+},{}],"calculator/types/BauerIcehockeySkates.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.BauerIcehockeySkates = BauerIcehockeySkates;
+
+var _ui = require("../ui");
+
+function BauerIcehockeySkates() {
+  return new _ui.calculatorUI();
 }
-},{}],"calculator.js":[function(require,module,exports) {
+},{"../ui":"calculator/ui.js"}],"calculator.js":[function(require,module,exports) {
 "use strict";
 
 var _alpinejs = _interopRequireDefault(require("alpinejs"));
 
-var _ui = require("./calculator/ui");
+var _BauerIcehockeySkates = require("./calculator/types/BauerIcehockeySkates");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 if (_alpinejs.default) {
-  _alpinejs.default.data('calculatorUI', _ui.calculatorUI);
+  _alpinejs.default.data('BauerIcehockeySkates', _BauerIcehockeySkates.BauerIcehockeySkates);
 
   _alpinejs.default.start();
 }
-},{"alpinejs":"../../../node_modules/alpinejs/dist/module.esm.js","./calculator/ui":"calculator/ui.js"}],"index.js":[function(require,module,exports) {
+},{"alpinejs":"../../../node_modules/alpinejs/dist/module.esm.js","./calculator/types/BauerIcehockeySkates":"calculator/types/BauerIcehockeySkates.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./calculator");

@@ -1,7 +1,7 @@
 import Alpine from 'alpinejs';
-import { calculatorUI } from './calculator/ui';
+import { BauerIcehockeySkates } from './calculator/types/BauerIcehockeySkates';
 
 if (Alpine) {
-  Alpine.data('calculatorUI', calculatorUI);
+  Alpine.data('BauerIcehockeySkates', BauerIcehockeySkates);
   Alpine.start();
 }
