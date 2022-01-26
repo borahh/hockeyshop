@@ -116,7 +116,7 @@ class BorahhCalculatorBase {
         </div>
 
         <?php
-        return ob_get_clean():
+        return ob_get_clean();
     }
 
     // Handlers 
