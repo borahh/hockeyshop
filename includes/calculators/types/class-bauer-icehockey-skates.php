@@ -63,7 +63,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
                 <div class="relative grid grid-cols-3 calculator__wraper__content__form__tab--width__inner">
                     <img class="absolute top-[48%]" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'grid-floor.webp'; ?>" alt=""/>
 
-                    <?php echo $this->widthOptions(array('low', 'medium', 'high')); ?>
+                    <?php echo $this->widthOptions(array('narrow', 'medium', 'wide')); ?>
                 </div>
             </div>
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--height" x-show="currentStep === 3">
