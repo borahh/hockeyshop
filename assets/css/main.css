@@ -523,12 +523,6 @@
     padding-bottom: 0.75rem;
     text-transform: uppercase;
 }
-.peer:checked ~ .calculator__wraper__content__form__tab--height__option__input label {
-    --tw-bg-opacity: 1;
-    background-color: rgb(23 104 210 / var(--tw-bg-opacity));
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-}
 @media (min-width: 768px) {
 
     .calculator__wraper__content__form__tab--height__option__input label {
@@ -717,4 +711,14 @@
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
+}
+
+.peer:checked ~ .peer-checked\:bg-accent {
+    --tw-bg-opacity: 1;
+    background-color: rgb(23 104 210 / var(--tw-bg-opacity));
+}
+
+.peer:checked ~ .peer-checked\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
 }
