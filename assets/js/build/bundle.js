@@ -4211,8 +4211,7 @@ var calculatorUI = {
     return this.currentStep == this.maxStep;
   },
   handleFinal: function handleFinal() {
-    this.final === true;
-    console.log(this.final);
+    this.final == !this.final;
   },
   showOnFinal: function showOnFinal() {
     return !this.final;
