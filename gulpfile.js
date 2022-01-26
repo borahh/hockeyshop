@@ -11,33 +11,4 @@ gulp.task('build:images', function () {
     .pipe(gulp.dest('assets/images'));
 });
 
-//   gulp.task('copy:src', function () {
-//     return gulp.src(['src/**/*']).pipe(gulp.dest('dist'));
-//   });
-
-//   gulp.task('copy:assets', function () {
-//     return gulp.src(['out/**/*']).pipe(gulp.dest('dist/assets'));
-//   });
-
-//   gulp.task('build:assets', function () {
-//     return gulp
-//       .src(['dist/assets/*.html'])
-//       .pipe(
-//         dom(function () {
-//           return this.querySelectorAll('img').forEach((img) => {
-//             img.setAttribute('src', 'Himanshu');
-//           });
-//         }),
-//       )
-//       .pipe(gulp.dest('dist/assets'));
-//   });
-
-//   gulp.task('watch', function () {
-//     gulp.watch(
-//       ['out/**/*'],
-//       gulp.series('clean:assets', 'copy:assets', 'build:assets'),
-//     );
-//     gulp.watch(['src/**/*'], gulp.series('copy:src'));
-//   });
-
 gulp.task('default', gulp.series('build:images'));
