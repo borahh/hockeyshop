@@ -94,7 +94,7 @@ class BorahhCalculatorBase {
                     </div>
                     
                     <!-- Calculator Nav -->
-                    <div class="calculator__wraper__content__nav">
+                    <div class="calculator__wraper__content__nav" x-show="!onSubmit">
                         <!-- Previous Step -->
                         <div class="calculator__wraper__content__nav__control" :class="showPrevHandler" @click="handlePrev">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
