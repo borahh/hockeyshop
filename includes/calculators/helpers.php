@@ -38,7 +38,7 @@ function borahh_get_calculator() {
 
     $availableCalculators = borahh_calculator_types();
     $calculator = $availableCalculators->$value->ID;
-    $deps = borahh_resolve_deps($post->ID, $availableCalculators->$value->dependencies)
+    $deps = borahh_resolve_deps($post->ID, $availableCalculators->$value->dependencies);
 
     if(!$calculator) {
         return;
