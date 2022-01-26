@@ -1,8 +1,23 @@
 <?php
 
 class BorahhCalculatorBase {
+
+    // Variation dependencies
+    public $dependencies = [''];
+
+    public function __construct($dependencies) {
+        $this->dependencies = $dependencies;
+    }
+
     // Loaders
-    protected function loaders() {}
+    protected function loaders() {
+        ob_start();
+        ?>
+            <span id="AvailableVariationsLoader" data-variations=""></span>
+            
+        <?php
+        return ob_get_clean();
+    }
 
     // Steps 
     protected function steps() {}
@@ -51,7 +66,7 @@ class BorahhCalculatorBase {
         <!-- Calculator Wraper -->
         <div class="calculator" x-data='BauerIcehockeySkates'>
 
-        
+            <?php var_dump($this->dependencies); ?>
             <!-- Calculator Accordion  -->
             <div class="calculator__accordion" @click="toggleOpen">
                 <!-- Calculator Accordion Info -->
