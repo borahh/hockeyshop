@@ -262,7 +262,7 @@
             &__content {
               @apply mb-4 text-base leading-7 text-center uppercase lg:text-xl;
 
-              h6 {
+              p {
                 @apply my-1 uppercase;
               }
 
@@ -286,12 +286,16 @@
               }
             }
 
-            p:nth-child(1) {
-              @apply mt-0 mb-[0.9rem] uppercase lg:text-base;
-            }
+            &__info {
+              @apply text-center;
 
-            p {
-              @apply my-1 uppercase lg:text-base;
+              p:nth-child(1) {
+                @apply mt-0 mb-[0.9rem] uppercase lg:text-base;
+              }
+
+              p {
+                @apply my-1 uppercase lg:text-base;
+              }
             }
           }
 
