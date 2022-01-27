@@ -10,11 +10,9 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
         $labels = ['Small', 'Mellem', 'Bred'];
         foreach($options as $index=>$option) {
         ?>
-        <div class="">
+        <div class="w-3/4 max-w-[150px]">
             <input class="peer" type="radio" name="foot-width" id="<?php echo 'width_' . $option; ?>" value="<?php echo $index; ?>"/>
-            <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'grid-floor.webp'; ?>" alt=""/>
             <img class="" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'foot-width-' . $option . '-inactive.webp'; ?>" alt="" />
-            <img class="" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'foot-width-' . $option . '-active.webp'; ?>" alt="" />
             <label for="<?php echo 'width_' . $option; ?>" class=""> 
                 <?php _e($labels[$index], "hockeyshop-theme"); ?>
             </label>
@@ -61,10 +59,10 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
                 <h2>
                     <?php _e("Vælg din fodbredde", "hockeyshop-theme"); ?>
                 </h2>
-                <div class="calculator__wraper__content__form__tab--width__inner">
+                <div class="relative calculator__wraper__content__form__tab--width__inner">
                     <img class="absolute top-[70px]" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'grid-floor.webp'; ?>" alt=""/>
 
-                    <div class="absolute grid w-full h-full grid-cols-3">
+                    <div class="grid w-full h-full grid-cols-3">
                     <?php echo $this->widthOptions(array('narrow', 'medium', 'wide')); ?>
                     </div>
                 </div>
