@@ -506,7 +506,7 @@
         padding-bottom: 1rem;
     }
 }
-.calculator__wraper__content__form__tab--width__option label:nth-child(2) {
+.calculator__wraper__content__form__tab--width__option:nth-child(2) label {
     margin-top: 3rem;
 }
 .calculator__wraper__content__form__tab--height__option {
