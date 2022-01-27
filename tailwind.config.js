@@ -35,6 +35,10 @@ module.exports = {
           color: theme('colors')['accent'],
           whiteSpace: 'wrap',
         },
+        '.img-selected': {
+          filter:
+            'invert(10%) sepia(30%) saturate(603%) hue-rotate(\n170deg\n)',
+        },
       });
     }),
   ],
