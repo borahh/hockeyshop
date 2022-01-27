@@ -749,6 +749,9 @@
 .top-0 {
     top: 0px;
 }
+.top-\[250px\] {
+    top: 250px;
+}
 .inline {
     display: inline;
 }
@@ -757,6 +760,9 @@
 }
 .hidden {
     display: none;
+}
+.h-\[350px\] {
+    height: 350px;
 }
 .w-\[27\%\] {
     width: 27%;
