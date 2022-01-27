@@ -60,11 +60,13 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
                 <h2>
                     <?php _e("Vælg din fodbredde", "hockeyshop-theme"); ?>
                 </h2>
-                <div class="relative calculator__wraper__content__form__tab--width__inner">
+                <div class="calculator__wraper__content__form__tab--width__inner">
                     <img class="absolute top-[70px]" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'grid-floor.webp'; ?>" alt=""/>
 
                     <div class="absolute top-0 grid w-full grid-cols-3">
-                        <?php echo $this->widthOptions(array('narrow', 'medium', 'wide')); ?>
+                        <div>Hi</div>
+                        <div>Hi</div>
+                        <div>Hi</div>
                     </div>
                 </div>
             </div>
