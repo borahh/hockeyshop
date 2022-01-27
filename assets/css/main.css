@@ -494,24 +494,26 @@
     padding: 1.25rem;
     padding-top: 0px;
 }
+.calculator__wraper__content__form__tab--width__inner__options div {
+    height: 350px;
+}
 .calculator__wraper__content__form__tab--width__inner__options div input {
     position: absolute;
     top: 50%;
     left: 50%;
     display: none;
 }
-.calculator__wraper__content__form__tab--width__inner__options div div.img_option_wraper {
-    position: relative;
-}
-.calculator__wraper__content__form__tab--width__inner__options div img.img_active {
+.calculator__wraper__content__form__tab--width__inner__options div img {
     position: absolute;
     top: 0px;
-    left: 0px;
+    width: 27%;
     transition-property: opacity;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 200ms;
 }
 .calculator__wraper__content__form__tab--width__inner__options div label {
+    position: absolute;
+    top: 250px;
     margin-top: 3.5rem;
     width: 100px;
     cursor: pointer;
@@ -532,9 +534,6 @@
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
-}
-.calculator__wraper__content__form__tab--width__inner__options div:nth-child(2) label {
-    margin-top: 3rem;
 }
 .calculator__wraper__content__form__tab--height__option {
     position: relative;
@@ -743,15 +742,6 @@
 .invisible {
     visibility: hidden;
 }
-.absolute {
-    position: absolute;
-}
-.top-0 {
-    top: 0px;
-}
-.top-\[250px\] {
-    top: 250px;
-}
 .inline {
     display: inline;
 }
@@ -760,12 +750,6 @@
 }
 .hidden {
     display: none;
-}
-.h-\[350px\] {
-    height: 350px;
-}
-.w-\[27\%\] {
-    width: 27%;
 }
 .transform {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -786,21 +770,17 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
 }
-
 .peer:checked ~ .peer-checked\:bg-accent {
     --tw-bg-opacity: 1;
     background-color: rgb(23 104 210 / var(--tw-bg-opacity));
 }
-
 .peer:checked ~ .peer-checked\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-
 .peer:checked ~ .peer-checked\:opacity-0 {
     opacity: 0;
 }
-
 .peer:checked ~ .peer-checked\:opacity-100 {
     opacity: 1;
 }
