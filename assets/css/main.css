@@ -481,10 +481,9 @@
 .calculator__wraper__content__form__tab--width__inner {
     position: relative;
 }
-.calculator__wraper__content__form__tab--width__inner img {
-    position: absolute;
-    top: 170px;
-}
+/* img {
+                  @apply absolute top-[170px];
+                } */
 .calculator__wraper__content__form__tab--width__inner__options {
     display: grid;
     height: 100%;
@@ -744,6 +743,12 @@
 }
 .invisible {
     visibility: hidden;
+}
+.absolute {
+    position: absolute;
+}
+.top-\[170px\] {
+    top: 170px;
 }
 .inline {
     display: inline;
