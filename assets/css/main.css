@@ -485,6 +485,59 @@
     position: absolute;
     top: 170px;
 }
+.calculator__wraper__content__form__tab--width__inner__options {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    padding: 1.25rem;
+    padding-top: 0px;
+}
+.calculator__wraper__content__form__tab--width__inner__options div input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+}
+.calculator__wraper__content__form__tab--width__inner__options div__img_active {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+.calculator__wraper__content__form__tab--width__inner__options div__img_inactive {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.calculator__wraper__content__form__tab--width__inner__options div label {
+    margin-top: 3.5rem;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 9999px;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219 / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+@media (min-width: 768px) {
+
+    .calculator__wraper__content__form__tab--width__inner__options div label {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+.calculator__wraper__content__form__tab--width__inner__options div:nth-child(2) label {
+    margin-top: 3rem;
+}
 .calculator__wraper__content__form__tab--height__option {
     position: relative;
     margin-bottom: 1.75rem;
@@ -720,14 +773,17 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
 }
+
 .peer:checked ~ .peer-checked\:bg-accent {
     --tw-bg-opacity: 1;
     background-color: rgb(23 104 210 / var(--tw-bg-opacity));
 }
+
 .peer:checked ~ .peer-checked\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
 .peer:checked ~ .peer-checked\:opacity-100 {
     opacity: 1;
 }
