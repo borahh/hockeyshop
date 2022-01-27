@@ -508,7 +508,6 @@
 .calculator__wraper__content__form__tab--fit__option label object {
     position: absolute;
     left: 1rem;
-    fill: currentColor;
 }
 .calculator__wraper__content__form__tab--fit__option label div {
     font-size: 1rem;
