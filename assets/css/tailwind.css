@@ -244,7 +244,7 @@
             /** Bauer Icehockey Skate Steps Start **/
             &--width {
               &__option {
-                @apply relative text-center mb-7;
+                @apply w-3/4 max-w-[150px];
 
                 input {
                   @apply absolute hidden top-1/2 left-1/2;

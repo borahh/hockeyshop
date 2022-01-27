@@ -10,7 +10,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
         $labels = ['Small', 'Mellem', 'Bred'];
         foreach($options as $index=>$option) {
         ?>
-        <div class="w-3/4 max-w-[150px]">
+        <div class="calculator__wraper__content__form__tab--width__option">
             <input class="peer" type="radio" name="foot-width" id="<?php echo 'width_' . $option; ?>" value="<?php echo $index; ?>"/>
             <img class="" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'foot-width-' . $option . '-inactive.webp'; ?>" alt="" />
             <label for="<?php echo 'width_' . $option; ?>" class=""> 
