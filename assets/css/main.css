@@ -743,6 +743,12 @@
 .invisible {
     visibility: hidden;
 }
+.absolute {
+    position: absolute;
+}
+.top-0 {
+    top: 0px;
+}
 .inline {
     display: inline;
 }
@@ -751,6 +757,9 @@
 }
 .hidden {
     display: none;
+}
+.w-\[28\%\] {
+    width: 28%;
 }
 .transform {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -795,4 +804,8 @@
 
 .peer:checked ~ .peer-checked\:opacity-100 {
     opacity: 1;
+}
+
+.peer:checked ~ .peer-checked\:opacity-0 {
+    opacity: 0;
 }
