@@ -249,14 +249,17 @@
                 input {
                   @apply hidden;
                 }
+                p {
+                  @apply mt-3 ml-4 text-sm text-center font-gt-america;
+                }
                 label {
                   @apply relative flex items-center justify-center px-5 py-4 rounded-full cursor-pointer;
 
-                  p {
-                    @apply mt-3 ml-4 text-sm text-center font-gt-america;
-                  }
                   svg {
                     @apply absolute fill-current left-4 w-14 h-14;
+                  }
+                  div {
+                    @apply text-base uppercase md:text-[28px] md:leading-10;
                   }
                 }
               }
