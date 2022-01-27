@@ -242,6 +242,25 @@
             }
 
             /** Bauer Icehockey Skate Steps Start **/
+            &--fit {
+              &__option {
+                @apply min-w-[200px] mb-7;
+
+                input {
+                  @apply hidden;
+                }
+                label {
+                  @apply relative flex items-center justify-center px-5 py-4 rounded-full cursor-pointer;
+
+                  p {
+                    @apply mt-3 ml-4 text-sm text-center font-gt-america;
+                  }
+                  svg {
+                    @apply absolute fill-current left-4 w-14 h-14;
+                  }
+                }
+              }
+            }
             &--width {
               &__inner {
                 @apply relative;
