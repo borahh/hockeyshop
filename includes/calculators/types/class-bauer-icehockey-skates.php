@@ -10,15 +10,16 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
         $labels = ['Small', 'Mellem', 'Bred'];
         foreach($options as $index=>$option) {
         ?>
-        <div class="calculator__wraper__content__form__tab--width__option">
+        <div class="">
             <input class="peer" type="radio" name="foot-width" id="<?php echo 'width_' . $option; ?>" value="<?php echo $index; ?>"/>
             <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'grid-floor.webp'; ?>" alt=""/>
-            <img class="calculator__wraper__content__form__tab--width__option__img_inactive" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'foot-width-' . $option . '-inactive.webp'; ?>" alt="" />
-            <img class="opacity-0 calculator__wraper__content__form__tab--width__option__img_active peer-checked:opacity-100" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'foot-width-' . $option . '-active.webp'; ?>" alt="" />
-            <label for="<?php echo 'width_' . $option; ?>" class="calculator__wraper__content__form__tab--width__option__input peer-checked:bg-accent peer-checked:text-white"> 
+            <img class="" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'foot-width-' . $option . '-inactive.webp'; ?>" alt="" />
+            <img class="" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'foot-width-' . $option . '-active.webp'; ?>" alt="" />
+            <label for="<?php echo 'width_' . $option; ?>" class=""> 
                 <?php _e($labels[$index], "hockeyshop-theme"); ?>
             </label>
         </div>
+        
         
         <?php
         }
@@ -64,9 +65,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
                     <img class="absolute top-[70px]" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'grid-floor.webp'; ?>" alt=""/>
 
                     <div class="absolute grid w-full h-full grid-cols-3">
-                        <div>Hi</div>
-                        <div>Hi</div>
-                        <div>Hi</div>
+                    <?php echo $this->widthOptions(array('narrow', 'medium', 'wide')); ?>
                     </div>
                 </div>
             </div>
