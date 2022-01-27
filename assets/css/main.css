@@ -503,10 +503,14 @@
 .calculator__wraper__content__form__tab--width__inner__options div div.img_option_wraper {
     position: relative;
 }
+.calculator__wraper__content__form__tab--width__inner__options div div.img_option_wraper.img_checked img.img_active {
+    opacity: 1;
+}
 .calculator__wraper__content__form__tab--width__inner__options div img.img_active {
     position: absolute;
     top: 0px;
     left: 0px;
+    opacity: 0;
     transition-property: opacity;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 200ms;
@@ -743,15 +747,6 @@
 .invisible {
     visibility: hidden;
 }
-.absolute {
-    position: absolute;
-}
-.top-0 {
-    top: 0px;
-}
-.left-0 {
-    left: 0px;
-}
 .inline {
     display: inline;
 }
@@ -779,6 +774,10 @@
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
+}
+
+.calculator__wraper__content__form__tab--width__inner__options div div.img_option_wraper.peer:checked ~ .peer-checked\:img_checked img.img_active {
+    opacity: 1;
 }
 
 .peer:checked ~ .peer-checked\:bg-accent {

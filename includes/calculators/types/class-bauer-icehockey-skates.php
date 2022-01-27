@@ -12,9 +12,9 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
         ?>
         <div>
             <input class="peer" type="radio" name="foot-width" id="<?php echo 'width_' . $option; ?>" value="<?php echo $index; ?>" <?php if ($index === 0) echo "checked" ;?>/>
-            <div class="img_option_wraper">
+            <div class="img_option_wraper peer-checked:img_checked">
                 <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'foot-width-' . $option . '-inactive.webp'; ?>" alt="" />
-                <img class="opacity-0 img_active peer-checked:opacity-100" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'foot-width-' . $option . '-active.webp'; ?>" alt="" />
+                <img class="img_active" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'foot-width-' . $option . '-active.webp'; ?>" alt="" />
             </div>
             <label for="<?php echo 'width_' . $option; ?>" class="peer-checked:bg-accent peer-checked:text-white"> 
                 <?php _e($labels[$index], "hockeyshop-theme"); ?>
