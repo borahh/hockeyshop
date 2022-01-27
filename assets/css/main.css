@@ -485,7 +485,7 @@
     display: none;
 }
 .calculator__wraper__content__form__tab--width__option label {
-    margin-top: 4.5em;
+    margin-top: 3.5rem;
     width: 100px;
     cursor: pointer;
     border-radius: 9999px;
@@ -505,6 +505,9 @@
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
+}
+.calculator__wraper__content__form__tab--width__option label:nth-child(2) {
+    margin-top: 3rem;
 }
 .calculator__wraper__content__form__tab--height__option {
     position: relative;
