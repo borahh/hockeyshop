@@ -744,6 +744,12 @@
 .top-\[48\%\] {
     top: 48%;
 }
+.top-\[70px\] {
+    top: 70px;
+}
+.top-0 {
+    top: 0px;
+}
 .inline {
     display: inline;
 }
@@ -755,6 +761,9 @@
 }
 .hidden {
     display: none;
+}
+.w-full {
+    width: 100%;
 }
 .transform {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
