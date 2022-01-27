@@ -258,11 +258,12 @@
                       @apply absolute hidden top-1/2 left-1/2;
                     }
 
-                    &__img_active {
-                      @apply absolute top-0 left-0 transition-opacity duration-200;
+                    div.img_option_wraper {
+                      @apply relative;
                     }
-                    &__img_inactive {
-                      @apply absolute top-0 left-0;
+
+                    img.img_active {
+                      @apply absolute top-0 left-0 transition-opacity duration-200;
                     }
 
                     label {
