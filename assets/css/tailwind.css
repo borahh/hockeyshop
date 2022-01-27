@@ -261,14 +261,9 @@
                     div.img_option_wraper {
                       @apply relative;
                     }
-                    div.img_option_wraper.img_checked {
-                      img.img_active {
-                        @apply opacity-100;
-                      }
-                    }
 
                     img.img_active {
-                      @apply absolute top-0 left-0 transition-opacity duration-200 opacity-0;
+                      @apply absolute top-0 left-0 transition-opacity duration-200;
                     }
 
                     label {
