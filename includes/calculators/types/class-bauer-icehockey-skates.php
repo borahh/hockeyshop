@@ -81,7 +81,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
                 <h2>
                     <?php _e("Vælg dit fit", "hockeyshop-theme"); ?>
                 </h2>
-                <?php echo $this->widthOptions(array('Pro fit', 'Performance fit', 'Comfort fit')); ?>
+                <?php echo $this->fitOptions(array('Pro fit', 'Performance fit', 'Comfort fit')); ?>
             </div>
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--width" x-show="currentStep === 2">
                 <h2>
