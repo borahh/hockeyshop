@@ -490,7 +490,24 @@
 }
 .calculator__wraper__content__form__tab--width__option label {
     margin-top: 4.5em;
-                  /* @apply absolute -translate-y-1/2 right-5 top-1/2  block w-[100px] rounded-full border-[1px] border-[rgba(209,213,219)] uppercase cursor-pointer py-3 md:py-4 bg-white; */
+    width: 100px;
+    cursor: pointer;
+    border-radius: 9999px;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219 / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+@media (min-width: 768px) {
+
+    .calculator__wraper__content__form__tab--width__option label {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
 }
 .calculator__wraper__content__form__tab--height__option {
     position: relative;

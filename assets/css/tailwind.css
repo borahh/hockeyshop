@@ -258,8 +258,7 @@
                 }
 
                 label {
-                  @apply mt-[4.5em];
-                  /* @apply absolute -translate-y-1/2 right-5 top-1/2  block w-[100px] rounded-full border-[1px] border-[rgba(209,213,219)] uppercase cursor-pointer py-3 md:py-4 bg-white; */
+                  @apply mt-[4.5em] w-[100px] rounded-full border-[1px] border-[rgba(209,213,219)] uppercase cursor-pointer py-3 md:py-4 bg-white;
                 }
               }
             }
