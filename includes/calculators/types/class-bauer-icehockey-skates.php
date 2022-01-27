@@ -14,9 +14,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
         <div class="calculator__wraper__content__form__tab--fit__option">
             <input class="peer" checked="" id="<?php echo $ids[$index]; ?>" type="radio" name="fit" value="<?php echo $index; ?>" />
             <label for="<?php echo $ids[$index]; ?>" class="bg-gray-200 peer-checked:bg-accent peer-checked:text-white">
-                <object type="image/svg+xml" data="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . $ids[$index] . '.svg'; ?>">
-                    Kiwi Logo <!-- fallback image in CSS -->
-                </object>
+                <object type="image/svg+xml" data="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . $ids[$index] . '.svg'; ?>"></object>
                 <div><?php _e($option, "hockeyshop-theme"); ?></div>
             </label>
             <p><?php _e($infos[$index], "hockeyshop-theme"); ?></p>
