@@ -246,9 +246,9 @@
               &__inner {
                 @apply relative;
 
-                /* img {
+                &__img {
                   @apply absolute top-[170px];
-                } */
+                }
 
                 &__options {
                   @apply grid w-full h-full grid-cols-3 gap-5 p-5 pt-0;
