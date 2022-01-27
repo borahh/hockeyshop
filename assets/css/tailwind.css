@@ -243,25 +243,37 @@
 
             /** Bauer Icehockey Skate Steps Start **/
             &--width {
-              &__option {
-                input {
-                  @apply absolute hidden top-1/2 left-1/2;
+              &__inner {
+                @apply relative;
+
+                img {
+                  @apply absolute top-[170px];
                 }
 
-                &__img_active {
-                  @apply absolute top-0 left-0 transition-opacity duration-200;
-                }
-                &__img_inactive {
-                  @apply absolute top-0 left-0;
-                }
+                &__options {
+                  @apply grid w-full h-full grid-cols-3 gap-5 p-5 pt-0;
 
-                label {
-                  @apply mt-14 text-center w-[100px] rounded-full border-[1px] border-[rgba(209,213,219)] uppercase cursor-pointer py-3 md:py-4 bg-white;
-                }
-              }
-              &__option:nth-child(2) {
-                label {
-                  @apply mt-12;
+                  div {
+                    input {
+                      @apply absolute hidden top-1/2 left-1/2;
+                    }
+
+                    &__img_active {
+                      @apply absolute top-0 left-0 transition-opacity duration-200;
+                    }
+                    &__img_inactive {
+                      @apply absolute top-0 left-0;
+                    }
+
+                    label {
+                      @apply mt-14 text-center w-[100px] rounded-full border-[1px] border-[rgba(209,213,219)] uppercase cursor-pointer py-3 md:py-4 bg-white;
+                    }
+                  }
+                  div:nth-child(2) {
+                    label {
+                      @apply mt-12;
+                    }
+                  }
                 }
               }
             }
