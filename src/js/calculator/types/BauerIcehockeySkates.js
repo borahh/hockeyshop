@@ -168,9 +168,10 @@ export function BauerIcehockeySkates() {
         '12.0',
       ],
     },
-    bauerValue:
-      this.lengthInputValues['BAUER'][
+    bauerValue() {
+      return this.lengthInputValues['BAUER'][
         this.lengthInputValues.US.indexOf(this.lengthInput)
-      ],
+      ];
+    },
   };
 }
