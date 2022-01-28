@@ -4254,11 +4254,11 @@ function BauerIcehockeySkates() {
       BAUER: ['6.0Y', '7.0Y', '7.0Y', '8.0Y', '8.0Y', '8.5Y', '9.0Y', '9.5Y', '10.0Y', '10.5Y', '11.0Y', '11.0Y', '11.5Y', '12.0Y', '12.0Y', '12.5Y', '13.0Y', '13.5Y', '13.5Y', '1.0', '1.5', '2.0', '2.0', '2.5', '3.0', '3.5', '4.0', '4.0', '4.5', '5.0', '5.5', '6.0', '6.0', '6.0', '6.5', '7.0', '7.0', '7.5', '8.0', '8.5', '8.5', '9.0', '9.5', '10.0', '10.5', '11.0', '11.0', '11.5', '12.0']
     },
     reccomendLength: function reccomendLength() {
-      $length = document.querySelector('input[name = "__length"]').value;
-      $fit = document.querySelector('input[name = "__fit"]:checked').value;
-      $width = document.querySelector('input[name = "__width"]:checked').value;
-      $height = document.querySelector('input[name = "__height"]:checked').value;
-      console.log($length, $fit, $width, $height);
+      var length = document.querySelector('input[name = "__length"]').value;
+      var fit = document.querySelector('input[name = "__fit"]:checked').value;
+      var width = document.querySelector('input[name = "__width"]:checked').value;
+      var height = document.querySelector('input[name = "__height"]:checked').value;
+      console.log(length, fit, width, height);
     }
   });
 }

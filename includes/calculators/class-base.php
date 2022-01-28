@@ -114,7 +114,7 @@ class BorahhCalculatorBase {
         </div>
 
         <!-- Final Step -->
-        <div class="calculator__wraper__content__nav__control" x-show="showFinalHandler" @click="reccomendLength">
+        <div class="calculator__wraper__content__nav__control" x-show="showFinalHandler" @click="handleFinal">
             <span>
                 <?php _e("Vis resultat", "hockeyshop-theme"); ?>                             
             </span>

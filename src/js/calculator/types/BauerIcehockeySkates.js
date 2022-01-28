@@ -168,14 +168,16 @@ export function BauerIcehockeySkates() {
       ],
     },
     reccomendLength() {
-      $length = document.querySelector('input[name = "__length"]').value;
-      $fit = document.querySelector('input[name = "__fit"]:checked').value;
-      $width = document.querySelector('input[name = "__width"]:checked').value;
-      $height = document.querySelector(
+      const length = document.querySelector('input[name = "__length"]').value;
+      const fit = document.querySelector('input[name = "__fit"]:checked').value;
+      const width = document.querySelector(
+        'input[name = "__width"]:checked',
+      ).value;
+      const height = document.querySelector(
         'input[name = "__height"]:checked',
       ).value;
 
-      console.log($length, $fit, $width, $height);
+      console.log(length, fit, width, height);
     },
   };
 }
