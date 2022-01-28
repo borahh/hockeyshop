@@ -4245,11 +4245,7 @@ function BauerIcehockeySkates() {
     }],
     lengthInput: '0',
     getLengthValue: function getLengthValue(i) {
-      console.log(this.lengthInputValues[this.selectedUnit][parseInt(this.lengthInput, 10) + i]);
       return this.lengthInputValues[this.selectedUnit][parseInt(this.lengthInput, 10) + i];
-    },
-    lengthValue: function lengthValue() {
-      return this.lengthInputValues[this.selectedUnit][0];
     },
     selectedUnit: 'EU',
     lengthInputValues: {
