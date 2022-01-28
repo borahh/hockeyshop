@@ -255,8 +255,8 @@
                 label {
                   @apply relative flex items-center justify-center px-5 py-4 rounded-full cursor-pointer;
 
-                  object {
-                    @apply absolute left-4;
+                  svg {
+                    @apply absolute fill-current left-4;
                   }
                   div {
                     @apply text-base uppercase md:text-[28px] md:leading-10;
