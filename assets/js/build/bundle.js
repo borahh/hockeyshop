@@ -4269,35 +4269,11 @@ if (_alpinejs.default) {
 
   _alpinejs.default.start();
 }
-},{"alpinejs":"../../node_modules/alpinejs/dist/module.esm.js","./calculator/types/BauerIcehockeySkates":"calculator/types/BauerIcehockeySkates.js"}],"calculator/helpers/getAllFormElements.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.getAllFormElements = void 0;
-
-var getAllFormElements = function getAllFormElements(element) {
-  return Array.from(element.elements).filter(function (tag) {
-    return ['select', 'textarea', 'input'].includes(tag.tagName.toLowerCase());
-  });
-};
-
-exports.getAllFormElements = getAllFormElements;
-},{}],"index.js":[function(require,module,exports) {
+},{"alpinejs":"../../node_modules/alpinejs/dist/module.esm.js","./calculator/types/BauerIcehockeySkates":"calculator/types/BauerIcehockeySkates.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./calculator");
-
-var _getAllFormElements = require("./calculator/helpers/getAllFormElements");
-
-function calculateFit() {
-  var x = (0, _getAllFormElements.getAllFormElements)(document.getElementById('calculatorForm'));
-  console.log(x);
-}
-
-calculateFit();
-},{"./calculator":"calculator.js","./calculator/helpers/getAllFormElements":"calculator/helpers/getAllFormElements.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./calculator":"calculator.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
