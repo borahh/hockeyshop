@@ -807,11 +807,6 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
             <span>EU</span>
             
             <div class="calculator__wraper__content__form__tab--length__switcher__inner">
-                <!-- <div class="calculator__wraper__content__form__tab--length__switcher__inner__input">
-                    <input class="peer" type="radio" name="length-size" id="EU" value="EU" checked/>
-                    <label for="EU" class="peer-checked:bg-accent peer-checked:text-white">
-                    </label>
-                </div> -->
                 <template x-for="unit in units" :key="unit.id">
                     <div class="calculator__wraper__content__form__tab--length__switcher__inner__input">
                         <input class="peer" x-model="selectedUnit" type="radio" :id="unit.id" :value="unit.id" checked/>
@@ -820,7 +815,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
                     </div>
                 </template>
             </div>
-            <span>US</span>
+            <span x-text="selectedUnit"></span>
         </div>
         <h2>
             <?php _e("Vælg din skostørrelse", "hockeyshop-theme"); ?>
