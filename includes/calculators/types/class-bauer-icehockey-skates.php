@@ -809,7 +809,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
             <div class="calculator__wraper__content__form__tab--length__switcher__inner">
                 <template x-for="unit in units" :key="unit.id">
                     <div class="calculator__wraper__content__form__tab--length__switcher__inner__input">
-                        <input class="peer" x-model="selectedUnit" type="radio" :id="unit.id" :value="unit.id" x-bind:checked="$el.value === unit.id"/>
+                        <input class="peer" x-model="selectedUnit" type="radio" :id="unit.id" :value="unit.id" :checked="$el.value === selectedUnit"/>
                         <label :for="unit.id" class="peer-checked:bg-accent peer-checked:text-white">
                         </label>
                     </div>
