@@ -5,8 +5,13 @@ class BorahhCalculatorBase {
     // Variation dependencies
     public $dependencies = [''];
 
-    public function __construct($dependencies = ['']) {
+    // ACF Fields
+    public $fields = [''];
+
+
+    public function __construct($dependencies = [''], $fields = ['']) {
         $this->dependencies = $dependencies;
+        $this->fields = $fields;
     }
 
     // Loaders

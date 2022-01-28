@@ -1,7 +1,8 @@
 <?php
 class BauerIcehockeySkates extends BorahhCalculatorBase {
-    public function __construct($dependencies) {
+    public function __construct($dependencies, $fields) {
         $this->dependencies = $dependencies;
+        $this->fields = $fields;
     }
 
     // Loaders
