@@ -1,4 +1,3 @@
-import { getAllFormElements } from '../helpers/getAllFormElements';
 import { calculatorUI } from '../ui';
 
 export function BauerIcehockeySkates() {
@@ -168,10 +167,5 @@ export function BauerIcehockeySkates() {
         '12.0',
       ],
     },
-    calculateFit() {
-      const x = getAllFormElements(document.getElementById('calculatorForm'));
-      console.log(x);
-    },
   };
 }
-BauerIcehockeySkates.calculateFit();
