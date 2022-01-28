@@ -4269,7 +4269,7 @@ function BauerIcehockeySkates() {
       var width = document.querySelector('input[name = "__width"]:checked').value;
       var height = document.querySelector('input[name = "__height"]:checked').value;
 
-      function get_length() {
+      function get_length(fit) {
         switch (fit) {
           case 0:
             return 'Pro';
@@ -4395,7 +4395,7 @@ function BauerIcehockeySkates() {
 
       var data = {
         length: length,
-        fits: get_length(),
+        fits: get_length(fit),
         yth: yth,
         scale: scale,
         fit: fit,

@@ -189,7 +189,7 @@ export function BauerIcehockeySkates() {
         'input[name = "__height"]:checked',
       ).value;
 
-      function get_length() {
+      function get_length(fit) {
         switch (fit) {
           case 0:
             return 'Pro';
@@ -322,7 +322,7 @@ export function BauerIcehockeySkates() {
 
       const data = {
         length,
-        fits: get_length(),
+        fits: get_length(fit),
         yth,
         scale,
         fit,
