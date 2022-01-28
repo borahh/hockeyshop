@@ -805,17 +805,20 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
         ?>
         <div class="calculator__wraper__content__form__tab--length__switcher">
             <span>EU</span>
+            
             <div class="calculator__wraper__content__form__tab--length__switcher__inner">
-                <div class="calculator__wraper__content__form__tab--length__switcher__inner__input">
-                    <input class="peer" type="radio" name="length-size" x-model="lengthSize" id="EU" value="EU" checked/>
+                <!-- <div class="calculator__wraper__content__form__tab--length__switcher__inner__input">
+                    <input class="peer" type="radio" name="length-size" id="EU" value="EU" checked/>
                     <label for="EU" class="peer-checked:bg-accent peer-checked:text-white">
                     </label>
-                </div>
-                <div class="calculator__wraper__content__form__tab--length__switcher__inner__input">
-                    <input class="peer" type="radio" name="length-size" x-model="lengthSize" id="ES" value="US"/>
-                    <label for="ES" class="peer-checked:bg-accent peer-checked:text-white">
-                    </label>
-                </div>
+                </div> -->
+                <template x-for="unit in units" :key="unit.id">
+                    <div class="calculator__wraper__content__form__tab--length__switcher__inner__input">
+                        <input class="peer" x-model="selectedUnit" type="radio" :id="unit.id" :value="unit.id" checked/>
+                        <label :for="unit.id" class="peer-checked:bg-accent peer-checked:text-white">
+                        </label>
+                    </div>
+                </template>
             </div>
             <span>US</span>
         </div>
@@ -904,9 +907,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
         ob_start();
         ?>
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length" x-show="currentStep === 0">
-                
                 <?php echo $this->lengthOptions(); ?>
-
             </div>
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--fit" x-show="currentStep === 1">
                 <h2>

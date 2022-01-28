@@ -4,6 +4,8 @@ export function BauerIcehockeySkates() {
   return {
     ...calculatorUI,
     maxStep: 3,
+    units: [{ id: 'EU' }, { id: 'US' }],
+    selectedUnit: 'EU',
     lengthInputValues: {
       US: [
         '7.0Y',
