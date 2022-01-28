@@ -808,17 +808,21 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
             <div class="calculator__wraper__content__form__tab--length__switcher__inner">
                 <div class="calculator__wraper__content__form__tab--length__switcher__inner__input">
                     <input class="peer" type="radio" name="size-standard" id="EU" value="EU" checked=""/>
-                    <label for="EU" class="peer-checked:bg-blue-400 peer-checked:text-white">
+                    <label for="EU" class="peer-checked:bg-accent peer-checked:text-white">
                     </label>
                 </div>
                 <div class="calculator__wraper__content__form__tab--length__switcher__inner__input">
                     <input class="peer" type="radio" name="size-standard" id="ES" value="US"/>
-                    <label for="ES" class="peer-checked:bg-blue-400 peer-checked:text-white">
+                    <label for="ES" class="peer-checked:bg-accent peer-checked:text-white">
                     </label>
                 </div>
             </div>
             <span>US</span>
         </div>
+        <h2>
+            <?php _e("Vælg din skostørrelse", "hockeyshop-theme"); ?>
+        </h2>
+        <input type="range" name="length" class="calculator-range sm:w-5/6" min="0" step="1" max="12">
         
         <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'grid-floor.webp'; ?>" alt=""/>
 
@@ -896,9 +900,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
         ob_start();
         ?>
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length" x-show="currentStep === 0">
-                <h2>
-                    <?php _e("Vælg din skostørrelse", "hockeyshop-theme"); ?>
-                </h2>
+                
                 <?php echo $this->lengthOptions(); ?>
 
             </div>
