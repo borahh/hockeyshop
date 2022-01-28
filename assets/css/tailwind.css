@@ -276,6 +276,18 @@
                     }
                   }
                 }
+
+                &__input {
+                  @apply flex items-center justify-center mt-6 mb-5 capitalize justify-items-center;
+
+                  span {
+                    @apply mr-1 text-base font-normal leading-none;
+                  }
+
+                  input {
+                    @apply w-[50px] border-none bg-transparent text-2xl leading-7 p-0;
+                  }
+                }
               }
             }
             &--fit {
