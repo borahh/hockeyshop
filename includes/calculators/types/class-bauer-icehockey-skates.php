@@ -4,6 +4,15 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
         $this->dependencies = $dependencies;
     }
 
+    // Loaders
+    protected function loaders() {
+        ob_start();
+        ?>
+            <span id="AvailableVariationsLoader" data-variations='<?php echo json_encode($this->dependencies); ?>'></span>
+        <?php
+        return ob_get_clean();
+    }
+
     protected function fitSVGs($option) {
         if($option === 'comfort-fit') {
             ob_start(); ?>

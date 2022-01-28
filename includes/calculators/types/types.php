@@ -10,6 +10,11 @@ function borahh_calculator_types() {
     return (object) array(
         'bauer_icehockey_skates' => (object) array(
             'ID' => 'BauerIcehockeySkates',
+            'fields' => (object) array(
+                'lengthFrom' => 'hbdv_size_from',
+                'lengthTo' =>  'hbdv_size_to',
+                'scale'  => 'hbdv_choose_fit_scale'
+            ),
             'dependencies' => [
                 (object) array(
                     'name' => 'length',
