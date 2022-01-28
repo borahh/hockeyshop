@@ -686,7 +686,6 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
                 </svg>
             <?php
             return ob_get_clean();
-        }
         } elseif($option === 'performance-fit') {
             ob_start(); ?>
                 <svg width="44" height="43" viewBox="0 0 44 43" fill="currentColor"  xmlns="http://www.w3.org/2000/svg">
