@@ -307,6 +307,7 @@ export function BauerIcehockeySkates() {
       // }
 
       const data = {
+        length,
         yth,
         scale,
         fit,

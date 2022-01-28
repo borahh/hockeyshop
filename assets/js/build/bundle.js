@@ -4377,6 +4377,7 @@ function BauerIcehockeySkates() {
       // }
 
       var data = {
+        length: length,
         yth: yth,
         scale: scale,
         fit: fit,
