@@ -6,7 +6,9 @@ export function BauerIcehockeySkates() {
     maxStep: 3,
     units: [{ id: 'EU' }, { id: 'US' }],
     lengthInput: 0,
-    lengthValue: this.lengthInputValues[this.selectedUnit][this.lengthInput],
+    lengthValue() {
+      return this.lengthInputValues[this.selectedUnit][this.lengthInput];
+    },
     selectedUnit: 'EU',
     lengthInputValues: {
       US: [
