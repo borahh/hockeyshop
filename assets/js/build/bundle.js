@@ -4243,7 +4243,7 @@ function BauerIcehockeySkates() {
     }, {
       id: 'US'
     }],
-    lengthInput: 0,
+    lengthInput: '0',
     getLengthValue: function getLengthValue(i) {
       return this.lengthInputValues[this.selectedUnit][parseInt(this.lengthInput, 10) + i];
     },
