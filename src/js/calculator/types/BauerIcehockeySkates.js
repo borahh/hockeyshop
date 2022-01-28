@@ -11,6 +11,11 @@ export function BauerIcehockeySkates() {
         parseInt(this.lengthInput, 10) + i
       ];
     },
+    getLengthIndex() {
+      return this.lengthInputValues[this.selectedUnit].indexOf(
+        this.$refs.lengthRef,
+      );
+    },
     selectedUnit: 'EU',
     lengthInputValues: {
       US: [
