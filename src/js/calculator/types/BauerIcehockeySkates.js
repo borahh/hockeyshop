@@ -173,7 +173,13 @@ export function BauerIcehockeySkates() {
       ],
     },
     reccomendLength() {
+      let yth = false;
       const length = document.querySelector('input[name = "__length"]').value;
+
+      if (length.includes('Y')) {
+        yth = true;
+      }
+
       const scale = document.querySelector('input[name = "__scale"]').value;
       const fit = document.querySelector('input[name = "__fit"]:checked').value;
       const width = document.querySelector(
@@ -183,7 +189,129 @@ export function BauerIcehockeySkates() {
         'input[name = "__height"]:checked',
       ).value;
 
-      console.log(length, scale, fit, width, height);
+      function get_recommended_length(fit, length, yth) {
+        switch (fit) {
+          case 0:
+            // Subtract 0.5
+
+            if (yth) {
+              return parseFloat(length - 0.5).toFixed(1) + 'Y';
+            } else {
+              return parseFloat(length - 0.5).toFixed(1);
+            }
+
+            break;
+          case 1:
+            // Do nothing
+            if (yth) {
+              return parseFloat(length).toFixed(1) + 'Y';
+            } else {
+              return parseFloat(length).toFixed(1);
+            }
+
+            break;
+          case 2:
+            // Add 0.5
+
+            if (yth) {
+              return parseFloat(length + 0.5).toFixed(1) + 'Y';
+            } else {
+              return parseFloat(length + 0.5).toFixed(1);
+            }
+
+            break;
+          default:
+            // Do nothing
+            if (yth) {
+              return parseFloat(length).toFixed(1) + 'Y';
+            } else {
+              return parseFloat(length).toFixed(1);
+            }
+        }
+      }
+
+      function get_scale_fit(width, height) {
+        switch (width) {
+          case 0:
+            // Narrow Width
+            switch (height) {
+              case 2:
+                // High Height
+                return 'fit2';
+                break;
+              default:
+                return 'fit1';
+            }
+            break;
+          case 1:
+            // Medium Width
+            switch (height) {
+              case 2:
+                // Hight Height
+                return 'fit3';
+                break;
+              default:
+                return 'fit2';
+            }
+            break;
+          case 2:
+            // Wide Width
+            switch (height) {
+              case 0:
+                // Low Height
+                return 'fit2';
+                break;
+              default:
+                return 'fit3';
+            }
+            break;
+          default:
+            // Do nothing
+            return 'fit1';
+        }
+      }
+
+      function get_scale_ee(width, height) {
+        switch (width) {
+          case 0:
+            // Narrow Width
+            return 'd';
+            break;
+          case 1:
+            // Medium Width
+            switch (height) {
+              case 2:
+                // Hight Height
+                return 'ee';
+                break;
+              default:
+                return 'd';
+            }
+            break;
+          case 2:
+            // Wide Width
+            return 'ee';
+            break;
+          default:
+            // Do nothing
+            return 'd';
+        }
+      }
+
+      function get_scale(scale) {
+        if (scale === 'scale_fit') {
+          return get_scale_fit();
+        } else if (scale === 'scale_ee') {
+          return get_scale_ee();
+        }
+      }
+
+      const data = {
+        length: get_recommended_length(fit, length, yth),
+        scale: get_scale(scale),
+      };
+
+      console.log(data);
     },
     handleFinal() {
       this.reccomendLength();
