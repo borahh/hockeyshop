@@ -1,4 +1,20 @@
 
+  .calculator-range::-ms-thumb, .calculator-range::-webkit-slider-thumb, .calculator-range::-moz-slider-thumb {
+    box-sizing: border-box;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    appearance: none;
+    border-radius: 50%;
+    border-width: 3px;
+    border-style: solid;
+    --tw-border-opacity: 1;
+    border-color: rgb(0 79 183 / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(23 104 210 / var(--tw-bg-opacity));
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.27);
+}
+
   .onsale {
     display: none;
 }
@@ -876,25 +892,20 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
 }
-
 .peer:checked ~ .peer-checked\:bg-accent {
     --tw-bg-opacity: 1;
     background-color: rgb(23 104 210 / var(--tw-bg-opacity));
 }
-
 .peer:checked ~ .peer-checked\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-
 .peer:checked ~ .peer-checked\:opacity-0 {
     opacity: 0;
 }
-
 .peer:checked ~ .peer-checked\:opacity-100 {
     opacity: 1;
 }
-
 @media (min-width: 640px) {
 
     .sm\:w-5\/6 {
