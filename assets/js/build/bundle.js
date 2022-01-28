@@ -4271,13 +4271,14 @@ function BauerIcehockeySkates() {
 
       var get_length = function get_length(fit, length, yth) {
         if (fit === '0') {
-          var i = length - 0.5;
+          var i = parseFloat(length - 0.5).toFixed(1);
           return yth ? i + 'Y' : i;
         } else if (fit === '1') {
-          var _i = length;
+          var _i = parseFloat(length).toFixed(1);
+
           return yth ? _i + 'Y' : _i;
         } else if (fit === '2') {
-          var _i2 = length + 0.5;
+          var _i2 = parseFloat(length + 0.5).toFixed(1);
 
           return yth ? _i2 + 'Y' : _i2;
         }
