@@ -13,7 +13,7 @@ export function BauerIcehockeySkates() {
     },
     getLengthIndex() {
       return this.lengthInputValues[this.selectedUnit].indexOf(
-        this.$refs.lengthRef,
+        this.$refs.lengthRef.value,
       );
     },
     selectedUnit: 'EU',
