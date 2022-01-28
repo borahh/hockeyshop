@@ -1,5 +1,5 @@
 
-  .calculator-range::-ms-thumb, .calculator-range::-webkit-slider-thumb, .calculator-range::-moz-slider-thumb {
+  input[type='range'].calculator-range::-ms-thumb, input[type='range'].calculator-range::-webkit-slider-thumb, input[type='range'].calculator-range::-moz-slider-thumb {
     box-sizing: border-box;
     height: 2rem;
     width: 2rem;
