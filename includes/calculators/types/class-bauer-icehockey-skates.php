@@ -798,7 +798,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
         }
     }
 
-    protected function lengthOptions($options) {
+    protected function lengthOptions() {
         ob_start();
 
         // Fix from here
@@ -899,6 +899,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
                 <h2>
                     <?php _e("Vælg din skostørrelse", "hockeyshop-theme"); ?>
                 </h2>
+                <?php echo $this->lengthOptions(); ?>
 
             </div>
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--fit" x-show="currentStep === 1">
