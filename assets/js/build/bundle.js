@@ -4270,15 +4270,14 @@ function BauerIcehockeySkates() {
       var height = document.querySelector('input[name = "__height"]:checked').value;
 
       var get_length = function get_length(fit, length, yth) {
-        if (fit === 0) {
-          var i = parseInt(length, 10) - 0.5;
+        if (fit === '0') {
+          var i = length - 0.5;
           return yth ? i + 'Y' : i;
-        } else if (fit === 1) {
-          var _i = parseInt(length, 10);
-
+        } else if (fit === '1') {
+          var _i = length;
           return yth ? _i + 'Y' : _i;
-        } else if (fit === 2) {
-          var _i2 = parseInt(length, 10) + 0.5;
+        } else if (fit === '2') {
+          var _i2 = length + 0.5;
 
           return yth ? _i2 + 'Y' : _i2;
         }
@@ -4394,7 +4393,7 @@ function BauerIcehockeySkates() {
 
       var data = {
         length: length,
-        fits: get_length(fit),
+        fits: get_length(fit, parseInt(length, 10), yth),
         yth: yth,
         scale: scale,
         fit: fit,

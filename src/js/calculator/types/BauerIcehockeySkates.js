@@ -190,14 +190,14 @@ export function BauerIcehockeySkates() {
       ).value;
 
       const get_length = (fit, length, yth) => {
-        if (fit === 0) {
-          const i = parseInt(length, 10) - 0.5;
+        if (fit === '0') {
+          const i = length - 0.5;
           return yth ? i + 'Y' : i;
-        } else if (fit === 1) {
-          const i = parseInt(length, 10);
+        } else if (fit === '1') {
+          const i = length;
           return yth ? i + 'Y' : i;
-        } else if (fit === 2) {
-          const i = parseInt(length, 10) + 0.5;
+        } else if (fit === '2') {
+          const i = length + 0.5;
           return yth ? i + 'Y' : i;
         }
       };
@@ -321,7 +321,7 @@ export function BauerIcehockeySkates() {
 
       const data = {
         length,
-        fits: get_length(fit),
+        fits: get_length(fit, parseInt(length, 10), yth),
         yth,
         scale,
         fit,
