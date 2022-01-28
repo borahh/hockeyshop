@@ -146,7 +146,7 @@ class BorahhCalculatorBase {
         ob_start();
 
         
-        print_r($this->fields = $fields);
+        print_r($this->fields);
         ?>
 
         
