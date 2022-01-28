@@ -934,7 +934,6 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
                     <?php _e("Væld din fodhøjde", "hockeyshop-theme"); ?>
                 </h2>
                 <?php echo $this->heightOptions(array('low', 'medium', 'high')); ?>
-                <span @click="reccomendLength">KKKKKK</span>
             </div>
         <?php
         return ob_get_clean();

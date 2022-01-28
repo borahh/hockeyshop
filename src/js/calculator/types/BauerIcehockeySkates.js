@@ -179,5 +179,9 @@ export function BauerIcehockeySkates() {
 
       console.log(length, fit, width, height);
     },
+    handleFinal() {
+      this.reccomendLength();
+      this.onSubmit = true;
+    },
   };
 }

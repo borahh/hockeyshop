@@ -4259,6 +4259,10 @@ function BauerIcehockeySkates() {
       var width = document.querySelector('input[name = "__width"]:checked').value;
       var height = document.querySelector('input[name = "__height"]:checked').value;
       console.log(length, fit, width, height);
+    },
+    handleFinal: function handleFinal() {
+      this.reccomendLength();
+      this.onSubmit = true;
     }
   });
 }
