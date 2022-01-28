@@ -478,6 +478,47 @@
     line-height: 1.5rem;
 }
 /** Bauer Icehockey Skate Steps Start **/
+.calculator__wraper__content__form__tab--length__switcher {
+    margin-bottom: 1.25rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0.8rem;
+}
+.calculator__wraper__content__form__tab--length__switcher__inner {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
+    box-sizing: content-box;
+    display: grid;
+    width: 61px;
+    max-width: 28rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.25rem;
+    border-radius: 40px;
+    border-width: 1px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(196 196 196 / var(--tw-bg-opacity));
+    padding: 0.25rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.calculator__wraper__content__form__tab--length__switcher__inner__input {
+    width: 100%;
+}
+.calculator__wraper__content__form__tab--length__switcher__inner__input input {
+    display: none;
+}
+.calculator__wraper__content__form__tab--length__switcher__inner__input label {
+    display: block;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+    border-radius: 9999px;
+}
 .calculator__wraper__content__form__tab--fit__option {
     margin-bottom: 1.75rem;
     min-width: 200px;
@@ -821,21 +862,21 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
 }
-
+.peer:checked ~ .peer-checked\:bg-blue-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+}
 .peer:checked ~ .peer-checked\:bg-accent {
     --tw-bg-opacity: 1;
     background-color: rgb(23 104 210 / var(--tw-bg-opacity));
 }
-
 .peer:checked ~ .peer-checked\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-
 .peer:checked ~ .peer-checked\:opacity-0 {
     opacity: 0;
 }
-
 .peer:checked ~ .peer-checked\:opacity-100 {
     opacity: 1;
 }

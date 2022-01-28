@@ -799,7 +799,31 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
     }
 
     protected function lengthOptions($options) {
-        return $options;
+        ob_start();
+
+        // Fix from here
+        ?>
+        <div class="calculator__wraper__content__form__tab--length__switcher">
+            <span>EU</span>
+            <div class="calculator__wraper__content__form__tab--length__switcher__inner">
+                <div class="calculator__wraper__content__form__tab--length__switcher__inner__input">
+                    <input class="peer" type="radio" name="size-standard" id="EU" value="EU" checked=""/>
+                    <label for="EU" class="peer-checked:bg-blue-400 peer-checked:text-white">
+                    </label>
+                </div>
+                <div class="calculator__wraper__content__form__tab--length__switcher__inner__input">
+                    <input class="peer" type="radio" name="size-standard" id="ES" value="US"/>
+                    <label for="ES" class="peer-checked:bg-blue-400 peer-checked:text-white">
+                    </label>
+                </div>
+            </div>
+            <span>US</span>
+        </div>
+        <?php var_dump($this->lengthOptions($this->fields)); ?>
+        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'grid-floor.webp'; ?>" alt=""/>
+
+        <?php
+        return ob_get_clean();
     }
 
     protected function fitOptions($options) {
@@ -875,8 +899,6 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
                 <h2>
                     <?php _e("Vælg din skostørrelse", "hockeyshop-theme"); ?>
                 </h2>
-                <?php var_dump($this->lengthOptions($this->fields)); ?>
-                <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'grid-floor.webp'; ?>" alt=""/>
 
             </div>
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--fit" x-show="currentStep === 1">
