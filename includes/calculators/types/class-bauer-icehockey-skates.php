@@ -807,12 +807,12 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
             <span>EU</span>
             <div class="calculator__wraper__content__form__tab--length__switcher__inner">
                 <div class="calculator__wraper__content__form__tab--length__switcher__inner__input">
-                    <input class="peer" type="radio" name="size-standard" id="EU" value="EU" checked=""/>
+                    <input class="peer" type="radio" name="length-size" x-model="length-size" id="EU" value="EU" checked=""/>
                     <label for="EU" class="peer-checked:bg-accent peer-checked:text-white">
                     </label>
                 </div>
                 <div class="calculator__wraper__content__form__tab--length__switcher__inner__input">
-                    <input class="peer" type="radio" name="size-standard" id="ES" value="US"/>
+                    <input class="peer" type="radio" name="length-size" x-model="length-size" id="ES" value="US"/>
                     <label for="ES" class="peer-checked:bg-accent peer-checked:text-white">
                     </label>
                 </div>
@@ -823,7 +823,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
             <?php _e("Vælg din skostørrelse", "hockeyshop-theme"); ?>
         </h2>
         <div class="calculator__wraper__content__form__tab--length__input">
-            <span>US</span>
+            <span x-text="length-size"></span>
             <input type="text" name="length">
         </div>
         <input type="range" class="calculator-range sm:w-5/6" min="0" step="1" max="12">
