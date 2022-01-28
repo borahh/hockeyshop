@@ -189,6 +189,20 @@ export function BauerIcehockeySkates() {
         'input[name = "__height"]:checked',
       ).value;
 
+      function get_length() {
+        switch (fit) {
+          case 0:
+            return 'Pro';
+            break;
+          case 1:
+            return 'Perf';
+            break;
+          case 2:
+            return 'Comf';
+            break;
+        }
+      }
+
       // function get_recommended_length(fit, length, yth) {
       //   switch (fit) {
       //     case 0:
@@ -308,6 +322,7 @@ export function BauerIcehockeySkates() {
 
       const data = {
         length,
+        fits: get_length(),
         yth,
         scale,
         fit,

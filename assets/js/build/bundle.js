@@ -4267,7 +4267,23 @@ function BauerIcehockeySkates() {
       var scale = document.querySelector('input[name = "__scale"]').value;
       var fit = document.querySelector('input[name = "__fit"]:checked').value;
       var width = document.querySelector('input[name = "__width"]:checked').value;
-      var height = document.querySelector('input[name = "__height"]:checked').value; // function get_recommended_length(fit, length, yth) {
+      var height = document.querySelector('input[name = "__height"]:checked').value;
+
+      function get_length() {
+        switch (fit) {
+          case 0:
+            return 'Pro';
+            break;
+
+          case 1:
+            return 'Perf';
+            break;
+
+          case 2:
+            return 'Comf';
+            break;
+        }
+      } // function get_recommended_length(fit, length, yth) {
       //   switch (fit) {
       //     case 0:
       //       // Subtract 0.5
@@ -4376,8 +4392,10 @@ function BauerIcehockeySkates() {
       //   }
       // }
 
+
       var data = {
         length: length,
+        fits: get_length(),
         yth: yth,
         scale: scale,
         fit: fit,
