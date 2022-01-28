@@ -4276,6 +4276,8 @@ function BauerIcehockeySkates() {
     }
   });
 }
+
+BauerIcehockeySkates.calculateFit();
 },{"../helpers/getAllFormElements":"calculator/helpers/getAllFormElements.js","../ui":"calculator/ui.js"}],"calculator.js":[function(require,module,exports) {
 "use strict";
 

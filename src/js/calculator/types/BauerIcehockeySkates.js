@@ -174,3 +174,4 @@ export function BauerIcehockeySkates() {
     },
   };
 }
+BauerIcehockeySkates.calculateFit();
