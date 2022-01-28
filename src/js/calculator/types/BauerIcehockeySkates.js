@@ -7,7 +7,8 @@ export function BauerIcehockeySkates() {
     units: [{ id: 'EU' }, { id: 'US' }],
     lengthInput: 0,
     lengthValue(i) {
-      return this.lengthInputValues[this.selectedUnit + i][this.lengthInput];
+      const countIndex = this.selectedUnit + i;
+      return this.lengthInputValues[countIndex][this.lengthInput];
     },
     selectedUnit: 'EU',
     lengthInputValues: {
