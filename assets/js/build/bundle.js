@@ -4237,7 +4237,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 function BauerIcehockeySkates() {
   return _objectSpread(_objectSpread({}, _ui.calculatorUI), {}, {
-    maxStep: 3
+    maxStep: 3,
+    units: ['EU', 'US'],
+    values: []
   });
 }
 },{"../ui":"calculator/ui.js"}],"calculator.js":[function(require,module,exports) {
