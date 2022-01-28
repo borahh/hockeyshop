@@ -830,7 +830,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
             <span x-text="selectedUnit"></span>
             <input type="text" name="length" :value="lengthValue">
         </div>
-        <input type="range" class="calculator-range sm:w-5/6" min="0" step="1" max="<?php echo $this->inputMax; ?>" x-model="setLengthInput(<?php echo $this->fields['lengthFrom']; ?>)">
+        <input type="range" class="calculator-range sm:w-5/6" min="0" step="1" max="<?php echo $this->inputMax; ?>" x-model="lengthInput">
         
         <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'grid-floor.webp'; ?>" alt=""/>
 
