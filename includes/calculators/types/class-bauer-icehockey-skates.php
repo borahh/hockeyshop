@@ -819,7 +819,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
             </div>
             <span>US</span>
         </div>
-        <?php var_dump($this->lengthOptions($this->fields)); ?>
+        
         <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'grid-floor.webp'; ?>" alt=""/>
 
         <?php
