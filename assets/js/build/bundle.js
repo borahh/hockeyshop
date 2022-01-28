@@ -4396,9 +4396,9 @@ function BauerIcehockeySkates() {
 
       function get_scale(scale) {
         if (scale === 'scale_fit') {
-          return get_scale_fit();
+          return get_scale_fit(width, height);
         } else if (scale === 'scale_ee') {
-          return get_scale_ee();
+          return get_scale_ee(width, height);
         }
       }
 
