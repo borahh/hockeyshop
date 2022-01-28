@@ -1,8 +1,13 @@
 <?php
 class BauerIcehockeySkates extends BorahhCalculatorBase {
+    private $inputMax;
+
     public function __construct($dependencies, $fields) {
         $this->dependencies = $dependencies;
         $this->fields = $fields;
+
+        // Calculate Max Input 
+        $this->inputMax = $this->fields->lengthTo - $this->fields->lengthFrom - 2;
     }
 
     // Loaders
@@ -824,7 +829,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
             <span x-text="selectedUnit"></span>
             <input type="text" name="length">
         </div>
-        <input type="range" class="calculator-range sm:w-5/6" min="0" step="1" max="12">
+        <input type="range" class="calculator-range sm:w-5/6" min="0" step="1" max="<?php echo $this->inputMax; ?>">
         
         <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'grid-floor.webp'; ?>" alt=""/>
 
