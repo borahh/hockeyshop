@@ -530,6 +530,30 @@
     line-height: 1.5rem;
 }
 /** Bauer Icehockey Skate Steps Start **/
+.calculator__wraper__content__form__tab--length__input {
+    margin-top: 1.5rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-transform: capitalize;
+}
+.calculator__wraper__content__form__tab--length__input span {
+    margin-right: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    line-height: 1;
+}
+.calculator__wraper__content__form__tab--length__input input {
+    width: 50px;
+    border-style: none;
+    background-color: transparent;
+    padding: 0px;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+}
 .calculator__wraper__content__form__tab--length__switcher {
     margin-bottom: 2.5rem;
     display: flex;

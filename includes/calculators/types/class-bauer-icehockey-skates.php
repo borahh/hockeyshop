@@ -823,7 +823,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
             <?php _e("Vælg din skostørrelse", "hockeyshop-theme"); ?>
         </h2>
         <div class="calculator__wraper__content__form__tab--length__input">
-            <span></span>
+            <span>US</span>
             <input type="text" name="length">
         </div>
         <input type="range" class="calculator-range sm:w-5/6" min="0" step="1" max="12">
