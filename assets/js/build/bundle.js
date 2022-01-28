@@ -4247,8 +4247,8 @@ function BauerIcehockeySkates() {
     getLengthValue: function getLengthValue(i) {
       return this.lengthInputValues[this.selectedUnit][parseInt(this.lengthInput, 10) + i];
     },
-    getLengthIndex: function getLengthIndex() {
-      return this.$refs.lengthRef.value;
+    getBauerValue: function getBauerValue(i) {
+      return this.lengthInputValues['BAUER'][parseInt(this.lengthInput, 10) + i];
     },
     selectedUnit: 'EU',
     lengthInputValues: {
@@ -4258,10 +4258,11 @@ function BauerIcehockeySkates() {
     },
     reccomendLength: function reccomendLength() {
       var length = document.querySelector('input[name = "__length"]').value;
+      var scale = document.querySelector('input[name = "__scale"]').value;
       var fit = document.querySelector('input[name = "__fit"]:checked').value;
       var width = document.querySelector('input[name = "__width"]:checked').value;
       var height = document.querySelector('input[name = "__height"]:checked').value;
-      console.log(length, fit, width, height);
+      console.log(length, scale, fit, width, height);
     },
     handleFinal: function handleFinal() {
       this.reccomendLength();

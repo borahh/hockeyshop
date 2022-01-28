@@ -829,7 +829,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
         <div class="calculator__wraper__content__form__tab--length__input">
             <span x-text="selectedUnit"></span>
             <input type="text" :value="getLengthValue(<?php echo $this->fields['lengthFrom']; ?>)" >
-            <input type="text" :value="getLengthIndex" name="__length">
+            <input type="hidden" :value="getBauerValue(<?php echo $this->fields['lengthFrom']; ?>)" name="__length">
             
         </div>
         <input type="range" class="calculator-range sm:w-5/6" min="0" step="1" max="<?php echo $this->inputMax; ?>" x-model="lengthInput" x-ref="lengthRef">
@@ -909,6 +909,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
      protected function steps() {
         ob_start();
         ?>
+            <input type="hidden" value="<?php echo $this->fields['scale']; ?>" name="__scale">
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length" x-show="currentStep === 0">
                 <?php echo $this->lengthOptions(); ?>
             </div>
