@@ -15,8 +15,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
     protected function loaders() {
         ob_start();
         ?>
-            <span id="AvailableVariationsLoader" data-variations='<?php echo json_encode($this->dependencies); ?>'></span>
-            <span id="CalculatorDataLoader" data-calculator='<?php echo json_encode($this->fields); ?>'></span>
+            <span x-ref="lengthFrom" value="<?php echo $this->fields['lengthFrom']; ?>"></span>
         <?php
         return ob_get_clean();
     }
