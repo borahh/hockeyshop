@@ -16,7 +16,9 @@ export function BauerIcehockeySkates() {
         parseInt(this.lengthInput, 10) + i
       ];
     },
-    lengthValue: '',
+    lengthValue() {
+      return this.lengthInputValues[this.selectedUnit][0];
+    },
     selectedUnit: 'EU',
     lengthInputValues: {
       US: [
