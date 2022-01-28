@@ -61,7 +61,7 @@ function borahh_get_calculator() {
         return;
     }
 
-    $instance = new $calculator($deps);
+    $instance = new $calculator($deps, $fields);
 
     return $instance->render();
 

@@ -144,6 +144,9 @@ class BorahhCalculatorBase {
     // Render
     public function render() {
         ob_start();
+
+        
+        print_r($this->fields = $fields);
         ?>
 
         
