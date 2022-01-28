@@ -7,7 +7,8 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
         $this->fields = $fields;
 
         // Calculate Max Input 
-        $this->inputMax = $this->fields.lengthTo - $this->fields.lengthFrom - 2;
+        $this->inputMax = $this->fields['lengthTo'] - $this->fields['lengthFrom'] - 2;
+
     }
 
     // Loaders
