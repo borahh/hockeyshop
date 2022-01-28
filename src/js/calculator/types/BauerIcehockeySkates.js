@@ -189,9 +189,16 @@ export function BauerIcehockeySkates() {
         'input[name = "__height"]:checked',
       ).value;
 
-      const get_length = (fit) => {
+      const get_length = (fit, length, yth) => {
         if (fit === 0) {
-          return 'Pro';
+          const i = parseInt(length, 10) - 0.5;
+          return yth ? i + 'Y' : i;
+        } else if (fit === 1) {
+          const i = parseInt(length, 10);
+          return yth ? i + 'Y' : i;
+        } else if (fit === 2) {
+          const i = parseInt(length, 10) + 0.5;
+          return yth ? i + 'Y' : i;
         }
       };
 
@@ -322,7 +329,7 @@ export function BauerIcehockeySkates() {
         height,
       };
 
-      console.log(data);
+      console.log(data, get_length(2, '12.0Y', true));
     },
     handleFinal() {
       this.reccomendLength();
