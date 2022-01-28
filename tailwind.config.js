@@ -40,7 +40,7 @@ module.exports = {
             'invert(10%) sepia(30%) saturate(603%) hue-rotate(\n170deg\n)',
         },
         '.calculator-range': {
-          margin: '2.5rem auto',
+          margin: '2.5rem auto 5rem auto',
           display: 'block',
           background: '#c4c4c4',
           border: '1px solid #dddddd',

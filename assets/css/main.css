@@ -376,7 +376,7 @@
     --tw-backdrop-sepia:  ;
 }
 .calculator-range {
-    margin: 2.5rem auto;
+    margin: 2.5rem auto 5rem auto;
     display: block;
     background: #c4c4c4;
     border: 1px solid #dddddd;
