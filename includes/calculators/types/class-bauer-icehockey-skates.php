@@ -798,6 +798,10 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
         }
     }
 
+    protected function lengthOptions($options) {
+        return $options;
+    }
+
     protected function fitOptions($options) {
         ob_start();
         $ids = ['pro-fit', 'performance-fit', 'comfort-fit'];
@@ -867,7 +871,12 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
      protected function steps() {
         ob_start();
         ?>
-            <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length" x-show="currentStep === 0">Extend this method to include steps 1</div>
+            <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length" x-show="currentStep === 0">
+                <h2>
+                    <?php _e("Vælg din skostørrelse", "hockeyshop-theme"); ?>
+                </h2>
+                <?php var_dump($this->lengthOptions($this->fields)); ?>
+            </div>
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--fit" x-show="currentStep === 1">
                 <h2>
                     <?php _e("Vælg dit fit", "hockeyshop-theme"); ?>
