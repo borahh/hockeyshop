@@ -167,5 +167,15 @@ export function BauerIcehockeySkates() {
         '12.0',
       ],
     },
+    reccomendLength() {
+      $length = document.querySelector('input[name = "__length"]').value;
+      $fit = document.querySelector('input[name = "__fit"]:checked').value;
+      $width = document.querySelector('input[name = "__width"]:checked').value;
+      $height = document.querySelector(
+        'input[name = "__height"]:checked',
+      ).value;
+
+      console.log($length, $fit, $width, $height);
+    },
   };
 }
