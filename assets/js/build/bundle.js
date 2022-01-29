@@ -4269,21 +4269,11 @@ function BauerIcehockeySkates() {
       var width = document.querySelector('input[name = "__width"]:checked').value;
       var height = document.querySelector('input[name = "__height"]:checked').value;
 
-      function get_length(fit) {
-        switch (fit) {
-          case 0:
-            return 'Pro';
-            break;
-
-          case 1:
-            return 'Perf';
-            break;
-
-          case 2:
-            return 'Comf';
-            break;
+      var get_length = function get_length(fit) {
+        if (fit === 0) {
+          return 'Pro';
         }
-      } // function get_recommended_length(fit, length, yth) {
+      }; // function get_recommended_length(fit, length, yth) {
       //   switch (fit) {
       //     case 0:
       //       // Subtract 0.5
@@ -4456,7 +4446,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52904" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56877" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
