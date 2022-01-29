@@ -337,6 +337,7 @@ export function BauerIcehockeySkates() {
         this.matchedVariations = true;
       }
       this.onDataObtained = true;
+      console.log(this.dataObtained);
     },
     handleFinal() {
       this.reccomendLength();
