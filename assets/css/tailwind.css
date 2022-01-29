@@ -226,7 +226,7 @@
       }
 
       &__result {
-        @apply flex font-bold uppercase text-accent;
+        @apply flex gap-5 font-bold uppercase text-accent;
       }
 
       &__toggle {
