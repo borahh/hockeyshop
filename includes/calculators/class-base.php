@@ -147,7 +147,7 @@ class BorahhCalculatorBase {
             <div x-show="!matchedVariations" @click="$refs.enquiryVariation.click()">
                 <?php _e("Send forespørgsel", "hockeyshop-theme"); ?>
             </div>
-            <div x-show="matchedVariations" @click="toggleOpen">
+            <div x-show="matchedVariations" @click="open = false">
                 <?php _e("Forstået", "hockeyshop-theme"); ?>
             </div>
         <?php
