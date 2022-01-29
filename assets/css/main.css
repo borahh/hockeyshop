@@ -906,9 +906,6 @@
 .invisible {
     visibility: hidden;
 }
-.block {
-    display: block;
-}
 .inline {
     display: inline;
 }
