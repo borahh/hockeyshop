@@ -172,13 +172,18 @@ class BorahhCalculatorBase {
                         src="https://cdn-icons-png.flaticon.com/512/2738/2738840.png"
                         alt
                     />
-                    <span class="calculator__accordion__info__label">
+                    <span class="calculator__accordion__info__label" x-show="!onSubmit">
                         <span>
                             <?php _e("I tvivl om din størrelse?", "hockeyshop-theme"); ?>
                         </span>
                         <u>
                             <?php _e('Prøv størrelsesguiden', "hockeyshop-theme"); ?>
                         </u>
+                    </span>
+                    <span class="calculator__accordion__info__label" x-show="onSubmit">
+                        <span>
+                            <?php _e("Din anbefalede størrelse er", "hockeyshop-theme"); ?>
+                        </span>
                     </span>
                 </span>
 
