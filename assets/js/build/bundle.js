@@ -4169,6 +4169,7 @@ var calculatorUI = {
   currentStep: 0,
   maxStep: 0,
   onSubmit: false,
+  onDataObtained: false,
   // Step to manage variations matching
   matchedVariations: false,
   // State to manage wraper state
@@ -4416,6 +4417,7 @@ function BauerIcehockeySkates() {
       var AvailableVariationsLoader = JSON.parse(document.getElementById('AvailableVariationsLoader').getAttribute('data-variations'));
 
       if (AvailableVariationsLoader.length.value.split(',').includes(this.dataObtained.fit) && AvailableVariationsLoader.width.value.split(',').includes(this.dataObtained.scale)) {
+        this.onDataObtained = true;
         this.matchedVariations = true;
       }
     },

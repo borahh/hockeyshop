@@ -3,7 +3,7 @@ export const calculatorUI = {
   currentStep: 0,
   maxStep: 0,
   onSubmit: false,
-
+  onDataObtained: false,
   // Step to manage variations matching
   matchedVariations: false,
 

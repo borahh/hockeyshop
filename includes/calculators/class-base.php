@@ -14,6 +14,10 @@ class BorahhCalculatorBase {
         $this->fields = $fields;
     }
 
+    protected function accordionResult() {
+        return 'OK';
+    }
+
     // Loaders
     protected function loaders() {
         ob_start();
@@ -188,10 +192,10 @@ class BorahhCalculatorBase {
                 </span>
 
                 <!-- Calculator Result -->
-                <span class="calculator__accordion__result" x-show="onSubmit">Ok</span>
+                <span class="calculator__accordion__result" x-show="onDataObtained"><?php echo $this->accordionResult(); ?></span>
 
                 <!-- Calculator Toggle -->
-                <span class="calculator__accordion__toggle" :class="open ? 'calculator__accordion__toggle--active' : ''" x-show="!onSubmit">
+                <span class="calculator__accordion__toggle" :class="open ? 'calculator__accordion__toggle--active' : ''" x-show="!onDataObtained">
                     <span class="calculator__accordion__toggle__icon"></span>
                 </span>
             </div>

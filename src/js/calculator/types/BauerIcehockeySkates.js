@@ -334,6 +334,7 @@ export function BauerIcehockeySkates() {
           .split(',')
           .includes(this.dataObtained.scale)
       ) {
+        this.onDataObtained = true;
         this.matchedVariations = true;
       }
     },
