@@ -3,6 +3,10 @@ import { calculatorUI } from '../ui';
 export function BauerIcehockeySkates() {
   return {
     ...calculatorUI,
+    dataObtained: {
+      fit: '',
+      scale: '',
+    },
     maxStep: 3,
     units: [{ id: 'EU' }, { id: 'US' }],
     lengthInput: '0',
@@ -314,7 +318,19 @@ export function BauerIcehockeySkates() {
         scale: get_scale(scale, width, height),
       };
 
-      console.log(data, fit);
+      this.dataObtained = data;
+
+      const AvailableVariationsLoader = JSON.parse(
+        document
+          .getElementById('AvailableVariationsLoader')
+          .getAttribute('data-variations'),
+      );
+
+      console.log(AvailableVariationsLoader);
+
+      if (this.dataObtained.fit && this.dataObtained.scale) {
+        this.matchedVariations = true;
+      }
     },
     handleFinal() {
       this.reccomendLength();

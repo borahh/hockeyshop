@@ -4237,6 +4237,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 function BauerIcehockeySkates() {
   return _objectSpread(_objectSpread({}, _ui.calculatorUI), {}, {
+    dataObtained: {
+      fit: '',
+      scale: ''
+    },
     maxStep: 3,
     units: [{
       id: 'EU'
@@ -4408,7 +4412,13 @@ function BauerIcehockeySkates() {
         fit: get_length(fit, parseInt(length, 10), yth),
         scale: get_scale(scale, width, height)
       };
-      console.log(data, fit);
+      this.dataObtained = data;
+      var AvailableVariationsLoader = JSON.parse(document.getElementById('AvailableVariationsLoader').getAttribute('data-variations'));
+      console.log(AvailableVariationsLoader);
+
+      if (this.dataObtained.fit && this.dataObtained.scale) {
+        this.matchedVariations = true;
+      }
     },
     handleFinal: function handleFinal() {
       this.reccomendLength();
