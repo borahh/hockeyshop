@@ -191,13 +191,13 @@ export function BauerIcehockeySkates() {
 
       const get_length = (fit, length, yth) => {
         if (fit === '0') {
-          const i = length - 0.5;
+          const i = parseFloat(length - 0.5).toFixed(1);
           return yth ? i + 'Y' : i;
         } else if (fit === '1') {
-          const i = length;
+          const i = parseFloat(length).toFixed(1);
           return yth ? i + 'Y' : i;
         } else if (fit === '2') {
-          const i = length + 0.5;
+          const i = parseFloat(length + 0.5).toFixed(1);
           return yth ? i + 'Y' : i;
         }
       };
