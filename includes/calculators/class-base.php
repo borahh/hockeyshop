@@ -31,6 +31,15 @@ class BorahhCalculatorBase {
         <?php
         return ob_get_clean();
     }
+
+    // Matched Function
+    protected function onMatchedVariations() {
+        ob_start();
+        ?>
+            Extend
+        <?php
+        return ob_get_clean();
+    }
     
     // Unmatched Variations
     protected function onUnmatchedVariations() {

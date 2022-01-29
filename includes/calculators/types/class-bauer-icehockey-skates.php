@@ -11,6 +11,14 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
 
     }
 
+    public function onMatchedVariations() {
+        ob_start();
+        ?>
+            <div class="">Extend this method to include steps</div>
+        <?php
+        return ob_get_clean();
+    }
+
     // Loaders
     protected function loaders() {
         ob_start();
