@@ -23,6 +23,15 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
         return ob_get_clean();
     }
 
+    protected function accordionResult() {
+        ob_start();
+        ?>
+            <span x-text="dataObtained.fit"></span>
+            <span x-text="dataObtained.scale"></span>
+        <?php
+        return ob_get_clean();
+    }
+
     public function onMatchedVariations() {
         ob_start();
         ?>
