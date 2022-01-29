@@ -4215,7 +4215,7 @@ var calculatorUI = {
   },
   restart: function restart() {
     this.onSubmit = false;
-    this.currentStep = 0;
+    this.currentStep = 1;
   }
 };
 exports.calculatorUI = calculatorUI;
@@ -4471,7 +4471,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57360" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57637" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -53,6 +53,6 @@ export const calculatorUI = {
   },
   restart() {
     this.onSubmit = false;
-    this.currentStep = 0;
+    this.currentStep = 1;
   },
 };
