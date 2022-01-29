@@ -305,6 +305,9 @@
                   svg {
                     @apply absolute fill-current left-4;
                   }
+                  object {
+                    @apply absolute fill-current left-4;
+                  }
                   div {
                     @apply text-base uppercase md:text-[28px] md:leading-10;
                   }
