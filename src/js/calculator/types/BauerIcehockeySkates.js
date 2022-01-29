@@ -314,7 +314,7 @@ export function BauerIcehockeySkates() {
         scale: get_scale(scale, width, height),
       };
 
-      console.log(data);
+      console.log(data, fit);
     },
     handleFinal() {
       this.reccomendLength();

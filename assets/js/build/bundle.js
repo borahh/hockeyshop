@@ -4408,7 +4408,7 @@ function BauerIcehockeySkates() {
         fit: get_length(fit, parseInt(length, 10), yth),
         scale: get_scale(scale, width, height)
       };
-      console.log(data);
+      console.log(data, fit);
     },
     handleFinal: function handleFinal() {
       this.reccomendLength();
