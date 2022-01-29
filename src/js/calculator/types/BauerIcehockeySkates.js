@@ -326,9 +326,14 @@ export function BauerIcehockeySkates() {
           .getAttribute('data-variations'),
       );
 
-      console.log(AvailableVariationsLoader);
-
-      if (this.dataObtained.fit && this.dataObtained.scale) {
+      if (
+        AvailableVariationsLoader.length.value
+          .split(',')
+          .includes(this.dataObtained.fit) &&
+        AvailableVariationsLoader.width.value
+          .split(',')
+          .includes(this.dataObtained.scale)
+      ) {
         this.matchedVariations = true;
       }
     },
