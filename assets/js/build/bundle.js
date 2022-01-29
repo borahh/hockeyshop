@@ -4189,7 +4189,7 @@ var calculatorUI = {
     if (this.open) {
       this.$el.style.maxHeight = 300 + this.$el.scrollHeight + 'px';
     } else {
-      this.$el.style.maxHeight = null;
+      this.$el.style.maxHeight = '0px';
     }
   },
   showPrevHandler: function showPrevHandler() {
