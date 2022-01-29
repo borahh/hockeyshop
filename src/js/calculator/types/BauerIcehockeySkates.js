@@ -4,8 +4,8 @@ export function BauerIcehockeySkates() {
   return {
     ...calculatorUI,
     dataObtained: {
-      fit: '',
-      scale: '',
+      fit: undefined,
+      scale: undefined,
     },
     maxStep: 3,
     units: [{ id: 'EU' }, { id: 'US' }],

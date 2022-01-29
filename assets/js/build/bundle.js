@@ -4214,7 +4214,7 @@ var calculatorUI = {
     this.onSubmit = true;
   },
   restart: function restart() {
-    this.onSubmit = false;
+    this.onSubmit = undefined;
     this.currentStep = 0;
   }
 };
@@ -4238,8 +4238,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function BauerIcehockeySkates() {
   return _objectSpread(_objectSpread({}, _ui.calculatorUI), {}, {
     dataObtained: {
-      fit: '',
-      scale: ''
+      fit: undefined,
+      scale: undefined
     },
     maxStep: 3,
     units: [{
