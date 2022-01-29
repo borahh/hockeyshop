@@ -4214,7 +4214,7 @@ var calculatorUI = {
     this.onSubmit = true;
   },
   restart: function restart() {
-    this.onSubmit = undefined;
+    this.onSubmit = false;
     this.currentStep = 0;
   }
 };

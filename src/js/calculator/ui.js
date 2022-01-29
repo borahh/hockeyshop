@@ -52,7 +52,7 @@ export const calculatorUI = {
     this.onSubmit = true;
   },
   restart() {
-    this.onSubmit = undefined;
+    this.onSubmit = false;
     this.currentStep = 0;
   },
 };
