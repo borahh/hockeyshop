@@ -188,10 +188,10 @@ class BorahhCalculatorBase {
                 </span>
 
                 <!-- Calculator Result -->
-                <span class="calculator__accordion__result"></span>
+                <span class="calculator__accordion__result" x-show="onSubmit">Ok</span>
 
                 <!-- Calculator Toggle -->
-                <span class="calculator__accordion__toggle" :class="open ? 'calculator__accordion__toggle--active' : ''">
+                <span class="calculator__accordion__toggle" :class="open ? 'calculator__accordion__toggle--active' : ''" x-show="!onSubmit">
                     <span class="calculator__accordion__toggle__icon"></span>
                 </span>
             </div>
