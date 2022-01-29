@@ -195,6 +195,10 @@ class BorahhCalculatorBase {
                         <div class="calculator__wraper__content__end__unmatched" x-show="!matchedVariations">
                             <?php echo $this->onUnmatchedVariations(); ?>
                         </div>
+                        
+                        <div class="calculator__wraper__content__end__matched" x-show="matchedVariations">
+                            <?php echo $this->onMatchedVariations(); ?>
+                        </div>
 
                         <div class="calculator__wraper__content__end__handlers">
                             <?php echo $this->handlers(); ?>             
