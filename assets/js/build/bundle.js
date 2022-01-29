@@ -4417,9 +4417,10 @@ function BauerIcehockeySkates() {
       var AvailableVariationsLoader = JSON.parse(document.getElementById('AvailableVariationsLoader').getAttribute('data-variations'));
 
       if (AvailableVariationsLoader.length.value.split(',').includes(this.dataObtained.fit) && AvailableVariationsLoader.width.value.split(',').includes(this.dataObtained.scale)) {
-        this.onDataObtained = true;
         this.matchedVariations = true;
       }
+
+      this.onDataObtained = true;
     },
     handleFinal: function handleFinal() {
       this.reccomendLength();
@@ -4473,7 +4474,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57637" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57634" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
