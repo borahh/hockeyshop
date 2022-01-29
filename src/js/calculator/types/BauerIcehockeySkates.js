@@ -189,137 +189,135 @@ export function BauerIcehockeySkates() {
         'input[name = "__height"]:checked',
       ).value;
 
+<<<<<<< HEAD
       const get_length = (fit) => {
         if (fit === 0) {
           return 'Pro';
+=======
+      const get_length = (fit, length, yth) => {
+        if (fit === '0') {
+          const i = parseFloat(length - 0.5).toFixed(1);
+          return yth ? i + 'Y' : i;
+        } else if (fit === '1') {
+          const i = parseFloat(length).toFixed(1);
+          return yth ? i + 'Y' : i;
+        } else if (fit === '2') {
+          const i = parseFloat(length + 0.5).toFixed(1);
+          return yth ? i + 'Y' : i;
+>>>>>>> ae7d28921db32db102a55fc486b1e076536e68b9
         }
       };
 
-      // function get_recommended_length(fit, length, yth) {
-      //   switch (fit) {
-      //     case 0:
-      //       // Subtract 0.5
+      const get_scale = (scale, width, height) => {
+        switch (width) {
+          // Narrow Width
+          case '0':
+            switch (height) {
+              // Low
+              case '0':
+                if (scale === 'scale_fit') {
+                  return 'fit1';
+                } else if (scale === 'scale_ee') {
+                  return 'd';
+                }
+                break;
 
-      //       if (yth) {
-      //         return parseFloat(length - 0.5).toFixed(1) + 'Y';
-      //       } else {
-      //         return parseFloat(length - 0.5).toFixed(1);
-      //       }
+              // Medium
+              case '1':
+                if (scale === 'scale_fit') {
+                  return 'fit1';
+                } else if (scale === 'scale_ee') {
+                  return 'd';
+                }
+                break;
 
-      //       break;
-      //     case 1:
-      //       // Do nothing
-      //       if (yth) {
-      //         return parseFloat(length).toFixed(1) + 'Y';
-      //       } else {
-      //         return parseFloat(length).toFixed(1);
-      //       }
+              // High
+              case '2':
+                if (scale === 'scale_fit') {
+                  return 'fit2';
+                } else if (scale === 'scale_ee') {
+                  return 'd';
+                }
+                break;
+            }
+            break;
 
-      //       break;
-      //     case 2:
-      //       // Add 0.5
+          // Medium Width
+          case '1':
+            switch (height) {
+              // Low
+              case '0':
+                if (scale === 'scale_fit') {
+                  return 'fit2';
+                } else if (scale === 'scale_ee') {
+                  return 'd';
+                }
+                break;
 
-      //       if (yth) {
-      //         return parseFloat(length + 0.5).toFixed(1) + 'Y';
-      //       } else {
-      //         return parseFloat(length + 0.5).toFixed(1);
-      //       }
+              // Medium
+              case '1':
+                if (scale === 'scale_fit') {
+                  return 'fit2';
+                } else if (scale === 'scale_ee') {
+                  return 'd';
+                }
+                break;
 
-      //       break;
-      //     default:
-      //       // Do nothing
-      //       if (yth) {
-      //         return parseFloat(length).toFixed(1) + 'Y';
-      //       } else {
-      //         return parseFloat(length).toFixed(1);
-      //       }
-      //   }
-      // }
+              // High
+              case '2':
+                if (scale === 'scale_fit') {
+                  return 'fit3';
+                } else if (scale === 'scale_ee') {
+                  return 'ee';
+                }
+                break;
+            }
+            break;
 
-      // function get_scale_fit(width, height) {
-      //   switch (width) {
-      //     case 0:
-      //       // Narrow Width
-      //       switch (height) {
-      //         case 2:
-      //           // High Height
-      //           return 'fit2';
-      //           break;
-      //         default:
-      //           return 'fit1';
-      //       }
-      //       break;
-      //     case 1:
-      //       // Medium Width
-      //       switch (height) {
-      //         case 2:
-      //           // Hight Height
-      //           return 'fit3';
-      //           break;
-      //         default:
-      //           return 'fit2';
-      //       }
-      //       break;
-      //     case 2:
-      //       // Wide Width
-      //       switch (height) {
-      //         case 0:
-      //           // Low Height
-      //           return 'fit2';
-      //           break;
-      //         default:
-      //           return 'fit3';
-      //       }
-      //       break;
-      //     default:
-      //       // Do nothing
-      //       return 'fit1';
-      //   }
-      // }
+          // Wide Width
+          case '2':
+            switch (height) {
+              // Low
+              case '0':
+                if (scale === 'scale_fit') {
+                  return 'fit2';
+                } else if (scale === 'scale_ee') {
+                  return 'ee';
+                }
+                break;
 
-      // function get_scale_ee(width, height) {
-      //   switch (width) {
-      //     case 0:
-      //       // Narrow Width
-      //       return 'd';
-      //       break;
-      //     case 1:
-      //       // Medium Width
-      //       switch (height) {
-      //         case 2:
-      //           // Hight Height
-      //           return 'ee';
-      //           break;
-      //         default:
-      //           return 'd';
-      //       }
-      //       break;
-      //     case 2:
-      //       // Wide Width
-      //       return 'ee';
-      //       break;
-      //     default:
-      //       // Do nothing
-      //       return 'd';
-      //   }
-      // }
+              // Medium
+              case '1':
+                if (scale === 'scale_fit') {
+                  return 'fit3';
+                } else if (scale === 'scale_ee') {
+                  return 'ee';
+                }
+                break;
 
-      // function get_scale(scale) {
-      //   if (scale === 'scale_fit') {
-      //     return get_scale_fit(width, height);
-      //   } else if (scale === 'scale_ee') {
-      //     return get_scale_ee(width, height);
-      //   }
-      // }
+              // High
+              case '2':
+                if (scale === 'scale_fit') {
+                  return 'fit3';
+                } else if (scale === 'scale_ee') {
+                  return 'ee';
+                }
+                break;
+            }
+            break;
+
+          default:
+            if (scale === 'scale_fit') {
+              return 'fit1';
+            } else if (scale === 'scale_ee') {
+              return 'd';
+            }
+        }
+      };
 
       const data = {
-        length,
-        fits: get_length(fit),
-        yth,
-        scale,
-        fit,
-        width,
-        height,
+        fit: get_length(fit, parseInt(length, 10), yth),
+        scale: get_scale(scale, width, height),
       };
 
       console.log(data);

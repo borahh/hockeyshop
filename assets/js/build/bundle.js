@@ -4269,6 +4269,7 @@ function BauerIcehockeySkates() {
       var width = document.querySelector('input[name = "__width"]:checked').value;
       var height = document.querySelector('input[name = "__height"]:checked').value;
 
+<<<<<<< HEAD
       var get_length = function get_length(fit) {
         if (fit === 0) {
           return 'Pro';
@@ -4381,16 +4382,146 @@ function BauerIcehockeySkates() {
       //     return get_scale_ee(width, height);
       //   }
       // }
+=======
+      var get_length = function get_length(fit, length, yth) {
+        if (fit === '0') {
+          var i = parseFloat(length - 0.5).toFixed(1);
+          return yth ? i + 'Y' : i;
+        } else if (fit === '1') {
+          var _i = parseFloat(length).toFixed(1);
 
+          return yth ? _i + 'Y' : _i;
+        } else if (fit === '2') {
+          var _i2 = parseFloat(length + 0.5).toFixed(1);
+
+          return yth ? _i2 + 'Y' : _i2;
+        }
+      };
+
+      var get_scale = function get_scale(scale, width, height) {
+        switch (width) {
+          // Narrow Width
+          case '0':
+            switch (height) {
+              // Low
+              case '0':
+                if (scale === 'scale_fit') {
+                  return 'fit1';
+                } else if (scale === 'scale_ee') {
+                  return 'd';
+                }
+
+                break;
+              // Medium
+
+              case '1':
+                if (scale === 'scale_fit') {
+                  return 'fit1';
+                } else if (scale === 'scale_ee') {
+                  return 'd';
+                }
+
+                break;
+              // High
+
+              case '2':
+                if (scale === 'scale_fit') {
+                  return 'fit2';
+                } else if (scale === 'scale_ee') {
+                  return 'd';
+                }
+
+                break;
+            }
+
+            break;
+          // Medium Width
+
+          case '1':
+            switch (height) {
+              // Low
+              case '0':
+                if (scale === 'scale_fit') {
+                  return 'fit2';
+                } else if (scale === 'scale_ee') {
+                  return 'd';
+                }
+
+                break;
+              // Medium
+
+              case '1':
+                if (scale === 'scale_fit') {
+                  return 'fit2';
+                } else if (scale === 'scale_ee') {
+                  return 'd';
+                }
+
+                break;
+              // High
+
+              case '2':
+                if (scale === 'scale_fit') {
+                  return 'fit3';
+                } else if (scale === 'scale_ee') {
+                  return 'ee';
+                }
+
+                break;
+            }
+
+            break;
+          // Wide Width
+
+          case '2':
+            switch (height) {
+              // Low
+              case '0':
+                if (scale === 'scale_fit') {
+                  return 'fit2';
+                } else if (scale === 'scale_ee') {
+                  return 'ee';
+                }
+
+                break;
+              // Medium
+
+              case '1':
+                if (scale === 'scale_fit') {
+                  return 'fit3';
+                } else if (scale === 'scale_ee') {
+                  return 'ee';
+                }
+
+                break;
+              // High
+
+              case '2':
+                if (scale === 'scale_fit') {
+                  return 'fit3';
+                } else if (scale === 'scale_ee') {
+                  return 'ee';
+                }
+
+                break;
+            }
+
+            break;
+>>>>>>> ae7d28921db32db102a55fc486b1e076536e68b9
+
+          default:
+            if (scale === 'scale_fit') {
+              return 'fit1';
+            } else if (scale === 'scale_ee') {
+              return 'd';
+            }
+
+        }
+      };
 
       var data = {
-        length: length,
-        fits: get_length(fit),
-        yth: yth,
-        scale: scale,
-        fit: fit,
-        width: width,
-        height: height
+        fit: get_length(fit, parseInt(length, 10), yth),
+        scale: get_scale(scale, width, height)
       };
       console.log(data);
     },
