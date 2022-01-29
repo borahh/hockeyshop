@@ -224,7 +224,7 @@ class BorahhCalculatorBase {
                     </div>
                     
                     <!-- Calculator Nav -->
-                    <div class="calculator__wraper__content__nav" :class="onSubmit ? 'hidden' : 'grid">
+                    <div class="calculator__wraper__content__nav" :class="onSubmit ? 'hidden' : 'grid'">
                         <?php echo $this->navigation(); ?>             
                     </div>
 
