@@ -7,11 +7,9 @@ export function getVariationEl(variation, data) {
     }
   });
 
-  for (const ele of ul.querySelectorAll('li')) {
-    if (ele.getAttribute(variation.selector) == data) {
-      return ele;
-    } else {
-      return false;
-    }
+  function matchEl(el) {
+    return ele.getAttribute(variation.selector) === data;
   }
+
+  return ul.querySelectorAll('li').find(matchEl);
 }
