@@ -4199,7 +4199,7 @@ function selectVariation(variation, data) {
         isSuccess = true;
       }
 
-      if (ele.classList.contains('selected')) {
+      if (ele.getAttribute(variation.selector) == data && ele.classList.contains('selected')) {
         isSuccess = true;
       }
     }
