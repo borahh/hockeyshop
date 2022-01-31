@@ -62,6 +62,7 @@ export const calculatorUI = {
     this.onSubmit = true;
   },
   restart() {
+    this.open = true;
     this.onSubmit = false;
     this.currentStep = 0;
   },
