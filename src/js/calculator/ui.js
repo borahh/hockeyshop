@@ -1,3 +1,5 @@
+import { getAbsoluteHeight } from '../helpers/getAbsoluteHeight';
+
 export const calculatorUI = {
   // State to manage current step
   currentStep: 0,
@@ -24,7 +26,11 @@ export const calculatorUI = {
   },
   onToggleOpen() {
     if (this.open) {
-      this.$el.style.maxHeight = 300 + this.$el.scrollHeight + 'px';
+      this.$el.style.maxHeight =
+        300 +
+        this.$el.scrollHeight +
+        getAbsoluteHeight('.calculator__wraper__content__nav') +
+        'px';
     } else {
       this.$el.style.maxHeight = null;
     }

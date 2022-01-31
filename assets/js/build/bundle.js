@@ -4157,6 +4157,26 @@ var src_default = alpine_default; // packages/alpinejs/builds/module.js
 
 var module_default = src_default;
 exports.default = module_default;
+},{}],"helpers/getAbsoluteHeight.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getAbsoluteHeight = getAbsoluteHeight;
+
+/**
+ *
+ * Get Absolute Height including TOP-BOTTOM Margins
+ *
+ */
+function getAbsoluteHeight(el) {
+  // Get the DOM Node if you pass in a string
+  el = typeof el === 'string' ? document.querySelector(el) : el;
+  var styles = window.getComputedStyle(el);
+  var margin = parseFloat(styles['marginTop']) + parseFloat(styles['marginBottom']);
+  return el.offsetHeight + margin;
+}
 },{}],"calculator/ui.js":[function(require,module,exports) {
 "use strict";
 
@@ -4164,6 +4184,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.calculatorUI = void 0;
+
+var _getAbsoluteHeight = require("../helpers/getAbsoluteHeight");
+
 var calculatorUI = {
   // State to manage current step
   currentStep: 0,
@@ -4187,7 +4210,7 @@ var calculatorUI = {
   },
   onToggleOpen: function onToggleOpen() {
     if (this.open) {
-      this.$el.style.maxHeight = 300 + this.$el.scrollHeight + 'px';
+      this.$el.style.maxHeight = 300 + this.$el.scrollHeight + (0, _getAbsoluteHeight.getAbsoluteHeight)('.calculator__wraper__content__nav') + 'px';
     } else {
       this.$el.style.maxHeight = null;
     }
@@ -4220,7 +4243,7 @@ var calculatorUI = {
   }
 };
 exports.calculatorUI = calculatorUI;
-},{}],"calculator/types/BauerIcehockeySkates.js":[function(require,module,exports) {
+},{"../helpers/getAbsoluteHeight":"helpers/getAbsoluteHeight.js"}],"calculator/types/BauerIcehockeySkates.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
