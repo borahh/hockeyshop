@@ -14,7 +14,6 @@ export function getVariationEl(variation, data) {
     } else {
       return false;
     }
-
-    return element;
   }
+  return element;
 }

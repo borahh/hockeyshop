@@ -4194,14 +4194,14 @@ function getVariationEl(variation, data) {
       } else {
         return false;
       }
-
-      return element;
     }
   } catch (err) {
     _iterator.e(err);
   } finally {
     _iterator.f();
   }
+
+  return element;
 }
 },{}],"helpers/getAbsoluteHeight.js":[function(require,module,exports) {
 "use strict";
@@ -4555,7 +4555,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59407" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52390" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
