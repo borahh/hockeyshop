@@ -4175,8 +4175,7 @@ function selectVariation(variation, data) {
     }
   });
   ul.querySelectorAll('li').forEach(function (ele) {
-    if (ele.getAttribute(variation.selector) == data) {
-      console.log(ele);
+    if (ele.getAttribute(variation.selector) == data && !ele.classList.contains('selected')) {
       ele.click();
     }
   });
