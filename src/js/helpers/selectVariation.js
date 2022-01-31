@@ -1,4 +1,4 @@
-export function selectVariation(variation, data, matchedVariations) {
+export function selectVariation(variation, data) {
   let ul;
   variation.list.forEach((item) => {
     let ele = document.querySelector(`ul[data-attribute_name="${item}"]`);
@@ -12,10 +12,9 @@ export function selectVariation(variation, data, matchedVariations) {
       ele.getAttribute(variation.selector) == data &&
       !ele.classList.contains('selected')
     ) {
+      ele.click();
       if (ele.classList.contains('disabled')) {
-        matchedVariations = false;
-      } else {
-        ele.click();
+        return false;
       }
     }
   });

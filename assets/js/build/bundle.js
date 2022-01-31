@@ -4165,7 +4165,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.selectVariation = selectVariation;
 
-function selectVariation(variation, data, matchedVariations) {
+function selectVariation(variation, data) {
   var ul;
   variation.list.forEach(function (item) {
     var ele = document.querySelector("ul[data-attribute_name=\"".concat(item, "\"]"));
@@ -4176,10 +4176,10 @@ function selectVariation(variation, data, matchedVariations) {
   });
   ul.querySelectorAll('li').forEach(function (ele) {
     if (ele.getAttribute(variation.selector) == data && !ele.classList.contains('selected')) {
+      ele.click();
+
       if (ele.classList.contains('disabled')) {
-        matchedVariations = false;
-      } else {
-        ele.click();
+        return false;
       }
     }
   });
@@ -4471,8 +4471,9 @@ function BauerIcehockeySkates() {
 
       if (AvailableVariationsLoader.length.value.split(',').includes(this.dataObtained.fit) && AvailableVariationsLoader.width.value.split(',').includes(this.dataObtained.scale)) {
         this.matchedVariations = true;
-        (0, _selectVariation.selectVariation)(AvailableVariationsLoader.length, this.dataObtained.fit, this.matchedVariations);
-        (0, _selectVariation.selectVariation)(AvailableVariationsLoader.width, this.dataObtained.scale, this.matchedVariations);
+        var x = (0, _selectVariation.selectVariation)(AvailableVariationsLoader.length, this.dataObtained.fit);
+        var y = (0, _selectVariation.selectVariation)(AvailableVariationsLoader.width, this.dataObtained.scale);
+        console.log(x, y);
       }
 
       this.onDataObtained = true;
