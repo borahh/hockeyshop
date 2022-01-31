@@ -9,23 +9,14 @@ export function selectVariation(variation, data) {
   });
 
   for (const ele of ul.querySelectorAll('li')) {
-    if (
-      ele.getAttribute(variation.selector) == data &&
-      !ele.classList.contains('selected')
-    ) {
-      if (ele.classList.contains('disabled')) {
-        ele.click();
-        isSuccess = false;
-      }
+    if (ele.getAttribute(variation.selector) == data) {
       ele.click();
       isSuccess = true;
-    }
-
-    if (
-      ele.getAttribute(variation.selector) == data &&
-      ele.classList.contains('selected')
-    ) {
-      isSuccess = true;
+      if (ele.classList.contains('selected')) {
+        isSuccess = true;
+      } else {
+        isSuccess = false;
+      }
     }
   }
 
