@@ -4176,11 +4176,13 @@ function selectVariation(variation, data) {
   });
   var x = ul.querySelectorAll('li').forEach(function (ele) {
     if (ele.getAttribute(variation.selector) == data && !ele.classList.contains('selected')) {
-      ele.click();
-
       if (ele.classList.contains('disabled')) {
+        ele.click();
         return false;
       }
+
+      ele.click();
+      return true;
     }
   });
   return x ? true : false;

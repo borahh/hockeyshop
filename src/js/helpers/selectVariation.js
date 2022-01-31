@@ -12,10 +12,12 @@ export function selectVariation(variation, data) {
       ele.getAttribute(variation.selector) == data &&
       !ele.classList.contains('selected')
     ) {
-      ele.click();
       if (ele.classList.contains('disabled')) {
+        ele.click();
         return false;
       }
+      ele.click();
+      return true;
     }
   });
 
