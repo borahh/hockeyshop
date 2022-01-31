@@ -4477,7 +4477,7 @@ function BauerIcehockeySkates() {
         var selectFit = (0, _selectVariation.selectVariation)(AvailableVariationsLoader.length, this.dataObtained.fit);
         var selectScale = (0, _selectVariation.selectVariation)(AvailableVariationsLoader.width, this.dataObtained.scale);
 
-        if (!selectFit || !selectScale) {
+        if (!selectFit && !selectScale) {
           this.matchedVariations = false;
         }
       }
