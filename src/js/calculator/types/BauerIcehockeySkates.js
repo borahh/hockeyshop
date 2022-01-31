@@ -336,16 +336,16 @@ export function BauerIcehockeySkates() {
           .includes(this.dataObtained.scale)
       ) {
         this.matchedVariations = true;
-        const selectFit = selectVariation(
+        selectVariation(
           AvailableVariationsLoader.length,
           this.dataObtained.fit,
+          this.matchedVariations,
         );
-        const selectScale = selectVariation(
+        selectVariation(
           AvailableVariationsLoader.width,
           this.dataObtained.scale,
+          this.matchedVariations,
         );
-
-        console.log(selectScale, selectFit);
       }
       this.onDataObtained = true;
       console.log(this.dataObtained);
