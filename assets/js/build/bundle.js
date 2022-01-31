@@ -4174,13 +4174,10 @@ function getVariationEl(variation, data) {
       ul = el;
     }
   });
-
-  function matchEl(el) {
+  var el = ul.querySelectorAll('li').find(function (el) {
     return el.getAttribute(variation.selector) === data;
-  }
-
-  var li = ul.querySelectorAll('li');
-  return li.find(matchEl);
+  });
+  return el;
 }
 },{}],"helpers/getAbsoluteHeight.js":[function(require,module,exports) {
 "use strict";
