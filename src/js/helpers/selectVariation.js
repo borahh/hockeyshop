@@ -19,5 +19,9 @@ export function selectVariation(variation, data) {
       ele.click();
       return true;
     }
+
+    if (ele.classList.contains('selected')) {
+      return true;
+    }
   }
 }

@@ -4197,6 +4197,10 @@ function selectVariation(variation, data) {
         ele.click();
         return true;
       }
+
+      if (ele.classList.contains('selected')) {
+        return true;
+      }
     }
   } catch (err) {
     _iterator.e(err);
