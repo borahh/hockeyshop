@@ -8,8 +8,8 @@ export function selectVariation(variation, data) {
   });
 
   for (const ele of ul.querySelectorAll('li')) {
-    if (ele.classList.contains('selected')) {
-      return true;
+    if (ele.getAttribute(variation.selector) !== data) {
+      return false;
     }
 
     if (
@@ -22,8 +22,10 @@ export function selectVariation(variation, data) {
       }
       ele.click();
       return true;
-    } else {
-      return false;
+    }
+
+    if (ele.classList.contains('selected')) {
+      return true;
     }
   }
 }

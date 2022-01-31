@@ -4188,8 +4188,8 @@ function selectVariation(variation, data) {
     for (_iterator.s(); !(_step = _iterator.n()).done;) {
       var ele = _step.value;
 
-      if (ele.classList.contains('selected')) {
-        return true;
+      if (ele.getAttribute(variation.selector) !== data) {
+        return false;
       }
 
       if (ele.getAttribute(variation.selector) == data && !ele.classList.contains('selected')) {
@@ -4200,8 +4200,10 @@ function selectVariation(variation, data) {
 
         ele.click();
         return true;
-      } else {
-        return false;
+      }
+
+      if (ele.classList.contains('selected')) {
+        return true;
       }
     }
   } catch (err) {
