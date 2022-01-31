@@ -35,7 +35,7 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
     public function onMatchedVariations() {
         ob_start();
         ?>
-            <h1>Din anbefalede størrelse er</h1>
+            <h2>Din anbefalede størrelse er</h2>
             <div class="calculator__wraper__content__end__matched__result"> <span x-text="dataObtained.fit"></span>/ <span x-text="dataObtained.scale"></span></div>
             <div>
                 <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'final-fit1.webp'; ?>" x-show="dataObtained.scale === 'fit1'">

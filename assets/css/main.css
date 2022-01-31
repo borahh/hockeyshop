@@ -789,6 +789,9 @@
 .calculator__wraper__content__end {
     padding: 0.5rem;
 }
+.calculator__wraper__content__end__matched {
+    text-align: center;
+}
 .calculator__wraper__content__end__matched h2 {
     margin-bottom: 2.5rem;
     text-align: center;
