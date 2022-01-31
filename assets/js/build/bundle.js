@@ -4178,7 +4178,6 @@ function getVariationEl(variation, data) {
   var el = list.find(function (el) {
     return el.getAttribute(variation.selector) === data;
   });
-  console.log(el);
   return el;
 }
 },{}],"helpers/getAbsoluteHeight.js":[function(require,module,exports) {
@@ -4472,6 +4471,18 @@ function BauerIcehockeySkates() {
 
         if (selectFit && selectScale) {
           this.matchedVariations = true;
+
+          if (!selectFit.classList.contains('selected')) {
+            selectFit.click();
+          }
+
+          if (selectScale.classList.contains('disabled')) {
+            this.matchedVariations = false;
+          }
+
+          if (!selectScale.classList.contains('selected')) {
+            selectScale.click();
+          }
         } else {
           this.matchedVariations = false;
         }
