@@ -1,18 +1,17 @@
 export function selectVariation(variation, data) {
-  let ul;
+  let select;
   variation.list.forEach((item) => {
-    let ele = document.querySelector(`ul[data-attribute_name="${item}"]`);
+    let ele = document.querySelector(`select#${item}`);
     if (ele) {
-      ul = ele;
+      select = ele;
     } else {
       return;
     }
   });
-
-  ul.querySelectorAll('li').forEach((ele) => {
-    if (ele.getAttribute(variation.selector) == data.toLowerCase()) {
-      console.log(ele);
-      ele.click();
-    }
-  });
+  // ul.querySelectorAll('li').forEach((ele) => {
+  //   if (ele.getAttribute(variation.selector) == data.toLowerCase()) {
+  //     console.log(ele);
+  //     ele.click();
+  //   }
+  // });
 }

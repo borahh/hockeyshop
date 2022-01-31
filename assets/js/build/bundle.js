@@ -4166,22 +4166,21 @@ Object.defineProperty(exports, "__esModule", {
 exports.selectVariation = selectVariation;
 
 function selectVariation(variation, data) {
-  var ul;
+  var select;
   variation.list.forEach(function (item) {
-    var ele = document.querySelector("ul[data-attribute_name=\"".concat(item, "\"]"));
+    var ele = document.querySelector("select#".concat(item));
 
     if (ele) {
-      ul = ele;
+      select = ele;
     } else {
       return;
     }
-  });
-  ul.querySelectorAll('li').forEach(function (ele) {
-    if (ele.getAttribute(variation.selector) == data.toLowerCase()) {
-      console.log(ele);
-      ele.click();
-    }
-  });
+  }); // ul.querySelectorAll('li').forEach((ele) => {
+  //   if (ele.getAttribute(variation.selector) == data.toLowerCase()) {
+  //     console.log(ele);
+  //     ele.click();
+  //   }
+  // });
 }
 },{}],"helpers/getAbsoluteHeight.js":[function(require,module,exports) {
 "use strict";
