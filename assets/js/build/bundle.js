@@ -4168,10 +4168,10 @@ exports.getVariationEl = getVariationEl;
 function getVariationEl(variation, data) {
   var ul;
   variation.list.forEach(function (item) {
-    var ele = document.querySelector("ul[data-attribute_name=\"".concat(item, "\"]"));
+    var el = document.querySelector("ul[data-attribute_name=\"".concat(item, "\"]"));
 
-    if (ele) {
-      ul = ele;
+    if (el) {
+      ul = el;
     }
   });
 
@@ -4179,7 +4179,8 @@ function getVariationEl(variation, data) {
     return el.getAttribute(variation.selector) === data;
   }
 
-  return ul.querySelectorAll('li').find(matchEl);
+  var li = ul.querySelectorAll('li');
+  return li.find(matchEl);
 }
 },{}],"helpers/getAbsoluteHeight.js":[function(require,module,exports) {
 "use strict";

@@ -1,9 +1,9 @@
 export function getVariationEl(variation, data) {
   let ul;
   variation.list.forEach((item) => {
-    let ele = document.querySelector(`ul[data-attribute_name="${item}"]`);
-    if (ele) {
-      ul = ele;
+    let el = document.querySelector(`ul[data-attribute_name="${item}"]`);
+    if (el) {
+      ul = el;
     }
   });
 
@@ -11,5 +11,6 @@ export function getVariationEl(variation, data) {
     return el.getAttribute(variation.selector) === data;
   }
 
-  return ul.querySelectorAll('li').find(matchEl);
+  const li = ul.querySelectorAll('li');
+  return li.find(matchEl);
 }
