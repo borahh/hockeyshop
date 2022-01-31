@@ -4240,6 +4240,7 @@ var calculatorUI = {
     this.onSubmit = true;
   },
   restart: function restart() {
+    this.open = false;
     this.open = true;
     this.onSubmit = false;
     this.currentStep = 0;
