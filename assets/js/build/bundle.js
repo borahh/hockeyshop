@@ -4157,6 +4157,30 @@ var src_default = alpine_default; // packages/alpinejs/builds/module.js
 
 var module_default = src_default;
 exports.default = module_default;
+},{}],"helpers/selectVariation.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.selectVariation = selectVariation;
+
+function selectVariation(variation, data) {
+  console.log(variation, data);
+  var ul;
+  variation.length.forEach(function (item) {
+    ul = document.querySelector("ul[data-attribute_name=\"".concat(item, "\""));
+
+    if (!ul) {
+      return;
+    }
+  });
+  ul.querySelectorAll('li').forEach(function (ele) {
+    if (ele.getAttribute(variation.selector) == data.toLowerCase()) {
+      ele.click();
+    }
+  });
+}
 },{}],"helpers/getAbsoluteHeight.js":[function(require,module,exports) {
 "use strict";
 
@@ -4251,6 +4275,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.BauerIcehockeySkates = BauerIcehockeySkates;
+
+var _selectVariation = require("../../helpers/selectVariation");
 
 var _ui = require("../ui");
 
@@ -4442,6 +4468,7 @@ function BauerIcehockeySkates() {
 
       if (AvailableVariationsLoader.length.value.split(',').includes(this.dataObtained.fit) && AvailableVariationsLoader.width.value.split(',').includes(this.dataObtained.scale)) {
         this.matchedVariations = true;
+        (0, _selectVariation.selectVariation)(AvailableVariationsLoader.length, this.dataObtained.fit);
       }
 
       this.onDataObtained = true;
@@ -4453,7 +4480,7 @@ function BauerIcehockeySkates() {
     }
   });
 }
-},{"../ui":"calculator/ui.js"}],"calculator.js":[function(require,module,exports) {
+},{"../../helpers/selectVariation":"helpers/selectVariation.js","../ui":"calculator/ui.js"}],"calculator.js":[function(require,module,exports) {
 "use strict";
 
 var _alpinejs = _interopRequireDefault(require("alpinejs"));

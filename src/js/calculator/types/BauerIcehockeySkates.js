@@ -1,3 +1,4 @@
+import { selectVariation } from '../../helpers/selectVariation';
 import { calculatorUI } from '../ui';
 
 export function BauerIcehockeySkates() {
@@ -335,6 +336,10 @@ export function BauerIcehockeySkates() {
           .includes(this.dataObtained.scale)
       ) {
         this.matchedVariations = true;
+        selectVariation(
+          AvailableVariationsLoader.length,
+          this.dataObtained.fit,
+        );
       }
       this.onDataObtained = true;
       console.log(this.dataObtained);

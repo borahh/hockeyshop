@@ -1,4 +1,5 @@
-export function selectVariation(variation) {
+export function selectVariation(variation, data) {
+  console.log(variation, data);
   let ul;
   variation.length.forEach((item) => {
     ul = document.querySelector(`ul[data-attribute_name="${item}"`);
@@ -7,5 +8,9 @@ export function selectVariation(variation) {
     }
   });
 
-  ul.querySelectorAll('li');
+  ul.querySelectorAll('li').forEach((ele) => {
+    if (ele.getAttribute(variation.selector) == data.toLowerCase()) {
+      ele.click();
+    }
+  });
 }
