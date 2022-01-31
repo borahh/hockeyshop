@@ -8,6 +8,8 @@ export function selectVariation(variation, data) {
       return;
     }
   });
+
+  select.value = data.toLowerCase();
   // ul.querySelectorAll('li').forEach((ele) => {
   //   if (ele.getAttribute(variation.selector) == data.toLowerCase()) {
   //     console.log(ele);
