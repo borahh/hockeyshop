@@ -4169,8 +4169,7 @@ function selectVariation(variation, data) {
   console.log(variation, data);
   var ul;
   variation.list.forEach(function (item) {
-    console.log("'ul[data-attribute_name=\"".concat(item, "\"'"));
-    ul = document.querySelector("'ul[data-attribute_name=\"".concat(item, "\"'"));
+    ul = document.querySelector("ul[data-attribute_name=\"".concat(item, "\"]"));
 
     if (!ul) {
       return;
