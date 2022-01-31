@@ -48,7 +48,7 @@ class BorahhCalculatorBase {
     // Unmatched Variations
     protected function onUnmatchedVariations() {
         if (isset($_POST['enquiryVariation'])){	
-            $to = 'lars@skatertown.dk';
+            $to = 'himanx007@gmail.com';
             $subject = 'Variation Enquiry for' . ' ' . get_the_title();
             
             // Lines
