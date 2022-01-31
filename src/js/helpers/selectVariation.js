@@ -1,4 +1,5 @@
 export function selectVariation(variation, data) {
+  let isSuccess = true;
   let ul;
   variation.list.forEach((item) => {
     let ele = document.querySelector(`ul[data-attribute_name="${item}"]`);
@@ -14,8 +15,10 @@ export function selectVariation(variation, data) {
     ) {
       ele.click();
       if (ele.classList.contains('disabled')) {
-        return false;
+        isSuccess = false;
       }
     }
   });
+
+  return isSuccess;
 }

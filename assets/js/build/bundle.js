@@ -4166,6 +4166,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.selectVariation = selectVariation;
 
 function selectVariation(variation, data) {
+  var isSuccess = true;
   var ul;
   variation.list.forEach(function (item) {
     var ele = document.querySelector("ul[data-attribute_name=\"".concat(item, "\"]"));
@@ -4179,10 +4180,11 @@ function selectVariation(variation, data) {
       ele.click();
 
       if (ele.classList.contains('disabled')) {
-        return false;
+        isSuccess = false;
       }
     }
   });
+  return isSuccess;
 }
 },{}],"helpers/getAbsoluteHeight.js":[function(require,module,exports) {
 "use strict";
