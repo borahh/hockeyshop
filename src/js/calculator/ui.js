@@ -25,7 +25,11 @@ export const calculatorUI = {
     this.open = !this.open;
   },
   onToggleOpen() {
-    if (this.open && !this.onSubmit) {
+    console.log(
+      this.$el.scrollHeight,
+      getAbsoluteHeight('.calculator__wraper__content__nav'),
+    );
+    if (this.open) {
       this.$el.style.maxHeight =
         300 +
         this.$el.scrollHeight +

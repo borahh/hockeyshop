@@ -4209,7 +4209,9 @@ var calculatorUI = {
     this.open = !this.open;
   },
   onToggleOpen: function onToggleOpen() {
-    if (this.open && !this.onSubmit) {
+    console.log(this.$el.scrollHeight, (0, _getAbsoluteHeight.getAbsoluteHeight)('.calculator__wraper__content__nav'));
+
+    if (this.open) {
       this.$el.style.maxHeight = 300 + this.$el.scrollHeight + (0, _getAbsoluteHeight.getAbsoluteHeight)('.calculator__wraper__content__nav') + 'px';
     } else {
       this.$el.style.maxHeight = null;
