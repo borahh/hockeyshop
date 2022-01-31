@@ -4178,12 +4178,7 @@ function selectVariation(variation, data) {
   });
   ul.querySelectorAll('li').forEach(function (ele) {
     if (ele.getAttribute(variation.selector) == data.toLowerCase()) {
-      if (ele.classList.contains('disabled')) {
-        return false;
-      } else {
-        ele.click();
-        return true;
-      }
+      ele.click();
     }
   });
 }
