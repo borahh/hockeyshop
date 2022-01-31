@@ -2,8 +2,12 @@ export function selectVariation(variation, data) {
   console.log(variation, data);
   let ul;
   variation.list.forEach((item) => {
-    ul = document.querySelector(`ul[data-attribute_name="${item}"]`);
-    console.log(ul);
+    let ele = document.querySelector(`ul[data-attribute_name="${item}"]`);
+    if (ele) {
+      ul = ele;
+    } else {
+      return;
+    }
   });
 
   console.log(ul);
