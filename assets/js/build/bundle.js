@@ -4181,8 +4181,8 @@ function selectVariation(variation, data) {
       if (ele.classList.contains('disabled')) {
         return false;
       } else {
-        return true;
         ele.click();
+        return true;
       }
     }
   });
