@@ -15,6 +15,7 @@ function borahh_resolve_deps($id, $deps) {
             $k .= implode(',', $j);
         }
         $l[$dep->name]['name'] = $dep->name;
+        $l[$dep->name]['selector'] = $dep->selector;
         $l[$dep->name]['list'] = array_map(function($v) { return 'attribute_' . $v; }, $dep->list);
         $l[$dep->name]['value'] = $k;
 
