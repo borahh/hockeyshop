@@ -4175,9 +4175,11 @@ function getVariationEl(variation, data) {
     }
   });
   var list = Array.from(ul.querySelectorAll('li'));
-  return list.find(function (el) {
+  var el = list.find(function (el) {
     return el.getAttribute(variation.selector) === data;
-  }) || false;
+  });
+  console.log(el);
+  return el;
 }
 },{}],"helpers/getAbsoluteHeight.js":[function(require,module,exports) {
 "use strict";
@@ -4467,17 +4469,14 @@ function BauerIcehockeySkates() {
       if (AvailableVariationsLoader.length.value.split(',').includes(this.dataObtained.fit) && AvailableVariationsLoader.width.value.split(',').includes(this.dataObtained.scale)) {
         var selectFit = (0, _getVariationEl.getVariationEl)(AvailableVariationsLoader.length, this.dataObtained.fit);
         var selectScale = (0, _getVariationEl.getVariationEl)(AvailableVariationsLoader.width, this.dataObtained.scale);
-        console.log(selectScale, selectFit);
 
         if (selectFit && selectScale) {
-          console.log(selectFit, selectScale);
           this.matchedVariations = true;
-        }
+        } // if (!selectFit || !selectScale) {
+        //   console.log('mismatched');
+        //   this.matchedVariations = false;
+        // }
 
-        if (!selectFit || !selectScale) {
-          console.log('mismatched');
-          this.matchedVariations = false;
-        }
       }
 
       this.onDataObtained = true;
