@@ -4172,6 +4172,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 function getVariationEl(variation, data) {
+  var element;
   var ul;
   variation.list.forEach(function (item) {
     var ele = document.querySelector("ul[data-attribute_name=\"".concat(item, "\"]"));
@@ -4189,10 +4190,12 @@ function getVariationEl(variation, data) {
       var ele = _step.value;
 
       if (ele.getAttribute(variation.selector) == data) {
-        return ele;
+        element = ele;
       } else {
         return false;
       }
+
+      return element;
     }
   } catch (err) {
     _iterator.e(err);
