@@ -4169,11 +4169,8 @@ function selectVariation(variation, data) {
   console.log(variation, data);
   var ul;
   variation.list.forEach(function (item) {
-    ul = document.querySelector("'ul[data-attribute_name=\"".concat(item, "\"]'"));
-
-    if (!ul) {
-      return;
-    }
+    ul = document.querySelector("ul[data-attribute_name=\"".concat(item, "\"]"));
+    console.log(ul);
   });
   console.log(ul);
   ul.querySelectorAll('li').forEach(function (ele) {
