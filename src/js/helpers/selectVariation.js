@@ -7,7 +7,7 @@ export function selectVariation(variation, data) {
     }
   });
 
-  const x = ul.querySelectorAll('li').forEach((ele) => {
+  for (const ele of ul.querySelectorAll('li')) {
     if (
       ele.getAttribute(variation.selector) == data &&
       !ele.classList.contains('selected')
@@ -19,7 +19,5 @@ export function selectVariation(variation, data) {
       ele.click();
       return true;
     }
-  });
-
-  return x ? true : false;
+  }
 }
