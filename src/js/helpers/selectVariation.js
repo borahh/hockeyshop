@@ -8,6 +8,7 @@ export function selectVariation(variation, data) {
     }
   });
 
+  console.log(ul);
   ul.querySelectorAll('li').forEach((ele) => {
     if (ele.getAttribute(variation.selector) == data.toLowerCase()) {
       ele.click();
