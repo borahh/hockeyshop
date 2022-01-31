@@ -4166,7 +4166,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.selectVariation = selectVariation;
 
 function selectVariation(variation, data) {
-  console.log(variation, data);
   var ul;
   variation.list.forEach(function (item) {
     var ele = document.querySelector("ul[data-attribute_name=\"".concat(item, "\"]"));
@@ -4177,7 +4176,6 @@ function selectVariation(variation, data) {
       return;
     }
   });
-  console.log(ul);
   ul.querySelectorAll('li').forEach(function (ele) {
     if (ele.getAttribute(variation.selector) == data.toLowerCase()) {
       ele.click();
@@ -4472,6 +4470,7 @@ function BauerIcehockeySkates() {
       if (AvailableVariationsLoader.length.value.split(',').includes(this.dataObtained.fit) && AvailableVariationsLoader.width.value.split(',').includes(this.dataObtained.scale)) {
         this.matchedVariations = true;
         (0, _selectVariation.selectVariation)(AvailableVariationsLoader.length, this.dataObtained.fit);
+        (0, _selectVariation.selectVariation)(AvailableVariationsLoader.width, this.dataObtained.scale);
       }
 
       this.onDataObtained = true;
