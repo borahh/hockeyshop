@@ -4194,11 +4194,12 @@ function selectVariation(variation, data) {
         isSuccess = true;
 
         if (ele.classList.contains('selected')) {
-          console.log(ele.getAttribute(variation.selector), data);
           isSuccess = true;
         } else {
           isSuccess = false;
         }
+      } else {
+        isSuccess = false;
       }
     }
   } catch (err) {
@@ -4498,7 +4499,7 @@ function BauerIcehockeySkates() {
         var selectFit = (0, _selectVariation.selectVariation)(AvailableVariationsLoader.length, this.dataObtained.fit);
         var selectScale = (0, _selectVariation.selectVariation)(AvailableVariationsLoader.width, this.dataObtained.scale);
 
-        if (!selectFit && !selectScale) {
+        if (!selectFit || !selectScale) {
           this.matchedVariations = false;
         } else {
           this.matchedVariations = true;
@@ -4559,7 +4560,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55794" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59407" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
