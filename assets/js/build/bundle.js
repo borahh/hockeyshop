@@ -4175,7 +4175,7 @@ function selectVariation(variation, data) {
     }
   });
   ul.querySelectorAll('li').forEach(function (ele) {
-    if (ele.getAttribute(variation.selector) == data.toLowerCase()) {
+    if (ele.getAttribute(variation.selector) == data) {
       console.log(ele);
       ele.click();
     }
