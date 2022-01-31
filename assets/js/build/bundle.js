@@ -4172,16 +4172,14 @@ function selectVariation(variation, data) {
 
     if (ele) {
       select = ele;
-    } else {
-      return;
     }
   });
-  select.value = data.toLowerCase(); // ul.querySelectorAll('li').forEach((ele) => {
-  //   if (ele.getAttribute(variation.selector) == data.toLowerCase()) {
-  //     console.log(ele);
-  //     ele.click();
-  //   }
-  // });
+  ul.querySelectorAll('li').forEach(function (ele) {
+    if (ele.getAttribute(variation.selector) == data.toLowerCase()) {
+      console.log(ele);
+      ele.click();
+    }
+  });
 }
 },{}],"helpers/getAbsoluteHeight.js":[function(require,module,exports) {
 "use strict";
