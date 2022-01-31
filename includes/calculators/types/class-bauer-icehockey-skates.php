@@ -38,9 +38,9 @@ class BauerIcehockeySkates extends BorahhCalculatorBase {
             <h1>Din anbefalede størrelse er</h1>
             <div> <span x-text="dataObtained.fit"></span>/ <span x-text="dataObtained.scale"></span></div>
             <div class="fit-image">
-                <img class="" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'final-fit1.png'; ?>" alt="" x-show="dataObtained.scale === fit1">
-                <img class="" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'final-fit2.png'; ?>" alt="" x-show="dataObtained.scale === fit2">
-                <img class="" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'final-fit3.png'; ?>" alt="" x-show="dataObtained.scale === fit3">
+                <img class="" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'final-fit1.webp'; ?>" alt="" x-show="dataObtained.scale === fit1">
+                <img class="" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'final-fit2.webp'; ?>" alt="" x-show="dataObtained.scale === fit2">
+                <img class="" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'final-fit3.webp'; ?>" alt="" x-show="dataObtained.scale === fit3">
             </div>
         <?php
         return ob_get_clean();
