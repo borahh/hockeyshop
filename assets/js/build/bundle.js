@@ -4157,13 +4157,13 @@ var src_default = alpine_default; // packages/alpinejs/builds/module.js
 
 var module_default = src_default;
 exports.default = module_default;
-},{}],"helpers/selectVariation.js":[function(require,module,exports) {
+},{}],"helpers/getVariationEl.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.selectVariation = selectVariation;
+exports.getVariationEl = getVariationEl;
 
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
 
@@ -4171,8 +4171,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function selectVariation(variation, data) {
-  var isSuccess = false;
+function getVariationEl(variation, data) {
   var ul;
   variation.list.forEach(function (item) {
     var ele = document.querySelector("ul[data-attribute_name=\"".concat(item, "\"]"));
@@ -4190,16 +4189,9 @@ function selectVariation(variation, data) {
       var ele = _step.value;
 
       if (ele.getAttribute(variation.selector) == data) {
-        ele.click();
-        isSuccess = true;
-
-        if (ele.classList.contains('selected')) {
-          isSuccess = true;
-        } else {
-          isSuccess = false;
-        }
+        return ele;
       } else {
-        isSuccess = false;
+        return false;
       }
     }
   } catch (err) {
@@ -4207,8 +4199,6 @@ function selectVariation(variation, data) {
   } finally {
     _iterator.f();
   }
-
-  return isSuccess;
 }
 },{}],"helpers/getAbsoluteHeight.js":[function(require,module,exports) {
 "use strict";
@@ -4305,7 +4295,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.BauerIcehockeySkates = BauerIcehockeySkates;
 
-var _selectVariation = require("../../helpers/selectVariation");
+var _getVariationEl = require("../../helpers/getVariationEl");
 
 var _ui = require("../ui");
 
@@ -4496,12 +4486,13 @@ function BauerIcehockeySkates() {
       var AvailableVariationsLoader = JSON.parse(document.getElementById('AvailableVariationsLoader').getAttribute('data-variations'));
 
       if (AvailableVariationsLoader.length.value.split(',').includes(this.dataObtained.fit) && AvailableVariationsLoader.width.value.split(',').includes(this.dataObtained.scale)) {
-        var selectFit = (0, _selectVariation.selectVariation)(AvailableVariationsLoader.length, this.dataObtained.fit);
-        var selectScale = (0, _selectVariation.selectVariation)(AvailableVariationsLoader.width, this.dataObtained.scale);
+        var selectFit = (0, _getVariationEl.getVariationEl)(AvailableVariationsLoader.length, this.dataObtained.fit);
+        var selectScale = (0, _getVariationEl.getVariationEl)(AvailableVariationsLoader.width, this.dataObtained.scale);
 
         if (!selectFit || !selectScale) {
           this.matchedVariations = false;
         } else {
+          console.log(selectFit, selectScale);
           this.matchedVariations = true;
         }
       }
@@ -4514,7 +4505,7 @@ function BauerIcehockeySkates() {
     }
   });
 }
-},{"../../helpers/selectVariation":"helpers/selectVariation.js","../ui":"calculator/ui.js"}],"calculator.js":[function(require,module,exports) {
+},{"../../helpers/getVariationEl":"helpers/getVariationEl.js","../ui":"calculator/ui.js"}],"calculator.js":[function(require,module,exports) {
 "use strict";
 
 var _alpinejs = _interopRequireDefault(require("alpinejs"));

@@ -1,5 +1,4 @@
-export function selectVariation(variation, data) {
-  let isSuccess = false;
+export function getVariationEl(variation, data) {
   let ul;
   variation.list.forEach((item) => {
     let ele = document.querySelector(`ul[data-attribute_name="${item}"]`);
@@ -10,17 +9,9 @@ export function selectVariation(variation, data) {
 
   for (const ele of ul.querySelectorAll('li')) {
     if (ele.getAttribute(variation.selector) == data) {
-      ele.click();
-      isSuccess = true;
-      if (ele.classList.contains('selected')) {
-        isSuccess = true;
-      } else {
-        isSuccess = false;
-      }
+      return ele;
     } else {
-      isSuccess = false;
+      return false;
     }
   }
-
-  return isSuccess;
 }
