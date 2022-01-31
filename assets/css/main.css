@@ -425,6 +425,7 @@
 .calculator__accordion__result {
     display: flex;
     gap: 1.25rem;
+    font-family: GT America;
     font-weight: 700;
     text-transform: uppercase;
     --tw-text-opacity: 1;
