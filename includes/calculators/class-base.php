@@ -84,8 +84,8 @@ class BorahhCalculatorBase {
             <input type="text" name="name" placeholder='<?php _e("Navn", "hockeyshop-theme"); ?>' required>
             <input type="text" name="email" placeholder='<?php _e("E-mail", "hockeyshop-theme"); ?>' required>
             <input type="text" name="phone" placeholder='<?php _e("Telefon", "hockeyshop-theme"); ?>' required>
-            <input type="hidden" name="variationLength">
-            <input type="hidden" name="variationWidth">
+            <input type="hidden" name="variationLength" x-bind:value="dataObtained.fit">
+            <input type="hidden" name="variationWidth" x-bind:value="dataObtained.scale">
             <input type="submit" name="enquiryVariation" x-ref='enquiryVariation'>
         </form>
         <?php
