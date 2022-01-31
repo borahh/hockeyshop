@@ -4174,7 +4174,8 @@ function getVariationEl(variation, data) {
       ul = el;
     }
   });
-  var el = ul.querySelectorAll('li').find(function (el) {
+  var list = Array.from(ul.querySelectorAll('li'));
+  var el = list.find(function (el) {
     return el.getAttribute(variation.selector) === data;
   });
   return el;

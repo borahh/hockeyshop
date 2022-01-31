@@ -7,8 +7,9 @@ export function getVariationEl(variation, data) {
     }
   });
 
-  const el = ul
-    .querySelectorAll('li')
-    .find((el) => el.getAttribute(variation.selector) === data);
+  const list = Array.from(ul.querySelectorAll('li'));
+
+  const el = list.find((el) => el.getAttribute(variation.selector) === data);
+
   return el;
 }
