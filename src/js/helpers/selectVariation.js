@@ -2,8 +2,7 @@ export function selectVariation(variation, data) {
   console.log(variation, data);
   let ul;
   variation.list.forEach((item) => {
-    console.log(`ul[data-attribute_name="${item}"]`);
-    ul = document.querySelector(`ul[data-attribute_name="${item}"]`);
+    ul = document.querySelector(`'ul[data-attribute_name="${item}"]'`);
     if (!ul) {
       return;
     }
