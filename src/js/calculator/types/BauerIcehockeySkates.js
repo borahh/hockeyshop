@@ -346,6 +346,9 @@ export function BauerIcehockeySkates() {
 
         if (selectFit && selectScale) {
           this.matchedVariations = true;
+          if (selectFit.classList.contains('disabled')) {
+            this.matchedVariations = false;
+          }
           if (!selectFit.classList.contains('selected')) {
             selectFit.click();
           }
