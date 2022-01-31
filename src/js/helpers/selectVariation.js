@@ -11,7 +11,12 @@ export function selectVariation(variation, data) {
 
   ul.querySelectorAll('li').forEach((ele) => {
     if (ele.getAttribute(variation.selector) == data.toLowerCase()) {
-      ele.click();
+      if (ele.classList.contains('disabled')) {
+        return false;
+      } else {
+        return true;
+        ele.click();
+      }
     }
   });
 }

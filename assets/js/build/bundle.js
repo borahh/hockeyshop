@@ -4178,7 +4178,12 @@ function selectVariation(variation, data) {
   });
   ul.querySelectorAll('li').forEach(function (ele) {
     if (ele.getAttribute(variation.selector) == data.toLowerCase()) {
-      ele.click();
+      if (ele.classList.contains('disabled')) {
+        return false;
+      } else {
+        return true;
+        ele.click();
+      }
     }
   });
 }
@@ -4469,8 +4474,12 @@ function BauerIcehockeySkates() {
 
       if (AvailableVariationsLoader.length.value.split(',').includes(this.dataObtained.fit) && AvailableVariationsLoader.width.value.split(',').includes(this.dataObtained.scale)) {
         this.matchedVariations = true;
-        (0, _selectVariation.selectVariation)(AvailableVariationsLoader.length, this.dataObtained.fit);
-        (0, _selectVariation.selectVariation)(AvailableVariationsLoader.width, this.dataObtained.scale);
+        var selectFit = (0, _selectVariation.selectVariation)(AvailableVariationsLoader.length, this.dataObtained.fit);
+        var selectScale = (0, _selectVariation.selectVariation)(AvailableVariationsLoader.width, this.dataObtained.scale);
+
+        if (!selectFit || !selectScale) {
+          this.matchedVariations = false;
+        }
       }
 
       this.onDataObtained = true;
