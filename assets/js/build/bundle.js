@@ -4176,7 +4176,7 @@ function getVariationEl(variation, data) {
   });
 
   function matchEl(el) {
-    return ele.getAttribute(variation.selector) === data;
+    return el.getAttribute(variation.selector) === data;
   }
 
   return ul.querySelectorAll('li').find(matchEl);
