@@ -4468,6 +4468,7 @@ function BauerIcehockeySkates() {
       if (AvailableVariationsLoader.length.value.split(',').includes(this.dataObtained.fit) && AvailableVariationsLoader.width.value.split(',').includes(this.dataObtained.scale)) {
         var selectFit = (0, _getVariationEl.getVariationEl)(AvailableVariationsLoader.length, this.dataObtained.fit);
         var selectScale = (0, _getVariationEl.getVariationEl)(AvailableVariationsLoader.width, this.dataObtained.scale);
+        console.log(selectScale, selectFit);
 
         if (selectFit && selectScale) {
           console.log(selectFit, selectScale);

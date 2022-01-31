@@ -344,6 +344,8 @@ export function BauerIcehockeySkates() {
           this.dataObtained.scale,
         );
 
+        console.log(selectScale, selectFit);
+
         if (selectFit && selectScale) {
           console.log(selectFit, selectScale);
           this.matchedVariations = true;
