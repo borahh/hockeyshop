@@ -9,7 +9,8 @@ export function getVariationEl(variation, data) {
 
   const list = Array.from(ul.querySelectorAll('li'));
 
-  const el = list.find((el) => el.getAttribute(variation.selector) === data);
+  const el =
+    list.find((el) => el.getAttribute(variation.selector) === data) || false;
 
   return el;
 }

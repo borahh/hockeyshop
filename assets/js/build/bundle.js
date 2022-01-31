@@ -4177,7 +4177,7 @@ function getVariationEl(variation, data) {
   var list = Array.from(ul.querySelectorAll('li'));
   var el = list.find(function (el) {
     return el.getAttribute(variation.selector) === data;
-  });
+  }) || false;
   return el;
 }
 },{}],"helpers/getAbsoluteHeight.js":[function(require,module,exports) {
