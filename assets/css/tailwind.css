@@ -386,6 +386,16 @@
         &__end {
           @apply p-2;
 
+          &__matched {
+            h2 {
+              @apply mb-10 text-2xl font-normal leading-6 text-center;
+            }
+
+            &__result {
+              @apply text-[1.5rem] text-accent mt-6 mb-12 lg:text-[2rem];
+            }
+          }
+
           &__unmatched {
             @apply p-5;
 
