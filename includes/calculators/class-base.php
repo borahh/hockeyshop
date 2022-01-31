@@ -68,7 +68,8 @@ class BorahhCalculatorBase {
         <div class="calculator__wraper__content__end__unmatched__content">
             <p><?php _e("Din anbefalede størrelse er", "hockeyshop-theme"); ?></p>
             <div>
-                <span>6.5</span>/ <span>fit1</span>
+                <span x-text="dataObtained.fit"></span>/ 
+                <span x-text="dataObtained.scale"></span>
             </div>
         </div>
         
