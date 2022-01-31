@@ -4172,6 +4172,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 function selectVariation(variation, data) {
+  var isSuccess = false;
   var ul;
   variation.list.forEach(function (item) {
     var ele = document.querySelector("ul[data-attribute_name=\"".concat(item, "\"]"));
@@ -4188,22 +4189,18 @@ function selectVariation(variation, data) {
     for (_iterator.s(); !(_step = _iterator.n()).done;) {
       var ele = _step.value;
 
-      if (ele.getAttribute(variation.selector) !== data) {
-        return false;
-      }
-
       if (ele.getAttribute(variation.selector) == data && !ele.classList.contains('selected')) {
         if (ele.classList.contains('disabled')) {
           ele.click();
-          return false;
+          isSuccess = false;
         }
 
         ele.click();
-        return true;
+        isSuccess = true;
       }
 
       if (ele.classList.contains('selected')) {
-        return true;
+        isSuccess = true;
       }
     }
   } catch (err) {
@@ -4211,6 +4208,8 @@ function selectVariation(variation, data) {
   } finally {
     _iterator.f();
   }
+
+  return isSuccess;
 }
 },{}],"helpers/getAbsoluteHeight.js":[function(require,module,exports) {
 "use strict";
