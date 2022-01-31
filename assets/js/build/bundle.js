@@ -4490,10 +4490,14 @@ function BauerIcehockeySkates() {
       var AvailableVariationsLoader = JSON.parse(document.getElementById('AvailableVariationsLoader').getAttribute('data-variations'));
 
       if (AvailableVariationsLoader.length.value.split(',').includes(this.dataObtained.fit) && AvailableVariationsLoader.width.value.split(',').includes(this.dataObtained.scale)) {
-        this.matchedVariations = true;
-        var x = (0, _selectVariation.selectVariation)(AvailableVariationsLoader.length, this.dataObtained.fit);
-        var y = (0, _selectVariation.selectVariation)(AvailableVariationsLoader.width, this.dataObtained.scale);
-        console.log(x, y);
+        var selectFit = (0, _selectVariation.selectVariation)(AvailableVariationsLoader.length, this.dataObtained.fit);
+        var selectScale = (0, _selectVariation.selectVariation)(AvailableVariationsLoader.width, this.dataObtained.scale);
+
+        if (!selectFit && !selectScale) {
+          this.matchedVariations = false;
+        } else {
+          this.matchedVariations = true;
+        }
       }
 
       this.onDataObtained = true;

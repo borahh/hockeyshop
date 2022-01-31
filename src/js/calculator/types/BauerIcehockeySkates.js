@@ -335,16 +335,20 @@ export function BauerIcehockeySkates() {
           .split(',')
           .includes(this.dataObtained.scale)
       ) {
-        this.matchedVariations = true;
-        const x = selectVariation(
+        const selectFit = selectVariation(
           AvailableVariationsLoader.length,
           this.dataObtained.fit,
         );
-        const y = selectVariation(
+        const selectScale = selectVariation(
           AvailableVariationsLoader.width,
           this.dataObtained.scale,
         );
-        console.log(x, y);
+
+        if (!selectFit && !selectScale) {
+          this.matchedVariations = false;
+        } else {
+          this.matchedVariations = true;
+        }
       }
       this.onDataObtained = true;
       console.log(this.dataObtained);
