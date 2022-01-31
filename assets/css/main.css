@@ -801,6 +801,9 @@
 .calculator__wraper__content__end__matched__result {
     margin-top: 1.5rem;
     margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
     font-size: 1.5rem;
     --tw-text-opacity: 1;
     color: rgb(23 104 210 / var(--tw-text-opacity));
