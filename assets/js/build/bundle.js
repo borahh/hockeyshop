@@ -4194,6 +4194,7 @@ function selectVariation(variation, data) {
         isSuccess = true;
 
         if (ele.classList.contains('selected')) {
+          console.log(ele.getAttribute(variation.selector), data);
           isSuccess = true;
         } else {
           isSuccess = false;

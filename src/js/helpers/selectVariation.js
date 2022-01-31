@@ -13,6 +13,7 @@ export function selectVariation(variation, data) {
       ele.click();
       isSuccess = true;
       if (ele.classList.contains('selected')) {
+        console.log(ele.getAttribute(variation.selector), data);
         isSuccess = true;
       } else {
         isSuccess = false;
