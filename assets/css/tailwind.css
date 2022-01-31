@@ -389,7 +389,7 @@
           &__matched {
             @apply text-center;
             h2 {
-              @apply mb-10 text-2xl font-normal leading-6 text-center;
+              @apply text-2xl font-normal leading-6 text-center;
             }
 
             &__result {
