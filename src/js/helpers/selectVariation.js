@@ -1,5 +1,4 @@
 export function selectVariation(variation, data) {
-  let isSuccess = true;
   let ul;
   variation.list.forEach((item) => {
     let ele = document.querySelector(`ul[data-attribute_name="${item}"]`);
@@ -8,17 +7,17 @@ export function selectVariation(variation, data) {
     }
   });
 
-  ul.querySelectorAll('li').forEach((ele) => {
+  const x = ul.querySelectorAll('li').forEach((ele) => {
     if (
       ele.getAttribute(variation.selector) == data &&
       !ele.classList.contains('selected')
     ) {
       ele.click();
       if (ele.classList.contains('disabled')) {
-        isSuccess = false;
+        return false;
       }
     }
   });
 
-  return isSuccess;
+  return x ? true : false;
 }

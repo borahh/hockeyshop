@@ -4166,7 +4166,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.selectVariation = selectVariation;
 
 function selectVariation(variation, data) {
-  var isSuccess = true;
   var ul;
   variation.list.forEach(function (item) {
     var ele = document.querySelector("ul[data-attribute_name=\"".concat(item, "\"]"));
@@ -4175,16 +4174,16 @@ function selectVariation(variation, data) {
       ul = ele;
     }
   });
-  ul.querySelectorAll('li').forEach(function (ele) {
+  var x = ul.querySelectorAll('li').forEach(function (ele) {
     if (ele.getAttribute(variation.selector) == data && !ele.classList.contains('selected')) {
       ele.click();
 
       if (ele.classList.contains('disabled')) {
-        isSuccess = false;
+        return false;
       }
     }
   });
-  return isSuccess;
+  return x ? true : false;
 }
 },{}],"helpers/getAbsoluteHeight.js":[function(require,module,exports) {
 "use strict";
