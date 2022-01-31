@@ -1,9 +1,9 @@
 export function selectVariation(variation, data) {
-  let select;
+  let ul;
   variation.list.forEach((item) => {
-    let ele = document.querySelector(`select#${item}`);
+    let ele = document.querySelector(`ul[data-attribute_name="${item}"]`);
     if (ele) {
-      select = ele;
+      ul = ele;
     }
   });
 

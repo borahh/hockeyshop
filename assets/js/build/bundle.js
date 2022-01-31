@@ -4166,12 +4166,12 @@ Object.defineProperty(exports, "__esModule", {
 exports.selectVariation = selectVariation;
 
 function selectVariation(variation, data) {
-  var select;
+  var ul;
   variation.list.forEach(function (item) {
-    var ele = document.querySelector("select#".concat(item));
+    var ele = document.querySelector("ul[data-attribute_name=\"".concat(item, "\"]"));
 
     if (ele) {
-      select = ele;
+      ul = ele;
     }
   });
   ul.querySelectorAll('li').forEach(function (ele) {
