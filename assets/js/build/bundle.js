@@ -4178,6 +4178,7 @@ function selectVariation(variation, data) {
   });
   ul.querySelectorAll('li').forEach(function (ele) {
     if (ele.getAttribute(variation.selector) == data.toLowerCase()) {
+      console.log(ele);
       ele.click();
     }
   });
