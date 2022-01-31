@@ -4172,7 +4172,6 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 function getVariationEl(variation, data) {
-  var element;
   var ul;
   variation.list.forEach(function (item) {
     var ele = document.querySelector("ul[data-attribute_name=\"".concat(item, "\"]"));
@@ -4190,7 +4189,7 @@ function getVariationEl(variation, data) {
       var ele = _step.value;
 
       if (ele.getAttribute(variation.selector) == data) {
-        element = ele;
+        return ele;
       } else {
         return false;
       }
@@ -4200,8 +4199,6 @@ function getVariationEl(variation, data) {
   } finally {
     _iterator.f();
   }
-
-  return element;
 }
 },{}],"helpers/getAbsoluteHeight.js":[function(require,module,exports) {
 "use strict";
