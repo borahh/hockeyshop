@@ -2,7 +2,8 @@
 class BauerIcehockeySkates extends BorahhCalculatorBase {
     private $inputMax;
 
-    public function __construct($dependencies, $fields) {
+    public function __construct($calculatorID, $dependencies, $fields) {
+        $this->calculatorID = $calculatorID;
         $this->dependencies = $dependencies;
         $this->fields = $fields;
 
