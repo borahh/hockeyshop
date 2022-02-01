@@ -10,6 +10,7 @@ function borahh_calculator_types() {
     return (object) array(
         'bauer_icehockey_skates' => (object) array(
             'ID' => 'BauerIcehockeySkates',
+            'type' => null,
             'fields' => array(
                 'lengthFrom' => 'hbdv_size_from',
                 'lengthTo' =>  'hbdv_size_to',
@@ -32,6 +33,7 @@ function borahh_calculator_types() {
         ),
         'ccm_skates' => (object) array(
             'ID' => 'CCMSkates',
+            'type' => null,
             'fields' => array(
                 'lengthFrom' => 'hbdv_size_from',
                 'lengthTo' =>  'hbdv_size_to',

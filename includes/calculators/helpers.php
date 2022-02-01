@@ -37,7 +37,7 @@ function borahh_get_fields($fields) {
             return get_field( $field );
          }, $fields);
     } else {
-        return null
+        return null;
     }
     
  }
