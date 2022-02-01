@@ -32,13 +32,14 @@ function borahh_resolve_deps($id, $deps) {
  * 
  */
 function borahh_get_fields($fields) {
+    if(!$fields) {
+        return null;
+    }
     if(count($fields) > 0)  {
         return array_map(function($field) {
             return get_field( $field );
          }, $fields);
-    } else {
-        return null;
-    }
+    } 
     
  }
 
