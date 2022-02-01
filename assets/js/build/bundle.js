@@ -4698,7 +4698,6 @@ function CCMSkates() {
         scale: get_scale(scale, width, height)
       };
       this.dataObtained = data;
-      console.log(this.dataObtained);
       var AvailableVariationsLoader = JSON.parse(document.getElementById('AvailableVariationsLoader').getAttribute('data-variations'));
 
       if (AvailableVariationsLoader.length.value.split(',').includes(this.dataObtained.fit) && AvailableVariationsLoader.width.value.split(',').includes(this.dataObtained.scale)) {

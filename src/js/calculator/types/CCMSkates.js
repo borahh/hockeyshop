@@ -321,7 +321,6 @@ export function CCMSkates() {
 
       this.dataObtained = data;
 
-      console.log(this.dataObtained);
       const AvailableVariationsLoader = JSON.parse(
         document
           .getElementById('AvailableVariationsLoader')
