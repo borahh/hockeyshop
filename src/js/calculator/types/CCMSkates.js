@@ -209,13 +209,13 @@ export function CCMSkates() {
 
       const get_scale = (scale, width, height) => {
         switch (width) {
-          // Narrow Width
+          // tapered Width
           case '0':
             switch (height) {
               // Low
               case '0':
                 if (scale === 'scale_fit') {
-                  return 'narrow';
+                  return 'tapered';
                 } else if (scale === 'scale_ee') {
                   return 'd';
                 }
@@ -224,7 +224,7 @@ export function CCMSkates() {
               // Medium
               case '1':
                 if (scale === 'scale_fit') {
-                  return 'narrow';
+                  return 'tapered';
                 } else if (scale === 'scale_ee') {
                   return 'd';
                 }
@@ -307,7 +307,7 @@ export function CCMSkates() {
 
           default:
             if (scale === 'scale_fit') {
-              return 'narrow';
+              return 'tapered';
             } else if (scale === 'scale_ee') {
               return 'd';
             }
@@ -321,6 +321,7 @@ export function CCMSkates() {
 
       this.dataObtained = data;
 
+      console.log(this.dataObtained);
       const AvailableVariationsLoader = JSON.parse(
         document
           .getElementById('AvailableVariationsLoader')

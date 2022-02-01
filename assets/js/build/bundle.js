@@ -4575,13 +4575,13 @@ function CCMSkates() {
 
       var get_scale = function get_scale(scale, width, height) {
         switch (width) {
-          // Narrow Width
+          // tapered Width
           case '0':
             switch (height) {
               // Low
               case '0':
                 if (scale === 'scale_fit') {
-                  return 'narrow';
+                  return 'tapered';
                 } else if (scale === 'scale_ee') {
                   return 'd';
                 }
@@ -4591,7 +4591,7 @@ function CCMSkates() {
 
               case '1':
                 if (scale === 'scale_fit') {
-                  return 'narrow';
+                  return 'tapered';
                 } else if (scale === 'scale_ee') {
                   return 'd';
                 }
@@ -4685,7 +4685,7 @@ function CCMSkates() {
 
           default:
             if (scale === 'scale_fit') {
-              return 'narrow';
+              return 'tapered';
             } else if (scale === 'scale_ee') {
               return 'd';
             }
@@ -4698,6 +4698,7 @@ function CCMSkates() {
         scale: get_scale(scale, width, height)
       };
       this.dataObtained = data;
+      console.log(this.dataObtained);
       var AvailableVariationsLoader = JSON.parse(document.getElementById('AvailableVariationsLoader').getAttribute('data-variations'));
 
       if (AvailableVariationsLoader.length.value.split(',').includes(this.dataObtained.fit) && AvailableVariationsLoader.width.value.split(',').includes(this.dataObtained.scale)) {
