@@ -4581,7 +4581,7 @@ function CCMSkates() {
               // Low
               case '0':
                 if (scale === 'scale_fit') {
-                  return 'fit1';
+                  return 'narrow';
                 } else if (scale === 'scale_ee') {
                   return 'd';
                 }
@@ -4591,7 +4591,7 @@ function CCMSkates() {
 
               case '1':
                 if (scale === 'scale_fit') {
-                  return 'fit1';
+                  return 'narrow';
                 } else if (scale === 'scale_ee') {
                   return 'd';
                 }
@@ -4601,7 +4601,7 @@ function CCMSkates() {
 
               case '2':
                 if (scale === 'scale_fit') {
-                  return 'fit2';
+                  return 'regular';
                 } else if (scale === 'scale_ee') {
                   return 'd';
                 }
@@ -4617,7 +4617,7 @@ function CCMSkates() {
               // Low
               case '0':
                 if (scale === 'scale_fit') {
-                  return 'fit2';
+                  return 'regular';
                 } else if (scale === 'scale_ee') {
                   return 'd';
                 }
@@ -4627,7 +4627,7 @@ function CCMSkates() {
 
               case '1':
                 if (scale === 'scale_fit') {
-                  return 'fit2';
+                  return 'regular';
                 } else if (scale === 'scale_ee') {
                   return 'd';
                 }
@@ -4637,7 +4637,7 @@ function CCMSkates() {
 
               case '2':
                 if (scale === 'scale_fit') {
-                  return 'fit3';
+                  return 'wide';
                 } else if (scale === 'scale_ee') {
                   return 'ee';
                 }
@@ -4653,7 +4653,7 @@ function CCMSkates() {
               // Low
               case '0':
                 if (scale === 'scale_fit') {
-                  return 'fit2';
+                  return 'regular';
                 } else if (scale === 'scale_ee') {
                   return 'ee';
                 }
@@ -4663,7 +4663,7 @@ function CCMSkates() {
 
               case '1':
                 if (scale === 'scale_fit') {
-                  return 'fit3';
+                  return 'wide';
                 } else if (scale === 'scale_ee') {
                   return 'ee';
                 }
@@ -4673,7 +4673,7 @@ function CCMSkates() {
 
               case '2':
                 if (scale === 'scale_fit') {
-                  return 'fit3';
+                  return 'wide';
                 } else if (scale === 'scale_ee') {
                   return 'ee';
                 }
@@ -4685,7 +4685,7 @@ function CCMSkates() {
 
           default:
             if (scale === 'scale_fit') {
-              return 'fit1';
+              return 'narrow';
             } else if (scale === 'scale_ee') {
               return 'd';
             }
