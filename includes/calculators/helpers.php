@@ -31,10 +31,15 @@ function borahh_resolve_deps($id, $deps) {
  * Get Fields
  * 
  */
-function borahh_get_fields($fields) { 
-    return array_map(function($field) {
-       return get_field( $field );
-    }, $fields);
+function borahh_get_fields($fields) {
+    if(count($fields) > 0)  {
+        return array_map(function($field) {
+            return get_field( $field );
+         }, $fields);
+    } else {
+        return null
+    }
+    
  }
 
 
@@ -57,12 +62,13 @@ function borahh_get_calculator() {
     $calculator = $availableCalculators->$value->ID;
     $deps = borahh_resolve_deps($post->ID, $availableCalculators->$value->dependencies);
     $fields = borahh_get_fields($availableCalculators->$value->fields);
+    $type = $availableCalculators->$value->type;
 
     if(!$calculator) {
         return;
     }
 
-    $instance = new $calculator($calculator, $deps, $fields);
+    $instance = new $calculator($calculator, $deps, $fields, $type);
 
     return $instance->render();
 

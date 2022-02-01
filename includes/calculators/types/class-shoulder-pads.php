@@ -2,10 +2,12 @@
 class ShoulderPads extends BorahhCalculatorBase {
     private $inputMax;
 
-    public function __construct($calculatorID, $dependencies, $fields) {
+    public function __construct($calculatorID, $dependencies, $fields, $type) {
         $this->calculatorID = $calculatorID;
         $this->dependencies = $dependencies;
         $this->fields = $fields;
+        $this->type = $type;
+
 
         // Calculate Max Input 
         $this->inputMax = $this->fields['lengthTo'] - $this->fields['lengthFrom'] - 1;
