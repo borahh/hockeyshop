@@ -12,10 +12,11 @@ class BorahhCalculatorBase {
     public $fields = [''];
 
 
-    public function __construct($calculatorID, $dependencies = [''], $fields = ['']) {
+    public function __construct($calculatorID, $dependencies = [''], $fields = [''], $type = null) {
         $this->calculatorID = $calculatorID;
         $this->dependencies = $dependencies;
         $this->fields = $fields;
+        $this->type = $type;
     }
 
     protected function accordionResult() {

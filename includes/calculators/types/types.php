@@ -52,6 +52,54 @@ function borahh_calculator_types() {
                )
             ]
         ),
+        'ccm_shoulder_pads_jr' => (object) array(
+            'ID' => 'ShoulderPads',
+            'type' => 'JR',
+            'dependencies' => [
+                (object) array(
+                    'name' => 'size',
+                    'list' =>  array('pa_x-stoerrelser'),
+                    'get'  => 'name',
+                    'selector' => 'data-title'
+               )
+            ]
+        ),
+        'ccm_shoulder_pads_sr' => (object) array(
+            'ID' => 'ShoulderPads',
+            'type' => 'SR',
+            'dependencies' => [
+                (object) array(
+                    'name' => 'size',
+                    'list' =>  array('pa_x-stoerrelser'),
+                    'get'  => 'name',
+                    'selector' => 'data-title'
+               )
+            ]
+        ),
+        'ccm_shoulder_pads_yt' => (object) array(
+            'ID' => 'ShoulderPads',
+            'type' => 'YT',
+            'dependencies' => [
+                (object) array(
+                    'name' => 'size',
+                    'list' =>  array('pa_x-stoerrelser'),
+                    'get'  => 'name',
+                    'selector' => 'data-title'
+               )
+            ]
+        ),
+        'ccm_shoulder_pads_women' => (object) array(
+            'ID' => 'ShoulderPads',
+            'type' => 'WOMEN',
+            'dependencies' => [
+                (object) array(
+                    'name' => 'size',
+                    'list' =>  array('pa_x-stoerrelser'),
+                    'get'  => 'name',
+                    'selector' => 'data-title'
+               )
+            ]
+        ),
     );
 }
 
