@@ -393,7 +393,7 @@
             }
 
             &__result {
-              @apply flex justify-center gap-4 text-[1.5rem] text-accent mt-6 mb-12 lg:text-[2rem];
+              @apply flex justify-center gap-4 text-[1.5rem] text-accent mt-6 mb-12 lg:text-[2rem] uppercase;
             }
           }
 
