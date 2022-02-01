@@ -47,8 +47,8 @@ function borahh_calculator_types() {
                 (object) array(
                     'name' => 'width',
                     'list' =>  array('pa_skoejte-bredde'),
-                    'get'  => 'slug',
-                    'selector' => 'data-value'
+                    'get'  => 'name',
+                    'selector' => 'data-title'
                )
             ]
         ),
