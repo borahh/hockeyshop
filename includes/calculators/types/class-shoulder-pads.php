@@ -1,27 +1,18 @@
 <?php
 class ShoulderPads extends BorahhCalculatorBase {
-    private $inputMax;
 
     public function __construct($calculatorID, $dependencies, $fields, $type) {
-        $this->calculatorID = $calculatorID;
+        $this->calculatorID = $calculatorID . $type;
         $this->dependencies = $dependencies;
         $this->fields = $fields;
         $this->type = $type;
-
-
-        // Calculate Max Input 
-        $this->inputMax = $this->fields['lengthTo'] - $this->fields['lengthFrom'] - 1;
-
     }
-
-    
 
     // Loaders
     protected function loaders() {
         ob_start();
         ?>
             <span id="AvailableVariationsLoader" data-variations='<?php echo json_encode($this->dependencies); ?>'></span>
-            <span id="CalculatorDataLoader" data-calculator='<?php echo json_encode($this->fields); ?>'></span>
         <?php
         return ob_get_clean();
     }
@@ -29,8 +20,7 @@ class ShoulderPads extends BorahhCalculatorBase {
     protected function accordionResult() {
         ob_start();
         ?>
-            <span x-text="dataObtained.fit"></span>
-            <span x-text="dataObtained.scale"></span>
+            <span x-text="dataObtained.size"></span>
         <?php
         return ob_get_clean();
     }
