@@ -2,6 +2,9 @@
 
 class BorahhCalculatorBase {
 
+    // Calculator ID
+    public $calculatorID = '';
+
     // Variation dependencies
     public $dependencies = [''];
 
@@ -9,7 +12,8 @@ class BorahhCalculatorBase {
     public $fields = [''];
 
 
-    public function __construct($dependencies = [''], $fields = ['']) {
+    public function __construct($calculatorID, $dependencies = [''], $fields = ['']) {
+        $this->calculatorID = $calculatorID;
         $this->dependencies = $dependencies;
         $this->fields = $fields;
     }
@@ -163,7 +167,7 @@ class BorahhCalculatorBase {
         
         
         <!-- Calculator Wraper -->
-        <div class="calculator" x-data='BauerIcehockeySkates'>
+        <div class="calculator" x-data="<?php echo $this->calculatorID; ?>">
 
             <!-- Calculator Loaders -->
             <?php echo $this->loaders(); ?>

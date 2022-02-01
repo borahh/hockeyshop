@@ -4502,6 +4502,241 @@ function BauerIcehockeySkates() {
     }
   });
 }
+},{"../../helpers/getVariationEl":"helpers/getVariationEl.js","../ui":"calculator/ui.js"}],"calculator/types/CCMSkates.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CCMSkates = CCMSkates;
+
+var _getVariationEl = require("../../helpers/getVariationEl");
+
+var _ui = require("../ui");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function CCMSkates() {
+  return _objectSpread(_objectSpread({}, _ui.calculatorUI), {}, {
+    dataObtained: {
+      fit: undefined,
+      scale: undefined
+    },
+    maxStep: 3,
+    units: [{
+      id: 'EU'
+    }, {
+      id: 'US'
+    }],
+    lengthInput: '0',
+    getLengthValue: function getLengthValue(i) {
+      return this.lengthInputValues[this.selectedUnit][parseInt(this.lengthInput, 10) + i];
+    },
+    getBauerValue: function getBauerValue(i) {
+      return this.lengthInputValues['BAUER'][parseInt(this.lengthInput, 10) + i];
+    },
+    selectedUnit: 'EU',
+    lengthInputValues: {
+      US: ['7.0Y', '7.5Y', '8.0Y', '8.5Y', '9.0Y', '9.5Y', '10.0Y', '10.5Y', '11.0Y', '11.5Y', '12.0Y', '12.0Y', '12.5Y', '13.0Y', '13.0Y', '13.5Y', '1.0', '1.5', '1.5', '2.0', '2.5', '3.0', '3.0', '3.5', '4.0', '4.5', '5.0', '5.0', '5.5', '6.0', '6.5', '7.0', '7.0', '7.5', '8.0', '8.5', '8.5', '9.0', '9.5', '10.0', '10.0', '10.5', '11.0', '11.5', '12.0', '12.5', '12.5', '13.0', '13.5'],
+      EU: ['24', '24.5', '25', '25.5', '26', '26.5', '27', '27.5', '28', '28.5', '29', '29.5', '30', '30.5', '31', '31.5', '32', '32.5', '33', '33.5', '34', '34.5', '35', '35.5', '36', '36.5', '37.0', '37.5', '38', '38.5', '39', '39.5', '40', '40.5', '41', '41.5', '42', '42.5', '43', '43.5', '44', '44.5', '45', '45.5', '46', '46.5', '47', '47.5', '48'],
+      BAUER: ['6.0Y', '7.0Y', '7.0Y', '8.0Y', '8.0Y', '8.5Y', '9.0Y', '9.5Y', '10.0Y', '10.5Y', '11.0Y', '11.0Y', '11.5Y', '12.0Y', '12.0Y', '12.5Y', '13.0Y', '13.5Y', '13.5Y', '1.0', '1.5', '2.0', '2.0', '2.5', '3.0', '3.5', '4.0', '4.0', '4.5', '5.0', '5.5', '6.0', '6.0', '6.0', '6.5', '7.0', '7.0', '7.5', '8.0', '8.5', '8.5', '9.0', '9.5', '10.0', '10.5', '11.0', '11.0', '11.5', '12.0']
+    },
+    reccomendLength: function reccomendLength() {
+      var yth = false;
+      var length = document.querySelector('input[name = "__length"]').value;
+
+      if (length.includes('Y')) {
+        yth = true;
+      }
+
+      var scale = document.querySelector('input[name = "__scale"]').value;
+      var fit = document.querySelector('input[name = "__fit"]:checked').value;
+      var width = document.querySelector('input[name = "__width"]:checked').value;
+      var height = document.querySelector('input[name = "__height"]:checked').value;
+
+      var get_length = function get_length(fit, length, yth) {
+        if (fit === '0') {
+          var i = parseFloat(length - 0.5).toFixed(1);
+          return yth ? i + 'Y' : i;
+        } else if (fit === '1') {
+          var _i = parseFloat(length).toFixed(1);
+
+          return yth ? _i + 'Y' : _i;
+        } else if (fit === '2') {
+          var _i2 = parseFloat(length + 0.5).toFixed(1);
+
+          return yth ? _i2 + 'Y' : _i2;
+        }
+      };
+
+      var get_scale = function get_scale(scale, width, height) {
+        switch (width) {
+          // Narrow Width
+          case '0':
+            switch (height) {
+              // Low
+              case '0':
+                if (scale === 'scale_fit') {
+                  return 'fit1';
+                } else if (scale === 'scale_ee') {
+                  return 'd';
+                }
+
+                break;
+              // Medium
+
+              case '1':
+                if (scale === 'scale_fit') {
+                  return 'fit1';
+                } else if (scale === 'scale_ee') {
+                  return 'd';
+                }
+
+                break;
+              // High
+
+              case '2':
+                if (scale === 'scale_fit') {
+                  return 'fit2';
+                } else if (scale === 'scale_ee') {
+                  return 'd';
+                }
+
+                break;
+            }
+
+            break;
+          // Medium Width
+
+          case '1':
+            switch (height) {
+              // Low
+              case '0':
+                if (scale === 'scale_fit') {
+                  return 'fit2';
+                } else if (scale === 'scale_ee') {
+                  return 'd';
+                }
+
+                break;
+              // Medium
+
+              case '1':
+                if (scale === 'scale_fit') {
+                  return 'fit2';
+                } else if (scale === 'scale_ee') {
+                  return 'd';
+                }
+
+                break;
+              // High
+
+              case '2':
+                if (scale === 'scale_fit') {
+                  return 'fit3';
+                } else if (scale === 'scale_ee') {
+                  return 'ee';
+                }
+
+                break;
+            }
+
+            break;
+          // Wide Width
+
+          case '2':
+            switch (height) {
+              // Low
+              case '0':
+                if (scale === 'scale_fit') {
+                  return 'fit2';
+                } else if (scale === 'scale_ee') {
+                  return 'ee';
+                }
+
+                break;
+              // Medium
+
+              case '1':
+                if (scale === 'scale_fit') {
+                  return 'fit3';
+                } else if (scale === 'scale_ee') {
+                  return 'ee';
+                }
+
+                break;
+              // High
+
+              case '2':
+                if (scale === 'scale_fit') {
+                  return 'fit3';
+                } else if (scale === 'scale_ee') {
+                  return 'ee';
+                }
+
+                break;
+            }
+
+            break;
+
+          default:
+            if (scale === 'scale_fit') {
+              return 'fit1';
+            } else if (scale === 'scale_ee') {
+              return 'd';
+            }
+
+        }
+      };
+
+      var data = {
+        fit: get_length(fit, parseInt(length, 10), yth),
+        scale: get_scale(scale, width, height)
+      };
+      this.dataObtained = data;
+      var AvailableVariationsLoader = JSON.parse(document.getElementById('AvailableVariationsLoader').getAttribute('data-variations'));
+
+      if (AvailableVariationsLoader.length.value.split(',').includes(this.dataObtained.fit) && AvailableVariationsLoader.width.value.split(',').includes(this.dataObtained.scale)) {
+        var selectFit = (0, _getVariationEl.getVariationEl)(AvailableVariationsLoader.length, this.dataObtained.fit);
+        var selectScale = (0, _getVariationEl.getVariationEl)(AvailableVariationsLoader.width, this.dataObtained.scale);
+
+        if (selectFit && selectScale) {
+          this.matchedVariations = true;
+
+          if (selectFit.classList.contains('disabled')) {
+            this.matchedVariations = false;
+          }
+
+          if (!selectFit.classList.contains('selected')) {
+            selectFit.click();
+          }
+
+          if (selectScale.classList.contains('disabled')) {
+            this.matchedVariations = false;
+          }
+
+          if (!selectScale.classList.contains('selected')) {
+            selectScale.click();
+          }
+        } else {
+          this.matchedVariations = false;
+        }
+      } else {
+        this.matchedVariations = false;
+      }
+
+      this.onDataObtained = true;
+    },
+    handleFinal: function handleFinal() {
+      this.reccomendLength();
+      this.onSubmit = true;
+    }
+  });
+}
 },{"../../helpers/getVariationEl":"helpers/getVariationEl.js","../ui":"calculator/ui.js"}],"calculator.js":[function(require,module,exports) {
 "use strict";
 
@@ -4509,14 +4744,18 @@ var _alpinejs = _interopRequireDefault(require("alpinejs"));
 
 var _BauerIcehockeySkates = require("./calculator/types/BauerIcehockeySkates");
 
+var _CCMSkates = require("./calculator/types/CCMSkates");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 if (_alpinejs.default) {
   _alpinejs.default.data('BauerIcehockeySkates', _BauerIcehockeySkates.BauerIcehockeySkates);
 
+  _alpinejs.default.data('CCMSkates', _CCMSkates.CCMSkates);
+
   _alpinejs.default.start();
 }
-},{"alpinejs":"../../node_modules/alpinejs/dist/module.esm.js","./calculator/types/BauerIcehockeySkates":"calculator/types/BauerIcehockeySkates.js"}],"index.js":[function(require,module,exports) {
+},{"alpinejs":"../../node_modules/alpinejs/dist/module.esm.js","./calculator/types/BauerIcehockeySkates":"calculator/types/BauerIcehockeySkates.js","./calculator/types/CCMSkates":"calculator/types/CCMSkates.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./calculator");
@@ -4548,7 +4787,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52390" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51767" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
