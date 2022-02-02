@@ -4753,7 +4753,7 @@ var cmToInch = {
       return x;
     } else if (this.selectedUnit === 'in') {
       var y = x / 2.54;
-      return y.toFixed(1);
+      return y.toFixed(0);
     }
   }
 };

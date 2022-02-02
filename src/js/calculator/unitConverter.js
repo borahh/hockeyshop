@@ -6,7 +6,7 @@ export const cmToInch = {
       return x;
     } else if (this.selectedUnit === 'in') {
       const y = x / 2.54;
-      return y.toFixed(1);
+      return y.toFixed(0);
     }
   },
 };
