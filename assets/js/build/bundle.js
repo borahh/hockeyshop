@@ -4752,7 +4752,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 function ShoulderPadsJR() {
   return _objectSpread(_objectSpread({}, _ui.calculatorUI), {}, {
-    maxStep: 1
+    maxStep: 0
   });
 }
 },{"../ui":"calculator/ui.js"}],"calculator.js":[function(require,module,exports) {

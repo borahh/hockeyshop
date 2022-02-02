@@ -3,6 +3,6 @@ import { calculatorUI } from '../ui';
 export function ShoulderPadsJR() {
   return {
     ...calculatorUI,
-    maxStep: 1,
+    maxStep: 0,
   };
 }
