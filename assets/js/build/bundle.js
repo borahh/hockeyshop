@@ -4747,7 +4747,15 @@ var cmToInch = {
     id: 'cm'
   }, {
     id: 'in'
-  }]
+  }],
+  convert: function convert(x) {
+    if (this.selectedUnit === 'cm') {
+      return x;
+    } else if (this.selectedUnit === 'in') {
+      var y = x / 2.54;
+      return y.toFixed(1);
+    }
+  }
 };
 exports.cmToInch = cmToInch;
 },{}],"calculator/types/ShoulderPadsJR.js":[function(require,module,exports) {
@@ -4782,6 +4790,12 @@ function ShoulderPadsJR() {
     rangeTo: {
       chest: 89,
       height: 157
+    },
+    getChestValue: function getChestValue() {
+      return this.convert(this.input.chest);
+    },
+    getHeightValue: function getHeightValue() {
+      return this.convert(this.input.height);
     }
   });
 }

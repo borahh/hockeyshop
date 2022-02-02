@@ -18,5 +18,11 @@ export function ShoulderPadsJR() {
       chest: 89,
       height: 157,
     },
+    getChestValue() {
+      return this.convert(this.input.chest);
+    },
+    getHeightValue() {
+      return this.convert(this.input.height);
+    },
   };
 }
