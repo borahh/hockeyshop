@@ -59,13 +59,27 @@ class ShoulderPads extends BorahhCalculatorBase {
             </div>
             <span>INCH</span>
         </div>
+        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'chest.svg'; ?>">     
+
+        <h2>
+            <?php _e("Brystomkreds", "hockeyshop-theme"); ?>
+        </h2>
         <div class="calculator__wraper__content__form__tab--length__input">
             <span x-text="selectedUnit"></span>
             <input type="text" :value="getChestValue" >            
         </div>
         
         <input type="range" class="calculator-range sm:w-5/6" x-bind:min="rangeFrom.chest" step="1" x-bind:max="rangeTo.chest" x-model="input.chest">
-        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'chest.svg'; ?>">     
+        
+        <h2>
+            <?php _e("Højde", "hockeyshop-theme"); ?>
+        </h2>
+        <div class="calculator__wraper__content__form__tab--length__input">
+            <span x-text="selectedUnit"></span>
+            <input type="text" :value="getHeightValue" >            
+        </div>
+        
+        <input type="range" class="calculator-range sm:w-5/6" x-bind:min="rangeFrom.height" step="1" x-bind:max="rangeTo.height" x-model="input.height">
 
         <?php
         return ob_get_clean();
