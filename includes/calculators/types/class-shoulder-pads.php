@@ -45,6 +45,7 @@ class ShoulderPads extends BorahhCalculatorBase {
 
         // Fix from here
         ?>
+        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'chest.svg'; ?>">     
         <div class="calculator__wraper__content__form__tab--length__switcher">
             <span>CM</span>
             
@@ -70,7 +71,6 @@ class ShoulderPads extends BorahhCalculatorBase {
         ob_start();
         ?>
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length" x-show="currentStep === 0">
-                <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'chest.svg'; ?>">     
                 <?php echo $this->stepOptions(); ?>
             </div>
             
