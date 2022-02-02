@@ -4755,6 +4755,14 @@ var cmToInch = {
       var y = x / 2.54;
       return y.toFixed(0);
     }
+  },
+  invert: function invert(x) {
+    if (this.selectedUnit === 'cm') {
+      return x;
+    } else if (this.selectedUnit === 'in') {
+      var y = x * 2.54;
+      return y.toFixed(0);
+    }
   }
 };
 exports.cmToInch = cmToInch;
@@ -4796,6 +4804,28 @@ function ShoulderPadsJR() {
     },
     getHeightValue: function getHeightValue() {
       return this.convert(this.input.height);
+    },
+    getResult: function getResult() {
+      var x = this.invert(parseInt(this.input.chest, 10));
+      var y = this.invert(parseInt(this.input.height, 10));
+
+      if (x >= 60 && x <= 76 && y >= 127 && y <= 137) {
+        return 'S';
+      } else if (x >= 67 && x <= 81 && y >= 137 && y <= 147) {
+        return 'M';
+      } else if (x >= 75 && x <= 89 && y >= 147 && y <= 157) {
+        return 'L';
+      }
+    },
+    handleFinal: function handleFinal() {
+      var size = this.getResult();
+
+      if (size) {
+        this.onDataObtained = true;
+        this.dataObtained.size = size;
+      }
+
+      this.onSubmit = true;
     }
   });
 }
