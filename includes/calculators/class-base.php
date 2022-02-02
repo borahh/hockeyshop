@@ -60,10 +60,26 @@ class BorahhCalculatorBase {
             $dataName = 'Name: ' . $_POST['name'] . '<br/><br/><br/>';
             $dataEmail = 'Email: ' . $_POST['email'] . '<br/>';
             $dataPhone = 'Phone: ' . $_POST['phone'] . '<br/>';
-            $dataVariationLength = 'Length: ' . $_POST['variationLength'] . '<br/>';
-            $dataVariationWidth = 'Width: ' . $_POST['variationWidth'] . '<br/>';
+
+            if($_POST['variationLength']) {
+                $dataVariationLength = 'Length: ' . $_POST['variationLength'] . '<br/>';
+            } else {
+                $dataVariationLength = '';
+            }
+
+            if($_POST['variationLength']) {
+                $dataVariationWidth = 'Width: ' . $_POST['variationWidth'] . '<br/>';
+            } else {
+                $dataVariationWidth = '';
+            }
+
+            if($_POST['variationSize']) {
+                $dataVariationSize = 'Size: ' . $_POST['variationSize'] . '<br/>';
+            } else {
+                $dataVariationSize = '';
+            }
             
-            $body = $dataVariationLength . $dataVariationWidth . $dataName . $dataEmail . $dataPhone;
+            $body = $dataVariationLength . $dataVariationWidth . $dataVariationSize . $dataName . $dataEmail . $dataPhone;
 
             $headers = array('Content-Type: text/html; charset=UTF-8','From: HockeyShop <hockeyshop@hockeyshop.dk>');
 
@@ -90,6 +106,7 @@ class BorahhCalculatorBase {
             <input type="text" name="email" placeholder='<?php _e("E-mail", "hockeyshop-theme"); ?>' required>
             <input type="text" name="phone" placeholder='<?php _e("Telefon", "hockeyshop-theme"); ?>' required>
             <input type="hidden" name="variationLength" x-bind:value="dataObtained.fit">
+            <input type="hidden" name="variationSize" x-bind:value="dataObtained.size">
             <input type="hidden" name="variationWidth" x-bind:value="dataObtained.scale">
             <input type="submit" name="enquiryVariation" x-ref='enquiryVariation'>
         </form>
