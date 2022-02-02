@@ -64,7 +64,7 @@ class ShoulderPads extends BorahhCalculatorBase {
             <input type="text" :value="getChestValue" >            
         </div>
         
-        <input type="range" class="calculator-range sm:w-5/6" x-bind:min="rangeFrom.chest" step="0.5" x-bind:max="rangeTo.chest" x-model="input.chest">
+        <input type="range" class="calculator-range sm:w-5/6" x-bind:min="rangeFrom.chest" step="1" x-bind:max="rangeTo.chest" x-model="input.chest">
         <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'chest.svg'; ?>">     
 
         <?php
