@@ -45,7 +45,20 @@ class ShoulderPads extends BorahhCalculatorBase {
 
         // Fix from here
         ?>
-        Extended
+        <div class="calculator__wraper__content__form__tab--length__switcher">
+            <span>CM</span>
+            
+            <div class="calculator__wraper__content__form__tab--length__switcher__inner">
+                <template x-for="unit in units" :key="unit.id">
+                    <div class="calculator__wraper__content__form__tab--length__switcher__inner__input">
+                        <input class="peer" x-model="selectedUnit" type="radio" :id="unit.id" :value="unit.id" :checked="$el.value === selectedUnit"/>
+                        <label :for="unit.id" class="peer-checked:bg-accent peer-checked:text-white">
+                        </label>
+                    </div>
+                </template>
+            </div>
+            <span>INCH</span>
+        </div>
 
         <?php
         return ob_get_clean();
@@ -56,7 +69,7 @@ class ShoulderPads extends BorahhCalculatorBase {
      protected function steps() {
         ob_start();
         ?>
-            <div class="calculator__wraper__content__form__tab" x-show="currentStep === 0">
+            <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length" x-show="currentStep === 0">
                 <?php echo $this->stepOptions(); ?>
             </div>
             
