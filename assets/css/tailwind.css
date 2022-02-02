@@ -271,7 +271,7 @@
                 }
 
                 input {
-                  @apply w-[50px] border-none bg-transparent text-2xl leading-7 p-0;
+                  @apply w-[35px] border-none bg-transparent text-2xl leading-7 p-0;
                 }
               }
               &__switcher {
