@@ -90,7 +90,7 @@ class ShoulderPads extends BorahhCalculatorBase {
      protected function steps() {
         ob_start();
         ?>
-            <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length" x-show="currentStep === 0">
+            <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length calculator__wraper__content__form__tab--length-multi" x-show="currentStep === 0">
                 <?php echo $this->stepOptions(); ?>
             </div>
             

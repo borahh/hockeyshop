@@ -257,6 +257,11 @@
             }
 
             /** Bauer Icehockey Skate Steps Start **/
+            &--length-multi {
+              h2 {
+                @apply mb-0;
+              }
+            }
             &--length {
               @apply text-center;
               img {

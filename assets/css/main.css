@@ -532,6 +532,9 @@
     line-height: 1.5rem;
 }
 /** Bauer Icehockey Skate Steps Start **/
+.calculator__wraper__content__form__tab--length-multi h2 {
+    margin-bottom: 0px;
+}
 .calculator__wraper__content__form__tab--length {
     text-align: center;
 }
@@ -979,20 +982,25 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
 }
+
 .peer:checked ~ .peer-checked\:bg-accent {
     --tw-bg-opacity: 1;
     background-color: rgb(23 104 210 / var(--tw-bg-opacity));
 }
+
 .peer:checked ~ .peer-checked\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
 .peer:checked ~ .peer-checked\:opacity-0 {
     opacity: 0;
 }
+
 .peer:checked ~ .peer-checked\:opacity-100 {
     opacity: 1;
 }
+
 @media (min-width: 640px) {
 
     .sm\:w-5\/6 {
