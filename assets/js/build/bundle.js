@@ -4737,7 +4737,26 @@ function CCMSkates() {
     }
   });
 }
-},{"../../helpers/getVariationEl":"helpers/getVariationEl.js","../ui":"calculator/ui.js"}],"calculator.js":[function(require,module,exports) {
+},{"../../helpers/getVariationEl":"helpers/getVariationEl.js","../ui":"calculator/ui.js"}],"calculator/types/ShoulderPadsJR.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ShoulderPadsJR = ShoulderPadsJR;
+
+var _ui = require("../ui");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function ShoulderPadsJR() {
+  return _objectSpread({}, _ui.calculatorUI);
+}
+},{"../ui":"calculator/ui.js"}],"calculator.js":[function(require,module,exports) {
 "use strict";
 
 var _alpinejs = _interopRequireDefault(require("alpinejs"));
@@ -4746,6 +4765,8 @@ var _BauerIcehockeySkates = require("./calculator/types/BauerIcehockeySkates");
 
 var _CCMSkates = require("./calculator/types/CCMSkates");
 
+var _ShoulderPadsJR = require("./calculator/types/ShoulderPadsJR");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 if (_alpinejs.default) {
@@ -4753,9 +4774,11 @@ if (_alpinejs.default) {
 
   _alpinejs.default.data('CCMSkates', _CCMSkates.CCMSkates);
 
+  _alpinejs.default.data('ShoulderPadsJR', _ShoulderPadsJR.ShoulderPadsJR);
+
   _alpinejs.default.start();
 }
-},{"alpinejs":"../../node_modules/alpinejs/dist/module.esm.js","./calculator/types/BauerIcehockeySkates":"calculator/types/BauerIcehockeySkates.js","./calculator/types/CCMSkates":"calculator/types/CCMSkates.js"}],"index.js":[function(require,module,exports) {
+},{"alpinejs":"../../node_modules/alpinejs/dist/module.esm.js","./calculator/types/BauerIcehockeySkates":"calculator/types/BauerIcehockeySkates.js","./calculator/types/CCMSkates":"calculator/types/CCMSkates.js","./calculator/types/ShoulderPadsJR":"calculator/types/ShoulderPadsJR.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./calculator");
@@ -4787,7 +4810,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51767" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50890" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
