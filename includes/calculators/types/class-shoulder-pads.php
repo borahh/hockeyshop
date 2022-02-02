@@ -45,7 +45,7 @@ class ShoulderPads extends BorahhCalculatorBase {
 
         // Fix from here
         ?>
-        <img class="text-center w-75" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'chest.svg'; ?>">     
+        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'chest.svg'; ?>">     
         <div class="calculator__wraper__content__form__tab--length__switcher">
             <span>CM</span>
             
