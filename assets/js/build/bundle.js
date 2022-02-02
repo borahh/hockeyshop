@@ -4819,6 +4819,7 @@ function ShoulderPadsJR() {
     },
     handleFinal: function handleFinal() {
       var size = this.getResult();
+      console.log(size);
 
       if (size) {
         this.onDataObtained = true;

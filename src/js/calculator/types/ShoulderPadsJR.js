@@ -38,6 +38,7 @@ export function ShoulderPadsJR() {
     },
     handleFinal() {
       const size = this.getResult();
+      console.log(size);
       if (size) {
         this.onDataObtained = true;
         this.dataObtained.size = size;
