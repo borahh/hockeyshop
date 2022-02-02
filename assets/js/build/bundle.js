@@ -4216,6 +4216,11 @@ var calculatorUI = {
   maxStep: 0,
   onSubmit: false,
   onDataObtained: false,
+  dataObtained: {
+    fit: undefined,
+    scale: undefined,
+    size: undefined
+  },
   // Step to manage variations matching
   matchedVariations: false,
   // State to manage wraper state
@@ -4287,10 +4292,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 function BauerIcehockeySkates() {
   return _objectSpread(_objectSpread({}, _ui.calculatorUI), {}, {
-    dataObtained: {
-      fit: undefined,
-      scale: undefined
-    },
     maxStep: 3,
     units: [{
       id: 'EU'
@@ -4522,10 +4523,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 function CCMSkates() {
   return _objectSpread(_objectSpread({}, _ui.calculatorUI), {}, {
-    dataObtained: {
-      fit: undefined,
-      scale: undefined
-    },
     maxStep: 3,
     units: [{
       id: 'EU'

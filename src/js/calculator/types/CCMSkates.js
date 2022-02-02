@@ -4,10 +4,7 @@ import { calculatorUI } from '../ui';
 export function CCMSkates() {
   return {
     ...calculatorUI,
-    dataObtained: {
-      fit: undefined,
-      scale: undefined,
-    },
+
     maxStep: 3,
     units: [{ id: 'EU' }, { id: 'US' }],
     lengthInput: '0',

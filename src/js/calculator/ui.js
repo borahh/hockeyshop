@@ -6,6 +6,11 @@ export const calculatorUI = {
   maxStep: 0,
   onSubmit: false,
   onDataObtained: false,
+  dataObtained: {
+    fit: undefined,
+    scale: undefined,
+    size: undefined,
+  },
   // Step to manage variations matching
   matchedVariations: false,
 
