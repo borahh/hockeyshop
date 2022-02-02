@@ -1,4 +1,4 @@
 export const cmToInch = {
-  default: 'cm',
+  selectedUnit: 'cm',
   units: [{ id: 'cm' }, { id: 'in' }],
 };
