@@ -260,7 +260,7 @@
             &--length {
               @apply text-center;
               img {
-                @apply w-3/4 text-center;
+                @apply w-3/4 mb-10 text-center;
               }
 
               &__input {
