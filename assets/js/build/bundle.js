@@ -4771,6 +4771,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function ShoulderPadsJR() {
   return _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorUI), _unitConverter.cmToInch), {}, {
     maxStep: 0,
+    input: {
+      chest: 60,
+      height: 127
+    },
     rangeFrom: {
       chest: 60,
       height: 127

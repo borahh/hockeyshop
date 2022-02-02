@@ -6,6 +6,10 @@ export function ShoulderPadsJR() {
     ...calculatorUI,
     ...cmToInch,
     maxStep: 0,
+    input: {
+      chest: 60,
+      height: 127,
+    },
     rangeFrom: {
       chest: 60,
       height: 127,
