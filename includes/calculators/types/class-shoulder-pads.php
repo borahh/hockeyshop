@@ -61,10 +61,10 @@ class ShoulderPads extends BorahhCalculatorBase {
         </div>
         <div class="calculator__wraper__content__form__tab--length__input">
             <span x-text="selectedUnit"></span>
-            <input type="text" :value="getLengthValue(<?php echo $this->fields['lengthFrom']; ?>)" >            
+            <input type="text" :value="getChestInput" >            
         </div>
         
-        <input type="range" class="calculator-range sm:w-5/6" min="0" step="1" max="<?php echo $this->inputMax; ?>" x-model="lengthInput" x-ref="lengthRef">
+        <input type="range" class="calculator-range sm:w-5/6" x-bind:min="rangeFrom.chest" step="0.5" x-bind:max="rangeTo.chest" x-model="chestInput">
         <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'chest.svg'; ?>">     
 
         <?php
