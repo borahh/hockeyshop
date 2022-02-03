@@ -1,11 +1,8 @@
-import { calculatorUI } from '../ui';
-import { cmToInch } from '../unitConverter';
+import { ShoulderPads } from './base';
 
-export function ShoulderPadsJR() {
+export function ShoulderPadsWOMEN() {
   return {
-    ...calculatorUI,
-    ...cmToInch,
-    maxStep: 0,
+    ...ShoulderPads,
     input: {
       chest: 60,
       height: 127,
@@ -18,12 +15,6 @@ export function ShoulderPadsJR() {
       chest: 89,
       height: 157,
     },
-    getChestValue() {
-      return this.convert(this.input.chest);
-    },
-    getHeightValue() {
-      return this.convert(this.input.height);
-    },
     getResult() {
       const x = this.invert(parseInt(this.input.chest, 10));
       const y = this.invert(parseInt(this.input.height, 10));
@@ -35,15 +26,6 @@ export function ShoulderPadsJR() {
       } else if (x >= 75 && x <= 89 && y >= 147 && y <= 157) {
         return 'L';
       }
-    },
-    handleFinal() {
-      const size = this.getResult();
-      console.log(size);
-      if (size) {
-        this.onDataObtained = true;
-        this.dataObtained.size = size;
-      }
-      this.onSubmit = true;
     },
   };
 }
