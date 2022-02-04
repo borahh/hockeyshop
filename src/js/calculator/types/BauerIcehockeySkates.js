@@ -264,7 +264,7 @@ export function BauerIcehockeySkates() {
                 if (scale === 'scale_fit') {
                   return 'fit3';
                 } else if (scale === 'scale_ee') {
-                  return 'ee';
+                  return '2e';
                 }
                 break;
             }
@@ -278,7 +278,7 @@ export function BauerIcehockeySkates() {
                 if (scale === 'scale_fit') {
                   return 'fit2';
                 } else if (scale === 'scale_ee') {
-                  return 'ee';
+                  return '2e';
                 }
                 break;
 
@@ -287,7 +287,7 @@ export function BauerIcehockeySkates() {
                 if (scale === 'scale_fit') {
                   return 'fit3';
                 } else if (scale === 'scale_ee') {
-                  return 'ee';
+                  return '2e';
                 }
                 break;
 
@@ -296,7 +296,7 @@ export function BauerIcehockeySkates() {
                 if (scale === 'scale_fit') {
                   return 'fit3';
                 } else if (scale === 'scale_ee') {
-                  return 'ee';
+                  return '2e';
                 }
                 break;
             }
