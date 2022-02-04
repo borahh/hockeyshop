@@ -43,7 +43,7 @@ if (limitedEl) {
   var revealMoreEl = document.querySelector('.product_content__reveal--more');
   var revealLessEl = document.querySelector('.product_content__reveal--less');
 
-  if (galleryHeight >= parseInt(limitedEl.style.height, 10)) {
+  if (galleryHeight >= limitedEl.clientHeight) {
     revealMoreEl.style.display = 'none';
     revealLessEl.style.display = 'none';
     limitedEl.classList.remove('product_content--hidden');
