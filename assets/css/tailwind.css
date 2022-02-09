@@ -111,7 +111,7 @@
       letter-spacing: 0em;
     }
 
-    .variations th {
+    .variations tbody tr th {
       @apply text-left;
     }
 
