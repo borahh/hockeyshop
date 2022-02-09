@@ -9,6 +9,7 @@ module.exports = {
     'summary',
     'onsale',
     'woocommerce-product-gallery--with-images',
+    'woocommerce',
     'woo-variation-swatches',
   ],
   theme: {

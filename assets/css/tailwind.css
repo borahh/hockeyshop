@@ -25,6 +25,10 @@
   .woocommerce-product-gallery--with-images {
     max-width: 350px;
   }
+
+  .woocommerce div.product form.cart .variations td {
+    @apply text-left block !important;
+  }
   .single.single-product {
     /** Full Width Product Layout */
     .product {
@@ -72,10 +76,6 @@
     table tbody tr:hover > td,
     table tbody tr:hover > th {
       @apply bg-white !important;
-    }
-
-    .woocommerce div.product form.cart .variations th {
-      @apply block text-left !important;
     }
 
     .price .ywcrbp_regular_price {
