@@ -81,6 +81,7 @@
 
     .price span.ywcrbp_regular_price:only-child {
       @apply text-xl font-normal leading-8 text-left text-black uppercase font-social-gothic !important;
+      text-decoration: none !important;
       font-style: normal !important;
       letter-spacing: 0em !important;
     }

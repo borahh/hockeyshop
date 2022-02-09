@@ -157,6 +157,7 @@
     line-height: 2rem !important;
     --tw-text-opacity: 1 !important;
     color: rgb(0 0 0 / var(--tw-text-opacity)) !important;
+      text-decoration: none !important;
       font-style: normal !important;
       letter-spacing: 0em !important;
 }
