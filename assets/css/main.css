@@ -162,6 +162,10 @@
       letter-spacing: 0em !important;
 }
 
+    .single-product .price span.ywcrbp_regular_price:only-child span {
+    font-weight: 600 !important;
+}
+
     .single-product .summary .ywcrbp_sale_price {
     text-align: left;
     font-family: Social Gothic, sans-serif;
