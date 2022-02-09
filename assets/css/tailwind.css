@@ -188,7 +188,7 @@
 
   .woo-variation-swatches {
     .variable-items-wrapper .variable-item:not(.radio-variable-item) {
-      @apply text-center leading-5 font-normal text-base font-gt-america w-[73px] shadow-none my-[15px] mx-0 !important;
+      @apply text-center leading-5 font-normal text-base font-gt-america w-[73px] min-w-fit shadow-none my-[15px] mx-0 !important;
       border-right: 2px solid #cfcfcf;
       letter-spacing: 0em;
     }

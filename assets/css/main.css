@@ -311,6 +311,9 @@
     margin-left: 0px !important;
     margin-right: 0px !important;
     width: 73px !important;
+    min-width: -webkit-fit-content !important;
+    min-width: -moz-fit-content !important;
+    min-width: fit-content !important;
     text-align: center !important;
     font-family: GT America !important;
     font-size: 1rem !important;

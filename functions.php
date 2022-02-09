@@ -48,21 +48,21 @@ function hockeyshop_enqueue_scripts() {
 		[
 			'hello-elementor-theme-style',
 		],
-		'2.2.0'
+		'2.2.5'
 	);
     
     wp_enqueue_style(
 		'borahh-hockeyshop-style',
 		BORAHH_HOCKEYSHOP_URL . '/assets/css/main.css',
 		null,
-		'2.2.0'
+		'2.2.5'
 	);
 
 	wp_enqueue_script(
 		'borahh',
 		BORAHH_HOCKEYSHOP_JS_URL . 'bundle.js',
 		array(),
-		'2.2.0',
+		'2.2.5',
         false
 	);
 
@@ -70,7 +70,7 @@ function hockeyshop_enqueue_scripts() {
 		'borahh-single-product',
 		get_stylesheet_directory_uri(). '/assets/js/' . 'single-product.js',
 		array(),
-		'2.2.0',
+		'2.2.5',
         true
 	);
     
