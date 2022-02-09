@@ -40,7 +40,7 @@
     table tbody > tr:nth-child(odd) > th {
       @apply bg-white;
     }
-    table.variations tbody tr th {
+    variations th.label {
       @apply block text-left;
     }
 
