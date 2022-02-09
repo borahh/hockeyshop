@@ -45,6 +45,9 @@
     table tbody > tr {
       @apply flex flex-col;
     }
+    table tbody > th {
+      @apply text-left;
+    }
     /** Remove Tabs from single product pages **/
     .woocommerce-tabs.wc-tabs-wrapper ul {
       @apply hidden !important;
