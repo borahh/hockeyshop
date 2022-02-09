@@ -73,6 +73,7 @@
     .single.single-product table tbody > th {
     text-align: left;
 }
+
     /** Remove Tabs from single product pages **/
     .single.single-product .woocommerce-tabs.wc-tabs-wrapper ul {
     display: none !important;
