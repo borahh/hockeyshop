@@ -79,6 +79,12 @@
       font-style: normal;
     }
 
+    .price span:only-child {
+      @apply text-xl font-normal leading-8 text-left text-black uppercase font-social-gothic !important;
+      font-style: normal !important;
+      letter-spacing: 0em !important;
+    }
+
     .summary .ywcrbp_sale_price {
       @apply text-xl font-normal leading-8 text-left text-black uppercase font-social-gothic;
       font-style: normal;
