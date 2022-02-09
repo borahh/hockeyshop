@@ -40,9 +40,6 @@
     table tbody > tr:nth-child(odd) > th {
       @apply bg-white;
     }
-    .woocommerce div.product form.cart .variations th {
-      @apply block text-left !important;
-    }
 
     /** Remove Tabs from single product pages **/
     .woocommerce-tabs.wc-tabs-wrapper ul {
@@ -75,6 +72,10 @@
     table tbody tr:hover > td,
     table tbody tr:hover > th {
       @apply bg-white !important;
+    }
+
+    .woocommerce div.product form.cart .variations th {
+      @apply block text-left !important;
     }
 
     .price .ywcrbp_regular_price {

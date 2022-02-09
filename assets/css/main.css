@@ -65,10 +65,6 @@
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-    .single.single-product .woocommerce div.product form.cart .variations th {
-    display: block !important;
-    text-align: left !important;
-}
 
     /** Remove Tabs from single product pages **/
     .single.single-product .woocommerce-tabs.wc-tabs-wrapper ul {
@@ -137,6 +133,11 @@
     .single-product table tbody tr:hover > td, .single-product table tbody tr:hover > th {
     --tw-bg-opacity: 1 !important;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+}
+
+    .single-product .woocommerce div.product form.cart .variations th {
+    display: block !important;
+    text-align: left !important;
 }
 
     .single-product .price .ywcrbp_regular_price {
