@@ -42,7 +42,7 @@
       @apply bg-white;
     }
 
-    table tbody > tr {
+    table tbody tr {
       @apply flex flex-col;
     }
 
@@ -109,6 +109,10 @@
       @apply font-gt-america text-base font-normal leading-[22px] text-left;
       font-style: normal;
       letter-spacing: 0em;
+    }
+
+    .variations th {
+      @apply text-left;
     }
 
     .variations label {

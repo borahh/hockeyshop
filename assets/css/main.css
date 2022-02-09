@@ -66,7 +66,7 @@
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-    .single.single-product table tbody > tr {
+    .single.single-product table tbody tr {
     display: flex;
     flex-direction: column;
 }
@@ -197,6 +197,10 @@
     line-height: 22px;
       font-style: normal;
       letter-spacing: 0em;
+}
+
+    .single-product .variations th {
+    text-align: left;
 }
 
     .single-product .variations label {
