@@ -66,12 +66,10 @@
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-    .single.single-product table tbody > tr:nth-child(odd) > th {
-    display: block;
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    .single.single-product table tbody > tr {
+    display: flex;
+    flex-direction: column;
 }
-
     /** Remove Tabs from single product pages **/
     .single.single-product .woocommerce-tabs.wc-tabs-wrapper ul {
     display: none !important;
@@ -201,6 +199,7 @@
 }
 
     .single-product .variations label {
+    text-align: left !important;
     font-family: Social Gothic, sans-serif !important;
     font-size: 1rem !important;
     font-weight: 400 !important;

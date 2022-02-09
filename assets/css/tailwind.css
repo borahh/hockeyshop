@@ -42,10 +42,9 @@
       @apply bg-white;
     }
 
-    table tbody > tr:nth-child(odd) > th {
-      @apply block bg-white;
+    table tbody > tr {
+      @apply flex flex-col;
     }
-
     /** Remove Tabs from single product pages **/
     .woocommerce-tabs.wc-tabs-wrapper ul {
       @apply hidden !important;
@@ -112,7 +111,7 @@
     }
 
     .variations label {
-      @apply text-base font-normal leading-6 uppercase font-social-gothic !important;
+      @apply text-base font-normal leading-6 uppercase font-social-gothic text-left !important;
       font-style: normal !important;
       letter-spacing: 0em;
     }
