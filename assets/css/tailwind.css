@@ -40,6 +40,9 @@
     table tbody > tr:nth-child(odd) > th {
       @apply bg-white;
     }
+    table.variations tbody tr th {
+      @apply block text-left;
+    }
 
     /** Remove Tabs from single product pages **/
     .woocommerce-tabs.wc-tabs-wrapper ul {

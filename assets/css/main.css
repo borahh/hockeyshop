@@ -65,6 +65,10 @@
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+    .single.single-product table.variations tbody tr th {
+    display: block;
+    text-align: left;
+}
 
     /** Remove Tabs from single product pages **/
     .single.single-product .woocommerce-tabs.wc-tabs-wrapper ul {
