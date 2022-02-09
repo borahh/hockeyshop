@@ -26,9 +26,6 @@
     max-width: 350px;
   }
 
-  .woocommerce div.product form.cart .variations th {
-    @apply text-left block !important;
-  }
   .single.single-product {
     /** Full Width Product Layout */
     .product {
@@ -42,7 +39,7 @@
     /** Add backround color to the Variation form **/
     table tbody > tr:nth-child(odd) > td,
     table tbody > tr:nth-child(odd) > th {
-      @apply bg-white;
+      @apply block bg-white;
     }
 
     /** Remove Tabs from single product pages **/
