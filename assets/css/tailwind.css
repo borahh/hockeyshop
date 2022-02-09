@@ -45,7 +45,7 @@
     table tbody > tr {
       @apply flex flex-col;
     }
-    table tbody > th {
+    table tbody > tr > th {
       @apply text-left;
     }
 
