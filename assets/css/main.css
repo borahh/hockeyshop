@@ -148,7 +148,7 @@
       font-style: normal;
 }
 
-    .single-product .price span:only-child {
+    .single-product .price span.ywcrbp_regular_price:only-child {
     text-align: left !important;
     font-family: Social Gothic, sans-serif !important;
     font-size: 1.25rem !important;
