@@ -39,6 +39,10 @@
     /** Add backround color to the Variation form **/
     table tbody > tr:nth-child(odd) > td,
     table tbody > tr:nth-child(odd) > th {
+      @apply bg-white;
+    }
+
+    table tbody > tr:nth-child(odd) > th {
       @apply block bg-white;
     }
 

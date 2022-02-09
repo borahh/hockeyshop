@@ -62,6 +62,11 @@
 
     /** Add backround color to the Variation form **/
     .single.single-product table tbody > tr:nth-child(odd) > td, .single.single-product table tbody > tr:nth-child(odd) > th {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+    .single.single-product table tbody > tr:nth-child(odd) > th {
     display: block;
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
