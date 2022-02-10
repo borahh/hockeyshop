@@ -1,30 +1,30 @@
-import { ShoulderPads } from './base';
+import { ShoulderPads } from "./base";
 
-export function ShoulderPadsWOMEN() {
+export function ShoulderPadsWomen() {
   return {
     ...ShoulderPads,
     input: {
-      chest: 60,
-      height: 127,
+      chest: 71,
+      height: 150,
     },
     rangeFrom: {
-      chest: 60,
-      height: 127,
+      chest: 71,
+      height: 150,
     },
     rangeTo: {
-      chest: 89,
-      height: 157,
+      chest: 119,
+      height: 183,
     },
     getResult() {
-      const x = this.invert(parseInt(this.input.chest, 10));
-      const y = this.invert(parseInt(this.input.height, 10));
+      const chest = this.invert(parseInt(this.input.chest, 10));
+      const height = this.invert(parseInt(this.input.height, 10));
 
-      if (x >= 60 && x <= 76 && y >= 127 && y <= 137) {
-        return 'S';
-      } else if (x >= 67 && x <= 81 && y >= 137 && y <= 147) {
-        return 'M';
-      } else if (x >= 75 && x <= 89 && y >= 147 && y <= 157) {
-        return 'L';
+      if (chest >= 71 && chest <= 84 && height >= 150 && height <= 160) {
+        return "S";
+      } else if (chest >= 84 && chest <= 99 && height >= 160 && height <= 170) {
+        return "M";
+      } else if (chest >= 99 && chest <= 119 && height >= 170 && height <= 183) {
+        return "L";
       }
     },
   };

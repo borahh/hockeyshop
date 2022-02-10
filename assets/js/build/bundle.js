@@ -4837,14 +4837,14 @@ function ShoulderPadsJR() {
       height: 157
     },
     getResult: function getResult() {
-      var x = this.invert(parseInt(this.input.chest, 10));
-      var y = this.invert(parseInt(this.input.height, 10));
+      var chest = this.invert(parseInt(this.input.chest, 10));
+      var height = this.invert(parseInt(this.input.height, 10));
 
-      if (x >= 60 && x <= 76 && y >= 127 && y <= 137) {
+      if (chest >= 60 && chest <= 76 && height >= 127 && height <= 137) {
         return 'S';
-      } else if (x >= 67 && x <= 81 && y >= 137 && y <= 147) {
+      } else if (chest >= 67 && chest <= 81 && height >= 137 && height <= 147) {
         return 'M';
-      } else if (x >= 75 && x <= 89 && y >= 147 && y <= 157) {
+      } else if (chest >= 75 && chest <= 89 && height >= 147 && height <= 157) {
         return 'L';
       }
     }
@@ -4902,7 +4902,7 @@ function ShoulderPadsSR() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ShoulderPadsWOMEN = ShoulderPadsWOMEN;
+exports.ShoulderPadsWomen = ShoulderPadsWomen;
 
 var _base = require("./base");
 
@@ -4912,30 +4912,30 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function ShoulderPadsWOMEN() {
+function ShoulderPadsWomen() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
     input: {
-      chest: 60,
-      height: 127
+      chest: 71,
+      height: 150
     },
     rangeFrom: {
-      chest: 60,
-      height: 127
+      chest: 71,
+      height: 150
     },
     rangeTo: {
-      chest: 89,
-      height: 157
+      chest: 119,
+      height: 183
     },
     getResult: function getResult() {
-      var x = this.invert(parseInt(this.input.chest, 10));
-      var y = this.invert(parseInt(this.input.height, 10));
+      var chest = this.invert(parseInt(this.input.chest, 10));
+      var height = this.invert(parseInt(this.input.height, 10));
 
-      if (x >= 60 && x <= 76 && y >= 127 && y <= 137) {
-        return 'S';
-      } else if (x >= 67 && x <= 81 && y >= 137 && y <= 147) {
-        return 'M';
-      } else if (x >= 75 && x <= 89 && y >= 147 && y <= 157) {
-        return 'L';
+      if (chest >= 71 && chest <= 84 && height >= 150 && height <= 160) {
+        return "S";
+      } else if (chest >= 84 && chest <= 99 && height >= 160 && height <= 170) {
+        return "M";
+      } else if (chest >= 99 && chest <= 119 && height >= 170 && height <= 183) {
+        return "L";
       }
     }
   });
@@ -4959,27 +4959,27 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function ShoulderPadsYT() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
     input: {
-      chest: 60,
-      height: 127
+      chest: 58,
+      height: 102
     },
     rangeFrom: {
-      chest: 60,
-      height: 127
+      chest: 58,
+      height: 102
     },
     rangeTo: {
-      chest: 89,
-      height: 157
+      chest: 70,
+      height: 127
     },
     getResult: function getResult() {
-      var x = this.invert(parseInt(this.input.chest, 10));
-      var y = this.invert(parseInt(this.input.height, 10));
+      var chest = this.invert(parseInt(this.input.chest, 10));
+      var height = this.invert(parseInt(this.input.height, 10));
 
-      if (x >= 60 && x <= 76 && y >= 127 && y <= 137) {
-        return 'S';
-      } else if (x >= 67 && x <= 81 && y >= 137 && y <= 147) {
-        return 'M';
-      } else if (x >= 75 && x <= 89 && y >= 147 && y <= 157) {
-        return 'L';
+      if (chest <= 58 && height >= 102 && height <= 109) {
+        return "S";
+      } else if (chest >= 58 && chest <= 64 && height >= 102 && height <= 122) {
+        return "M";
+      } else if (chest >= 60 && chest <= 70 && height >= 117 && height <= 127) {
+        return "L";
       }
     }
   });
@@ -5102,7 +5102,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52025" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64589" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

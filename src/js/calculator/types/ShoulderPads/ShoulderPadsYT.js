@@ -1,30 +1,30 @@
-import { ShoulderPads } from './base';
+import { ShoulderPads } from "./base";
 
 export function ShoulderPadsYT() {
   return {
     ...ShoulderPads,
     input: {
-      chest: 60,
-      height: 127,
+      chest: 58,
+      height: 102,
     },
     rangeFrom: {
-      chest: 60,
-      height: 127,
+      chest: 58,
+      height: 102,
     },
     rangeTo: {
-      chest: 89,
-      height: 157,
+      chest: 70,
+      height: 127,
     },
     getResult() {
-      const x = this.invert(parseInt(this.input.chest, 10));
-      const y = this.invert(parseInt(this.input.height, 10));
+      const chest = this.invert(parseInt(this.input.chest, 10));
+      const height = this.invert(parseInt(this.input.height, 10));
 
-      if (x >= 60 && x <= 76 && y >= 127 && y <= 137) {
-        return 'S';
-      } else if (x >= 67 && x <= 81 && y >= 137 && y <= 147) {
-        return 'M';
-      } else if (x >= 75 && x <= 89 && y >= 147 && y <= 157) {
-        return 'L';
+      if ( chest <= 58 && height >= 102 && height <= 109) {
+        return "S";
+      } else if (chest >=58 && chest <= 64 && height >= 102 && height <= 122) {
+        return "M";
+      } else if (chest >= 60 && chest <= 70 && height >= 117 && height <= 127) {
+        return "L";
       }
     },
   };
