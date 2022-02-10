@@ -40,7 +40,7 @@ class ShoulderPads extends BorahhCalculatorBase {
     }
 
    
-    protected function stepOptions() {
+    protected function heightOptions() {
         ob_start();
 
         // Fix from here
@@ -59,17 +59,6 @@ class ShoulderPads extends BorahhCalculatorBase {
             </div>
             <span>INCH</span>
         </div>
-        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'chest.svg'; ?>">     
-
-        <h2>
-            <?php _e("Brystomkreds", "hockeyshop-theme"); ?>
-        </h2>
-        <div class="calculator__wraper__content__form__tab--length__input">
-            <input type="text" :value="getChestValue" >            
-            <span x-text="selectedUnit"></span>
-        </div>
-        
-        <input type="range" class="calculator-range sm:w-5/6" x-bind:min="rangeFrom.chest" step="1" x-bind:max="rangeTo.chest" x-model="input.chest">
         
         <h2>
             <?php _e("Højde", "hockeyshop-theme"); ?>
@@ -85,13 +74,39 @@ class ShoulderPads extends BorahhCalculatorBase {
         return ob_get_clean();
     }
 
+    protected function chestOptions() {
+        ob_start();
+
+        // Fix from here
+        ?>
+        
+        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'chest.svg'; ?>">     
+
+        <h2>
+            <?php _e("Brystomkreds", "hockeyshop-theme"); ?>
+        </h2>
+        <div class="calculator__wraper__content__form__tab--length__input">
+            <input type="text" :value="getChestValue" >            
+            <span x-text="selectedUnit"></span>
+        </div>
+        
+        <input type="range" class="calculator-range sm:w-5/6" x-bind:min="rangeFrom.chest" step="1" x-bind:max="rangeTo.chest" x-model="input.chest">
+        
+        
+        <?php
+        return ob_get_clean();
+    }
+
    
      // Steps 
      protected function steps() {
         ob_start();
         ?>
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length calculator__wraper__content__form__tab--length-multi" x-show="currentStep === 0">
-                <?php echo $this->stepOptions(); ?>
+                <?php echo $this->heightOptions(); ?>
+            </div>
+            <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length calculator__wraper__content__form__tab--length-multi" x-show="currentStep === 1">
+                <?php echo $this->chestOptions(); ?>
             </div>
             
         <?php
