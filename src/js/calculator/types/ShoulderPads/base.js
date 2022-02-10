@@ -4,7 +4,7 @@ import { cmToInch } from '../../unitConverter';
 export const ShoulderPads = {
   ...calculatorUI,
   ...cmToInch,
-  maxStep: 0,
+  maxStep: 1,
   getChestValue() {
     return this.convert(this.input.chest);
   },
