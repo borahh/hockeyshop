@@ -7,32 +7,49 @@ export function ShoulderPadsSR() {
       chest: 86,
       height: 157,
     },
-    getHeightInput(i) {
-      const ranges = {
-        a: [86, 97],
-        b: [94, 104],
-        c: [102, 112],
-        d: [109, 122],
-      };
-      const chest = this.invert(parseInt(this.input.chest, 10));
-
-      if (chest >= 86 && chest <= 97) {
-        return ranges.a[i];
-      } else if (chest >= 94 && chest <= 108) {
-        return ranges.b[i];
-      } else if (chest >= 102 && chest <= 112) {
-        return ranges.c[i];
-      } else if (chest >= 109 && chest <= 122) {
-        return ranges.d[i];
-      }
-    },
     rangeFrom: {
       chest: 86,
-      height: this.getHeightInput(0),
+      height: () => {
+        const values = {
+          a: 86,
+          b: 94,
+          c: 102,
+          d: 109,
+        };
+        const chest = this.invert(parseInt(this.input.chest, 10));
+
+        if (chest >= 86 && chest <= 97) {
+          return values.a;
+        } else if (chest >= 94 && chest <= 108) {
+          return values.b;
+        } else if (chest >= 102 && chest <= 112) {
+          return values.c;
+        } else if (chest >= 109 && chest <= 122) {
+          return values.d;
+        }
+      },
     },
     rangeTo: {
       chest: 112,
-      height: this.getHeightInput(1),
+      height: () => {
+        const values = {
+          a: 97,
+          b: 104,
+          c: 112,
+          d: 122,
+        };
+        const chest = this.invert(parseInt(this.input.chest, 10));
+
+        if (chest >= 86 && chest <= 97) {
+          return values.a;
+        } else if (chest >= 94 && chest <= 108) {
+          return values.b;
+        } else if (chest >= 102 && chest <= 112) {
+          return values.c;
+        } else if (chest >= 109 && chest <= 122) {
+          return values.d;
+        }
+      },
     },
 
     getResult() {

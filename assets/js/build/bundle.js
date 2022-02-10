@@ -4867,37 +4867,58 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function ShoulderPadsSR() {
+  var _this = this;
+
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
     input: {
       chest: 86,
       height: 157
     },
-    getHeightInput: function getHeightInput(i) {
-      var ranges = {
-        a: [86, 97],
-        b: [94, 104],
-        c: [102, 112],
-        d: [109, 122]
-      };
-      var chest = this.invert(parseInt(this.input.chest, 10));
-
-      if (chest >= 86 && chest <= 97) {
-        return ranges.a[i];
-      } else if (chest >= 94 && chest <= 108) {
-        return ranges.b[i];
-      } else if (chest >= 102 && chest <= 112) {
-        return ranges.c[i];
-      } else if (chest >= 109 && chest <= 122) {
-        return ranges.d[i];
-      }
-    },
     rangeFrom: {
       chest: 86,
-      height: this.getHeightInput(0)
+      height: function height() {
+        var values = {
+          a: 86,
+          b: 94,
+          c: 102,
+          d: 109
+        };
+
+        var chest = _this.invert(parseInt(_this.input.chest, 10));
+
+        if (chest >= 86 && chest <= 97) {
+          return values.a;
+        } else if (chest >= 94 && chest <= 108) {
+          return values.b;
+        } else if (chest >= 102 && chest <= 112) {
+          return values.c;
+        } else if (chest >= 109 && chest <= 122) {
+          return values.d;
+        }
+      }
     },
     rangeTo: {
       chest: 112,
-      height: this.getHeightInput(1)
+      height: function height() {
+        var values = {
+          a: 97,
+          b: 104,
+          c: 112,
+          d: 122
+        };
+
+        var chest = _this.invert(parseInt(_this.input.chest, 10));
+
+        if (chest >= 86 && chest <= 97) {
+          return values.a;
+        } else if (chest >= 94 && chest <= 108) {
+          return values.b;
+        } else if (chest >= 102 && chest <= 112) {
+          return values.c;
+        } else if (chest >= 109 && chest <= 122) {
+          return values.d;
+        }
+      }
     },
     getResult: function getResult() {
       var chest = this.invert(parseInt(this.input.chest, 10));
