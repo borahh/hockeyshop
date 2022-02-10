@@ -7,15 +7,6 @@ export function ShoulderPadsSR() {
       chest: 86,
       height: 157,
     },
-
-    rangeFrom: {
-      chest: 86,
-      height: this.getHeightInput(0),
-    },
-    rangeTo: {
-      chest: 112,
-      height: this.getHeightInput(1),
-    },
     getHeightInput(i) {
       const ranges = {
         a: [86, 97],
@@ -35,6 +26,15 @@ export function ShoulderPadsSR() {
         return ranges.d[i];
       }
     },
+    rangeFrom: {
+      chest: 86,
+      height: this.getHeightInput(0),
+    },
+    rangeTo: {
+      chest: 112,
+      height: this.getHeightInput(1),
+    },
+
     getResult() {
       const chest = this.invert(parseInt(this.input.chest, 10));
       const height = this.invert(parseInt(this.input.height, 10));

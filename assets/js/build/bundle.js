@@ -4872,14 +4872,6 @@ function ShoulderPadsSR() {
       chest: 86,
       height: 157
     },
-    rangeFrom: {
-      chest: 86,
-      height: this.getHeightInput(0)
-    },
-    rangeTo: {
-      chest: 112,
-      height: this.getHeightInput(1)
-    },
     getHeightInput: function getHeightInput(i) {
       var ranges = {
         a: [86, 97],
@@ -4898,6 +4890,14 @@ function ShoulderPadsSR() {
       } else if (chest >= 109 && chest <= 122) {
         return ranges.d[i];
       }
+    },
+    rangeFrom: {
+      chest: 86,
+      height: this.getHeightInput(0)
+    },
+    rangeTo: {
+      chest: 112,
+      height: this.getHeightInput(1)
     },
     getResult: function getResult() {
       var chest = this.invert(parseInt(this.input.chest, 10));
