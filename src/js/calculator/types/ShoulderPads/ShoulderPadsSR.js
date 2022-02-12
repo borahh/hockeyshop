@@ -24,7 +24,25 @@ export function ShoulderPadsSR() {
     },
     input: {
       height: 157,
-      chest: ShoulderPadsSR.getChestInput(0),
+      chest: () => {
+        const output = {
+          a: [86, 97],
+          b: [94, 104],
+          c: [102, 112],
+          d: [109, 122],
+        };
+        const height = this.height;
+
+        if (height >= 157 && height <= 168) {
+          return output.a[i];
+        } else if (height >= 168 && height <= 178) {
+          return output.b[i];
+        } else if (height >= 178 && height <= 188) {
+          return output.c[i];
+        } else if (height >= 183) {
+          return output.d[i];
+        }
+      },
     },
     rangeFrom: {
       height: 157,
