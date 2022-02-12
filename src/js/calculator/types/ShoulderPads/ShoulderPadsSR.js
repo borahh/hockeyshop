@@ -21,7 +21,7 @@ export function ShoulderPadsSR() {
         c: [102, 112],
         d: [109, 122],
       };
-      const height = this.invert(parseInt(this.input.height, 10));
+      const height = this.getHeightValue();
 
       if (height >= 157 && height <= 168) {
         return output.a[i];
