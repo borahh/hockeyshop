@@ -4869,8 +4869,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function ShoulderPadsSR() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
     input: {
-      chest: 86,
-      height: 157
+      height: 157,
+      chest: this.getChestInput(0)
     },
     rangeFrom: {
       height: 157

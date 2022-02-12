@@ -4,8 +4,8 @@ export function ShoulderPadsSR() {
   return {
     ...ShoulderPads,
     input: {
-      chest: 86,
       height: 157,
+      chest: this.getChestInput(0),
     },
     rangeFrom: {
       height: 157,
