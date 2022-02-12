@@ -4,6 +4,7 @@ export function ShoulderPadsSR() {
   return {
     ...ShoulderPads,
     input: {
+      chest: 86,
       height: 157,
     },
     rangeFrom: {
