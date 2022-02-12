@@ -4867,57 +4867,34 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function ShoulderPadsSR() {
-  var _this = this;
-
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
     input: {
       chest: 86,
       height: 157
     },
     rangeFrom: {
-      chest: 86,
-      height: function height() {
-        var values = {
-          a: 86,
-          b: 94,
-          c: 102,
-          d: 109
-        };
-
-        var chest = _this.invert(parseInt(_this.input.chest, 10));
-
-        if (chest >= 86 && chest <= 97) {
-          return values.a;
-        } else if (chest >= 94 && chest <= 108) {
-          return values.b;
-        } else if (chest >= 102 && chest <= 112) {
-          return values.c;
-        } else if (chest >= 109 && chest <= 122) {
-          return values.d;
-        }
-      }
+      height: 157
     },
     rangeTo: {
-      chest: 112,
-      height: function height() {
-        var values = {
-          a: 97,
-          b: 104,
-          c: 112,
-          d: 122
-        };
+      height: 183
+    },
+    getChestInput: function getChestInput(i) {
+      var output = {
+        a: [86, 97],
+        b: [94, 104],
+        c: [102, 112],
+        d: [109, 122]
+      };
+      var height = this.invert(parseInt(this.input.height, 10));
 
-        var chest = _this.invert(parseInt(_this.input.chest, 10));
-
-        if (chest >= 86 && chest <= 97) {
-          return values.a;
-        } else if (chest >= 94 && chest <= 108) {
-          return values.b;
-        } else if (chest >= 102 && chest <= 112) {
-          return values.c;
-        } else if (chest >= 109 && chest <= 122) {
-          return values.d;
-        }
+      if (height >= 157 && height <= 168) {
+        return output.a[i];
+      } else if (height >= 168 && height <= 178) {
+        return output.b[i];
+      } else if (height >= 178 && height <= 188) {
+        return output.c[i];
+      } else if (height >= 183) {
+        return output.d[i];
       }
     },
     getResult: function getResult() {
@@ -5142,7 +5119,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64589" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61587" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
