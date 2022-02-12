@@ -4889,7 +4889,7 @@ function ShoulderPadsSR() {
     },
     input: {
       height: 157,
-      chest: this.getChestInput(0)
+      chest: ShoulderPadsSR.getChestInput(0)
     },
     rangeFrom: {
       height: 157
