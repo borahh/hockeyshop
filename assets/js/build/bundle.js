@@ -4868,16 +4868,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 function ShoulderPadsSR() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
-    input: {
-      height: 157,
-      chest: this.getChestInput(0)
-    },
-    rangeFrom: {
-      height: 157
-    },
-    rangeTo: {
-      height: 183
-    },
     getChestInput: function getChestInput(i) {
       var output = {
         a: [86, 97],
@@ -4896,6 +4886,16 @@ function ShoulderPadsSR() {
       } else if (height >= 183) {
         return output.d[i];
       }
+    },
+    input: {
+      height: 157,
+      chest: this.getChestInput(0)
+    },
+    rangeFrom: {
+      height: 157
+    },
+    rangeTo: {
+      height: 183
     },
     getResult: function getResult() {
       var chest = this.invert(parseInt(this.input.chest, 10));
