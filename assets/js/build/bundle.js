@@ -4911,7 +4911,7 @@ function ShoulderPadsSR() {
     },
     input: {
       height: 157,
-      chest: 86
+      chest: document.getElementById('chestInput').value
     },
     rangeFrom: {
       height: 157
