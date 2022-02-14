@@ -900,6 +900,9 @@
         font-size: 2rem;
     }
 }
+.calculator__wraper__content__end__unmatched__content div span:not(:last-child)::after {
+                  content: '/';
+                }
 .calculator__wraper__content__end__unmatched__content div span {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -1017,25 +1020,20 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
 }
-
 .peer:checked ~ .peer-checked\:bg-accent {
     --tw-bg-opacity: 1;
     background-color: rgb(23 104 210 / var(--tw-bg-opacity));
 }
-
 .peer:checked ~ .peer-checked\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-
 .peer:checked ~ .peer-checked\:opacity-0 {
     opacity: 0;
 }
-
 .peer:checked ~ .peer-checked\:opacity-100 {
     opacity: 1;
 }
-
 @media (min-width: 640px) {
 
     .sm\:w-5\/6 {
