@@ -4887,55 +4887,18 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function ShoulderPadsSR() {
-  var _this = this;
-
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
-    getChestInput: function getChestInput(i) {
-      var output = {
-        a: [86, 97],
-        b: [94, 104],
-        c: [102, 112],
-        d: [109, 122]
-      };
-      var height = this.getHeightValue();
-
-      if (height >= 157 && height <= 168) {
-        return output.a[i];
-      } else if (height >= 168 && height <= 178) {
-        return output.b[i];
-      } else if (height >= 178 && height <= 188) {
-        return output.c[i];
-      } else if (height >= 183) {
-        return output.d[i];
-      }
-    },
     input: {
       height: 157,
-      chest: function chest() {
-        var output = {
-          a: [86, 97],
-          b: [94, 104],
-          c: [102, 112],
-          d: [109, 122]
-        };
-        var height = _this.height;
-
-        if (height >= 157 && height <= 168) {
-          return output.a[i];
-        } else if (height >= 168 && height <= 178) {
-          return output.b[i];
-        } else if (height >= 178 && height <= 188) {
-          return output.c[i];
-        } else if (height >= 183) {
-          return output.d[i];
-        }
-      }
+      chest: 86
     },
     rangeFrom: {
-      height: 157
+      height: 157,
+      chest: 86
     },
     rangeTo: {
-      height: 183
+      height: 183,
+      chest: 122
     },
     getResult: function getResult() {
       var chest = this.invert(parseInt(this.input.chest, 10));
