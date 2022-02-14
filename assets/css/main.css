@@ -900,9 +900,6 @@
         font-size: 2rem;
     }
 }
-.calculator__wraper__content__end__unmatched__content div span:not(:last-child)::after {
-                  content: '/';
-                }
 .calculator__wraper__content__end__unmatched__content div span {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
