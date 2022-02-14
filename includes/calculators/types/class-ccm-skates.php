@@ -25,20 +25,11 @@ class CCMSkates extends BorahhCalculatorBase {
         return ob_get_clean();
     }
 
-    protected function accordionResult() {
-        ob_start();
-        ?>
-            <span x-text="dataObtained.fit"></span>
-            <span x-text="dataObtained.scale"></span>
-        <?php
-        return ob_get_clean();
-    }
+
 
     public function onMatchedVariations() {
         ob_start();
         ?>
-            <h2>Din anbefalede størrelse er</h2>
-            <div class="calculator__wraper__content__end__matched__result"> <span x-text="dataObtained.fit"></span>/ <span x-text="dataObtained.scale"></span></div>
             <div>
                 <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'final-fit1.webp'; ?>" x-show="dataObtained.scale === 'Tapered'">
                 <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'final-fit2.webp'; ?>" x-show="dataObtained.scale === 'Regular'">

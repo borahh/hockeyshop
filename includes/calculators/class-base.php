@@ -19,8 +19,26 @@ class BorahhCalculatorBase {
         $this->type = $type;
     }
 
+    protected function dataObtained() {
+        ob_start(); 
+        ?>
+            <span x-text="dataObtained.fit" x-show="dataObtained.fit"></span>
+            <span x-show="dataObtained.scale"> / </span>
+            <span x-text="dataObtained.scale" x-show="dataObtained.scale"> / </span>
+            <span x-show="dataObtained.size"> / </span>
+            <span x-text="dataObtained.size" x-show="dataObtained.size"></span>
+        <?php
+        return ob_get_clean();
+    }
+
     protected function accordionResult() {
-        return 'Extend this';
+        ob_start();
+        ?>
+            <span x-text="dataObtained.fit" x-show="dataObtained.fit"></span>
+            <span x-text="dataObtained.scale" x-show="dataObtained.scale"></span>
+            <span x-text="dataObtained.size" x-text="dataObtained.scale"></span>
+        <?php
+        return ob_get_clean();
     }
 
     // Loaders
@@ -89,11 +107,7 @@ class BorahhCalculatorBase {
         <div class="calculator__wraper__content__end__unmatched__content">
             <p><?php _e("Din anbefalede størrelse er", "hockeyshop-theme"); ?></p>
             <div>
-                <span x-text="dataObtained.fit" x-show="dataObtained.fit"></span>
-                <span x-show="dataObtained.scale"> / </span>
-                <span x-text="dataObtained.scale" x-show="dataObtained.scale"> / </span>
-                <span x-show="dataObtained.size"> / </span>
-                <span x-text="dataObtained.size" x-show="dataObtained.size"></span>
+                <?php echo $this->dataObtained(); ?>
             </div>
         </div>
         
@@ -241,6 +255,10 @@ class BorahhCalculatorBase {
                         </div>
                         
                         <div class="calculator__wraper__content__end__matched" x-show="matchedVariations">
+                            <h2>Din anbefalede størrelse er</h2>
+                            <div class="calculator__wraper__content__end__matched__result">
+                                <?php echo $this->dataObtained(); ?>
+                            </div>
                             <?php echo $this->onMatchedVariations(); ?>
                         </div>
 

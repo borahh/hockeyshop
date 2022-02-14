@@ -16,24 +16,6 @@ class ShoulderPads extends BorahhCalculatorBase {
         <?php
         return ob_get_clean();
     }
-
-    protected function accordionResult() {
-        ob_start();
-        ?>
-            <span x-text="dataObtained.size"></span>
-        <?php
-        return ob_get_clean();
-    }
-
-    public function onMatchedVariations() {
-        ob_start();
-        ?>
-            <h2>Din anbefalede størrelse er</h2>
-            <div class="calculator__wraper__content__end__matched__result"><span x-text="dataObtained.scale"></span></div>
-        <?php
-        return ob_get_clean();
-    }
-
    
     protected function heightOptions() {
         ob_start();
