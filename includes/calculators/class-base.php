@@ -20,7 +20,7 @@ class BorahhCalculatorBase {
     }
 
     protected function accordionResult() {
-        return 'OK';
+        return 'Extend this';
     }
 
     // Loaders
