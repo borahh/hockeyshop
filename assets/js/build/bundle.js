@@ -4795,6 +4795,7 @@ var ShoulderPads = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorU
   handleFinal: function handleFinal() {
     var size = this.getResult();
     console.log(size);
+    this.dataObtained.size = size;
     var AvailableVariationsLoader = JSON.parse(document.getElementById('AvailableVariationsLoader').getAttribute('data-variations'));
 
     if (AvailableVariationsLoader.size.value.split(',').includes(this.dataObtained.size)) {

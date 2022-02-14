@@ -15,6 +15,8 @@ export const ShoulderPads = {
     const size = this.getResult();
     console.log(size);
 
+    this.dataObtained.size = size;
+
     const AvailableVariationsLoader = JSON.parse(
       document
         .getElementById('AvailableVariationsLoader')
