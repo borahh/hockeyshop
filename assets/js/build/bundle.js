@@ -4909,7 +4909,7 @@ function ShoulderPadsSR() {
     },
     input: {
       height: 157,
-      chest: this.$el.getAtrribute('min')
+      chest: 86
     },
     rangeFrom: {
       height: 157
