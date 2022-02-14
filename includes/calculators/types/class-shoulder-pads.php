@@ -63,11 +63,11 @@ class ShoulderPads extends BorahhCalculatorBase {
             <?php _e("Brystomkreds", "hockeyshop-theme"); ?>
         </h2>
         <div class="calculator__wraper__content__form__tab--length__input">
-            <input type="text" :value="getChestValue()" >            
+            <input type="text" :value="chestValue" >            
             <span x-text="selectedUnit"></span>
         </div>
         
-        <input type="range" class="calculator-range sm:w-5/6" x-bind:min="getChestInput(0)" step="1" x-bind:max="getChestInput(1)" x-model="input.chest" :value="$el.getAttribute('min')">
+        <input type="range" class="calculator-range sm:w-5/6" x-bind:min="getChestInput(0)" step="1" x-bind:max="getChestInput(1)" x-modelable="input.chest" x-model="chestValue" :value="$el.getAttribute('min')">
         
         
         <?php
