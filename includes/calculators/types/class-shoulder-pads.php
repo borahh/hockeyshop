@@ -67,7 +67,7 @@ class ShoulderPads extends BorahhCalculatorBase {
             <span x-text="selectedUnit"></span>
         </div>
         
-        <input type="range" class="calculator-range sm:w-5/6" x-bind:min="getChestInput(0)" step="1" x-bind:max="getChestInput(1)" x-model="input.chest" x-bind:value="$el.getAttribute('min')">
+        <input type="range" class="calculator-range sm:w-5/6" x-bind:min="getChestInput(0)" step="1" x-bind:max="getChestInput(1)" x-model="input.chest">
         
         
         <?php
