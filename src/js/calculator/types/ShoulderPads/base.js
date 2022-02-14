@@ -6,8 +6,8 @@ export const ShoulderPads = {
   ...calculatorUI,
   ...cmToInch,
   maxStep: 1,
-  getChestValue(i) {
-    return this.convert(i);
+  getChestValue() {
+    return this.convert(this.input.chest);
   },
   getHeightValue() {
     return this.convert(this.input.height);

@@ -4788,8 +4788,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var ShoulderPads = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorUI), _unitConverter.cmToInch), {}, {
   maxStep: 1,
-  getChestValue: function getChestValue(i) {
-    return this.convert(i);
+  getChestValue: function getChestValue() {
+    return this.convert(this.input.chest);
   },
   getHeightValue: function getHeightValue() {
     return this.convert(this.input.height);
