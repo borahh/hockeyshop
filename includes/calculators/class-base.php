@@ -23,9 +23,9 @@ class BorahhCalculatorBase {
         ob_start(); 
         ?>
             <span x-text="dataObtained.fit" x-show="dataObtained.fit"></span>
-            <span x-show="dataObtained.scale"> / </span>
+            <span x-show="dataObtained.fit && dataObtained.scale"> / </span>
             <span x-text="dataObtained.scale" x-show="dataObtained.scale"> / </span>
-            <span x-show="dataObtained.size"> / </span>
+            <span x-show="dataObtained.scale && dataObtained.size"> / </span>
             <span x-text="dataObtained.size" x-show="dataObtained.size"></span>
         <?php
         return ob_get_clean();
