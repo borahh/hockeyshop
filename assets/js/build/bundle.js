@@ -4888,17 +4888,34 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 function ShoulderPadsSR() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
+    getChestInput: function getChestInput(i) {
+      var output = {
+        a: [86, 97],
+        b: [94, 104],
+        c: [102, 112],
+        d: [109, 122]
+      };
+      var height = this.getHeightValue();
+
+      if (height >= 157 && height <= 168) {
+        return output.a[i];
+      } else if (height >= 168 && height <= 178) {
+        return output.b[i];
+      } else if (height >= 178 && height <= 188) {
+        return output.c[i];
+      } else if (height >= 183) {
+        return output.d[i];
+      }
+    },
     input: {
       height: 157,
-      chest: 86
+      chest: this.$el.getAtrribute('min')
     },
     rangeFrom: {
-      height: 157,
-      chest: 86
+      height: 157
     },
     rangeTo: {
-      height: 183,
-      chest: 122
+      height: 183
     },
     getResult: function getResult() {
       var chest = this.invert(parseInt(this.input.chest, 10));

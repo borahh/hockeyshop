@@ -3,17 +3,34 @@ import { ShoulderPads } from './base';
 export function ShoulderPadsSR() {
   return {
     ...ShoulderPads,
+    getChestInput(i) {
+      const output = {
+        a: [86, 97],
+        b: [94, 104],
+        c: [102, 112],
+        d: [109, 122],
+      };
+      const height = this.getHeightValue();
+
+      if (height >= 157 && height <= 168) {
+        return output.a[i];
+      } else if (height >= 168 && height <= 178) {
+        return output.b[i];
+      } else if (height >= 178 && height <= 188) {
+        return output.c[i];
+      } else if (height >= 183) {
+        return output.d[i];
+      }
+    },
     input: {
       height: 157,
-      chest: 86,
+      chest: this.$el.getAtrribute('min'),
     },
     rangeFrom: {
       height: 157,
-      chest: 86,
     },
     rangeTo: {
       height: 183,
-      chest: 122,
     },
 
     getResult() {
