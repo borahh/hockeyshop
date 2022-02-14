@@ -4795,12 +4795,29 @@ var ShoulderPads = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorU
   handleFinal: function handleFinal() {
     var size = this.getResult();
     console.log(size);
+    var AvailableVariationsLoader = JSON.parse(document.getElementById('AvailableVariationsLoader').getAttribute('data-variations'));
 
-    if (size) {
-      this.onDataObtained = true;
-      this.dataObtained.size = size;
+    if (AvailableVariationsLoader.size.value.split(',').includes(this.dataObtained.size)) {
+      var selectSize = getVariationEl(AvailableVariationsLoader.size, this.dataObtained.size);
+
+      if (selectSize) {
+        this.matchedVariations = true;
+
+        if (selectSize.classList.contains('disabled')) {
+          this.matchedVariations = false;
+        }
+
+        if (!selectSize.classList.contains('selected')) {
+          selectSize.click();
+        }
+      } else {
+        this.matchedVariations = false;
+      }
+    } else {
+      this.matchedVariations = false;
     }
 
+    this.onDataObtained = true;
     this.onSubmit = true;
   }
 });
