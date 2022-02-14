@@ -1,3 +1,4 @@
+import { getVariationEl } from '../../../helpers/getVariationEl';
 import { calculatorUI } from '../../ui';
 import { cmToInch } from '../../unitConverter';
 

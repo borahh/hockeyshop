@@ -4774,6 +4774,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.ShoulderPads = void 0;
 
+var _getVariationEl = require("../../../helpers/getVariationEl");
+
 var _ui = require("../../ui");
 
 var _unitConverter = require("../../unitConverter");
@@ -4799,7 +4801,7 @@ var ShoulderPads = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorU
     var AvailableVariationsLoader = JSON.parse(document.getElementById('AvailableVariationsLoader').getAttribute('data-variations'));
 
     if (AvailableVariationsLoader.size.value.split(',').includes(this.dataObtained.size)) {
-      var selectSize = getVariationEl(AvailableVariationsLoader.size, this.dataObtained.size);
+      var selectSize = (0, _getVariationEl.getVariationEl)(AvailableVariationsLoader.size, this.dataObtained.size);
 
       if (selectSize) {
         this.matchedVariations = true;
@@ -4824,7 +4826,7 @@ var ShoulderPads = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorU
 });
 
 exports.ShoulderPads = ShoulderPads;
-},{"../../ui":"calculator/ui.js","../../unitConverter":"calculator/unitConverter.js"}],"calculator/types/ShoulderPads/ShoulderPadsJR.js":[function(require,module,exports) {
+},{"../../../helpers/getVariationEl":"helpers/getVariationEl.js","../../ui":"calculator/ui.js","../../unitConverter":"calculator/unitConverter.js"}],"calculator/types/ShoulderPads/ShoulderPadsJR.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
