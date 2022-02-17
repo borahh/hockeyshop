@@ -63,11 +63,11 @@ class ShoulderPads extends BorahhCalculatorBase {
             <?php _e("Brystomkreds", "hockeyshop-theme"); ?>
         </h2>
         <div class="calculator__wraper__content__form__tab--length__input">
-            <input type="text" :value="getChestValue()" >            
+            <input type="text" :value="chestValue" >            
             <span x-text="selectedUnit"></span>
         </div>
         
-        <input type="range" class="calculator-range sm:w-5/6" x-model="input.chest" x-bind:min="getChestInput(0)" step="1" x-bind:max="getChestInput(1)">
+        <input id="xxx" type="range" class="calculator-range sm:w-5/6" x-model="chestValue" x-bind:min="getChestInput(0)" step="1" x-bind:max="getChestInput(1)">
         
         
         <?php
@@ -82,7 +82,7 @@ class ShoulderPads extends BorahhCalculatorBase {
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length calculator__wraper__content__form__tab--length-multi" x-show="currentStep === 0">
                 <?php echo $this->heightOptions(); ?>
             </div>
-            <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length calculator__wraper__content__form__tab--length-multi" x-show="currentStep === 1">
+            <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length calculator__wraper__content__form__tab--length-multi" x-show="currentStep === 1" x-data="{ chestValue: 0 }">
                 <?php echo $this->chestOptions(); ?>
             </div>
             
