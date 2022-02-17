@@ -4897,7 +4897,7 @@ function ShoulderPadsSR() {
         c: [102, 112],
         d: [109, 122]
       };
-      var height = this.getHeightValue();
+      var height = this.invert(parseInt(this.input.height, 10));
 
       if (height >= 157 && height <= 168) {
         return output.a[i];
@@ -4911,7 +4911,7 @@ function ShoulderPadsSR() {
     },
     input: {
       height: 157,
-      chest: document.getElementById('chestInput').value
+      chest: 86
     },
     rangeFrom: {
       height: 157
@@ -5141,7 +5141,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50948" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56661" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

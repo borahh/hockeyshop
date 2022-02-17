@@ -10,7 +10,7 @@ export function ShoulderPadsSR() {
         c: [102, 112],
         d: [109, 122],
       };
-      const height = this.getHeightValue();
+      const height = this.invert(parseInt(this.input.height, 10));
 
       if (height >= 157 && height <= 168) {
         return output.a[i];
@@ -24,7 +24,7 @@ export function ShoulderPadsSR() {
     },
     input: {
       height: 157,
-      chest: document.getElementById('chestInput').value,
+      chest: 86,
     },
     rangeFrom: {
       height: 157,
