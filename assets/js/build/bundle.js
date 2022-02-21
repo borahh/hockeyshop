@@ -4909,6 +4909,11 @@ function ShoulderPadsSR() {
         return output.d[i];
       }
     },
+    handleNext: function handleNext() {
+      document.getElementById('chestInput').setAttribute('min', this.getChestInput(0));
+      document.getElementById('chestInput').setAttribute('max', this.getChestInput(1));
+      this.currentStep++;
+    },
     input: {
       height: 157,
       chest: 86
