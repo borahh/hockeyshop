@@ -26,10 +26,7 @@ export function ShoulderPadsSR() {
       const el = document.getElementById('chestInput');
 
       el.setAttribute('min', this.getChestInput(0));
-      el.getElementById('chestInput').setAttribute(
-        'max',
-        this.getChestInput(1),
-      );
+      el.setAttribute('max', this.getChestInput(1));
       el.value = this.getChestInput(0);
       this.currentStep++;
     },
