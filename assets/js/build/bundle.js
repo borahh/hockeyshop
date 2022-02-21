@@ -4910,8 +4910,10 @@ function ShoulderPadsSR() {
       }
     },
     handleNext: function handleNext() {
-      document.getElementById('chestInput').setAttribute('min', this.getChestInput(0));
-      document.getElementById('chestInput').setAttribute('max', this.getChestInput(1));
+      var el = document.getElementById('chestInput');
+      el.setAttribute('min', this.getChestInput(0));
+      el.getElementById('chestInput').setAttribute('max', this.getChestInput(1));
+      el.value = el.getAttribute('min');
       this.currentStep++;
     },
     input: {
