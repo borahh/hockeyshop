@@ -28,7 +28,7 @@ export function ShoulderPadsSR() {
       el.setAttribute('min', this.getChestInput(0));
       el.setAttribute('max', this.getChestInput(1));
 
-      console.log(ele.target.value);
+      console.log(el.target.value);
       this.currentStep++;
     },
     input: {
