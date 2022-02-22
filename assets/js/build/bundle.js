@@ -4932,7 +4932,7 @@ function ShoulderPadsSR() {
       height: 183
     },
     getResult: function getResult() {
-      var chest = this.invert(parseInt(this.input.chest, 10));
+      var chest = parseInt(this.input.chest, 10);
       var height = this.invert(parseInt(this.input.height, 10));
       console.log(height, chest);
 

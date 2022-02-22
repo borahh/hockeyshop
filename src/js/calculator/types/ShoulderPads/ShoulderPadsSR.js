@@ -47,7 +47,7 @@ export function ShoulderPadsSR() {
     },
 
     getResult() {
-      const chest = this.invert(parseInt(this.input.chest, 10));
+      const chest = parseInt(this.input.chest, 10);
       const height = this.invert(parseInt(this.input.height, 10));
 
       console.log(height, chest);
