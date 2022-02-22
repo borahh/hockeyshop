@@ -4913,7 +4913,7 @@ function ShoulderPadsSR() {
       var el = document.getElementById('chestInput');
       el.setAttribute('min', this.getChestInput(0));
       el.setAttribute('max', this.getChestInput(1));
-      console.log(el.target.value);
+      el.value = (el.getAttribute('min') + el.getAttribute('max')) / 2;
       this.currentStep++;
     },
     input: {
