@@ -4915,7 +4915,7 @@ function ShoulderPadsSR() {
       el.setAttribute('max', this.getChestInput(1));
       var value = (this.getChestInput(0) + this.getChestInput(1)) / 2;
 
-      $refs.chestInput._x_model.set(value);
+      this.$refs.chestInput._x_model.set(value);
 
       this.currentStep++;
     },
