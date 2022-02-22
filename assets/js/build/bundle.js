@@ -4932,6 +4932,7 @@ function ShoulderPadsSR() {
     getResult: function getResult() {
       var chest = this.invert(parseInt(this.input.chest, 10));
       var height = this.invert(parseInt(this.input.height, 10));
+      console.log(height, chest);
 
       if (chest >= 86 && chest <= 97 && height >= 157 && height <= 168) {
         return 'S';
