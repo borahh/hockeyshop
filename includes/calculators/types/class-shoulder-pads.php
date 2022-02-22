@@ -16,6 +16,12 @@ class ShoulderPads extends BorahhCalculatorBase {
         <?php
         return ob_get_clean();
     }
+
+    // Matched Function
+    protected function onMatchedVariations() {
+        ob_start();
+        return ob_get_clean();
+    }
    
     protected function heightOptions() {
         ob_start();
