@@ -4914,7 +4914,7 @@ function ShoulderPadsSR() {
       el.setAttribute('min', this.getChestInput(0));
       el.setAttribute('max', this.getChestInput(1));
       var value = (this.getChestInput(0) + this.getChestInput(1)) / 2;
-      console.log($refs);
+      console.log(this.$refs);
       this.currentStep++;
     },
     input: {
