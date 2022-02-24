@@ -43,7 +43,7 @@ export function ShoulderPadsSR() {
       height: 157,
     },
     rangeTo: {
-      height: 183,
+      height: 210,
     },
 
     getResult() {

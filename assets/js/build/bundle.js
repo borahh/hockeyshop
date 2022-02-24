@@ -4929,7 +4929,7 @@ function ShoulderPadsSR() {
       height: 157
     },
     rangeTo: {
-      height: 183
+      height: 210
     },
     getResult: function getResult() {
       var chest = parseInt(this.input.chest, 10);
