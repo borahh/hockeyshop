@@ -4897,17 +4897,17 @@ function ShoulderPadsSR() {
         a: [86, 97],
         b: [94, 104],
         c: [102, 112],
-        d: [109, 122]
+        d: [102, 122]
       };
       var height = this.invert(parseInt(this.input.height, 10));
 
       if (height >= 157 && height <= 168) {
         return output.a[i];
-      } else if (height >= 168 && height <= 178) {
+      } else if (height >= 169 && height <= 178) {
         return output.b[i];
-      } else if (height >= 178 && height <= 188) {
+      } else if (height >= 179 && height <= 182) {
         return output.c[i];
-      } else if (height >= 183) {
+      } else if (height >= 183 && height <= 210) {
         return output.d[i];
       }
     },
@@ -4938,11 +4938,11 @@ function ShoulderPadsSR() {
 
       if (chest >= 86 && chest <= 97 && height >= 157 && height <= 168) {
         return 'S';
-      } else if (chest >= 94 && chest <= 108 && height >= 168 && height <= 178) {
+      } else if (chest >= 94 && chest <= 104 && height >= 168 && height <= 178) {
         return 'M';
       } else if (chest >= 102 && chest <= 112 && height >= 178 && height <= 188) {
         return 'L';
-      } else if (chest >= 109 && chest <= 122 && height >= 183) {
+      } else if (chest >= 109 && chest <= 122 && height >= 183 && height <= 210) {
         return 'XL';
       }
     }
@@ -5154,7 +5154,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61592" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49229" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -8,17 +8,17 @@ export function ShoulderPadsSR() {
         a: [86, 97],
         b: [94, 104],
         c: [102, 112],
-        d: [109, 122],
+        d: [102, 122],
       };
       const height = this.invert(parseInt(this.input.height, 10));
 
       if (height >= 157 && height <= 168) {
         return output.a[i];
-      } else if (height >= 168 && height <= 178) {
+      } else if (height >= 169 && height <= 178) {
         return output.b[i];
-      } else if (height >= 178 && height <= 188) {
+      } else if (height >= 179 && height <= 182) {
         return output.c[i];
-      } else if (height >= 183) {
+      } else if (height >= 183 && height <= 210) {
         return output.d[i];
       }
     },
@@ -55,7 +55,7 @@ export function ShoulderPadsSR() {
         return 'S';
       } else if (
         chest >= 94 &&
-        chest <= 108 &&
+        chest <= 104 &&
         height >= 168 &&
         height <= 178
       ) {
@@ -67,7 +67,12 @@ export function ShoulderPadsSR() {
         height <= 188
       ) {
         return 'L';
-      } else if (chest >= 109 && chest <= 122 && height >= 183) {
+      } else if (
+        chest >= 109 &&
+        chest <= 122 &&
+        height >= 183 &&
+        height <= 210
+      ) {
         return 'XL';
       }
     },
