@@ -46,7 +46,7 @@ class CCMGloves extends BorahhCalculatorBase {
             <span x-text="selectedUnit"></span>
         </div>
         
-        <input type="range" class="calculator-range sm:w-5/6" x-bind:min="rangeFrom.length" step="1" x-bind:max="rangeTo.length" x-model="input.length">
+        <input type="range" class="calculator-range sm:w-5/6" x-bind:min="rangeFrom.length" step="0.5" x-bind:max="rangeTo.length" x-model="input.length">
 
         <?php
         return ob_get_clean();

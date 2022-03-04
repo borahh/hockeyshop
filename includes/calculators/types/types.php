@@ -61,9 +61,9 @@ function borahh_calculator_types() {
             'dependencies' => [
                 (object) array(
                     'name' => 'size',
-                    'list' =>  array('pa_x-stoerrelser'),
-                    'get'  => 'name',
-                    'selector' => 'data-title'
+                    'list' =>  array('pa_tommer'),
+                    'get'  => 'data-value',
+                    'selector' => 'data-value'
                )
             ]
         ),
@@ -74,9 +74,9 @@ function borahh_calculator_types() {
             'dependencies' => [
                 (object) array(
                     'name' => 'size',
-                    'list' =>  array('pa_x-stoerrelser'),
-                    'get'  => 'name',
-                    'selector' => 'data-title'
+                    'list' =>  array('pa_tommer'),
+                    'get'  => 'data-value',
+                    'selector' => 'data-value'
                )
             ]
         ),
@@ -87,9 +87,9 @@ function borahh_calculator_types() {
             'dependencies' => [
                 (object) array(
                     'name' => 'size',
-                    'list' =>  array('pa_x-stoerrelser'),
-                    'get'  => 'name',
-                    'selector' => 'data-title'
+                    'list' =>  array('pa_tommer'),
+                    'get'  => 'data-value',
+                    'selector' => 'data-value'
                )
             ]
         ),
