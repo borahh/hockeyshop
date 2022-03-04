@@ -13,7 +13,6 @@ export const Gloves = {
 
   handleFinal() {
     const size = this.getResult();
-    console.log(size);
 
     this.dataObtained.size = size;
 

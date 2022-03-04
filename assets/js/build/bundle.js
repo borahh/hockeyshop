@@ -4793,7 +4793,6 @@ var Gloves = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorUI), _u
   },
   handleFinal: function handleFinal() {
     var size = this.getResult();
-    console.log(size);
     this.dataObtained.size = size;
     var AvailableVariationsLoader = JSON.parse(document.getElementById('AvailableVariationsLoader').getAttribute('data-variations'));
 
