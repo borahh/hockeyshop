@@ -5394,7 +5394,743 @@ Object.keys(_CCMGlovesYT).forEach(function (key) {
     }
   });
 });
-},{"./CCMGlovesJR":"calculator/types/Gloves/CCMGlovesJR.js","./CCMGlovesSR":"calculator/types/Gloves/CCMGlovesSR.js","./CCMGlovesYT":"calculator/types/Gloves/CCMGlovesYT.js"}],"calculator/types/ShoulderPads/base.js":[function(require,module,exports) {
+},{"./CCMGlovesJR":"calculator/types/Gloves/CCMGlovesJR.js","./CCMGlovesSR":"calculator/types/Gloves/CCMGlovesSR.js","./CCMGlovesYT":"calculator/types/Gloves/CCMGlovesYT.js"}],"calculator/types/PlayerPants/base.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.PlayerPants = void 0;
+
+var _getVariationEl = require("../../../helpers/getVariationEl");
+
+var _ui = require("../../ui");
+
+var _unitConverter = require("../../unitConverter");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var PlayerPants = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorUI), _unitConverter.cmToInch), {}, {
+  maxStep: 1,
+  getWaistValue: function getWaistValue() {
+    var waist = this.convert(this.input.waist);
+    return waist;
+  },
+  getHeightValue: function getHeightValue() {
+    return this.convert(this.input.height);
+  },
+  handleFinal: function handleFinal() {
+    var size = this.getResult();
+    console.log(size);
+    this.dataObtained.size = size;
+    var AvailableVariationsLoader = JSON.parse(document.getElementById('AvailableVariationsLoader').getAttribute('data-variations'));
+
+    if (AvailableVariationsLoader.size.value.split(',').includes(this.dataObtained.size)) {
+      var selectSize = (0, _getVariationEl.getVariationEl)(AvailableVariationsLoader.size, this.dataObtained.size);
+
+      if (selectSize) {
+        this.matchedVariations = true;
+
+        if (selectSize.classList.contains('disabled')) {
+          this.matchedVariations = false;
+        }
+
+        if (!selectSize.classList.contains('selected')) {
+          selectSize.click();
+        }
+      } else {
+        this.matchedVariations = false;
+      }
+    } else {
+      this.matchedVariations = false;
+    }
+
+    this.onDataObtained = true;
+    this.onSubmit = true;
+  }
+});
+
+exports.PlayerPants = PlayerPants;
+},{"../../../helpers/getVariationEl":"helpers/getVariationEl.js","../../ui":"calculator/ui.js","../../unitConverter":"calculator/unitConverter.js"}],"calculator/types/PlayerPants/CCMPlayerPantsJR.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CCMPlayerPantsJR = CCMPlayerPantsJR;
+
+var _base = require("./base");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function CCMPlayerPantsJR() {
+  return _objectSpread(_objectSpread({}, _base.PlayerPants), {}, {
+    getWaistInput: function getWaistInput(i) {
+      var output = {
+        a: [30, 58],
+        b: [58, 64],
+        c: [62, 72],
+        d: [69, 79],
+        e: [69, 79]
+      };
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 110 && height <= 126) {
+        return output.a[i];
+      } else if (height >= 127 && height <= 137) {
+        return output.b[i];
+      } else if (height >= 138 && height <= 147) {
+        return output.c[i];
+      } else if (height >= 148 && height <= 157) {
+        return output.d[i];
+      } else if (height >= 158 && height <= 170) {
+        return output.e[i];
+      }
+    },
+    handleNext: function handleNext() {
+      var el = document.getElementById('waistInput');
+      el.setAttribute('min', this.getWaistValue(0));
+      el.setAttribute('max', this.getWaistValue(1));
+      var value = parseFloat((this.getWaistValue(0) + this.getWaistValue(1)) / 2).toFixed(0);
+
+      el._x_model.set(value);
+
+      this.currentStep++;
+    },
+    input: {
+      waist: 58,
+      height: 127
+    },
+    rangeFrom: {
+      waist: 58,
+      height: 127
+    },
+    rangeTo: {
+      waist: 79,
+      height: 170
+    },
+    getResult: function getResult() {
+      var height = parseInt(this.input.height, 10);
+      var waist = parseInt(this.input.waist, 10);
+
+      if (waist <= 58 && height <= 132) {
+        return 'XS';
+      } else if (waist >= 58 && waist <= 64 && height >= 127 && height <= 137) {
+        return 'S';
+      } else if (waist >= 62 && waist <= 72 && height >= 137 && height <= 147) {
+        return 'M';
+      } else if (waist >= 69 && waist <= 79 && height >= 147 && height <= 157) {
+        return 'L';
+      } else if (waist >= 69 && waist <= 74 && height >= 163 && height <= 170) {
+        return 'XL';
+      }
+    }
+  });
+}
+},{"./base":"calculator/types/PlayerPants/base.js"}],"calculator/types/PlayerPants/CCMPlayerPantsSR.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CCMPlayerPantsSR = CCMPlayerPantsSR;
+
+var _base = require("./base");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function CCMPlayerPantsSR() {
+  return _objectSpread(_objectSpread({}, _base.PlayerPants), {}, {
+    getWaistInput: function getWaistInput(i) {
+      var output = {
+        a: [74, 82],
+        b: [79, 89],
+        c: [86, 99],
+        d: [86, 107]
+      };
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 157 && height <= 168) {
+        return output.a[i];
+      } else if (height >= 169 && height <= 178) {
+        return output.b[i];
+      } else if (height >= 179 && height <= 182) {
+        return output.c[i];
+      } else if (height >= 183 && height <= 210) {
+        return output.d[i];
+      }
+    },
+    handleNext: function handleNext() {
+      var el = document.getElementById('waistInput');
+      el.setAttribute('min', this.getWaistValue(0));
+      el.setAttribute('max', this.getWaistValue(1));
+      var value = parseFloat((this.getWaistValue(0) + this.getWaistValue(1)) / 2).toFixed(0);
+
+      el._x_model.set(value);
+
+      this.currentStep++;
+    },
+    input: {
+      waist: 74,
+      height: 157
+    },
+    rangeFrom: {
+      waist: 74,
+      height: 157
+    },
+    rangeTo: {
+      waist: 107,
+      height: 188
+    },
+    getResult: function getResult() {
+      var height = parseInt(this.input.height, 10);
+      var waist = parseInt(this.input.waist, 10);
+
+      if (waist >= 74 && waist <= 82 && height >= 157 && height <= 168) {
+        return 'S';
+      } else if (waist >= 79 && waist <= 89 && height >= 168 && height <= 178) {
+        return 'M';
+      } else if (waist >= 86 && waist <= 99 && height >= 178 && height <= 188) {
+        return 'L';
+      } else if (waist >= 95 && waist <= 107 && height >= 183) {
+        return 'XL';
+      }
+    }
+  });
+}
+},{"./base":"calculator/types/PlayerPants/base.js"}],"calculator/types/PlayerPants/CCMPlayerPantsYT.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CCMPlayerPantsYT = CCMPlayerPantsYT;
+
+var _base = require("./base");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function CCMPlayerPantsYT() {
+  return _objectSpread(_objectSpread({}, _base.PlayerPants), {}, {
+    getWaistInput: function getWaistInput(i) {
+      var output = {
+        a: [51, 55],
+        b: [53, 57],
+        c: [56, 60]
+      };
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 102 && height <= 109) {
+        return output.a[i];
+      } else if (height >= 110 && height <= 117) {
+        return output.b[i];
+      } else if (height >= 118 && height <= 127) {
+        return output.c[i];
+      }
+    },
+    handleNext: function handleNext() {
+      var el = document.getElementById('waistInput');
+      el.setAttribute('min', this.getWaistValue(0));
+      el.setAttribute('max', this.getWaistValue(1));
+      var value = parseFloat((this.getWaistValue(0) + this.getWaistValue(1)) / 2).toFixed(0);
+
+      el._x_model.set(value);
+
+      this.currentStep++;
+    },
+    input: {
+      waist: 51,
+      height: 102
+    },
+    rangeFrom: {
+      waist: 51,
+      height: 102
+    },
+    rangeTo: {
+      waist: 60,
+      height: 127
+    },
+    getResult: function getResult() {
+      var height = parseInt(this.input.height, 10);
+      var waist = parseInt(this.input.waist, 10);
+
+      if (waist >= 51 && waist <= 55 && height >= 102 && height <= 109) {
+        return 'S';
+      } else if (waist >= 53 && waist <= 57 && height >= 109 && height <= 117) {
+        return 'M';
+      } else if (waist >= 56 && waist <= 60 && height >= 117 && height <= 127) {
+        return 'L';
+      }
+    }
+  });
+}
+},{"./base":"calculator/types/PlayerPants/base.js"}],"calculator/types/PlayerPants/CCMPlayerPantsWomen.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CCMPlayerPantsWomen = CCMPlayerPantsWomen;
+
+var _base = require("./base");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function CCMPlayerPantsWomen() {
+  return _objectSpread(_objectSpread({}, _base.PlayerPants), {}, {
+    getWaistInput: function getWaistInput(i) {
+      var output = {
+        a: [64, 74],
+        b: [74, 84],
+        c: [84, 94]
+      };
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 150 && height <= 160) {
+        return output.a[i];
+      } else if (height >= 161 && height <= 170) {
+        return output.b[i];
+      } else if (height >= 171 && height <= 183) {
+        return output.c[i];
+      }
+    },
+    handleNext: function handleNext() {
+      var el = document.getElementById('waistInput');
+      el.setAttribute('min', this.getWaistValue(0));
+      el.setAttribute('max', this.getWaistValue(1));
+      var value = parseFloat((this.getWaistValue(0) + this.getWaistValue(1)) / 2).toFixed(0);
+
+      el._x_model.set(value);
+
+      this.currentStep++;
+    },
+    input: {
+      waist: 64,
+      height: 150
+    },
+    rangeFrom: {
+      waist: 64,
+      height: 150
+    },
+    rangeTo: {
+      waist: 94,
+      height: 183
+    },
+    getResult: function getResult() {
+      var height = parseInt(this.input.height, 10);
+      var waist = parseInt(this.input.waist, 10);
+
+      if (waist >= 64 && waist <= 74 && height >= 150 && height <= 160) {
+        return 'S';
+      } else if (waist >= 74 && waist <= 84 && height >= 160 && height <= 170) {
+        return 'M';
+      } else if (waist >= 84 && waist <= 94 && height >= 170 && height <= 183) {
+        return 'L';
+      }
+    }
+  });
+}
+},{"./base":"calculator/types/PlayerPants/base.js"}],"calculator/types/PlayerPants/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _CCMPlayerPantsJR = require("./CCMPlayerPantsJR");
+
+Object.keys(_CCMPlayerPantsJR).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _CCMPlayerPantsJR[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _CCMPlayerPantsJR[key];
+    }
+  });
+});
+
+var _CCMPlayerPantsSR = require("./CCMPlayerPantsSR");
+
+Object.keys(_CCMPlayerPantsSR).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _CCMPlayerPantsSR[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _CCMPlayerPantsSR[key];
+    }
+  });
+});
+
+var _CCMPlayerPantsYT = require("./CCMPlayerPantsYT");
+
+Object.keys(_CCMPlayerPantsYT).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _CCMPlayerPantsYT[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _CCMPlayerPantsYT[key];
+    }
+  });
+});
+
+var _CCMPlayerPantsWomen = require("./CCMPlayerPantsWomen");
+
+Object.keys(_CCMPlayerPantsWomen).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _CCMPlayerPantsWomen[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _CCMPlayerPantsWomen[key];
+    }
+  });
+});
+},{"./CCMPlayerPantsJR":"calculator/types/PlayerPants/CCMPlayerPantsJR.js","./CCMPlayerPantsSR":"calculator/types/PlayerPants/CCMPlayerPantsSR.js","./CCMPlayerPantsYT":"calculator/types/PlayerPants/CCMPlayerPantsYT.js","./CCMPlayerPantsWomen":"calculator/types/PlayerPants/CCMPlayerPantsWomen.js"}],"calculator/types/ShinGuards/base.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ShinGuards = void 0;
+
+var _getVariationEl = require("../../../helpers/getVariationEl");
+
+var _ui = require("../../ui");
+
+var _unitConverter = require("../../unitConverter");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var ShinGuards = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorUI), _unitConverter.cmToInch), {}, {
+  maxStep: 1,
+  getLengthValue: function getLengthValue() {
+    var length = this.convert(this.input.length);
+    return length;
+  },
+  getHeightValue: function getHeightValue() {
+    return this.convert(this.input.height);
+  },
+  handleFinal: function handleFinal() {
+    var size = this.getResult();
+    this.dataObtained.size = size;
+    var AvailableVariationsLoader = JSON.parse(document.getElementById('AvailableVariationsLoader').getAttribute('data-variations'));
+
+    if (AvailableVariationsLoader.size.value.split(',').includes(this.dataObtained.size)) {
+      var selectSize = (0, _getVariationEl.getVariationEl)(AvailableVariationsLoader.size, this.dataObtained.size);
+
+      if (selectSize) {
+        this.matchedVariations = true;
+
+        if (selectSize.classList.contains('disabled')) {
+          this.matchedVariations = false;
+        }
+
+        if (!selectSize.classList.contains('selected')) {
+          selectSize.click();
+        }
+      } else {
+        this.matchedVariations = false;
+      }
+    } else {
+      this.matchedVariations = false;
+    }
+
+    this.onDataObtained = true;
+    this.onSubmit = true;
+  }
+});
+
+exports.ShinGuards = ShinGuards;
+},{"../../../helpers/getVariationEl":"helpers/getVariationEl.js","../../ui":"calculator/ui.js","../../unitConverter":"calculator/unitConverter.js"}],"calculator/types/ShinGuards/CCMShinGuardsJR.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CCMShinGuardsJR = CCMShinGuardsJR;
+
+var _base = require("./base");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function CCMShinGuardsJR() {
+  return _objectSpread(_objectSpread({}, _base.ShinGuards), {}, {
+    getTibiaInput: function getTibiaInput(i) {
+      var output = {
+        a: [28, 30],
+        b: [30, 33],
+        c: [33, 36]
+      };
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 132 && height <= 142) {
+        return output.a[i];
+      } else if (height >= 143 && height <= 152) {
+        return output.b[i];
+      } else if (height >= 153 && height <= 163) {
+        return output.c[i];
+      }
+    },
+    handleNext: function handleNext() {
+      var el = document.getElementById('lengthInput');
+      el.setAttribute('min', this.getTibiaInput(0));
+      el.setAttribute('max', this.getTibiaInput(1));
+      var value = parseFloat((this.getTibiaInput(0) + this.getTibiaInput(1)) / 2).toFixed(0);
+
+      el._x_model.set(value);
+
+      this.currentStep++;
+    },
+    input: {
+      height: 132,
+      length: 28
+    },
+    rangeFrom: {
+      height: 132,
+      length: 28
+    },
+    rangeTo: {
+      height: 163,
+      length: 36
+    },
+    getResult: function getResult() {
+      var length = parseInt(this.input.length, 10);
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 132 && height <= 142 && length >= 28 && length <= 30) {
+        return '11';
+      } else if (height >= 142 && height <= 152 && length >= 30 && length <= 33) {
+        return '12';
+      } else if (height >= 152 && height <= 163 && length >= 33 && length <= 36) {
+        return '13';
+      }
+    }
+  });
+}
+},{"./base":"calculator/types/ShinGuards/base.js"}],"calculator/types/ShinGuards/CCMShinGuardsSR.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CCMShinGuardsSR = CCMShinGuardsSR;
+
+var _base = require("./base");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function CCMShinGuardsSR() {
+  return _objectSpread(_objectSpread({}, _base.ShinGuards), {}, {
+    getTibiaInput: function getTibiaInput(i) {
+      var output = {
+        a: [36, 38],
+        b: [38, 41],
+        c: [41, 43],
+        d: [43, 48]
+      };
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 163 && height <= 173) {
+        return output.a[i];
+      } else if (height >= 174 && height <= 183) {
+        return output.b[i];
+      } else if (height >= 184 && height <= 193) {
+        return output.c[i];
+      } else if (height >= 194 && height <= 210) {
+        return output.d[i];
+      }
+    },
+    handleNext: function handleNext() {
+      var el = document.getElementById('lengthInput');
+      el.setAttribute('min', this.getTibiaInput(0));
+      el.setAttribute('max', this.getTibiaInput(1));
+      var value = parseFloat((this.getTibiaInput(0) + this.getTibiaInput(1)) / 2).toFixed(0);
+
+      el._x_model.set(value);
+
+      this.currentStep++;
+    },
+    input: {
+      height: 163,
+      length: 36
+    },
+    rangeFrom: {
+      height: 163,
+      length: 36
+    },
+    rangeTo: {
+      height: 193,
+      length: 48
+    },
+    getResult: function getResult() {
+      var length = parseInt(this.input.length, 10);
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 163 && height <= 173 && length >= 36 && length <= 38) {
+        return '14';
+      } else if (height >= 173 && height <= 183 && length >= 38 && length <= 41) {
+        return '15';
+      } else if (height >= 183 && height <= 193 && length >= 41 && length <= 43) {
+        return '16';
+      } else if (height >= 193 && length >= 43 && length <= 46) {
+        return '17';
+      } else if (height >= 193 && length >= 46 && length <= 48) {
+        return '18';
+      }
+    }
+  });
+}
+},{"./base":"calculator/types/ShinGuards/base.js"}],"calculator/types/ShinGuards/CCMShinGuardsYT.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CCMShinGuardsYT = CCMShinGuardsYT;
+
+var _base = require("./base");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function CCMShinGuardsYT() {
+  return _objectSpread(_objectSpread({}, _base.ShinGuards), {}, {
+    getTibiaInput: function getTibiaInput(i) {
+      var output = {
+        a: [20, 23],
+        b: [23, 25],
+        c: [25, 28]
+      };
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 102 && height <= 112) {
+        return output.a[i];
+      } else if (height >= 113 && height <= 122) {
+        return output.b[i];
+      } else if (height >= 123 && height <= 132) {
+        return output.c[i];
+      }
+    },
+    handleNext: function handleNext() {
+      var el = document.getElementById('lengthInput');
+      el.setAttribute('min', this.getTibiaInput(0));
+      el.setAttribute('max', this.getTibiaInput(1));
+      var value = parseFloat((this.getTibiaInput(0) + this.getTibiaInput(1)) / 2).toFixed(0);
+
+      el._x_model.set(value);
+
+      this.currentStep++;
+    },
+    input: {
+      height: 102,
+      length: 20
+    },
+    rangeFrom: {
+      height: 102,
+      length: 20
+    },
+    rangeTo: {
+      height: 132,
+      length: 28
+    },
+    getResult: function getResult() {
+      var length = parseInt(this.input.length, 10);
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 102 && height <= 112 && length >= 20 && length <= 23) {
+        return '8';
+      } else if (height >= 112 && height <= 122 && length >= 23 && length <= 25) {
+        return '9';
+      } else if (height >= 122 && height <= 132 && length >= 25 && length <= 28) {
+        return '10';
+      }
+    }
+  });
+}
+},{"./base":"calculator/types/ShinGuards/base.js"}],"calculator/types/ShinGuards/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _CCMShinGuardsJR = require("./CCMShinGuardsJR");
+
+Object.keys(_CCMShinGuardsJR).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _CCMShinGuardsJR[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _CCMShinGuardsJR[key];
+    }
+  });
+});
+
+var _CCMShinGuardsSR = require("./CCMShinGuardsSR");
+
+Object.keys(_CCMShinGuardsSR).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _CCMShinGuardsSR[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _CCMShinGuardsSR[key];
+    }
+  });
+});
+
+var _CCMShinGuardsYT = require("./CCMShinGuardsYT");
+
+Object.keys(_CCMShinGuardsYT).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _CCMShinGuardsYT[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _CCMShinGuardsYT[key];
+    }
+  });
+});
+},{"./CCMShinGuardsJR":"calculator/types/ShinGuards/CCMShinGuardsJR.js","./CCMShinGuardsSR":"calculator/types/ShinGuards/CCMShinGuardsSR.js","./CCMShinGuardsYT":"calculator/types/ShinGuards/CCMShinGuardsYT.js"}],"calculator/types/ShoulderPads/base.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5809,6 +6545,10 @@ var _ElbowPads = require("./calculator/types/ElbowPads");
 
 var _Gloves = require("./calculator/types/Gloves");
 
+var _PlayerPants = require("./calculator/types/PlayerPants");
+
+var _ShinGuards = require("./calculator/types/ShinGuards");
+
 var _ShoulderPads = require("./calculator/types/ShoulderPads");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -5838,9 +6578,23 @@ if (_alpinejs.default) {
 
   _alpinejs.default.data('CCMElbowPadsYT', _ElbowPads.CCMElbowPadsYT);
 
+  _alpinejs.default.data('CCMShinGuardsJR', _ShinGuards.CCMShinGuardsJR);
+
+  _alpinejs.default.data('CCMShinGuardsSR', _ShinGuards.CCMShinGuardsSR);
+
+  _alpinejs.default.data('CCMShinGuardsYT', _ShinGuards.CCMShinGuardsYT);
+
+  _alpinejs.default.data('CCMPlayerPantsJR', _PlayerPants.CCMPlayerPantsJR);
+
+  _alpinejs.default.data('CCMPlayerPantsSR', _PlayerPants.CCMPlayerPantsSR);
+
+  _alpinejs.default.data('CCMPlayerPantsWomen', _PlayerPants.CCMPlayerPantsWomen);
+
+  _alpinejs.default.data('CCMPlayerPantsYT', _PlayerPants.CCMPlayerPantsYT);
+
   _alpinejs.default.start();
 }
-},{"alpinejs":"../../node_modules/alpinejs/dist/module.esm.js","./calculator/types/BauerIcehockeySkates":"calculator/types/BauerIcehockeySkates.js","./calculator/types/CCMSkates":"calculator/types/CCMSkates.js","./calculator/types/ElbowPads":"calculator/types/ElbowPads/index.js","./calculator/types/Gloves":"calculator/types/Gloves/index.js","./calculator/types/ShoulderPads":"calculator/types/ShoulderPads/index.js"}],"index.js":[function(require,module,exports) {
+},{"alpinejs":"../../node_modules/alpinejs/dist/module.esm.js","./calculator/types/BauerIcehockeySkates":"calculator/types/BauerIcehockeySkates.js","./calculator/types/CCMSkates":"calculator/types/CCMSkates.js","./calculator/types/ElbowPads":"calculator/types/ElbowPads/index.js","./calculator/types/Gloves":"calculator/types/Gloves/index.js","./calculator/types/PlayerPants":"calculator/types/PlayerPants/index.js","./calculator/types/ShinGuards":"calculator/types/ShinGuards/index.js","./calculator/types/ShoulderPads":"calculator/types/ShoulderPads/index.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./calculator");

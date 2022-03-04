@@ -12,6 +12,17 @@ import {
   CCMGlovesYT,
 } from './calculator/types/Gloves';
 import {
+  CCMPlayerPantsJR,
+  CCMPlayerPantsSR,
+  CCMPlayerPantsWomen,
+  CCMPlayerPantsYT,
+} from './calculator/types/PlayerPants';
+import {
+  CCMShinGuardsJR,
+  CCMShinGuardsSR,
+  CCMShinGuardsYT,
+} from './calculator/types/ShinGuards';
+import {
   CCMShoulderPadsJR,
   CCMShoulderPadsSR,
   CCMShoulderPadsWOMEN,
@@ -31,5 +42,12 @@ if (Alpine) {
   Alpine.data('CCMElbowPadsSR', CCMElbowPadsSR);
   Alpine.data('CCMElbowPadsJR', CCMElbowPadsJR);
   Alpine.data('CCMElbowPadsYT', CCMElbowPadsYT);
+  Alpine.data('CCMShinGuardsJR', CCMShinGuardsJR);
+  Alpine.data('CCMShinGuardsSR', CCMShinGuardsSR);
+  Alpine.data('CCMShinGuardsYT', CCMShinGuardsYT);
+  Alpine.data('CCMPlayerPantsJR', CCMPlayerPantsJR);
+  Alpine.data('CCMPlayerPantsSR', CCMPlayerPantsSR);
+  Alpine.data('CCMPlayerPantsWomen', CCMPlayerPantsWomen);
+  Alpine.data('CCMPlayerPantsYT', CCMPlayerPantsYT);
   Alpine.start();
 }
