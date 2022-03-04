@@ -18,7 +18,7 @@ class CCMGloves extends BorahhCalculatorBase {
     }
     
     
-    protected function heightOptions() {
+    protected function lengthOptions() {
         ob_start();
 
         // Fix from here
@@ -42,7 +42,7 @@ class CCMGloves extends BorahhCalculatorBase {
             <?php _e("Højde", "hockeyshop-theme"); ?>
         </h2>
         <div class="calculator__wraper__content__form__tab--length__input">
-            <input type="text" :value="getHeightValue" >            
+            <input type="text" :value="getLengthValue" >            
             <span x-text="selectedUnit"></span>
         </div>
         
@@ -57,7 +57,7 @@ class CCMGloves extends BorahhCalculatorBase {
         ob_start();
         ?>
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length calculator__wraper__content__form__tab--length-multi" x-show="currentStep === 0">
-                <?php echo $this->heightOptions(); ?>
+                <?php echo $this->lengthOptions(); ?>
             </div>   
         <?php
         return ob_get_clean();
