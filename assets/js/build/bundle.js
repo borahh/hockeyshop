@@ -4790,8 +4790,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var Gloves = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorUI), _unitConverter.cmToInch), {}, {
   maxStep: 0,
-  getHeightValue: function getHeightValue() {
-    return this.convert(this.input.height);
+  getLengthValue: function getLengthValue() {
+    return this.convert(this.input.length);
   },
   handleFinal: function handleFinal() {
     var size = this.getResult();

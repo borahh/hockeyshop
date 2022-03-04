@@ -7,8 +7,8 @@ export const Gloves = {
   ...cmToInch,
   maxStep: 0,
 
-  getHeightValue() {
-    return this.convert(this.input.height);
+  getLengthValue() {
+    return this.convert(this.input.length);
   },
 
   handleFinal() {
