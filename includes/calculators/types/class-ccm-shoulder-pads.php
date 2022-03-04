@@ -1,5 +1,5 @@
 <?php
-class ShoulderPads extends BorahhCalculatorBase {
+class CCMShoulderPads extends BorahhCalculatorBase {
 
     public function __construct($calculatorID, $dependencies, $fields, $type) {
         $this->calculatorID = $calculatorID . $type;
@@ -16,13 +16,13 @@ class ShoulderPads extends BorahhCalculatorBase {
         <?php
         return ob_get_clean();
     }
-
+    
     // Matched Function
     protected function onMatchedVariations() {
         ob_start();
         return ob_get_clean();
     }
-   
+    
     protected function heightOptions() {
         ob_start();
 
@@ -80,7 +80,7 @@ class ShoulderPads extends BorahhCalculatorBase {
         return ob_get_clean();
     }
 
-   
+    
      // Steps 
      protected function steps() {
         ob_start();

@@ -4774,7 +4774,7 @@ exports.cmToInch = cmToInch;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ShoulderPads = void 0;
+exports.CCMShoulderPads = void 0;
 
 var _getVariationEl = require("../../../helpers/getVariationEl");
 
@@ -4788,7 +4788,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var ShoulderPads = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorUI), _unitConverter.cmToInch), {}, {
+var CCMShoulderPads = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorUI), _unitConverter.cmToInch), {}, {
   maxStep: 1,
   getChestValue: function getChestValue() {
     var chest = this.convert(this.input.chest);
@@ -4829,14 +4829,14 @@ var ShoulderPads = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorU
   }
 });
 
-exports.ShoulderPads = ShoulderPads;
-},{"../../../helpers/getVariationEl":"helpers/getVariationEl.js","../../ui":"calculator/ui.js","../../unitConverter":"calculator/unitConverter.js"}],"calculator/types/ShoulderPads/ShoulderPadsJR.js":[function(require,module,exports) {
+exports.CCMShoulderPads = CCMShoulderPads;
+},{"../../../helpers/getVariationEl":"helpers/getVariationEl.js","../../ui":"calculator/ui.js","../../unitConverter":"calculator/unitConverter.js"}],"calculator/types/ShoulderPads/CCMShoulderPadsJR.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ShoulderPadsJR = ShoulderPadsJR;
+exports.CCMShoulderPadsJR = CCMShoulderPadsJR;
 
 var _base = require("./base");
 
@@ -4846,7 +4846,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function ShoulderPadsJR() {
+function CCMShoulderPadsJR() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
     input: {
       chest: 60,
@@ -4874,13 +4874,13 @@ function ShoulderPadsJR() {
     }
   });
 }
-},{"./base":"calculator/types/ShoulderPads/base.js"}],"calculator/types/ShoulderPads/ShoulderPadsSR.js":[function(require,module,exports) {
+},{"./base":"calculator/types/ShoulderPads/base.js"}],"calculator/types/ShoulderPads/CCMShoulderPadsSR.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ShoulderPadsSR = ShoulderPadsSR;
+exports.CCMShoulderPadsSR = CCMShoulderPadsSR;
 
 var _base = require("./base");
 
@@ -4890,7 +4890,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function ShoulderPadsSR() {
+function CCMShoulderPadsSR() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
     getChestInput: function getChestInput(i) {
       var output = {
@@ -4948,13 +4948,13 @@ function ShoulderPadsSR() {
     }
   });
 }
-},{"./base":"calculator/types/ShoulderPads/base.js"}],"calculator/types/ShoulderPads/ShoulderPadsWOMEN.js":[function(require,module,exports) {
+},{"./base":"calculator/types/ShoulderPads/base.js"}],"calculator/types/ShoulderPads/CCMShoulderPadsWOMEN.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ShoulderPadsWomen = ShoulderPadsWomen;
+exports.CCMShoulderPadsWomen = CCMShoulderPadsWomen;
 
 var _base = require("./base");
 
@@ -4964,7 +4964,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function ShoulderPadsWomen() {
+function CCMShoulderPadsWomen() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
     input: {
       chest: 71,
@@ -4983,22 +4983,22 @@ function ShoulderPadsWomen() {
       var height = this.invert(parseInt(this.input.height, 10));
 
       if (chest >= 71 && chest <= 84 && height >= 150 && height <= 160) {
-        return "S";
+        return 'S';
       } else if (chest >= 84 && chest <= 99 && height >= 160 && height <= 170) {
-        return "M";
+        return 'M';
       } else if (chest >= 99 && chest <= 119 && height >= 170 && height <= 183) {
-        return "L";
+        return 'L';
       }
     }
   });
 }
-},{"./base":"calculator/types/ShoulderPads/base.js"}],"calculator/types/ShoulderPads/ShoulderPadsYT.js":[function(require,module,exports) {
+},{"./base":"calculator/types/ShoulderPads/base.js"}],"calculator/types/ShoulderPads/CCMShoulderPadsYT.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ShoulderPadsYT = ShoulderPadsYT;
+exports.CCMShoulderPadsYT = CCMShoulderPadsYT;
 
 var _base = require("./base");
 
@@ -5008,7 +5008,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function ShoulderPadsYT() {
+function CCMShoulderPadsYT() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
     input: {
       chest: 58,
@@ -5027,11 +5027,11 @@ function ShoulderPadsYT() {
       var height = this.invert(parseInt(this.input.height, 10));
 
       if (chest <= 58 && height >= 102 && height <= 109) {
-        return "S";
+        return 'S';
       } else if (chest >= 58 && chest <= 64 && height >= 102 && height <= 122) {
-        return "M";
+        return 'M';
       } else if (chest >= 60 && chest <= 70 && height >= 117 && height <= 127) {
-        return "L";
+        return 'L';
       }
     }
   });
@@ -5043,58 +5043,58 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _ShoulderPadsJR = require("./ShoulderPadsJR");
+var _CCMShoulderPadsJR = require("./CCMShoulderPadsJR");
 
-Object.keys(_ShoulderPadsJR).forEach(function (key) {
+Object.keys(_CCMShoulderPadsJR).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _ShoulderPadsJR[key]) return;
+  if (key in exports && exports[key] === _CCMShoulderPadsJR[key]) return;
   Object.defineProperty(exports, key, {
     enumerable: true,
     get: function () {
-      return _ShoulderPadsJR[key];
+      return _CCMShoulderPadsJR[key];
     }
   });
 });
 
-var _ShoulderPadsSR = require("./ShoulderPadsSR");
+var _CCMShoulderPadsSR = require("./CCMShoulderPadsSR");
 
-Object.keys(_ShoulderPadsSR).forEach(function (key) {
+Object.keys(_CCMShoulderPadsSR).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _ShoulderPadsSR[key]) return;
+  if (key in exports && exports[key] === _CCMShoulderPadsSR[key]) return;
   Object.defineProperty(exports, key, {
     enumerable: true,
     get: function () {
-      return _ShoulderPadsSR[key];
+      return _CCMShoulderPadsSR[key];
     }
   });
 });
 
-var _ShoulderPadsWOMEN = require("./ShoulderPadsWOMEN");
+var _CCMShoulderPadsWOMEN = require("./CCMShoulderPadsWOMEN");
 
-Object.keys(_ShoulderPadsWOMEN).forEach(function (key) {
+Object.keys(_CCMShoulderPadsWOMEN).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _ShoulderPadsWOMEN[key]) return;
+  if (key in exports && exports[key] === _CCMShoulderPadsWOMEN[key]) return;
   Object.defineProperty(exports, key, {
     enumerable: true,
     get: function () {
-      return _ShoulderPadsWOMEN[key];
+      return _CCMShoulderPadsWOMEN[key];
     }
   });
 });
 
-var _ShoulderPadsYT = require("./ShoulderPadsYT");
+var _CCMShoulderPadsYT = require("./CCMShoulderPadsYT");
 
-Object.keys(_ShoulderPadsYT).forEach(function (key) {
+Object.keys(_CCMShoulderPadsYT).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _ShoulderPadsYT[key]) return;
+  if (key in exports && exports[key] === _CCMShoulderPadsYT[key]) return;
   Object.defineProperty(exports, key, {
     enumerable: true,
     get: function () {
-      return _ShoulderPadsYT[key];
+      return _CCMShoulderPadsYT[key];
     }
   });
 });
-},{"./ShoulderPadsJR":"calculator/types/ShoulderPads/ShoulderPadsJR.js","./ShoulderPadsSR":"calculator/types/ShoulderPads/ShoulderPadsSR.js","./ShoulderPadsWOMEN":"calculator/types/ShoulderPads/ShoulderPadsWOMEN.js","./ShoulderPadsYT":"calculator/types/ShoulderPads/ShoulderPadsYT.js"}],"calculator.js":[function(require,module,exports) {
+},{"./CCMShoulderPadsJR":"calculator/types/ShoulderPads/CCMShoulderPadsJR.js","./CCMShoulderPadsSR":"calculator/types/ShoulderPads/CCMShoulderPadsSR.js","./CCMShoulderPadsWOMEN":"calculator/types/ShoulderPads/CCMShoulderPadsWOMEN.js","./CCMShoulderPadsYT":"calculator/types/ShoulderPads/CCMShoulderPadsYT.js"}],"calculator.js":[function(require,module,exports) {
 "use strict";
 
 var _alpinejs = _interopRequireDefault(require("alpinejs"));
@@ -5112,13 +5112,13 @@ if (_alpinejs.default) {
 
   _alpinejs.default.data('CCMSkates', _CCMSkates.CCMSkates);
 
-  _alpinejs.default.data('ShoulderPadsJR', _ShoulderPads.ShoulderPadsJR);
+  _alpinejs.default.data('CCMShoulderPadsJR', _ShoulderPads.CCMShoulderPadsJR);
 
-  _alpinejs.default.data('ShoulderPadsYT', _ShoulderPads.ShoulderPadsYT);
+  _alpinejs.default.data('CCMShoulderPadsYT', _ShoulderPads.CCMShoulderPadsYT);
 
-  _alpinejs.default.data('ShoulderPadsSR', _ShoulderPads.ShoulderPadsSR);
+  _alpinejs.default.data('CCMShoulderPadsSR', _ShoulderPads.CCMShoulderPadsSR);
 
-  _alpinejs.default.data('ShoulderPadsWOMEN', _ShoulderPads.ShoulderPadsWOMEN);
+  _alpinejs.default.data('CCMShoulderPadsWOMEN', _ShoulderPads.CCMShoulderPadsWOMEN);
 
   _alpinejs.default.start();
 }

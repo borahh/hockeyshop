@@ -1,6 +1,6 @@
 import { ShoulderPads } from './base';
 
-export function ShoulderPadsSR() {
+export function CCMShoulderPadsSR() {
   return {
     ...ShoulderPads,
     getChestInput(i) {

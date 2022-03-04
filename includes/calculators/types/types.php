@@ -94,7 +94,7 @@ function borahh_calculator_types() {
             ]
         ),
         'ccm_shoulder_pads_jr' => (object) array(
-            'ID' => 'ShoulderPads',
+            'ID' => 'CCMShoulderPads',
             'type' => 'JR',
             'fields' => null,
             'dependencies' => [
@@ -107,7 +107,7 @@ function borahh_calculator_types() {
             ]
         ),
         'ccm_shoulder_pads_sr' => (object) array(
-            'ID' => 'ShoulderPads',
+            'ID' => 'CCMShoulderPads',
             'type' => 'SR',
             'fields' => null,
             'dependencies' => [
@@ -120,7 +120,7 @@ function borahh_calculator_types() {
             ]
         ),
         'ccm_shoulder_pads_yt' => (object) array(
-            'ID' => 'ShoulderPads',
+            'ID' => 'CCMShoulderPads',
             'type' => 'YT',
             'fields' => null,
             'dependencies' => [
@@ -133,7 +133,7 @@ function borahh_calculator_types() {
             ]
         ),
         'ccm_shoulder_pads_women' => (object) array(
-            'ID' => 'ShoulderPads',
+            'ID' => 'CCMShoulderPads',
             'type' => 'WOMEN',
             'fields' => null,
             'dependencies' => [

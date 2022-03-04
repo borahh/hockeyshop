@@ -1,6 +1,6 @@
-import { ShoulderPads } from "./base";
+import { ShoulderPads } from './base';
 
-export function ShoulderPadsWomen() {
+export function CCMShoulderPadsWomen() {
   return {
     ...ShoulderPads,
     input: {
@@ -20,11 +20,16 @@ export function ShoulderPadsWomen() {
       const height = this.invert(parseInt(this.input.height, 10));
 
       if (chest >= 71 && chest <= 84 && height >= 150 && height <= 160) {
-        return "S";
+        return 'S';
       } else if (chest >= 84 && chest <= 99 && height >= 160 && height <= 170) {
-        return "M";
-      } else if (chest >= 99 && chest <= 119 && height >= 170 && height <= 183) {
-        return "L";
+        return 'M';
+      } else if (
+        chest >= 99 &&
+        chest <= 119 &&
+        height >= 170 &&
+        height <= 183
+      ) {
+        return 'L';
       }
     },
   };

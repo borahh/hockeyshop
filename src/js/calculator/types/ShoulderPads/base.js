@@ -2,7 +2,7 @@ import { getVariationEl } from '../../../helpers/getVariationEl';
 import { calculatorUI } from '../../ui';
 import { cmToInch } from '../../unitConverter';
 
-export const ShoulderPads = {
+export const CCMShoulderPads = {
   ...calculatorUI,
   ...cmToInch,
   maxStep: 1,
@@ -12,9 +12,11 @@ export const ShoulderPads = {
     console.log(chest);
     return chest;
   },
+
   getHeightValue() {
     return this.convert(this.input.height);
   },
+
   handleFinal() {
     const size = this.getResult();
     console.log(size);
