@@ -77,7 +77,7 @@ class CCMElbowPads extends BorahhCalculatorBase {
             <?php _e("Biceps Omkreds", "hockeyshop-theme"); ?>
         </h2>
         <div class="calculator__wraper__content__form__tab--length__input">
-            <input type="text" :value="bicepCirc" >            
+            <input type="text" :value="getBicepValue" >            
             <span x-text="selectedUnit"></span>
         </div>
         

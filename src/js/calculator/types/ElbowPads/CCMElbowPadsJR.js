@@ -36,15 +36,24 @@ export function CCMElbowPadsJR() {
       }
     },
     handleNext() {
-      const el = document.getElementById('chestInput');
+      const foreArm = document.getElementById('foreArmLength');
+      const bicep = document.getElementById('bicepCirc');
 
-      el.setAttribute('min', this.getChestInput(0));
-      el.setAttribute('max', this.getChestInput(1));
+      foreArm.setAttribute('min', this.getForeArmInput(0));
+      foreArm.setAttribute('max', this.getForeArmInput(1));
 
-      const value = parseFloat(
-        (this.getChestInput(0) + this.getChestInput(1)) / 2,
+      const foreArmvalue = parseFloat(
+        (this.getForeArmInput(0) + this.getForeArmInput(1)) / 2,
       ).toFixed(0);
-      el._x_model.set(value);
+      foreArm._x_model.set(foreArmvalue);
+
+      bicep.setAttribute('min', this.getBicepInput(0));
+      bicep.setAttribute('max', this.getBicepInput(1));
+
+      const bicepValue = parseFloat(
+        (this.getBicepInput(0) + this.getBicepInput(1)) / 2,
+      ).toFixed(0);
+      bicep._x_model.set(bicepValue);
 
       this.currentStep++;
     },

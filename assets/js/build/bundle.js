@@ -4882,12 +4882,19 @@ function CCMElbowPadsJR() {
       }
     },
     handleNext: function handleNext() {
-      var el = document.getElementById('chestInput');
-      el.setAttribute('min', this.getChestInput(0));
-      el.setAttribute('max', this.getChestInput(1));
-      var value = parseFloat((this.getChestInput(0) + this.getChestInput(1)) / 2).toFixed(0);
+      var foreArm = document.getElementById('foreArmLength');
+      var bicep = document.getElementById('bicepCirc');
+      foreArm.setAttribute('min', this.getForeArmInput(0));
+      foreArm.setAttribute('max', this.getForeArmInput(1));
+      var foreArmvalue = parseFloat((this.getForeArmInput(0) + this.getForeArmInput(1)) / 2).toFixed(0);
 
-      el._x_model.set(value);
+      foreArm._x_model.set(foreArmvalue);
+
+      bicep.setAttribute('min', this.getBicepInput(0));
+      bicep.setAttribute('max', this.getBicepInput(1));
+      var bicepValue = parseFloat((this.getBicepInput(0) + this.getBicepInput(1)) / 2).toFixed(0);
+
+      bicep._x_model.set(bicepValue);
 
       this.currentStep++;
     },
