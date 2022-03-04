@@ -5065,6 +5065,32 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 function CCMShoulderPadsJR() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
+    getChestInput: function getChestInput(i) {
+      var output = {
+        a: [60, 76],
+        b: [67, 81],
+        c: [75, 89]
+      };
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 127 && height <= 137) {
+        return output.a[i];
+      } else if (height >= 138 && height <= 147) {
+        return output.b[i];
+      } else if (height >= 148 && height <= 157) {
+        return output.c[i];
+      }
+    },
+    handleNext: function handleNext() {
+      var el = document.getElementById('chestInput');
+      el.setAttribute('min', this.getChestInput(0));
+      el.setAttribute('max', this.getChestInput(1));
+      var value = parseFloat((this.getChestInput(0) + this.getChestInput(1)) / 2).toFixed(0);
+
+      el._x_model.set(value);
+
+      this.currentStep++;
+    },
     input: {
       chest: 60,
       height: 127
@@ -5151,7 +5177,6 @@ function CCMShoulderPadsSR() {
     getResult: function getResult() {
       var chest = parseInt(this.input.chest, 10);
       var height = parseInt(this.input.height, 10);
-      console.log(height, chest);
 
       if (chest >= 86 && chest <= 97 && height >= 157 && height <= 168) {
         return 'S';
@@ -5183,6 +5208,32 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 function CCMShoulderPadsWomen() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
+    getChestInput: function getChestInput(i) {
+      var output = {
+        a: [71, 84],
+        b: [84, 99],
+        c: [99, 119]
+      };
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 150 && height <= 160) {
+        return output.a[i];
+      } else if (height >= 161 && height <= 170) {
+        return output.b[i];
+      } else if (height >= 171 && height <= 183) {
+        return output.c[i];
+      }
+    },
+    handleNext: function handleNext() {
+      var el = document.getElementById('chestInput');
+      el.setAttribute('min', this.getChestInput(0));
+      el.setAttribute('max', this.getChestInput(1));
+      var value = parseFloat((this.getChestInput(0) + this.getChestInput(1)) / 2).toFixed(0);
+
+      el._x_model.set(value);
+
+      this.currentStep++;
+    },
     input: {
       chest: 71,
       height: 150
@@ -5227,6 +5278,32 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 function CCMShoulderPadsYT() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
+    getChestInput: function getChestInput(i) {
+      var output = {
+        a: [30, 58],
+        b: [58, 64],
+        c: [58, 70]
+      };
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 102 && height <= 109) {
+        return output.a[i];
+      } else if (height >= 110 && height <= 116) {
+        return output.b[i];
+      } else if (height >= 117 && height <= 127) {
+        return output.c[i];
+      }
+    },
+    handleNext: function handleNext() {
+      var el = document.getElementById('chestInput');
+      el.setAttribute('min', this.getChestInput(0));
+      el.setAttribute('max', this.getChestInput(1));
+      var value = parseFloat((this.getChestInput(0) + this.getChestInput(1)) / 2).toFixed(0);
+
+      el._x_model.set(value);
+
+      this.currentStep++;
+    },
     input: {
       chest: 58,
       height: 102
@@ -5379,7 +5456,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53545" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63242" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
