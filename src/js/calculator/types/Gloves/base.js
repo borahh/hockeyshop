@@ -5,13 +5,7 @@ import { cmToInch } from '../../unitConverter';
 export const Gloves = {
   ...calculatorUI,
   ...cmToInch,
-  maxStep: 1,
-
-  getChestValue() {
-    const chest = this.convert(this.input.chest);
-    console.log(chest);
-    return chest;
-  },
+  maxStep: 0,
 
   getHeightValue() {
     return this.convert(this.input.height);

@@ -17,11 +17,6 @@ class CCMGloves extends BorahhCalculatorBase {
         return ob_get_clean();
     }
     
-    // Matched Function
-    protected function onMatchedVariations() {
-        ob_start();
-        return ob_get_clean();
-    }
     
     protected function heightOptions() {
         ob_start();
@@ -56,30 +51,6 @@ class CCMGloves extends BorahhCalculatorBase {
         <?php
         return ob_get_clean();
     }
-
-    protected function chestOptions() {
-        ob_start();
-
-        // Fix from here
-        ?>
-        
-        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'chest.svg'; ?>">     
-
-        <h2>
-            <?php _e("Brystomkreds", "hockeyshop-theme"); ?>
-        </h2>
-        <div class="calculator__wraper__content__form__tab--length__input">
-            <input type="text" :value="input.chest" >            
-            <span x-text="selectedUnit"></span>
-        </div>
-        
-        <input id="chestInput" type="range" class="calculator-range sm:w-5/6" x-model="input.chest" step="1">
-        
-        
-        <?php
-        return ob_get_clean();
-    }
-
     
      // Steps 
      protected function steps() {
@@ -87,11 +58,7 @@ class CCMGloves extends BorahhCalculatorBase {
         ?>
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length calculator__wraper__content__form__tab--length-multi" x-show="currentStep === 0">
                 <?php echo $this->heightOptions(); ?>
-            </div>
-            <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length calculator__wraper__content__form__tab--length-multi" x-show="currentStep === 1" x-data="{ chestValue: 0 }">
-                <?php echo $this->chestOptions(); ?>
-            </div>
-            
+            </div>   
         <?php
         return ob_get_clean();
     }
