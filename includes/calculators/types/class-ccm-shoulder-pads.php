@@ -69,7 +69,7 @@ class CCMShoulderPads extends BorahhCalculatorBase {
             <?php _e("Brystomkreds", "hockeyshop-theme"); ?>
         </h2>
         <div class="calculator__wraper__content__form__tab--length__input">
-            <input type="text" :value="input.chest" >            
+            <input type="text" :value="getChestValue" >            
             <span x-text="selectedUnit"></span>
         </div>
         

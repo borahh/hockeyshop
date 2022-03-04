@@ -5009,7 +5009,6 @@ var ShoulderPads = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorU
   maxStep: 1,
   getChestValue: function getChestValue() {
     var chest = this.convert(this.input.chest);
-    console.log(chest);
     return chest;
   },
   getHeightValue: function getHeightValue() {

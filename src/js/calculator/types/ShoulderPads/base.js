@@ -9,7 +9,7 @@ export const ShoulderPads = {
 
   getChestValue() {
     const chest = this.convert(this.input.chest);
-    console.log(chest);
+
     return chest;
   },
 
