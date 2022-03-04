@@ -5078,8 +5078,8 @@ function CCMShoulderPadsJR() {
       height: 157
     },
     getResult: function getResult() {
-      var chest = this.invert(parseInt(this.input.chest, 10));
-      var height = this.invert(parseInt(this.input.height, 10));
+      var chest = parseInt(this.input.chest, 10);
+      var height = parseInt(this.input.height, 10);
 
       if (chest >= 60 && chest <= 76 && height >= 127 && height <= 137) {
         return 'S';
@@ -5150,7 +5150,7 @@ function CCMShoulderPadsSR() {
     },
     getResult: function getResult() {
       var chest = parseInt(this.input.chest, 10);
-      var height = this.invert(parseInt(this.input.height, 10));
+      var height = parseInt(this.input.height, 10);
       console.log(height, chest);
 
       if (chest >= 86 && chest <= 97 && height >= 157 && height <= 168) {
@@ -5196,8 +5196,8 @@ function CCMShoulderPadsWomen() {
       height: 183
     },
     getResult: function getResult() {
-      var chest = this.invert(parseInt(this.input.chest, 10));
-      var height = this.invert(parseInt(this.input.height, 10));
+      var chest = parseInt(this.input.chest, 10);
+      var height = parseInt(this.input.height, 10);
 
       if (chest >= 71 && chest <= 84 && height >= 150 && height <= 160) {
         return 'S';
@@ -5240,8 +5240,8 @@ function CCMShoulderPadsYT() {
       height: 127
     },
     getResult: function getResult() {
-      var chest = this.invert(parseInt(this.input.chest, 10));
-      var height = this.invert(parseInt(this.input.height, 10));
+      var chest = parseInt(this.input.chest, 10);
+      var height = parseInt(this.input.height, 10);
 
       if (chest <= 58 && height >= 102 && height <= 109) {
         return 'S';

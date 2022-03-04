@@ -16,8 +16,8 @@ export function CCMShoulderPadsWomen() {
       height: 183,
     },
     getResult() {
-      const chest = this.invert(parseInt(this.input.chest, 10));
-      const height = this.invert(parseInt(this.input.height, 10));
+      const chest = parseInt(this.input.chest, 10);
+      const height = parseInt(this.input.height, 10);
 
       if (chest >= 71 && chest <= 84 && height >= 150 && height <= 160) {
         return 'S';
