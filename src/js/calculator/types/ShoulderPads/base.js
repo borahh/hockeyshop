@@ -2,7 +2,7 @@ import { getVariationEl } from '../../../helpers/getVariationEl';
 import { calculatorUI } from '../../ui';
 import { cmToInch } from '../../unitConverter';
 
-export const CCMShoulderPads = {
+export const ShoulderPads = {
   ...calculatorUI,
   ...cmToInch,
   maxStep: 1,

@@ -4991,7 +4991,7 @@ Object.keys(_CCMGlovesYT).forEach(function (key) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CCMShoulderPads = void 0;
+exports.ShoulderPads = void 0;
 
 var _getVariationEl = require("../../../helpers/getVariationEl");
 
@@ -5005,7 +5005,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var CCMShoulderPads = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorUI), _unitConverter.cmToInch), {}, {
+var ShoulderPads = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorUI), _unitConverter.cmToInch), {}, {
   maxStep: 1,
   getChestValue: function getChestValue() {
     var chest = this.convert(this.input.chest);
@@ -5046,7 +5046,7 @@ var CCMShoulderPads = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculat
   }
 });
 
-exports.CCMShoulderPads = CCMShoulderPads;
+exports.ShoulderPads = ShoulderPads;
 },{"../../../helpers/getVariationEl":"helpers/getVariationEl.js","../../ui":"calculator/ui.js","../../unitConverter":"calculator/unitConverter.js"}],"calculator/types/ShoulderPads/CCMShoulderPadsJR.js":[function(require,module,exports) {
 "use strict";
 
