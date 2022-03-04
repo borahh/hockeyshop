@@ -2,6 +2,11 @@ import Alpine from 'alpinejs';
 import { BauerIcehockeySkates } from './calculator/types/BauerIcehockeySkates';
 import { CCMSkates } from './calculator/types/CCMSkates';
 import {
+  CCMElbowPadsJR,
+  CCMElbowPadsSR,
+  CCMElbowPadsYT,
+} from './calculator/types/ElbowPads';
+import {
   CCMGlovesJR,
   CCMGlovesSR,
   CCMGlovesYT,
@@ -23,5 +28,8 @@ if (Alpine) {
   Alpine.data('CCMShoulderPadsYT', CCMShoulderPadsYT);
   Alpine.data('CCMShoulderPadsSR', CCMShoulderPadsSR);
   Alpine.data('CCMShoulderPadsWOMEN', CCMShoulderPadsWOMEN);
+  Alpine.data('CCMElbowPadsSR', CCMElbowPadsSR);
+  Alpine.data('CCMElbowPadsJR', CCMElbowPadsJR);
+  Alpine.data('CCMElbowPadsYT', CCMElbowPadsYT);
   Alpine.start();
 }

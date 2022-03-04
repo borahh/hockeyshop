@@ -4766,7 +4766,391 @@ var cmToInch = {
   }
 };
 exports.cmToInch = cmToInch;
-},{}],"calculator/types/Gloves/base.js":[function(require,module,exports) {
+},{}],"calculator/types/ElbowPads/base.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ElbowPads = void 0;
+
+var _getVariationEl = require("../../../helpers/getVariationEl");
+
+var _ui = require("../../ui");
+
+var _unitConverter = require("../../unitConverter");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var ElbowPads = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorUI), _unitConverter.cmToInch), {}, {
+  maxStep: 1,
+  getChestValue: function getChestValue() {
+    var chest = this.convert(this.input.chest);
+    return chest;
+  },
+  getHeightValue: function getHeightValue() {
+    return this.convert(this.input.height);
+  },
+  handleFinal: function handleFinal() {
+    var size = this.getResult();
+    console.log(size);
+    this.dataObtained.size = size;
+    var AvailableVariationsLoader = JSON.parse(document.getElementById('AvailableVariationsLoader').getAttribute('data-variations'));
+
+    if (AvailableVariationsLoader.size.value.split(',').includes(this.dataObtained.size)) {
+      var selectSize = (0, _getVariationEl.getVariationEl)(AvailableVariationsLoader.size, this.dataObtained.size);
+
+      if (selectSize) {
+        this.matchedVariations = true;
+
+        if (selectSize.classList.contains('disabled')) {
+          this.matchedVariations = false;
+        }
+
+        if (!selectSize.classList.contains('selected')) {
+          selectSize.click();
+        }
+      } else {
+        this.matchedVariations = false;
+      }
+    } else {
+      this.matchedVariations = false;
+    }
+
+    this.onDataObtained = true;
+    this.onSubmit = true;
+  }
+});
+
+exports.ElbowPads = ElbowPads;
+},{"../../../helpers/getVariationEl":"helpers/getVariationEl.js","../../ui":"calculator/ui.js","../../unitConverter":"calculator/unitConverter.js"}],"calculator/types/ElbowPads/CCMElbowPadsJR.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CCMElbowPadsJR = CCMElbowPadsJR;
+
+var _base = require("./base");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function CCMElbowPadsJR() {
+  return _objectSpread(_objectSpread({}, _base.ElbowPads), {}, {
+    getForeArmInput: function getForeArmInput(i) {
+      var output = {
+        a: [16, 20],
+        b: [18, 22],
+        c: [20, 25]
+      };
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 127 && height <= 137) {
+        return output.a[i];
+      } else if (height >= 138 && height <= 147) {
+        return output.b[i];
+      } else if (height >= 148 && height <= 157) {
+        return output.c[i];
+      }
+    },
+    getBicepInput: function getBicepInput(i) {
+      var output = {
+        a: [18, 23],
+        b: [20, 25],
+        c: [23, 28]
+      };
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 127 && height <= 137) {
+        return output.a[i];
+      } else if (height >= 138 && height <= 147) {
+        return output.b[i];
+      } else if (height >= 148 && height <= 157) {
+        return output.c[i];
+      }
+    },
+    handleNext: function handleNext() {
+      var el = document.getElementById('chestInput');
+      el.setAttribute('min', this.getChestInput(0));
+      el.setAttribute('max', this.getChestInput(1));
+      var value = parseFloat((this.getChestInput(0) + this.getChestInput(1)) / 2).toFixed(0);
+
+      el._x_model.set(value);
+
+      this.currentStep++;
+    },
+    input: {
+      foreArmLength: 16,
+      bicepCirc: 18,
+      height: 127
+    },
+    rangeFrom: {
+      foreArmLength: 16,
+      bicepCirc: 18,
+      height: 127
+    },
+    rangeTo: {
+      foreArmLength: 25,
+      bicepCirc: 28,
+      height: 157
+    },
+    getResult: function getResult() {
+      var foreArmLength = parseInt(this.input.foreArmLength, 10);
+      var bicepCirc = parseInt(this.input.bicepCirc, 10);
+      var height = parseInt(this.input.height, 10);
+
+      if (foreArmLength >= 16 && foreArmLength <= 20 && bicepCirc >= 18 && bicepCirc <= 23 && height >= 127 && height <= 137) {
+        return 'S';
+      } else if (foreArmLength >= 18 && foreArmLength <= 22 && bicepCirc >= 20 && bicepCirc <= 25 && height >= 137 && height <= 147) {
+        return 'M';
+      } else if (foreArmLength >= 20 && foreArmLength <= 25 && bicepCirc >= 23 && bicepCirc <= 28 && height >= 147 && height <= 157) {
+        return 'L';
+      }
+    }
+  });
+}
+},{"./base":"calculator/types/ElbowPads/base.js"}],"calculator/types/ElbowPads/CCMElbowPadsSR.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CCMElbowPadsSR = CCMElbowPadsSR;
+
+var _base = require("./base");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function CCMElbowPadsSR() {
+  return _objectSpread(_objectSpread({}, _base.ElbowPads), {}, {
+    getForeArmInput: function getForeArmInput(i) {
+      var output = {
+        a: [23, 27],
+        b: [25, 29],
+        c: [28, 32],
+        d: [28, 50]
+      };
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 157 && height <= 168) {
+        return output.a[i];
+      } else if (height >= 169 && height <= 178) {
+        return output.b[i];
+      } else if (height >= 179 && height <= 182) {
+        return output.c[i];
+      } else if (height >= 183 && height <= 210) {
+        return output.d[i];
+      }
+    },
+    getBicepInput: function getBicepInput(i) {
+      var output = {
+        a: [25, 30],
+        b: [28, 36],
+        c: [33, 41],
+        d: [38, 50]
+      };
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 157 && height <= 168) {
+        return output.a[i];
+      } else if (height >= 169 && height <= 178) {
+        return output.b[i];
+      } else if (height >= 179 && height <= 182) {
+        return output.c[i];
+      } else if (height >= 183 && height <= 210) {
+        return output.d[i];
+      }
+    },
+    handleNext: function handleNext() {
+      var el = document.getElementById('chestInput');
+      el.setAttribute('min', this.getChestInput(0));
+      el.setAttribute('max', this.getChestInput(1));
+      var value = parseFloat((this.getChestInput(0) + this.getChestInput(1)) / 2).toFixed(0);
+
+      el._x_model.set(value);
+
+      this.currentStep++;
+    },
+    input: {
+      foreArmLength: 23,
+      bicepCirc: 25,
+      height: 157
+    },
+    rangeFrom: {
+      foreArmLength: 23,
+      bicepCirc: 25,
+      height: 157
+    },
+    rangeTo: {
+      foreArmLength: 32,
+      bicepCirc: 41,
+      height: 188
+    },
+    getResult: function getResult() {
+      var foreArmLength = parseInt(this.input.foreArmLength, 10);
+      var bicepCirc = parseInt(this.input.bicepCirc, 10);
+      var height = parseInt(this.input.height, 10);
+
+      if (foreArmLength >= 23 && foreArmLength <= 27 && bicepCirc >= 25 && bicepCirc <= 30 && height >= 157 && height <= 168) {
+        return 'S';
+      } else if (foreArmLength >= 25 && foreArmLength <= 29 && bicepCirc >= 28 && bicepCirc <= 36 && height >= 168 && height <= 178) {
+        return 'M';
+      } else if (foreArmLength >= 28 && foreArmLength <= 32 && bicepCirc >= 33 && bicepCirc <= 41 && height >= 178 && height <= 188) {
+        return 'L';
+      } else if (foreArmLength >= 29 && bicepCirc >= 38 && height >= 183) {
+        return 'XL';
+      }
+    }
+  });
+}
+},{"./base":"calculator/types/ElbowPads/base.js"}],"calculator/types/ElbowPads/CCMElbowPadsYT.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CCMElbowPadsYT = CCMElbowPadsYT;
+
+var _base = require("./base");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function CCMElbowPadsYT() {
+  return _objectSpread(_objectSpread({}, _base.ElbowPads), {}, {
+    getForeArmInput: function getForeArmInput(i) {
+      var output = {
+        a: [11, 15],
+        b: [14, 17],
+        c: [15, 19]
+      };
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 102 && height <= 109) {
+        return output.a[i];
+      } else if (height >= 110 && height <= 117) {
+        return output.b[i];
+      } else if (height >= 118 && height <= 127) {
+        return output.c[i];
+      }
+    },
+    getBicepInput: function getBicepInput(i) {
+      var output = {
+        a: [14, 17],
+        b: [16, 19],
+        c: [18, 21]
+      };
+      var height = parseInt(this.input.height, 10);
+
+      if (height >= 102 && height <= 109) {
+        return output.a[i];
+      } else if (height >= 110 && height <= 117) {
+        return output.b[i];
+      } else if (height >= 118 && height <= 127) {
+        return output.c[i];
+      }
+    },
+    handleNext: function handleNext() {
+      var el = document.getElementById('chestInput');
+      el.setAttribute('min', this.getChestInput(0));
+      el.setAttribute('max', this.getChestInput(1));
+      var value = parseFloat((this.getChestInput(0) + this.getChestInput(1)) / 2).toFixed(0);
+
+      el._x_model.set(value);
+
+      this.currentStep++;
+    },
+    input: {
+      foreArmLength: 11,
+      bicepCirc: 14,
+      height: 102
+    },
+    rangeFrom: {
+      foreArmLength: 11,
+      bicepCirc: 14,
+      height: 102
+    },
+    rangeTo: {
+      foreArmLength: 19,
+      bicepCirc: 21,
+      height: 127
+    },
+    getResult: function getResult() {
+      var foreArmLength = parseInt(this.input.foreArmLength, 10);
+      var bicepCirc = parseInt(this.input.bicepCirc, 10);
+      var height = parseInt(this.input.height, 10);
+
+      if (foreArmLength >= 11 && foreArmLength <= 15 && bicepCirc >= 14 && bicepCirc <= 17 && height >= 102 && height <= 109) {
+        return 'S';
+      } else if (foreArmLength >= 14 && foreArmLength <= 17 && bicepCirc >= 16 && bicepCirc <= 19 && height >= 109 && height <= 117) {
+        return 'M';
+      } else if (foreArmLength >= 15 && foreArmLength <= 19 && bicepCirc >= 18 && bicepCirc <= 21 && height >= 117 && height <= 127) {
+        return 'L';
+      }
+    }
+  });
+}
+},{"./base":"calculator/types/ElbowPads/base.js"}],"calculator/types/ElbowPads/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _CCMElbowPadsJR = require("./CCMElbowPadsJR");
+
+Object.keys(_CCMElbowPadsJR).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _CCMElbowPadsJR[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _CCMElbowPadsJR[key];
+    }
+  });
+});
+
+var _CCMElbowPadsSR = require("./CCMElbowPadsSR");
+
+Object.keys(_CCMElbowPadsSR).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _CCMElbowPadsSR[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _CCMElbowPadsSR[key];
+    }
+  });
+});
+
+var _CCMElbowPadsYT = require("./CCMElbowPadsYT");
+
+Object.keys(_CCMElbowPadsYT).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _CCMElbowPadsYT[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _CCMElbowPadsYT[key];
+    }
+  });
+});
+},{"./CCMElbowPadsJR":"calculator/types/ElbowPads/CCMElbowPadsJR.js","./CCMElbowPadsSR":"calculator/types/ElbowPads/CCMElbowPadsSR.js","./CCMElbowPadsYT":"calculator/types/ElbowPads/CCMElbowPadsYT.js"}],"calculator/types/Gloves/base.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5396,6 +5780,8 @@ var _BauerIcehockeySkates = require("./calculator/types/BauerIcehockeySkates");
 
 var _CCMSkates = require("./calculator/types/CCMSkates");
 
+var _ElbowPads = require("./calculator/types/ElbowPads");
+
 var _Gloves = require("./calculator/types/Gloves");
 
 var _ShoulderPads = require("./calculator/types/ShoulderPads");
@@ -5421,9 +5807,15 @@ if (_alpinejs.default) {
 
   _alpinejs.default.data('CCMShoulderPadsWOMEN', _ShoulderPads.CCMShoulderPadsWOMEN);
 
+  _alpinejs.default.data('CCMElbowPadsSR', _ElbowPads.CCMElbowPadsSR);
+
+  _alpinejs.default.data('CCMElbowPadsJR', _ElbowPads.CCMElbowPadsJR);
+
+  _alpinejs.default.data('CCMElbowPadsYT', _ElbowPads.CCMElbowPadsYT);
+
   _alpinejs.default.start();
 }
-},{"alpinejs":"../../node_modules/alpinejs/dist/module.esm.js","./calculator/types/BauerIcehockeySkates":"calculator/types/BauerIcehockeySkates.js","./calculator/types/CCMSkates":"calculator/types/CCMSkates.js","./calculator/types/Gloves":"calculator/types/Gloves/index.js","./calculator/types/ShoulderPads":"calculator/types/ShoulderPads/index.js"}],"index.js":[function(require,module,exports) {
+},{"alpinejs":"../../node_modules/alpinejs/dist/module.esm.js","./calculator/types/BauerIcehockeySkates":"calculator/types/BauerIcehockeySkates.js","./calculator/types/CCMSkates":"calculator/types/CCMSkates.js","./calculator/types/ElbowPads":"calculator/types/ElbowPads/index.js","./calculator/types/Gloves":"calculator/types/Gloves/index.js","./calculator/types/ShoulderPads":"calculator/types/ShoulderPads/index.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./calculator");
