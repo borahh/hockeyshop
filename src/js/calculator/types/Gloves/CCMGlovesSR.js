@@ -13,8 +13,7 @@ export function CCMGlovesSR() {
       length: 22,
     },
     getResult() {
-      const length = this.invert(parseInt(this.input.length, 10));
-      console.log(this.input.length, '🍕');
+      const length = parseInt(this.input.length, 10);
       if (length >= 16.5 && length <= 18) {
         return '13';
       } else if (length >= 18.5 && length <= 19.0) {
