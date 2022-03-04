@@ -10,7 +10,8 @@ export const cmToInch = {
     }
   },
   invert(x) {
-    console.log(this.selectedUnit);
+    console.log(this.selectedUnit, '🍕');
+
     if (this.selectedUnit === 'cm') {
       return x;
     } else if (this.selectedUnit === 'in') {
