@@ -5116,7 +5116,7 @@ function CCMShoulderPadsSR() {
         c: [102, 112],
         d: [102, 122]
       };
-      var height = this.invert(parseInt(this.input.height, 10));
+      var height = parseInt(this.input.height, 10);
 
       if (height >= 157 && height <= 168) {
         return output.a[i];
