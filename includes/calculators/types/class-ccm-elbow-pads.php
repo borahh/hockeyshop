@@ -57,23 +57,31 @@ class CCMElbowPads extends BorahhCalculatorBase {
         return ob_get_clean();
     }
 
-    protected function chestOptions() {
+    protected function secondStepOptions() {
         ob_start();
 
         // Fix from here
-        ?>
-        
-        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'chest.svg'; ?>">     
+        ?>   
 
         <h2>
-            <?php _e("Brystomkreds", "hockeyshop-theme"); ?>
+            <?php _e("Underarm Længde", "hockeyshop-theme"); ?>
         </h2>
         <div class="calculator__wraper__content__form__tab--length__input">
-            <input type="text" :value="getChestValue" >            
+            <input type="text" :value="getForeArmValue" >            
             <span x-text="selectedUnit"></span>
         </div>
         
-        <input id="chestInput" type="range" class="calculator-range sm:w-5/6" x-model="input.chest" step="1">
+        <input id="foreArmLength" type="range" class="calculator-range sm:w-5/6" x-model="input.foreArmLength" step="1">
+        
+        <h2>
+            <?php _e("Biceps Omkreds", "hockeyshop-theme"); ?>
+        </h2>
+        <div class="calculator__wraper__content__form__tab--length__input">
+            <input type="text" :value="bicepCirc" >            
+            <span x-text="selectedUnit"></span>
+        </div>
+        
+        <input id="bicepCirc" type="range" class="calculator-range sm:w-5/6" x-model="input.bicepCirc" step="1">
         
         
         <?php
@@ -89,7 +97,7 @@ class CCMElbowPads extends BorahhCalculatorBase {
                 <?php echo $this->heightOptions(); ?>
             </div>
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length calculator__wraper__content__form__tab--length-multi" x-show="currentStep === 1" x-data="{ chestValue: 0 }">
-                <?php echo $this->chestOptions(); ?>
+                <?php echo $this->secondStepOptions(); ?>
             </div>
             
         <?php

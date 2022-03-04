@@ -7,8 +7,13 @@ export const ElbowPads = {
   ...cmToInch,
   maxStep: 1,
 
-  getChestValue() {
-    const chest = this.convert(this.input.chest);
+  getForeArmValue() {
+    const chest = this.convert(this.input.foreArmLength);
+    return chest;
+  },
+
+  getBicepValue() {
+    const chest = this.convert(this.input.bicepCirc);
     return chest;
   },
 

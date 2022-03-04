@@ -4788,8 +4788,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var ElbowPads = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorUI), _unitConverter.cmToInch), {}, {
   maxStep: 1,
-  getChestValue: function getChestValue() {
-    var chest = this.convert(this.input.chest);
+  getForeArmValue: function getForeArmValue() {
+    var chest = this.convert(this.input.foreArmLength);
+    return chest;
+  },
+  getBicepValue: function getBicepValue() {
+    var chest = this.convert(this.input.bicepCirc);
     return chest;
   },
   getHeightValue: function getHeightValue() {
