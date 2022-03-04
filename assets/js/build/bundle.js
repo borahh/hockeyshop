@@ -5425,7 +5425,6 @@ var PlayerPants = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorUI
   },
   handleFinal: function handleFinal() {
     var size = this.getResult();
-    console.log(size);
     this.dataObtained.size = size;
     var AvailableVariationsLoader = JSON.parse(document.getElementById('AvailableVariationsLoader').getAttribute('data-variations'));
 
@@ -5497,9 +5496,9 @@ function CCMPlayerPantsJR() {
     },
     handleNext: function handleNext() {
       var el = document.getElementById('waistInput');
-      el.setAttribute('min', this.getWaistValue(0));
-      el.setAttribute('max', this.getWaistValue(1));
-      var value = parseFloat((this.getWaistValue(0) + this.getWaistValue(1)) / 2).toFixed(0);
+      el.setAttribute('min', this.getWaistInput(0));
+      el.setAttribute('max', this.getWaistInput(1));
+      var value = parseFloat((this.getWaistInput(0) + this.getWaistInput(1)) / 2).toFixed(0);
 
       el._x_model.set(value);
 
@@ -5574,9 +5573,9 @@ function CCMPlayerPantsSR() {
     },
     handleNext: function handleNext() {
       var el = document.getElementById('waistInput');
-      el.setAttribute('min', this.getWaistValue(0));
-      el.setAttribute('max', this.getWaistValue(1));
-      var value = parseFloat((this.getWaistValue(0) + this.getWaistValue(1)) / 2).toFixed(0);
+      el.setAttribute('min', this.getWaistInput(0));
+      el.setAttribute('max', this.getWaistInput(1));
+      var value = parseFloat((this.getWaistInput(0) + this.getWaistInput(1)) / 2).toFixed(0);
 
       el._x_model.set(value);
 
@@ -5646,9 +5645,9 @@ function CCMPlayerPantsYT() {
     },
     handleNext: function handleNext() {
       var el = document.getElementById('waistInput');
-      el.setAttribute('min', this.getWaistValue(0));
-      el.setAttribute('max', this.getWaistValue(1));
-      var value = parseFloat((this.getWaistValue(0) + this.getWaistValue(1)) / 2).toFixed(0);
+      el.setAttribute('min', this.getWaistInput(0));
+      el.setAttribute('max', this.getWaistInput(1));
+      var value = parseFloat((this.getWaistInput(0) + this.getWaistInput(1)) / 2).toFixed(0);
 
       el._x_model.set(value);
 
@@ -5716,9 +5715,9 @@ function CCMPlayerPantsWomen() {
     },
     handleNext: function handleNext() {
       var el = document.getElementById('waistInput');
-      el.setAttribute('min', this.getWaistValue(0));
-      el.setAttribute('max', this.getWaistValue(1));
-      var value = parseFloat((this.getWaistValue(0) + this.getWaistValue(1)) / 2).toFixed(0);
+      el.setAttribute('min', this.getWaistInput(0));
+      el.setAttribute('max', this.getWaistInput(1));
+      var value = parseFloat((this.getWaistInput(0) + this.getWaistInput(1)) / 2).toFixed(0);
 
       el._x_model.set(value);
 

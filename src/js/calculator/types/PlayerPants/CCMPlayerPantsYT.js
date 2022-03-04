@@ -22,11 +22,11 @@ export function CCMPlayerPantsYT() {
     handleNext() {
       const el = document.getElementById('waistInput');
 
-      el.setAttribute('min', this.getWaistValue(0));
-      el.setAttribute('max', this.getWaistValue(1));
+      el.setAttribute('min', this.getWaistInput(0));
+      el.setAttribute('max', this.getWaistInput(1));
 
       const value = parseFloat(
-        (this.getWaistValue(0) + this.getWaistValue(1)) / 2,
+        (this.getWaistInput(0) + this.getWaistInput(1)) / 2,
       ).toFixed(0);
       el._x_model.set(value);
 

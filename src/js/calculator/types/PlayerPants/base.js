@@ -18,7 +18,6 @@ export const PlayerPants = {
 
   handleFinal() {
     const size = this.getResult();
-    console.log(size);
 
     this.dataObtained.size = size;
 
