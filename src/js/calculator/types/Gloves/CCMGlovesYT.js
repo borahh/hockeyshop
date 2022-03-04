@@ -13,7 +13,7 @@ export function CCMGlovesYT() {
       length: 14,
     },
     getResult() {
-      const length = this.invert(parseInt(this.input.length, 10));
+      const length = parseInt(this.input.length, 10);
 
       if (length >= 10.5 && length <= 13) {
         return '8';

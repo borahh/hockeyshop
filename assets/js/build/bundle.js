@@ -4851,7 +4851,7 @@ function CCMGlovesJR() {
       length: 18
     },
     getResult: function getResult() {
-      var length = this.invert(parseInt(this.input.length, 10));
+      var length = parseInt(this.input.length, 10);
 
       if (length >= 13 && length <= 15.5) {
         return '10';
@@ -4931,7 +4931,7 @@ function CCMGlovesYT() {
       length: 14
     },
     getResult: function getResult() {
-      var length = this.invert(parseInt(this.input.length, 10));
+      var length = parseInt(this.input.length, 10);
 
       if (length >= 10.5 && length <= 13) {
         return '8';
