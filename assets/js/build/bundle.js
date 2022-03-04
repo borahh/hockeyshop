@@ -4768,7 +4768,232 @@ var cmToInch = {
   }
 };
 exports.cmToInch = cmToInch;
-},{}],"calculator/types/ShoulderPads/base.js":[function(require,module,exports) {
+},{}],"calculator/types/Gloves/base.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Gloves = void 0;
+
+var _getVariationEl = require("../../../helpers/getVariationEl");
+
+var _ui = require("../../ui");
+
+var _unitConverter = require("../../unitConverter");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var Gloves = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorUI), _unitConverter.cmToInch), {}, {
+  maxStep: 1,
+  getChestValue: function getChestValue() {
+    var chest = this.convert(this.input.chest);
+    console.log(chest);
+    return chest;
+  },
+  getHeightValue: function getHeightValue() {
+    return this.convert(this.input.height);
+  },
+  handleFinal: function handleFinal() {
+    var size = this.getResult();
+    console.log(size);
+    this.dataObtained.size = size;
+    var AvailableVariationsLoader = JSON.parse(document.getElementById('AvailableVariationsLoader').getAttribute('data-variations'));
+
+    if (AvailableVariationsLoader.size.value.split(',').includes(this.dataObtained.size)) {
+      var selectSize = (0, _getVariationEl.getVariationEl)(AvailableVariationsLoader.size, this.dataObtained.size);
+
+      if (selectSize) {
+        this.matchedVariations = true;
+
+        if (selectSize.classList.contains('disabled')) {
+          this.matchedVariations = false;
+        }
+
+        if (!selectSize.classList.contains('selected')) {
+          selectSize.click();
+        }
+      } else {
+        this.matchedVariations = false;
+      }
+    } else {
+      this.matchedVariations = false;
+    }
+
+    this.onDataObtained = true;
+    this.onSubmit = true;
+  }
+});
+
+exports.Gloves = Gloves;
+},{"../../../helpers/getVariationEl":"helpers/getVariationEl.js","../../ui":"calculator/ui.js","../../unitConverter":"calculator/unitConverter.js"}],"calculator/types/Gloves/CCMGlovesJR.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CCMGlovesJR = CCMGlovesJR;
+
+var _base = require("./base");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function CCMGlovesJR() {
+  return _objectSpread(_objectSpread({}, _base.Gloves), {}, {
+    input: {
+      length: 13
+    },
+    rangeFrom: {
+      length: 13
+    },
+    rangeTo: {
+      length: 18
+    },
+    getResult: function getResult() {
+      var length = this.invert(parseInt(this.input.length, 10));
+
+      if (length >= 13 && length <= 15.5) {
+        return '10';
+      } else if (length >= 14 && length <= 16.5) {
+        return '11';
+      } else if (length >= 15.5 && length <= 18) {
+        return '12';
+      }
+    }
+  });
+}
+},{"./base":"calculator/types/Gloves/base.js"}],"calculator/types/Gloves/CCMGlovesSR.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CCMGlovesSR = CCMGlovesSR;
+
+var _base = require("./base");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function CCMGlovesSR() {
+  return _objectSpread(_objectSpread({}, _base.Gloves), {}, {
+    input: {
+      length: 16.5
+    },
+    rangeFrom: {
+      length: 16.5
+    },
+    rangeTo: {
+      length: 22
+    },
+    getResult: function getResult() {
+      var length = this.invert(parseInt(this.input.length, 10));
+
+      if (length >= 16.5 && length <= 19) {
+        return '13';
+      } else if (length >= 18 && length <= 20.5) {
+        return '14';
+      } else if (length >= 19 && length <= 22) {
+        return '15';
+      }
+    }
+  });
+}
+},{"./base":"calculator/types/Gloves/base.js"}],"calculator/types/Gloves/CCMGlovesYT.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CCMGlovesYT = CCMGlovesYT;
+
+var _base = require("./base");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function CCMGlovesYT() {
+  return _objectSpread(_objectSpread({}, _base.Gloves), {}, {
+    input: {
+      length: 10.5
+    },
+    rangeFrom: {
+      length: 10.5
+    },
+    rangeTo: {
+      length: 14
+    },
+    getResult: function getResult() {
+      var length = this.invert(parseInt(this.input.length, 10));
+
+      if (length >= 10.5 && length <= 13) {
+        return '8';
+      } else if (length >= 11.5 && length <= 14) {
+        return '9';
+      }
+    }
+  });
+}
+},{"./base":"calculator/types/Gloves/base.js"}],"calculator/types/Gloves/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _CCMGlovesJR = require("./CCMGlovesJR");
+
+Object.keys(_CCMGlovesJR).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _CCMGlovesJR[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _CCMGlovesJR[key];
+    }
+  });
+});
+
+var _CCMGlovesSR = require("./CCMGlovesSR");
+
+Object.keys(_CCMGlovesSR).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _CCMGlovesSR[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _CCMGlovesSR[key];
+    }
+  });
+});
+
+var _CCMGlovesYT = require("./CCMGlovesYT");
+
+Object.keys(_CCMGlovesYT).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _CCMGlovesYT[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _CCMGlovesYT[key];
+    }
+  });
+});
+},{"./CCMGlovesJR":"calculator/types/Gloves/CCMGlovesJR.js","./CCMGlovesSR":"calculator/types/Gloves/CCMGlovesSR.js","./CCMGlovesYT":"calculator/types/Gloves/CCMGlovesYT.js"}],"calculator/types/ShoulderPads/base.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5103,6 +5328,8 @@ var _BauerIcehockeySkates = require("./calculator/types/BauerIcehockeySkates");
 
 var _CCMSkates = require("./calculator/types/CCMSkates");
 
+var _Gloves = require("./calculator/types/Gloves");
+
 var _ShoulderPads = require("./calculator/types/ShoulderPads");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -5111,6 +5338,12 @@ if (_alpinejs.default) {
   _alpinejs.default.data('BauerIcehockeySkates', _BauerIcehockeySkates.BauerIcehockeySkates);
 
   _alpinejs.default.data('CCMSkates', _CCMSkates.CCMSkates);
+
+  _alpinejs.default.data('CCMGlovesSR', _Gloves.CCMGlovesSR);
+
+  _alpinejs.default.data('CCMGlovesJR', _Gloves.CCMGlovesJR);
+
+  _alpinejs.default.data('CCMGlovesYT', _Gloves.CCMGlovesYT);
 
   _alpinejs.default.data('CCMShoulderPadsJR', _ShoulderPads.CCMShoulderPadsJR);
 
@@ -5122,7 +5355,7 @@ if (_alpinejs.default) {
 
   _alpinejs.default.start();
 }
-},{"alpinejs":"../../node_modules/alpinejs/dist/module.esm.js","./calculator/types/BauerIcehockeySkates":"calculator/types/BauerIcehockeySkates.js","./calculator/types/CCMSkates":"calculator/types/CCMSkates.js","./calculator/types/ShoulderPads":"calculator/types/ShoulderPads/index.js"}],"index.js":[function(require,module,exports) {
+},{"alpinejs":"../../node_modules/alpinejs/dist/module.esm.js","./calculator/types/BauerIcehockeySkates":"calculator/types/BauerIcehockeySkates.js","./calculator/types/CCMSkates":"calculator/types/CCMSkates.js","./calculator/types/Gloves":"calculator/types/Gloves/index.js","./calculator/types/ShoulderPads":"calculator/types/ShoulderPads/index.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./calculator");
