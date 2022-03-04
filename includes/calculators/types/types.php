@@ -62,7 +62,7 @@ function borahh_calculator_types() {
                 (object) array(
                     'name' => 'size',
                     'list' =>  array('pa_tommer'),
-                    'get'  => 'value',
+                    'get'  => 'name',
                     'selector' => 'data-value'
                )
             ]
@@ -88,7 +88,7 @@ function borahh_calculator_types() {
                 (object) array(
                     'name' => 'size',
                     'list' =>  array('pa_tommer'),
-                    'get'  => 'value',
+                    'get'  => 'name',
                     'selector' => 'data-value'
                )
             ]
