@@ -8,6 +8,13 @@ class CCMGloves extends BorahhCalculatorBase {
         $this->type = $type;
     }
 
+    // Matched Function
+    // Keep this like this to remove the default behavoiur of the function
+    protected function onMatchedVariations() {
+        ob_start();
+        return ob_get_clean();
+    }
+
     // Loaders
     protected function loaders() {
         ob_start();
