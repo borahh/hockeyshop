@@ -191,8 +191,8 @@ function borahh_calculator_types() {
             'dependencies' => [
                 (object) array(
                     'name' => 'size',
-                    'list' =>  array('pa_x-stoerrelser'),
-                    'get'  => 'name',
+                    'list' =>  array('pa_tommer'),
+                    'get'  => 'slug',
                     'selector' => 'data-title'
                )
             ]
@@ -204,8 +204,8 @@ function borahh_calculator_types() {
             'dependencies' => [
                 (object) array(
                     'name' => 'size',
-                    'list' =>  array('pa_x-stoerrelser'),
-                    'get'  => 'name',
+                    'list' =>  array('pa_tommer'),
+                    'get'  => 'slug',
                     'selector' => 'data-title'
                )
             ]
@@ -217,8 +217,8 @@ function borahh_calculator_types() {
             'dependencies' => [
                 (object) array(
                     'name' => 'size',
-                    'list' =>  array('pa_x-stoerrelser'),
-                    'get'  => 'name',
+                    'list' =>  array('pa_tommer'),
+                    'get'  => 'slug',
                     'selector' => 'data-title'
                )
             ]
