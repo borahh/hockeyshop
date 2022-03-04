@@ -4757,9 +4757,6 @@ var cmToInch = {
     }
   },
   invert: function invert(x) {
-    console.log(this.selectedUnit, '🍕');
-    console.log(x);
-
     if (this.selectedUnit === 'cm') {
       return x;
     } else if (this.selectedUnit === 'in') {
@@ -4895,6 +4892,7 @@ function CCMGlovesSR() {
     },
     getResult: function getResult() {
       var length = this.invert(parseInt(this.input.length, 10));
+      console.log(this.input.length, '🍕');
 
       if (length >= 16.5 && length <= 18) {
         return '13';
