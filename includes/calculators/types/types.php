@@ -193,7 +193,7 @@ function borahh_calculator_types() {
                     'name' => 'size',
                     'list' =>  array('pa_tommer'),
                     'get'  => 'slug',
-                    'selector' => 'data-title'
+                    'selector' => 'data-value'
                )
             ]
         ),
@@ -206,7 +206,7 @@ function borahh_calculator_types() {
                     'name' => 'size',
                     'list' =>  array('pa_tommer'),
                     'get'  => 'slug',
-                    'selector' => 'data-title'
+                    'selector' => 'data-value'
                )
             ]
         ),
@@ -219,7 +219,7 @@ function borahh_calculator_types() {
                     'name' => 'size',
                     'list' =>  array('pa_tommer'),
                     'get'  => 'slug',
-                    'selector' => 'data-title'
+                    'selector' => 'data-value'
                )
             ]
         ),
