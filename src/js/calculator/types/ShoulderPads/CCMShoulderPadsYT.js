@@ -5,7 +5,7 @@ export function CCMShoulderPadsYT() {
     ...ShoulderPads,
     getChestInput(i) {
       const output = {
-        a: [30, 58],
+        a: [48, 58],
         b: [58, 64],
         c: [58, 70],
       };

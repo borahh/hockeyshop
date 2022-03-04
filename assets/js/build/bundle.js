@@ -6423,7 +6423,7 @@ function CCMShoulderPadsYT() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
     getChestInput: function getChestInput(i) {
       var output = {
-        a: [30, 58],
+        a: [48, 58],
         b: [58, 64],
         c: [58, 70]
       };
