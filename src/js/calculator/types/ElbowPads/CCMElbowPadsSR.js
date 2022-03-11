@@ -25,7 +25,7 @@ export function CCMElbowPadsSR() {
     getBicepInput(i) {
       const output = {
         a: [25, 30],
-        b: [28, 36],
+        b: [29, 36],
         c: [33, 41],
         d: [38, 50],
       };

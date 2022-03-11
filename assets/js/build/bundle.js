@@ -4968,7 +4968,7 @@ function CCMElbowPadsSR() {
     getBicepInput: function getBicepInput(i) {
       var output = {
         a: [25, 30],
-        b: [28, 36],
+        b: [29, 36],
         c: [33, 41],
         d: [38, 50]
       };
@@ -6625,7 +6625,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63242" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62347" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
