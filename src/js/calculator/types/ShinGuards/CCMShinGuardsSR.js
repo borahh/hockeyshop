@@ -44,7 +44,7 @@ export function CCMShinGuardsSR() {
       length: 36,
     },
     rangeTo: {
-      height: 193,
+      height: 210,
       length: 48,
     },
     getResult() {
