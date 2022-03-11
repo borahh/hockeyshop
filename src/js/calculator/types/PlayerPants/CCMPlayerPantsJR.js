@@ -9,7 +9,7 @@ export function CCMPlayerPantsJR() {
         b: [58, 64],
         c: [62, 72],
         d: [69, 79],
-        e: [69, 79],
+        e: [69, 74],
       };
       const height = parseInt(this.input.height, 10);
 
