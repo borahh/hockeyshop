@@ -262,7 +262,7 @@ function borahh_calculator_types() {
                )
             ]
         ),
-        'ccm_player_pants_sr' => (object) array(
+        'ccm_player_pants_women' => (object) array(
             'ID' => 'CCMPlayerPants',
             'type' => 'WOMEN',
             'fields' => null,
