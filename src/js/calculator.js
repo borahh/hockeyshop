@@ -14,7 +14,7 @@ import {
 import {
   CCMPlayerPantsJR,
   CCMPlayerPantsSR,
-  CCMPlayerPantsWomen,
+  CCMPlayerPantsWOMEN,
   CCMPlayerPantsYT,
 } from './calculator/types/PlayerPants';
 import {
@@ -47,7 +47,7 @@ if (Alpine) {
   Alpine.data('CCMShinGuardsYT', CCMShinGuardsYT);
   Alpine.data('CCMPlayerPantsJR', CCMPlayerPantsJR);
   Alpine.data('CCMPlayerPantsSR', CCMPlayerPantsSR);
-  Alpine.data('CCMPlayerPantsWomen', CCMPlayerPantsWomen);
+  Alpine.data('CCMPlayerPantsWOMEN', CCMPlayerPantsWOMEN);
   Alpine.data('CCMPlayerPantsYT', CCMPlayerPantsYT);
   Alpine.start();
 }

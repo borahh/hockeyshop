@@ -5679,7 +5679,7 @@ function CCMPlayerPantsYT() {
     }
   });
 }
-},{"./base":"calculator/types/PlayerPants/base.js"}],"calculator/types/PlayerPants/CCMPlayerPantsWomen.js":[function(require,module,exports) {
+},{"./base":"calculator/types/PlayerPants/base.js"}],"calculator/types/PlayerPants/CCMPlayerPantsWOMEN.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5795,19 +5795,19 @@ Object.keys(_CCMPlayerPantsYT).forEach(function (key) {
   });
 });
 
-var _CCMPlayerPantsWomen = require("./CCMPlayerPantsWomen");
+var _CCMPlayerPantsWOMEN = require("./CCMPlayerPantsWOMEN");
 
-Object.keys(_CCMPlayerPantsWomen).forEach(function (key) {
+Object.keys(_CCMPlayerPantsWOMEN).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _CCMPlayerPantsWomen[key]) return;
+  if (key in exports && exports[key] === _CCMPlayerPantsWOMEN[key]) return;
   Object.defineProperty(exports, key, {
     enumerable: true,
     get: function () {
-      return _CCMPlayerPantsWomen[key];
+      return _CCMPlayerPantsWOMEN[key];
     }
   });
 });
-},{"./CCMPlayerPantsJR":"calculator/types/PlayerPants/CCMPlayerPantsJR.js","./CCMPlayerPantsSR":"calculator/types/PlayerPants/CCMPlayerPantsSR.js","./CCMPlayerPantsYT":"calculator/types/PlayerPants/CCMPlayerPantsYT.js","./CCMPlayerPantsWomen":"calculator/types/PlayerPants/CCMPlayerPantsWomen.js"}],"calculator/types/ShinGuards/base.js":[function(require,module,exports) {
+},{"./CCMPlayerPantsJR":"calculator/types/PlayerPants/CCMPlayerPantsJR.js","./CCMPlayerPantsSR":"calculator/types/PlayerPants/CCMPlayerPantsSR.js","./CCMPlayerPantsYT":"calculator/types/PlayerPants/CCMPlayerPantsYT.js","./CCMPlayerPantsWOMEN":"calculator/types/PlayerPants/CCMPlayerPantsWOMEN.js"}],"calculator/types/ShinGuards/base.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6587,7 +6587,7 @@ if (_alpinejs.default) {
 
   _alpinejs.default.data('CCMPlayerPantsSR', _PlayerPants.CCMPlayerPantsSR);
 
-  _alpinejs.default.data('CCMPlayerPantsWomen', _PlayerPants.CCMPlayerPantsWomen);
+  _alpinejs.default.data('CCMPlayerPantsWOMEN', _PlayerPants.CCMPlayerPantsWOMEN);
 
   _alpinejs.default.data('CCMPlayerPantsYT', _PlayerPants.CCMPlayerPantsYT);
 
