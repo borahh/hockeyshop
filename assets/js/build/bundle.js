@@ -6283,7 +6283,7 @@ function CCMShoulderPadsSR() {
         a: [86, 97],
         b: [94, 104],
         c: [102, 112],
-        d: [102, 122]
+        d: [109, 122]
       };
       var height = parseInt(this.input.height, 10);
 
@@ -6291,9 +6291,9 @@ function CCMShoulderPadsSR() {
         return output.a[i];
       } else if (height >= 169 && height <= 178) {
         return output.b[i];
-      } else if (height >= 179 && height <= 182) {
+      } else if (height >= 179 && height <= 188) {
         return output.c[i];
-      } else if (height >= 183 && height <= 210) {
+      } else if (height >= 189 && height <= 210) {
         return output.d[i];
       }
     },
