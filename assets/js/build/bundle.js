@@ -5303,9 +5303,9 @@ function CCMGlovesSR() {
 
       if (length >= 16 && length <= 18) {
         return '13';
-      } else if (length > 18.5 && length <= 19) {
+      } else if (length >= 18.5 && length <= 19) {
         return '14';
-      } else if (length > 19.5 && length <= 22) {
+      } else if (length >= 19.5 && length <= 22) {
         return '15';
       }
     }
