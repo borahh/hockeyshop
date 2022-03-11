@@ -5301,11 +5301,11 @@ function CCMGlovesSR() {
     getResult: function getResult() {
       var length = parseInt(this.input.length, 10);
 
-      if (length >= 16.5 && length <= 18) {
+      if (length >= 16 && length <= 18) {
         return '13';
-      } else if (length >= 18.5 && length <= 19.0) {
+      } else if (length >= 18 && length <= 19) {
         return '14';
-      } else if (length >= 19.5 && length <= 22) {
+      } else if (length >= 19 && length <= 22) {
         return '15';
       }
     }
