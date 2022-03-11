@@ -15,7 +15,7 @@ export function CCMGlovesYT() {
     getResult() {
       const length = parseFloat(this.input.length, 10);
 
-      if (length >= 10.5 && length <= 13) {
+      if (length >= 10.5 && length <= 13.5) {
         return '8';
       } else if (length == 14) {
         return '9';
