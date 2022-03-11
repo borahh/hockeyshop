@@ -8,7 +8,7 @@ export function CCMElbowPadsSR() {
         a: [23, 27],
         b: [25, 29],
         c: [28, 32],
-        d: [28, 50],
+        d: [29, 50],
       };
       const height = parseInt(this.input.height, 10);
 
@@ -25,7 +25,7 @@ export function CCMElbowPadsSR() {
     getBicepInput(i) {
       const output = {
         a: [25, 30],
-        b: [29, 36],
+        b: [28, 36],
         c: [33, 41],
         d: [38, 50],
       };
