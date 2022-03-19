@@ -5,16 +5,11 @@ import { cmToInch } from '../../unitConverter';
 export const ShoulderPads = {
   ...calculatorUI,
   ...cmToInch,
-  maxStep: 1,
+  maxStep: 0,
 
   getChestValue() {
     const chest = this.convert(this.input.chest);
-
     return chest;
-  },
-
-  getHeightValue() {
-    return this.convert(this.input.height);
   },
 
   handleFinal() {

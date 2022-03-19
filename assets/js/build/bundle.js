@@ -7606,13 +7606,10 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var ShoulderPads = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorUI), _unitConverter.cmToInch), {}, {
-  maxStep: 1,
+  maxStep: 0,
   getChestValue: function getChestValue() {
     var chest = this.convert(this.input.chest);
     return chest;
-  },
-  getHeightValue: function getHeightValue() {
-    return this.convert(this.input.height);
   },
   handleFinal: function handleFinal() {
     var size = this.getResult();
