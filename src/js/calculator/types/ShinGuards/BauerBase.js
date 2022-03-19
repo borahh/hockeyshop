@@ -5,7 +5,7 @@ import { cmToInch } from '../../unitConverter';
 export const ShinGuards = {
   ...calculatorUI,
   ...cmToInch,
-  maxStep: 1,
+  maxStep: 0,
 
   getLengthValue() {
     const length = this.convert(this.input.length);
