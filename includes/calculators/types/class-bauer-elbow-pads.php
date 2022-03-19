@@ -44,14 +44,14 @@ class BauerElbowPads extends BorahhCalculatorBase {
         </div>
         
         <h2>
-            <?php _e("Højde", "hockeyshop-theme"); ?>
+            <?php _e("Longueur", "hockeyshop-theme"); ?>
         </h2>
         <div class="calculator__wraper__content__form__tab--length__input">
-            <input type="text" :value="getHeightValue" >            
+            <input type="text" :value="getLengthValue" >            
             <span x-text="selectedUnit"></span>
         </div>
         
-        <input type="range" class="calculator-range sm:w-5/6" x-bind:min="rangeFrom.height" step="1" x-bind:max="rangeTo.height" x-model="input.height">
+        <input type="range" class="calculator-range sm:w-5/6" x-bind:min="rangeFrom.length" step="1" x-bind:max="rangeTo.length" x-model="input.length">
 
         <?php
         return ob_get_clean();

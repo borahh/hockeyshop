@@ -5151,21 +5151,12 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var ElbowPads = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorUI), _unitConverter.cmToInch), {}, {
-  maxStep: 1,
-  getForeArmValue: function getForeArmValue() {
-    var chest = this.convert(this.input.foreArmLength);
-    return chest;
-  },
-  getBicepValue: function getBicepValue() {
-    var chest = this.convert(this.input.bicepCirc);
-    return chest;
-  },
-  getHeightValue: function getHeightValue() {
-    return this.convert(this.input.height);
+  maxStep: 0,
+  getLengthValue: function getLengthValue() {
+    return this.convert(this.input.length);
   },
   handleFinal: function handleFinal() {
     var size = this.getResult();
-    console.log(size);
     this.dataObtained.size = size;
     var AvailableVariationsLoader = JSON.parse(document.getElementById('AvailableVariationsLoader').getAttribute('data-variations'));
 

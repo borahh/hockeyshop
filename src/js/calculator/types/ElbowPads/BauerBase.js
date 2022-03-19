@@ -5,25 +5,14 @@ import { cmToInch } from '../../unitConverter';
 export const ElbowPads = {
   ...calculatorUI,
   ...cmToInch,
-  maxStep: 1,
+  maxStep: 0,
 
-  getForeArmValue() {
-    const chest = this.convert(this.input.foreArmLength);
-    return chest;
-  },
-
-  getBicepValue() {
-    const chest = this.convert(this.input.bicepCirc);
-    return chest;
-  },
-
-  getHeightValue() {
-    return this.convert(this.input.height);
+  getLengthValue() {
+    return this.convert(this.input.length);
   },
 
   handleFinal() {
     const size = this.getResult();
-    console.log(size);
 
     this.dataObtained.size = size;
 
