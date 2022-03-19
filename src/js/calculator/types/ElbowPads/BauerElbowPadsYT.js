@@ -1,4 +1,4 @@
-import { ElbowPads } from './base';
+import { ElbowPads } from './BauerBase';
 
 export function BauerElbowPadsYT() {
   return {

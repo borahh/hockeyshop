@@ -1,4 +1,4 @@
-import { Gloves } from './base';
+import { Gloves } from './BauerBase';
 
 export function BauerGlovesJR() {
   return {

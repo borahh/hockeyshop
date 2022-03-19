@@ -1,4 +1,4 @@
-import { ShinGuards } from './base';
+import { ShinGuards } from './CCMBase';
 
 export function CCMShinGuardsYT() {
   return {

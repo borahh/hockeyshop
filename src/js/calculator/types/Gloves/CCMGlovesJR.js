@@ -1,4 +1,4 @@
-import { Gloves } from './base';
+import { Gloves } from './CCMBase';
 
 export function CCMGlovesJR() {
   return {

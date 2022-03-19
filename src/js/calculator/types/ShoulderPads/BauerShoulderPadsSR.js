@@ -1,4 +1,4 @@
-import { ShoulderPads } from './base';
+import { ShoulderPads } from './BauerBase';
 
 export function BauerShoulderPadsSR() {
   return {

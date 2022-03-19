@@ -1,4 +1,4 @@
-import { PlayerPants } from './base';
+import { PlayerPants } from './BauerBase';
 
 export function BauerPlayerPantsSR() {
   return {

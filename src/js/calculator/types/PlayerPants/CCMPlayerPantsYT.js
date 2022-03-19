@@ -1,4 +1,4 @@
-import { PlayerPants } from './base';
+import { PlayerPants } from './CCMBase';
 
 export function CCMPlayerPantsYT() {
   return {

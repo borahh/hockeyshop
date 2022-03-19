@@ -23,7 +23,7 @@ class BauerElbowPads extends BorahhCalculatorBase {
         return ob_get_clean();
     }
     
-    protected function heightOptions() {
+    protected function lengthOptions() {
         ob_start();
 
         // Fix from here
@@ -57,47 +57,12 @@ class BauerElbowPads extends BorahhCalculatorBase {
         return ob_get_clean();
     }
 
-    protected function secondStepOptions() {
-        ob_start();
-
-        // Fix from here
-        ?>   
-
-        <h2>
-            <?php _e("Underarm Længde", "hockeyshop-theme"); ?>
-        </h2>
-        <div class="calculator__wraper__content__form__tab--length__input">
-            <input type="text" :value="getForeArmValue" >            
-            <span x-text="selectedUnit"></span>
-        </div>
-        
-        <input id="foreArmLength" type="range" class="calculator-range sm:w-5/6" x-model="input.foreArmLength" step="1">
-        
-        <h2>
-            <?php _e("Biceps Omkreds", "hockeyshop-theme"); ?>
-        </h2>
-        <div class="calculator__wraper__content__form__tab--length__input">
-            <input type="text" :value="getBicepValue" >            
-            <span x-text="selectedUnit"></span>
-        </div>
-        
-        <input id="bicepCirc" type="range" class="calculator-range sm:w-5/6" x-model="input.bicepCirc" step="1">
-        
-        
-        <?php
-        return ob_get_clean();
-    }
-
-    
      // Steps 
      protected function steps() {
         ob_start();
         ?>
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length calculator__wraper__content__form__tab--length-multi" x-show="currentStep === 0">
-                <?php echo $this->heightOptions(); ?>
-            </div>
-            <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length calculator__wraper__content__form__tab--length-multi" x-show="currentStep === 1" x-data="{ chestValue: 0 }">
-                <?php echo $this->secondStepOptions(); ?>
+                <?php echo $this->lengthOptions(); ?>
             </div>
             
         <?php

@@ -1,4 +1,4 @@
-import { ElbowPads } from './base';
+import { ElbowPads } from './CCMBase';
 
 export function CCMElbowPadsJR() {
   return {

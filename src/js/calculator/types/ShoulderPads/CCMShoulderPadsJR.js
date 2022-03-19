@@ -1,4 +1,4 @@
-import { ShoulderPads } from './base';
+import { ShoulderPads } from './CCMBase';
 
 export function CCMShoulderPadsJR() {
   return {
