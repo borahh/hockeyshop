@@ -2,3 +2,8 @@ export * from './CCMShoulderPadsJR';
 export * from './CCMShoulderPadsSR';
 export * from './CCMShoulderPadsWOMEN';
 export * from './CCMShoulderPadsYT';
+export * from './BauerShoulderPadsYT';
+export * from './BauerShoulderPadsJR';
+export * from './BauerShoulderPadsINT';
+export * from './BauerShoulderPadsSR';
+export * from './BauerShoulderPadsWOMEN';

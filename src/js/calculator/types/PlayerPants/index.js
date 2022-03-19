@@ -2,3 +2,8 @@ export * from './CCMPlayerPantsJR';
 export * from './CCMPlayerPantsSR';
 export * from './CCMPlayerPantsYT';
 export * from './CCMPlayerPantsWOMEN';
+export * from './BauerPlayerPantsYT';
+export * from './BauerPlayerPantsJR';
+export * from './BauerPlayerPantsINT';
+export * from './BauerPlayerPantsSR';
+export * from './BauerPlayerPantsWOMEN';

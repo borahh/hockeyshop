@@ -5130,7 +5130,13 @@ function CCMElbowPadsYT() {
     }
   });
 }
-},{"./base":"calculator/types/ElbowPads/base.js"}],"calculator/types/ElbowPads/index.js":[function(require,module,exports) {
+},{"./base":"calculator/types/ElbowPads/base.js"}],"calculator/types/ElbowPads/BauerElbowPadsINT.js":[function(require,module,exports) {
+
+},{}],"calculator/types/ElbowPads/BauerElbowPadsJR.js":[function(require,module,exports) {
+
+},{}],"calculator/types/ElbowPads/BauerElbowPadsSR.js":[function(require,module,exports) {
+
+},{}],"calculator/types/ElbowPads/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5175,7 +5181,46 @@ Object.keys(_CCMElbowPadsYT).forEach(function (key) {
     }
   });
 });
-},{"./CCMElbowPadsJR":"calculator/types/ElbowPads/CCMElbowPadsJR.js","./CCMElbowPadsSR":"calculator/types/ElbowPads/CCMElbowPadsSR.js","./CCMElbowPadsYT":"calculator/types/ElbowPads/CCMElbowPadsYT.js"}],"calculator/types/Gloves/base.js":[function(require,module,exports) {
+
+var _BauerElbowPadsINT = require("./BauerElbowPadsINT");
+
+Object.keys(_BauerElbowPadsINT).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerElbowPadsINT[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerElbowPadsINT[key];
+    }
+  });
+});
+
+var _BauerElbowPadsJR = require("./BauerElbowPadsJR");
+
+Object.keys(_BauerElbowPadsJR).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerElbowPadsJR[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerElbowPadsJR[key];
+    }
+  });
+});
+
+var _BauerElbowPadsSR = require("./BauerElbowPadsSR");
+
+Object.keys(_BauerElbowPadsSR).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerElbowPadsSR[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerElbowPadsSR[key];
+    }
+  });
+});
+},{"./CCMElbowPadsJR":"calculator/types/ElbowPads/CCMElbowPadsJR.js","./CCMElbowPadsSR":"calculator/types/ElbowPads/CCMElbowPadsSR.js","./CCMElbowPadsYT":"calculator/types/ElbowPads/CCMElbowPadsYT.js","./BauerElbowPadsINT":"calculator/types/ElbowPads/BauerElbowPadsINT.js","./BauerElbowPadsJR":"calculator/types/ElbowPads/BauerElbowPadsJR.js","./BauerElbowPadsSR":"calculator/types/ElbowPads/BauerElbowPadsSR.js"}],"calculator/types/Gloves/base.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5349,7 +5394,15 @@ function CCMGlovesYT() {
     }
   });
 }
-},{"./base":"calculator/types/Gloves/base.js"}],"calculator/types/Gloves/index.js":[function(require,module,exports) {
+},{"./base":"calculator/types/Gloves/base.js"}],"calculator/types/Gloves/BauerGlovesYT.js":[function(require,module,exports) {
+
+},{}],"calculator/types/Gloves/BauerGlovesJR.js":[function(require,module,exports) {
+
+},{}],"calculator/types/Gloves/BauerGlovesINT.js":[function(require,module,exports) {
+
+},{}],"calculator/types/Gloves/BauerGlovesSR.js":[function(require,module,exports) {
+
+},{}],"calculator/types/Gloves/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5394,7 +5447,59 @@ Object.keys(_CCMGlovesYT).forEach(function (key) {
     }
   });
 });
-},{"./CCMGlovesJR":"calculator/types/Gloves/CCMGlovesJR.js","./CCMGlovesSR":"calculator/types/Gloves/CCMGlovesSR.js","./CCMGlovesYT":"calculator/types/Gloves/CCMGlovesYT.js"}],"calculator/types/PlayerPants/base.js":[function(require,module,exports) {
+
+var _BauerGlovesYT = require("./BauerGlovesYT");
+
+Object.keys(_BauerGlovesYT).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerGlovesYT[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerGlovesYT[key];
+    }
+  });
+});
+
+var _BauerGlovesJR = require("./BauerGlovesJR");
+
+Object.keys(_BauerGlovesJR).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerGlovesJR[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerGlovesJR[key];
+    }
+  });
+});
+
+var _BauerGlovesINT = require("./BauerGlovesINT");
+
+Object.keys(_BauerGlovesINT).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerGlovesINT[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerGlovesINT[key];
+    }
+  });
+});
+
+var _BauerGlovesSR = require("./BauerGlovesSR");
+
+Object.keys(_BauerGlovesSR).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerGlovesSR[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerGlovesSR[key];
+    }
+  });
+});
+},{"./CCMGlovesJR":"calculator/types/Gloves/CCMGlovesJR.js","./CCMGlovesSR":"calculator/types/Gloves/CCMGlovesSR.js","./CCMGlovesYT":"calculator/types/Gloves/CCMGlovesYT.js","./BauerGlovesYT":"calculator/types/Gloves/BauerGlovesYT.js","./BauerGlovesJR":"calculator/types/Gloves/BauerGlovesJR.js","./BauerGlovesINT":"calculator/types/Gloves/BauerGlovesINT.js","./BauerGlovesSR":"calculator/types/Gloves/BauerGlovesSR.js"}],"calculator/types/PlayerPants/base.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5749,7 +5854,17 @@ function CCMPlayerPantsWomen() {
     }
   });
 }
-},{"./base":"calculator/types/PlayerPants/base.js"}],"calculator/types/PlayerPants/index.js":[function(require,module,exports) {
+},{"./base":"calculator/types/PlayerPants/base.js"}],"calculator/types/PlayerPants/BauerPlayerPantsYT.js":[function(require,module,exports) {
+
+},{}],"calculator/types/PlayerPants/BauerPlayerPantsJR.js":[function(require,module,exports) {
+
+},{}],"calculator/types/PlayerPants/BauerPlayerPantsINT.js":[function(require,module,exports) {
+
+},{}],"calculator/types/PlayerPants/BauerPlayerPantsSR.js":[function(require,module,exports) {
+
+},{}],"calculator/types/PlayerPants/BauerPlayerPantsWOMEN.js":[function(require,module,exports) {
+
+},{}],"calculator/types/PlayerPants/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5807,7 +5922,72 @@ Object.keys(_CCMPlayerPantsWOMEN).forEach(function (key) {
     }
   });
 });
-},{"./CCMPlayerPantsJR":"calculator/types/PlayerPants/CCMPlayerPantsJR.js","./CCMPlayerPantsSR":"calculator/types/PlayerPants/CCMPlayerPantsSR.js","./CCMPlayerPantsYT":"calculator/types/PlayerPants/CCMPlayerPantsYT.js","./CCMPlayerPantsWOMEN":"calculator/types/PlayerPants/CCMPlayerPantsWOMEN.js"}],"calculator/types/ShinGuards/base.js":[function(require,module,exports) {
+
+var _BauerPlayerPantsYT = require("./BauerPlayerPantsYT");
+
+Object.keys(_BauerPlayerPantsYT).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerPlayerPantsYT[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerPlayerPantsYT[key];
+    }
+  });
+});
+
+var _BauerPlayerPantsJR = require("./BauerPlayerPantsJR");
+
+Object.keys(_BauerPlayerPantsJR).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerPlayerPantsJR[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerPlayerPantsJR[key];
+    }
+  });
+});
+
+var _BauerPlayerPantsINT = require("./BauerPlayerPantsINT");
+
+Object.keys(_BauerPlayerPantsINT).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerPlayerPantsINT[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerPlayerPantsINT[key];
+    }
+  });
+});
+
+var _BauerPlayerPantsSR = require("./BauerPlayerPantsSR");
+
+Object.keys(_BauerPlayerPantsSR).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerPlayerPantsSR[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerPlayerPantsSR[key];
+    }
+  });
+});
+
+var _BauerPlayerPantsWOMEN = require("./BauerPlayerPantsWOMEN");
+
+Object.keys(_BauerPlayerPantsWOMEN).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerPlayerPantsWOMEN[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerPlayerPantsWOMEN[key];
+    }
+  });
+});
+},{"./CCMPlayerPantsJR":"calculator/types/PlayerPants/CCMPlayerPantsJR.js","./CCMPlayerPantsSR":"calculator/types/PlayerPants/CCMPlayerPantsSR.js","./CCMPlayerPantsYT":"calculator/types/PlayerPants/CCMPlayerPantsYT.js","./CCMPlayerPantsWOMEN":"calculator/types/PlayerPants/CCMPlayerPantsWOMEN.js","./BauerPlayerPantsYT":"calculator/types/PlayerPants/BauerPlayerPantsYT.js","./BauerPlayerPantsJR":"calculator/types/PlayerPants/BauerPlayerPantsJR.js","./BauerPlayerPantsINT":"calculator/types/PlayerPants/BauerPlayerPantsINT.js","./BauerPlayerPantsSR":"calculator/types/PlayerPants/BauerPlayerPantsSR.js","./BauerPlayerPantsWOMEN":"calculator/types/PlayerPants/BauerPlayerPantsWOMEN.js"}],"calculator/types/ShinGuards/base.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6084,7 +6264,15 @@ function CCMShinGuardsYT() {
     }
   });
 }
-},{"./base":"calculator/types/ShinGuards/base.js"}],"calculator/types/ShinGuards/index.js":[function(require,module,exports) {
+},{"./base":"calculator/types/ShinGuards/base.js"}],"calculator/types/ShinGuards/BauerShinGuardsYT.js":[function(require,module,exports) {
+
+},{}],"calculator/types/ShinGuards/BauerShinGuardsJR.js":[function(require,module,exports) {
+
+},{}],"calculator/types/ShinGuards/BauerShinGuardsINT.js":[function(require,module,exports) {
+
+},{}],"calculator/types/ShinGuards/BauerShinGuardsSR.js":[function(require,module,exports) {
+
+},{}],"calculator/types/ShinGuards/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6129,7 +6317,59 @@ Object.keys(_CCMShinGuardsYT).forEach(function (key) {
     }
   });
 });
-},{"./CCMShinGuardsJR":"calculator/types/ShinGuards/CCMShinGuardsJR.js","./CCMShinGuardsSR":"calculator/types/ShinGuards/CCMShinGuardsSR.js","./CCMShinGuardsYT":"calculator/types/ShinGuards/CCMShinGuardsYT.js"}],"calculator/types/ShoulderPads/base.js":[function(require,module,exports) {
+
+var _BauerShinGuardsYT = require("./BauerShinGuardsYT");
+
+Object.keys(_BauerShinGuardsYT).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerShinGuardsYT[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerShinGuardsYT[key];
+    }
+  });
+});
+
+var _BauerShinGuardsJR = require("./BauerShinGuardsJR");
+
+Object.keys(_BauerShinGuardsJR).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerShinGuardsJR[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerShinGuardsJR[key];
+    }
+  });
+});
+
+var _BauerShinGuardsINT = require("./BauerShinGuardsINT");
+
+Object.keys(_BauerShinGuardsINT).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerShinGuardsINT[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerShinGuardsINT[key];
+    }
+  });
+});
+
+var _BauerShinGuardsSR = require("./BauerShinGuardsSR");
+
+Object.keys(_BauerShinGuardsSR).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerShinGuardsSR[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerShinGuardsSR[key];
+    }
+  });
+});
+},{"./CCMShinGuardsJR":"calculator/types/ShinGuards/CCMShinGuardsJR.js","./CCMShinGuardsSR":"calculator/types/ShinGuards/CCMShinGuardsSR.js","./CCMShinGuardsYT":"calculator/types/ShinGuards/CCMShinGuardsYT.js","./BauerShinGuardsYT":"calculator/types/ShinGuards/BauerShinGuardsYT.js","./BauerShinGuardsJR":"calculator/types/ShinGuards/BauerShinGuardsJR.js","./BauerShinGuardsINT":"calculator/types/ShinGuards/BauerShinGuardsINT.js","./BauerShinGuardsSR":"calculator/types/ShinGuards/BauerShinGuardsSR.js"}],"calculator/types/ShoulderPads/base.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6473,7 +6713,17 @@ function CCMShoulderPadsYT() {
     }
   });
 }
-},{"./base":"calculator/types/ShoulderPads/base.js"}],"calculator/types/ShoulderPads/index.js":[function(require,module,exports) {
+},{"./base":"calculator/types/ShoulderPads/base.js"}],"calculator/types/ShoulderPads/BauerShoulderPadsYT.js":[function(require,module,exports) {
+
+},{}],"calculator/types/ShoulderPads/BauerShoulderPadsJR.js":[function(require,module,exports) {
+
+},{}],"calculator/types/ShoulderPads/BauerShoulderPadsINT.js":[function(require,module,exports) {
+
+},{}],"calculator/types/ShoulderPads/BauerShoulderPadsSR.js":[function(require,module,exports) {
+
+},{}],"calculator/types/ShoulderPads/BauerShoulderPadsWOMEN.js":[function(require,module,exports) {
+
+},{}],"calculator/types/ShoulderPads/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6531,7 +6781,72 @@ Object.keys(_CCMShoulderPadsYT).forEach(function (key) {
     }
   });
 });
-},{"./CCMShoulderPadsJR":"calculator/types/ShoulderPads/CCMShoulderPadsJR.js","./CCMShoulderPadsSR":"calculator/types/ShoulderPads/CCMShoulderPadsSR.js","./CCMShoulderPadsWOMEN":"calculator/types/ShoulderPads/CCMShoulderPadsWOMEN.js","./CCMShoulderPadsYT":"calculator/types/ShoulderPads/CCMShoulderPadsYT.js"}],"calculator.js":[function(require,module,exports) {
+
+var _BauerShoulderPadsYT = require("./BauerShoulderPadsYT");
+
+Object.keys(_BauerShoulderPadsYT).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerShoulderPadsYT[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerShoulderPadsYT[key];
+    }
+  });
+});
+
+var _BauerShoulderPadsJR = require("./BauerShoulderPadsJR");
+
+Object.keys(_BauerShoulderPadsJR).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerShoulderPadsJR[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerShoulderPadsJR[key];
+    }
+  });
+});
+
+var _BauerShoulderPadsINT = require("./BauerShoulderPadsINT");
+
+Object.keys(_BauerShoulderPadsINT).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerShoulderPadsINT[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerShoulderPadsINT[key];
+    }
+  });
+});
+
+var _BauerShoulderPadsSR = require("./BauerShoulderPadsSR");
+
+Object.keys(_BauerShoulderPadsSR).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerShoulderPadsSR[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerShoulderPadsSR[key];
+    }
+  });
+});
+
+var _BauerShoulderPadsWOMEN = require("./BauerShoulderPadsWOMEN");
+
+Object.keys(_BauerShoulderPadsWOMEN).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _BauerShoulderPadsWOMEN[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _BauerShoulderPadsWOMEN[key];
+    }
+  });
+});
+},{"./CCMShoulderPadsJR":"calculator/types/ShoulderPads/CCMShoulderPadsJR.js","./CCMShoulderPadsSR":"calculator/types/ShoulderPads/CCMShoulderPadsSR.js","./CCMShoulderPadsWOMEN":"calculator/types/ShoulderPads/CCMShoulderPadsWOMEN.js","./CCMShoulderPadsYT":"calculator/types/ShoulderPads/CCMShoulderPadsYT.js","./BauerShoulderPadsYT":"calculator/types/ShoulderPads/BauerShoulderPadsYT.js","./BauerShoulderPadsJR":"calculator/types/ShoulderPads/BauerShoulderPadsJR.js","./BauerShoulderPadsINT":"calculator/types/ShoulderPads/BauerShoulderPadsINT.js","./BauerShoulderPadsSR":"calculator/types/ShoulderPads/BauerShoulderPadsSR.js","./BauerShoulderPadsWOMEN":"calculator/types/ShoulderPads/BauerShoulderPadsWOMEN.js"}],"calculator.js":[function(require,module,exports) {
 "use strict";
 
 var _alpinejs = _interopRequireDefault(require("alpinejs"));
@@ -6625,7 +6940,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62347" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50198" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
