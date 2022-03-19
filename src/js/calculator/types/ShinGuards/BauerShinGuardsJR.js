@@ -14,7 +14,7 @@ export function BauerShinGuardsJR() {
       length: 38.5,
     },
     getResult() {
-      const length = this.invert(parseInt(this.input.length, 10));
+      const length = this.invert(parseFloat(this.input.length, 10));
 
       if (length >= 33.5 && length <= 36) {
         return '11';

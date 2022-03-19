@@ -5,15 +5,11 @@ import { cmToInch } from '../../unitConverter';
 export const PlayerPants = {
   ...calculatorUI,
   ...cmToInch,
-  maxStep: 1,
+  maxStep: 0,
 
   getWaistValue() {
     const waist = this.convert(this.input.waist);
     return waist;
-  },
-
-  getHeightValue() {
-    return this.convert(this.input.height);
   },
 
   handleFinal() {

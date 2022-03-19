@@ -6281,13 +6281,10 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var PlayerPants = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorUI), _unitConverter.cmToInch), {}, {
-  maxStep: 1,
+  maxStep: 0,
   getWaistValue: function getWaistValue() {
     var waist = this.convert(this.input.waist);
     return waist;
-  },
-  getHeightValue: function getHeightValue() {
-    return this.convert(this.input.height);
   },
   handleFinal: function handleFinal() {
     var size = this.getResult();
@@ -7050,7 +7047,7 @@ function BauerShinGuardsJR() {
       length: 38.5
     },
     getResult: function getResult() {
-      var length = this.invert(parseInt(this.input.length, 10));
+      var length = this.invert(parseFloat(this.input.length, 10));
 
       if (length >= 33.5 && length <= 36) {
         return '11';

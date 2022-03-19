@@ -23,7 +23,7 @@ class BauerPlayerPants extends BorahhCalculatorBase {
         return ob_get_clean();
     }
     
-    protected function heightOptions() {
+    protected function waistOptions() {
         ob_start();
 
         // Fix from here
@@ -44,27 +44,6 @@ class BauerPlayerPants extends BorahhCalculatorBase {
         </div>
         
         <h2>
-            <?php _e("Højde", "hockeyshop-theme"); ?>
-        </h2>
-        <div class="calculator__wraper__content__form__tab--length__input">
-            <input type="text" :value="getHeightValue" >            
-            <span x-text="selectedUnit"></span>
-        </div>
-        
-        <input type="range" class="calculator-range sm:w-5/6" x-bind:min="rangeFrom.height" step="1" x-bind:max="rangeTo.height" x-model="input.height">
-
-        <?php
-        return ob_get_clean();
-    }
-
-    protected function waistOptions() {
-        ob_start();
-
-        // Fix from here
-        ?>
-        
-
-        <h2>
             <?php _e("Hoftmål", "hockeyshop-theme"); ?>
         </h2>
         <div class="calculator__wraper__content__form__tab--length__input">
@@ -72,12 +51,13 @@ class BauerPlayerPants extends BorahhCalculatorBase {
             <span x-text="selectedUnit"></span>
         </div>
         
-        <input id="waistInput" type="range" class="calculator-range sm:w-5/6" x-model="input.waist" step="1">
-        
-        
+        <input type="range" class="calculator-range sm:w-5/6" x-bind:min="rangeFrom.waist" step="1" x-bind:max="rangeTo.waist" x-model="input.waist">
+
         <?php
         return ob_get_clean();
     }
+
+   
 
     
      // Steps 
@@ -85,12 +65,8 @@ class BauerPlayerPants extends BorahhCalculatorBase {
         ob_start();
         ?>
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length calculator__wraper__content__form__tab--length-multi" x-show="currentStep === 0">
-                <?php echo $this->heightOptions(); ?>
-            </div>
-            <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length calculator__wraper__content__form__tab--length-multi" x-show="currentStep === 1" x-data="{ chestValue: 0 }">
                 <?php echo $this->waistOptions(); ?>
             </div>
-            
         <?php
         return ob_get_clean();
     }
