@@ -1,6 +1,6 @@
 import { PlayerPants } from './base';
 
-export function PlayerPantsIntermediate() {
+export function BauerPlayerPantsINT() {
   return {
     ...PlayerPants,
 

@@ -1,6 +1,6 @@
 import { ShoulderPads } from './base';
 
-export function ShoulderPadsYT() {
+export function BauerShoulderPadsYT() {
   return {
     ...ShoulderPads,
     input: {

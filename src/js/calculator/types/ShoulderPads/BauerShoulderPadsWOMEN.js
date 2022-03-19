@@ -1,6 +1,6 @@
 import { ShoulderPads } from './base';
 
-export function ShoulderPadsWomen() {
+export function BauerShoulderPadsWomen() {
   return {
     ...ShoulderPads,
 

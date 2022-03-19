@@ -1,6 +1,6 @@
 import { ShinGuards } from './base';
 
-export function ShinGuardsYT() {
+export function BauerShinGuardsYT() {
   return {
     ...ShinGuards,
 

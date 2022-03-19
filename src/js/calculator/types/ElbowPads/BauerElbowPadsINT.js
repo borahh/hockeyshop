@@ -1,6 +1,6 @@
 import { ElbowPads } from './base';
 
-export function ElbowPadsIntermediate() {
+export function BauerElbowPadsINT() {
   return {
     ...ElbowPads,
 

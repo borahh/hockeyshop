@@ -5136,7 +5136,7 @@ function CCMElbowPadsYT() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ElbowPadsIntermediate = ElbowPadsIntermediate;
+exports.BauerElbowPadsINT = BauerElbowPadsINT;
 
 var _base = require("./base");
 
@@ -5146,7 +5146,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function ElbowPadsIntermediate() {
+function BauerElbowPadsINT() {
   return _objectSpread(_objectSpread({}, _base.ElbowPads), {}, {
     input: {
       length: 24
@@ -5174,7 +5174,7 @@ function ElbowPadsIntermediate() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ElbowPadsJR = ElbowPadsJR;
+exports.BauerElbowPadsJR = BauerElbowPadsJR;
 
 var _base = require("./base");
 
@@ -5184,7 +5184,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function ElbowPadsJR() {
+function BauerElbowPadsJR() {
   return _objectSpread(_objectSpread({}, _base.ElbowPads), {}, {
     input: {
       Length: 20
@@ -5212,7 +5212,7 @@ function ElbowPadsJR() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ElbowPadsSR = ElbowPadsSR;
+exports.BauerElbowPadsSR = BauerElbowPadsSR;
 
 var _base = require("./base");
 
@@ -5222,7 +5222,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function ElbowPadsSR() {
+function BauerElbowPadsSR() {
   return _objectSpread(_objectSpread({}, _base.ElbowPads), {}, {
     input: {
       length: 27
@@ -5510,7 +5510,7 @@ function CCMGlovesYT() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.GlovesYT = GlovesYT;
+exports.BauerGlovesYT = BauerGlovesYT;
 
 var _base = require("./base");
 
@@ -5520,7 +5520,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function GlovesYT() {
+function BauerGlovesYT() {
   return _objectSpread(_objectSpread({}, _base.Gloves), {}, {
     input: {
       length: 10.5
@@ -5548,7 +5548,7 @@ function GlovesYT() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.GlovesJR = GlovesJR;
+exports.BauerGlovesJR = BauerGlovesJR;
 
 var _base = require("./base");
 
@@ -5558,7 +5558,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function GlovesJR() {
+function BauerGlovesJR() {
   return _objectSpread(_objectSpread({}, _base.Gloves), {}, {
     input: {
       length: 13
@@ -5586,7 +5586,7 @@ function GlovesJR() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.GlovesIntermediate = GlovesIntermediate;
+exports.BauerGlovesINT = BauerGlovesINT;
 
 var _base = require("./base");
 
@@ -5596,7 +5596,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function GlovesIntermediate() {
+function BauerGlovesINT() {
   return _objectSpread(_objectSpread({}, _base.Gloves), {}, {
     input: {
       length: 15.5
@@ -5624,7 +5624,7 @@ function GlovesIntermediate() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.GlovesSR = GlovesSR;
+exports.BauerGlovesSR = BauerGlovesSR;
 
 var _base = require("./base");
 
@@ -5634,7 +5634,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function GlovesSR() {
+function BauerGlovesSR() {
   return _objectSpread(_objectSpread({}, _base.Gloves), {}, {
     input: {
       length: 18
@@ -6114,7 +6114,7 @@ function CCMPlayerPantsWomen() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.PlayerPantsYT = PlayerPantsYT;
+exports.BauerPlayerPantsYT = BauerPlayerPantsYT;
 
 var _base = require("./base");
 
@@ -6124,7 +6124,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function PlayerPantsYT() {
+function BauerPlayerPantsYT() {
   return _objectSpread(_objectSpread({}, _base.PlayerPants), {}, {
     input: {
       waist: 48
@@ -6154,7 +6154,7 @@ function PlayerPantsYT() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.PlayerPantsJR = PlayerPantsJR;
+exports.BauerPlayerPantsJR = BauerPlayerPantsJR;
 
 var _base = require("./base");
 
@@ -6164,7 +6164,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function PlayerPantsJR() {
+function BauerPlayerPantsJR() {
   return _objectSpread(_objectSpread({}, _base.PlayerPants), {}, {
     input: {
       waist: 56
@@ -6194,7 +6194,7 @@ function PlayerPantsJR() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.PlayerPantsIntermediate = PlayerPantsIntermediate;
+exports.BauerPlayerPantsINT = BauerPlayerPantsINT;
 
 var _base = require("./base");
 
@@ -6204,7 +6204,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function PlayerPantsIntermediate() {
+function BauerPlayerPantsINT() {
   return _objectSpread(_objectSpread({}, _base.PlayerPants), {}, {
     input: {
       waist: 71
@@ -6232,7 +6232,7 @@ function PlayerPantsIntermediate() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.PlayerPantsSR = PlayerPantsSR;
+exports.BauerPlayerPantsSR = BauerPlayerPantsSR;
 
 var _base = require("./base");
 
@@ -6242,7 +6242,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function PlayerPantsSR() {
+function BauerPlayerPantsSR() {
   return _objectSpread(_objectSpread({}, _base.PlayerPants), {}, {
     input: {
       waist: 81
@@ -6277,7 +6277,7 @@ function PlayerPantsSR() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.PlayerPantsWomen = PlayerPantsWomen;
+exports.BauerPlayerPantsWomen = BauerPlayerPantsWomen;
 
 var _base = require("./base");
 
@@ -6287,7 +6287,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function PlayerPantsWomen() {
+function BauerPlayerPantsWomen() {
   return _objectSpread(_objectSpread({}, _base.PlayerPants), {}, {
     input: {
       waist: 61
@@ -6719,7 +6719,7 @@ function CCMShinGuardsYT() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ShinGuardsYT = ShinGuardsYT;
+exports.BauerShinGuardsYT = BauerShinGuardsYT;
 
 var _base = require("./base");
 
@@ -6729,7 +6729,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function ShinGuardsYT() {
+function BauerShinGuardsYT() {
   return _objectSpread(_objectSpread({}, _base.ShinGuards), {}, {
     input: {
       length: 25.5
@@ -6759,7 +6759,7 @@ function ShinGuardsYT() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ShinGuardsJR = ShinGuardsJR;
+exports.BauerShinGuardsJR = BauerShinGuardsJR;
 
 var _base = require("./base");
 
@@ -6769,7 +6769,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function ShinGuardsJR() {
+function BauerShinGuardsJR() {
   return _objectSpread(_objectSpread({}, _base.ShinGuards), {}, {
     input: {
       length: 33.5
@@ -6797,7 +6797,7 @@ function ShinGuardsJR() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ShinGuardsIntermediate = ShinGuardsIntermediate;
+exports.BauerShinGuardsINT = BauerShinGuardsINT;
 
 var _base = require("./base");
 
@@ -6807,7 +6807,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function ShinGuardsIntermediate() {
+function BauerShinGuardsINT() {
   return _objectSpread(_objectSpread({}, _base.ShinGuards), {}, {
     input: {
       length: 38.5
@@ -6835,7 +6835,7 @@ function ShinGuardsIntermediate() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ShinGuardsSR = ShinGuardsSR;
+exports.BauerShinGuardsSR = BauerShinGuardsSR;
 
 var _base = require("./base");
 
@@ -6845,7 +6845,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function ShinGuardsSR() {
+function BauerShinGuardsSR() {
   return _objectSpread(_objectSpread({}, _base.ShinGuards), {}, {
     input: {
       length: 43.5
@@ -7319,7 +7319,7 @@ function CCMShoulderPadsYT() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ShoulderPadsYT = ShoulderPadsYT;
+exports.BauerShoulderPadsYT = BauerShoulderPadsYT;
 
 var _base = require("./base");
 
@@ -7329,7 +7329,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function ShoulderPadsYT() {
+function BauerShoulderPadsYT() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
     input: {
       chest: 51
@@ -7359,7 +7359,7 @@ function ShoulderPadsYT() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ShoulderPadsJR = ShoulderPadsJR;
+exports.BauerShoulderPadsJR = BauerShoulderPadsJR;
 
 var _base = require("./base");
 
@@ -7369,7 +7369,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function ShoulderPadsJR() {
+function BauerShoulderPadsJR() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
     input: {
       chest: 61
@@ -7397,7 +7397,7 @@ function ShoulderPadsJR() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ShoulderPadsIntermediate = ShoulderPadsIntermediate;
+exports.BauerShoulderPadsINT = BauerShoulderPadsINT;
 
 var _base = require("./base");
 
@@ -7407,7 +7407,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function ShoulderPadsIntermediate() {
+function BauerShoulderPadsINT() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
     input: {
       chest: 71
@@ -7435,7 +7435,7 @@ function ShoulderPadsIntermediate() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ShoulderPadsSR = ShoulderPadsSR;
+exports.BauerShoulderPadsSR = BauerShoulderPadsSR;
 
 var _base = require("./base");
 
@@ -7445,7 +7445,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function ShoulderPadsSR() {
+function BauerShoulderPadsSR() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
     input: {
       chest: 97
@@ -7479,7 +7479,7 @@ function ShoulderPadsSR() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ShoulderPadsWomen = ShoulderPadsWomen;
+exports.BauerShoulderPadsWomen = BauerShoulderPadsWomen;
 
 var _base = require("./base");
 
@@ -7489,7 +7489,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function ShoulderPadsWomen() {
+function BauerShoulderPadsWomen() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
     input: {
       chest: 76

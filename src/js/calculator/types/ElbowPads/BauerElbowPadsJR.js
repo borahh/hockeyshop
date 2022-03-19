@@ -1,6 +1,6 @@
 import { ElbowPads } from './base';
 
-export function ElbowPadsJR() {
+export function BauerElbowPadsJR() {
   return {
     ...ElbowPads,
 

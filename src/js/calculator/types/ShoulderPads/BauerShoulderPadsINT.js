@@ -1,6 +1,6 @@
 import { ShoulderPads } from './base';
 
-export function ShoulderPadsIntermediate() {
+export function BauerShoulderPadsINT() {
   return {
     ...ShoulderPads,
     input: {

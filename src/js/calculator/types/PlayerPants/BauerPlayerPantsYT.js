@@ -1,6 +1,6 @@
 import { PlayerPants } from './base';
 
-export function PlayerPantsYT() {
+export function BauerPlayerPantsYT() {
   return {
     ...PlayerPants,
 

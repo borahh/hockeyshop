@@ -1,6 +1,6 @@
 import { Gloves } from './base';
 
-export function GlovesYT() {
+export function BauerGlovesYT() {
   return {
     ...Gloves,
     input: {
