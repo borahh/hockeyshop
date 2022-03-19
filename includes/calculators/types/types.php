@@ -245,7 +245,7 @@ function borahh_calculator_types() {
             ]
         ),
         'bauer_shoulder_pads_yt' => (object) array(
-            'ID' => 'BauerhoulderPads',
+            'ID' => 'BauerShoulderPads',
             'type' => 'YT',
             'fields' => null,
             'dependencies' => [
