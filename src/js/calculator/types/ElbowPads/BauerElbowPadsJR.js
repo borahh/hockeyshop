@@ -5,16 +5,16 @@ export function BauerElbowPadsJR() {
     ...ElbowPads,
 
     input: {
-      Length: 20,
+      length: 20,
     },
     rangeFrom: {
-      Length: 20,
+      length: 20,
     },
     rangeTo: {
-      Length: 25,
+      length: 25,
     },
     getResult() {
-      const Length = this.invert(parseInt(this.input.Length, 10));
+      const Length = this.invert(parseInt(this.input.length, 10));
 
       if (Length >= 20 && Length <= 23) {
         return 'S';

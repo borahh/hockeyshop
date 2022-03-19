@@ -5243,16 +5243,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function BauerElbowPadsJR() {
   return _objectSpread(_objectSpread({}, _BauerBase.ElbowPads), {}, {
     input: {
-      Length: 20
+      length: 20
     },
     rangeFrom: {
-      Length: 20
+      length: 20
     },
     rangeTo: {
-      Length: 25
+      length: 25
     },
     getResult: function getResult() {
-      var Length = this.invert(parseInt(this.input.Length, 10));
+      var Length = this.invert(parseInt(this.input.length, 10));
 
       if (Length >= 20 && Length <= 23) {
         return 'S';
@@ -5405,16 +5405,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function BauerElbowPadsYT() {
   return _objectSpread(_objectSpread({}, _BauerBase.ElbowPads), {}, {
     input: {
-      Length: 15
+      length: 15
     },
     rangeFrom: {
-      Length: 15
+      length: 15
     },
     rangeTo: {
-      Length: 20
+      length: 20
     },
     getResult: function getResult() {
-      var Length = this.invert(parseInt(this.input.Length, 10));
+      var Length = this.invert(parseInt(this.input.length, 10));
 
       if (Length >= 15 && Length <= 18) {
         return 'S';
