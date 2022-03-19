@@ -1,6 +1,6 @@
 import { PlayerPants } from './base';
 
-export function BauerPlayerPantsWomen() {
+export function BauerPlayerPantsWOMEN() {
   return {
     ...PlayerPants,
 

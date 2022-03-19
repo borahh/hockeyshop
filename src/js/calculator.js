@@ -23,7 +23,7 @@ import {
   BauerPlayerPantsINT,
   BauerPlayerPantsJR,
   BauerPlayerPantsSR,
-  BauerPlayerPantsWomen,
+  BauerPlayerPantsWOMEN,
   BauerPlayerPantsYT,
   CCMPlayerPantsJR,
   CCMPlayerPantsSR,
@@ -43,7 +43,7 @@ import {
   BauerShoulderPadsINT,
   BauerShoulderPadsJR,
   BauerShoulderPadsSR,
-  BauerShoulderPadsWomen,
+  BauerShoulderPadsWOMEN,
   BauerShoulderPadsYT,
   CCMShoulderPadsJR,
   CCMShoulderPadsSR,
@@ -65,7 +65,7 @@ if (Alpine) {
   Alpine.data('BauerShoulderPadsSR', BauerShoulderPadsSR);
   Alpine.data('BauerShoulderPadsYT', BauerShoulderPadsYT);
   Alpine.data('BauerShoulderPadsINT', BauerShoulderPadsINT);
-  Alpine.data('BauerShoulderPadsWOMEN', BauerShoulderPadsWomen);
+  Alpine.data('BauerShoulderPadsWOMEN', BauerShoulderPadsWOMEN);
   Alpine.data('CCMShoulderPadsJR', CCMShoulderPadsJR);
   Alpine.data('CCMShoulderPadsYT', CCMShoulderPadsYT);
   Alpine.data('CCMShoulderPadsSR', CCMShoulderPadsSR);
@@ -88,7 +88,7 @@ if (Alpine) {
   Alpine.data('BauerPlayerPantsSR', BauerPlayerPantsSR);
   Alpine.data('BauerPlayerPantsYT', BauerPlayerPantsYT);
   Alpine.data('BauerPlayerPantsINT', BauerPlayerPantsINT);
-  Alpine.data('BauerPlayerPantsWOMEN', BauerPlayerPantsWomen);
+  Alpine.data('BauerPlayerPantsWOMEN', BauerPlayerPantsWOMEN);
   Alpine.data('CCMPlayerPantsJR', CCMPlayerPantsJR);
   Alpine.data('CCMPlayerPantsSR', CCMPlayerPantsSR);
   Alpine.data('CCMPlayerPantsWOMEN', CCMPlayerPantsWOMEN);

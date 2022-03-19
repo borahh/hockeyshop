@@ -6317,7 +6317,7 @@ function BauerPlayerPantsSR() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.BauerPlayerPantsWomen = BauerPlayerPantsWomen;
+exports.BauerPlayerPantsWOMEN = BauerPlayerPantsWOMEN;
 
 var _base = require("./base");
 
@@ -6327,7 +6327,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function BauerPlayerPantsWomen() {
+function BauerPlayerPantsWOMEN() {
   return _objectSpread(_objectSpread({}, _base.PlayerPants), {}, {
     input: {
       waist: 61
@@ -7519,7 +7519,7 @@ function BauerShoulderPadsSR() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.BauerShoulderPadsWomen = BauerShoulderPadsWomen;
+exports.BauerShoulderPadsWOMEN = BauerShoulderPadsWOMEN;
 
 var _base = require("./base");
 
@@ -7529,7 +7529,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function BauerShoulderPadsWomen() {
+function BauerShoulderPadsWOMEN() {
   return _objectSpread(_objectSpread({}, _base.ShoulderPads), {}, {
     input: {
       chest: 76
@@ -7728,7 +7728,7 @@ if (_alpinejs.default) {
 
   _alpinejs.default.data('BauerShoulderPadsINT', _ShoulderPads.BauerShoulderPadsINT);
 
-  _alpinejs.default.data('BauerShoulderPadsWOMEN', _ShoulderPads.BauerShoulderPadsWomen);
+  _alpinejs.default.data('BauerShoulderPadsWOMEN', _ShoulderPads.BauerShoulderPadsWOMEN);
 
   _alpinejs.default.data('CCMShoulderPadsJR', _ShoulderPads.CCMShoulderPadsJR);
 
@@ -7774,7 +7774,7 @@ if (_alpinejs.default) {
 
   _alpinejs.default.data('BauerPlayerPantsINT', _PlayerPants.BauerPlayerPantsINT);
 
-  _alpinejs.default.data('BauerPlayerPantsWOMEN', _PlayerPants.BauerPlayerPantsWomen);
+  _alpinejs.default.data('BauerPlayerPantsWOMEN', _PlayerPants.BauerPlayerPantsWOMEN);
 
   _alpinejs.default.data('CCMPlayerPantsJR', _PlayerPants.CCMPlayerPantsJR);
 
