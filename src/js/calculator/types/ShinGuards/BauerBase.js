@@ -12,10 +12,6 @@ export const ShinGuards = {
     return length;
   },
 
-  getHeightValue() {
-    return this.convert(this.input.height);
-  },
-
   handleFinal() {
     const size = this.getResult();
 

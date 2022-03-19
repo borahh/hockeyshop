@@ -6951,9 +6951,6 @@ var ShinGuards = _objectSpread(_objectSpread(_objectSpread({}, _ui.calculatorUI)
     var length = this.convert(this.input.length);
     return length;
   },
-  getHeightValue: function getHeightValue() {
-    return this.convert(this.input.height);
-  },
   handleFinal: function handleFinal() {
     var size = this.getResult();
     this.dataObtained.size = size;

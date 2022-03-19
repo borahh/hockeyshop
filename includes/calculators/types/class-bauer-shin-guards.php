@@ -23,7 +23,7 @@ class BauerShinGuards extends BorahhCalculatorBase {
         return ob_get_clean();
     }
     
-    protected function heightOptions() {
+    protected function lengthOptions() {
         ob_start();
 
         // Fix from here
@@ -44,39 +44,19 @@ class BauerShinGuards extends BorahhCalculatorBase {
         </div>
         
         <h2>
-            <?php _e("Højde", "hockeyshop-theme"); ?>
-        </h2>
-        <div class="calculator__wraper__content__form__tab--length__input">
-            <input type="text" :value="getHeightValue" >            
-            <span x-text="selectedUnit"></span>
-        </div>
-        
-        <input type="range" class="calculator-range sm:w-5/6" x-bind:min="rangeFrom.height" step="1" x-bind:max="rangeTo.height" x-model="input.height">
-
-        <?php
-        return ob_get_clean();
-    }
-
-    protected function tibiaOptions() {
-        ob_start();
-
-        // Fix from here
-        ?>
-        
-        <h2>
-            <?php _e("Underben", "hockeyshop-theme"); ?>
+            <?php _e("Longueur", "hockeyshop-theme"); ?>
         </h2>
         <div class="calculator__wraper__content__form__tab--length__input">
             <input type="text" :value="getLengthValue" >            
             <span x-text="selectedUnit"></span>
         </div>
         
-        <input id="lengthInput" type="range" class="calculator-range sm:w-5/6" x-model="input.length" step="1">
-        
-        
+        <input type="range" class="calculator-range sm:w-5/6" x-bind:min="rangeFrom.length" step="1" x-bind:max="rangeTo.length" x-model="input.length">
+
         <?php
         return ob_get_clean();
     }
+
 
     
      // Steps 
@@ -84,12 +64,8 @@ class BauerShinGuards extends BorahhCalculatorBase {
         ob_start();
         ?>
             <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length calculator__wraper__content__form__tab--length-multi" x-show="currentStep === 0">
-                <?php echo $this->heightOptions(); ?>
+                <?php echo $this->lengthOptions(); ?>
             </div>
-            <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length calculator__wraper__content__form__tab--length-multi" x-show="currentStep === 1" x-data="{ chestValue: 0 }">
-                <?php echo $this->tibiaOptions(); ?>
-            </div>
-            
         <?php
         return ob_get_clean();
     }
