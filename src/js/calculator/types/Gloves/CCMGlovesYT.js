@@ -17,7 +17,7 @@ export function CCMGlovesYT() {
 
       if (length >= 10.5 && length <= 13.5) {
         return '8';
-      } else if (length == 14) {
+      } else if (length >= 14) {
         return '9';
       }
     },

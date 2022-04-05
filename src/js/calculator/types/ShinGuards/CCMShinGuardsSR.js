@@ -69,9 +69,10 @@ export function CCMShinGuardsSR() {
         return '16';
       } else if (height >= 193 && length >= 43 && length <= 46) {
         return '17';
-      } else if (height >= 193 && length >= 46 && length <= 48) {
-        return '18';
       }
+      // } else if (height >= 193 && length >= 46 && length <= 48) {
+      //   return '18';
+      // }
     },
   };
 }
