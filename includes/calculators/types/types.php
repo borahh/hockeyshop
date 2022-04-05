@@ -151,6 +151,7 @@ function borahh_calculator_types() {
         ),
 
         /** CCM Shoulder Pads **/
+        
         'ccm_shoulder_pads_jr' => (object) array(
             'ID' => 'CCMShoulderPads',
             'type' => 'JR',
