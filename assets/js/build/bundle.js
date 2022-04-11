@@ -5684,7 +5684,7 @@ function BauerGlovesYT() {
       length: 14
     },
     getResult: function getResult() {
-      var length = this.invert(parseInt(this.input.length, 10));
+      var length = this.invert(parseFloat(this.input.length, 10));
 
       if (length >= 10.5 && length <= 13) {
         return '8';
@@ -5722,7 +5722,7 @@ function BauerGlovesJR() {
       length: 16.5
     },
     getResult: function getResult() {
-      var length = this.invert(parseInt(this.input.length, 10));
+      var length = this.invert(parseFloat(this.input.length, 10));
 
       if (length >= 13 && length <= 15.5) {
         return '10';
@@ -5760,7 +5760,7 @@ function BauerGlovesINT() {
       length: 19
     },
     getResult: function getResult() {
-      var length = this.invert(parseInt(this.input.length, 10));
+      var length = this.invert(parseFloat(this.input.length, 10));
 
       if (length >= 15.5 && length <= 18) {
         return '12';
@@ -5798,7 +5798,7 @@ function BauerGlovesSR() {
       length: 22
     },
     getResult: function getResult() {
-      var length = this.invert(parseInt(this.input.length, 10));
+      var length = this.invert(parseFloat(this.input.length, 10));
 
       if (length >= 18 && length <= 20.5) {
         return '14';
@@ -6472,8 +6472,6 @@ function BauerPlayerPantsSR() {
         return 'L';
       } else if (waist >= 91 && waist <= 102) {
         return 'XL';
-      } else if (waist >= 97 && waist <= 107) {
-        return 'XXL';
       } else if (waist >= 102) {
         return 'XXXL';
       }
@@ -7710,7 +7708,7 @@ function BauerShoulderPadsJR() {
 
       if (chest >= 61 && chest <= 66) {
         return 'S';
-      } else if (chest >= 66 && chest <= 71) {
+      } else if (chest >= 67 && chest <= 71) {
         return 'M';
       }
     }
@@ -7791,10 +7789,7 @@ function BauerShoulderPadsSR() {
         return 'L';
       } else if (chest >= 107 && chest <= 117) {
         return 'XL';
-      } else if (chest >= 112) {
-        return 'XXL';
-      } // There should be xxxl size but it has same condition as xxl
-
+      }
     }
   });
 }
@@ -8103,7 +8098,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63599" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59985" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

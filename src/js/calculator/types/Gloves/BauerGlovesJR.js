@@ -13,7 +13,7 @@ export function BauerGlovesJR() {
       length: 16.5,
     },
     getResult() {
-      const length = this.invert(parseInt(this.input.length, 10));
+      const length = this.invert(parseFloat(this.input.length, 10));
 
       if (length >= 13 && length <= 15.5) {
         return '10';

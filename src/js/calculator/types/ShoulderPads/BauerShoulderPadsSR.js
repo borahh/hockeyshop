@@ -24,10 +24,7 @@ export function BauerShoulderPadsSR() {
         return 'L';
       } else if (chest >= 107 && chest <= 117) {
         return 'XL';
-      } else if (chest >= 112) {
-        return 'XXL';
       }
-      // There should be xxxl size but it has same condition as xxl
     },
   };
 }

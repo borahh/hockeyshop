@@ -17,7 +17,7 @@ export function BauerShoulderPadsJR() {
 
       if (chest >= 61 && chest <= 66) {
         return 'S';
-      } else if (chest >= 66 && chest <= 71) {
+      } else if (chest >= 67 && chest <= 71) {
         return 'M';
       }
     },

@@ -23,8 +23,6 @@ export function BauerPlayerPantsSR() {
         return 'L';
       } else if (waist >= 91 && waist <= 102) {
         return 'XL';
-      } else if (waist >= 97 && waist <= 107) {
-        return 'XXL';
       } else if (waist >= 102) {
         return 'XXXL';
       }
