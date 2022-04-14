@@ -18,7 +18,7 @@ export function BauerShinGuardsJR() {
 
       if (length >= 33.5 && length <= 36) {
         return '11';
-      } else if (length >= 36 && length <= 38.5) {
+      } else if (length >= 36.5 && length <= 38.5) {
         return '12';
       }
     },

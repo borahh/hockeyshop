@@ -16,11 +16,11 @@ export function BauerElbowPadsYT() {
     getResult() {
       const Length = this.invert(parseInt(this.input.length, 10));
 
-      if (Length >= 15 && Length <= 18) {
+      if (Length >= 15 && Length <= 16) {
         return 'S';
-      } else if (Length >= 16 && Length <= 19) {
+      } else if (Length >= 17 && Length <= 18) {
         return 'M';
-      } else if (Length >= 18 && Length <= 20) {
+      } else if (Length >= 19 && Length <= 20) {
         return 'L';
       }
     },

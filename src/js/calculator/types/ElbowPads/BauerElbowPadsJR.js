@@ -16,9 +16,9 @@ export function BauerElbowPadsJR() {
     getResult() {
       const Length = this.invert(parseInt(this.input.length, 10));
 
-      if (Length >= 20 && Length <= 23) {
+      if (Length >= 20 && Length <= 22) {
         return 'S';
-      } else if (Length >= 22 && Length <= 25) {
+      } else if (Length >= 23 && Length <= 25) {
         return 'M';
       }
     },

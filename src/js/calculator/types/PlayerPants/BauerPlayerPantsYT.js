@@ -16,11 +16,11 @@ export function BauerPlayerPantsYT() {
     getResult() {
       const waist = this.invert(parseInt(this.input.waist, 10));
 
-      if (waist >= 48 && waist <= 53) {
+      if (waist >= 48 && waist <= 52) {
         return 'S';
-      } else if (waist >= 51 && waist <= 56) {
+      } else if (waist >= 53 && waist <= 55) {
         return 'M';
-      } else if (waist >= 54 && waist <= 62) {
+      } else if (waist >= 56 && waist <= 61) {
         return 'L';
       }
     },

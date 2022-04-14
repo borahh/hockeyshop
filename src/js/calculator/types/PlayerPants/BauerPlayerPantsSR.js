@@ -17,14 +17,12 @@ export function BauerPlayerPantsSR() {
     getResult() {
       const waist = this.invert(parseInt(this.input.waist, 10));
 
-      if (waist >= 81 && waist <= 91) {
+      if (waist >= 82 && waist <= 88) {
         return 'M';
-      } else if (waist >= 86 && waist <= 97) {
+      } else if (waist >= 89 && waist <= 96) {
         return 'L';
-      } else if (waist >= 91 && waist <= 102) {
+      } else if (waist >= 97 && waist <= 102) {
         return 'XL';
-      } else if (waist >= 102) {
-        return 'XXXL';
       }
     },
   };

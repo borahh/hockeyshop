@@ -5216,9 +5216,9 @@ function BauerElbowPadsINT() {
     getResult: function getResult() {
       var length = this.invert(parseInt(this.input.length, 10));
 
-      if (length >= 24 && length <= 27) {
+      if (length >= 24 && length <= 26) {
         return 'M';
-      } else if (length >= 26 && length <= 29) {
+      } else if (length >= 27 && length <= 29) {
         return 'L';
       }
     }
@@ -5254,9 +5254,9 @@ function BauerElbowPadsJR() {
     getResult: function getResult() {
       var Length = this.invert(parseInt(this.input.length, 10));
 
-      if (Length >= 20 && Length <= 23) {
+      if (Length >= 20 && Length <= 22) {
         return 'S';
-      } else if (Length >= 22 && Length <= 25) {
+      } else if (Length >= 23 && Length <= 25) {
         return 'M';
       }
     }
@@ -5292,11 +5292,11 @@ function BauerElbowPadsSR() {
     getResult: function getResult() {
       var length = this.invert(parseInt(this.input.length, 10));
 
-      if (length >= 27 && length <= 32) {
+      if (length >= 27 && length <= 31) {
         return 'M';
-      } else if (length >= 29 && length <= 34) {
+      } else if (length >= 32 && length <= 34) {
         return 'L';
-      } else if (length >= 32 && length <= 37) {
+      } else if (length >= 35 && length <= 37) {
         return 'XL';
       }
     }
@@ -5416,11 +5416,11 @@ function BauerElbowPadsYT() {
     getResult: function getResult() {
       var Length = this.invert(parseInt(this.input.length, 10));
 
-      if (Length >= 15 && Length <= 18) {
+      if (Length >= 15 && Length <= 16) {
         return 'S';
-      } else if (Length >= 16 && Length <= 19) {
+      } else if (Length >= 17 && Length <= 18) {
         return 'M';
-      } else if (Length >= 18 && Length <= 20) {
+      } else if (Length >= 19 && Length <= 20) {
         return 'L';
       }
     }
@@ -5688,7 +5688,7 @@ function BauerGlovesYT() {
 
       if (length >= 10.5 && length <= 13) {
         return '8';
-      } else if (length >= 11.5 && length <= 14) {
+      } else if (length >= 13.5 && length <= 14) {
         return '9';
       }
     }
@@ -5724,9 +5724,9 @@ function BauerGlovesJR() {
     getResult: function getResult() {
       var length = this.invert(parseFloat(this.input.length, 10));
 
-      if (length >= 13 && length <= 15.5) {
+      if (length >= 14 && length <= 15.5) {
         return '10';
-      } else if (length >= 14 && length <= 16.5) {
+      } else if (length >= 16 && length <= 16.5) {
         return '11';
       }
     }
@@ -5762,9 +5762,9 @@ function BauerGlovesINT() {
     getResult: function getResult() {
       var length = this.invert(parseFloat(this.input.length, 10));
 
-      if (length >= 15.5 && length <= 18) {
+      if (length >= 17 && length <= 18) {
         return '12';
-      } else if (length >= 16.5 && length <= 19) {
+      } else if (length >= 18.5 && length <= 19) {
         return '13';
       }
     }
@@ -5800,9 +5800,9 @@ function BauerGlovesSR() {
     getResult: function getResult() {
       var length = this.invert(parseFloat(this.input.length, 10));
 
-      if (length >= 18 && length <= 20.5) {
+      if (length >= 19.5 && length <= 20.5) {
         return '14';
-      } else if (length >= 19 && length <= 22) {
+      } else if (length >= 21 && length <= 22) {
         return '15';
       }
     }
@@ -6347,11 +6347,11 @@ function BauerPlayerPantsYT() {
     getResult: function getResult() {
       var waist = this.invert(parseInt(this.input.waist, 10));
 
-      if (waist >= 48 && waist <= 53) {
+      if (waist >= 48 && waist <= 52) {
         return 'S';
-      } else if (waist >= 51 && waist <= 56) {
+      } else if (waist >= 53 && waist <= 55) {
         return 'M';
-      } else if (waist >= 54 && waist <= 62) {
+      } else if (waist >= 56 && waist <= 61) {
         return 'L';
       }
     }
@@ -6387,11 +6387,11 @@ function BauerPlayerPantsJR() {
     getResult: function getResult() {
       var waist = this.invert(parseInt(this.input.waist, 10));
 
-      if (waist >= 56 && waist <= 64) {
+      if (waist >= 61 && waist <= 64) {
         return 'S';
-      } else if (waist >= 62 && waist <= 66) {
+      } else if (waist >= 65 && waist <= 68) {
         return 'M';
-      } else if (waist >= 66 && waist <= 72) {
+      } else if (waist >= 69 && waist <= 72) {
         return 'L';
       }
     }
@@ -6427,9 +6427,9 @@ function BauerPlayerPantsINT() {
     getResult: function getResult() {
       var waist = this.invert(parseInt(this.input.waist, 10));
 
-      if (waist >= 71 && waist <= 80) {
+      if (waist >= 72 && waist <= 78) {
         return 'M';
-      } else if (waist >= 76 && waist <= 86) {
+      } else if (waist >= 73 && waist <= 82) {
         return 'L';
       }
     }
@@ -6466,14 +6466,12 @@ function BauerPlayerPantsSR() {
     getResult: function getResult() {
       var waist = this.invert(parseInt(this.input.waist, 10));
 
-      if (waist >= 81 && waist <= 91) {
+      if (waist >= 82 && waist <= 88) {
         return 'M';
-      } else if (waist >= 86 && waist <= 97) {
+      } else if (waist >= 89 && waist <= 96) {
         return 'L';
-      } else if (waist >= 91 && waist <= 102) {
+      } else if (waist >= 97 && waist <= 102) {
         return 'XL';
-      } else if (waist >= 102) {
-        return 'XXXL';
       }
     }
   });
@@ -7010,9 +7008,9 @@ function BauerShinGuardsYT() {
 
       if (length >= 25.5 && length <= 28) {
         return '8';
-      } else if (length >= 28 && length <= 31) {
+      } else if (length >= 28.5 && length <= 31) {
         return '9';
-      } else if (length >= 31 && length <= 33.5) {
+      } else if (length >= 31.5 && length <= 33.5) {
         return '10';
       }
     }
@@ -7050,7 +7048,7 @@ function BauerShinGuardsJR() {
 
       if (length >= 33.5 && length <= 36) {
         return '11';
-      } else if (length >= 36 && length <= 38.5) {
+      } else if (length >= 36.5 && length <= 38.5) {
         return '12';
       }
     }
@@ -7088,7 +7086,7 @@ function BauerShinGuardsINT() {
 
       if (length >= 38.5 && length <= 41) {
         return '13';
-      } else if (length >= 41 && length <= 43.5) {
+      } else if (length >= 41.5 && length <= 43.5) {
         return '14';
       }
     }
@@ -7127,12 +7125,10 @@ function BauerShinGuardsSR() {
 
       if (length >= 43.5 && length <= 46) {
         return '15';
-      } else if (length >= 46 && length <= 48.5) {
+      } else if (length >= 46.5 && length <= 48.5) {
         return '16';
-      } else if (length >= 48.5 && length <= 51.5) {
+      } else if (length >= 49 && length <= 51.5) {
         return '17';
-      } else if (length >= 51.5) {
-        return '18';
       }
     }
   });
@@ -8098,7 +8094,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59985" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60916" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
