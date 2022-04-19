@@ -14,7 +14,7 @@ export function BauerPlayerPantsWOMEN() {
       waist: 84,
     },
     getResult() {
-      const waist = this.invert(parseInt(this.input.waist, 10));
+      const waist = this.invert(parseFloat(this.input.waist, 10));
 
       if (waist >= 61 && waist <= 69) {
         return 'XS';

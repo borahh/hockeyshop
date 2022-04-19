@@ -5,16 +5,16 @@ export function BauerPlayerPantsINT() {
     ...PlayerPants,
 
     input: {
-      waist: 71,
+      waist: 72,
     },
     rangeFrom: {
-      waist: 71,
+      waist: 72,
     },
     rangeTo: {
-      waist: 86,
+      waist: 82,
     },
     getResult() {
-      const waist = this.invert(parseInt(this.input.waist, 10));
+      const waist = this.invert(parseFloat(this.input.waist, 10));
 
       if (waist >= 72 && waist <= 78) {
         return 'M';

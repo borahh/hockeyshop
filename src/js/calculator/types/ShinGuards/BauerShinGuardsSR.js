@@ -11,11 +11,10 @@ export function BauerShinGuardsSR() {
       length: 43.5,
     },
     rangeTo: {
-      length: 60,
-      // not accurate value
+      length: 51.5,
     },
     getResult() {
-      const length = this.invert(parseInt(this.input.length, 10));
+      const length = this.invert(parseFloat(this.input.length, 10));
 
       if (length >= 43.5 && length <= 46) {
         return '15';

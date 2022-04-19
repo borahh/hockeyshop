@@ -4,10 +4,10 @@ export function BauerGlovesINT() {
   return {
     ...Gloves,
     input: {
-      length: 15.5,
+      length: 17,
     },
     rangeFrom: {
-      length: 15.5,
+      length: 17,
     },
     rangeTo: {
       length: 19,

@@ -5713,10 +5713,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function BauerGlovesJR() {
   return _objectSpread(_objectSpread({}, _BauerBase.Gloves), {}, {
     input: {
-      length: 13
+      length: 14
     },
     rangeFrom: {
-      length: 13
+      length: 14
     },
     rangeTo: {
       length: 16.5
@@ -5751,10 +5751,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function BauerGlovesINT() {
   return _objectSpread(_objectSpread({}, _BauerBase.Gloves), {}, {
     input: {
-      length: 15.5
+      length: 17
     },
     rangeFrom: {
-      length: 15.5
+      length: 17
     },
     rangeTo: {
       length: 19
@@ -5789,10 +5789,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function BauerGlovesSR() {
   return _objectSpread(_objectSpread({}, _BauerBase.Gloves), {}, {
     input: {
-      length: 18
+      length: 19.5
     },
     rangeFrom: {
-      length: 18
+      length: 19.5
     },
     rangeTo: {
       length: 22
@@ -6342,10 +6342,10 @@ function BauerPlayerPantsYT() {
       waist: 48
     },
     rangeTo: {
-      waist: 62
+      waist: 61
     },
     getResult: function getResult() {
-      var waist = this.invert(parseInt(this.input.waist, 10));
+      var waist = this.invert(parseFloat(this.input.waist, 10));
 
       if (waist >= 48 && waist <= 52) {
         return 'S';
@@ -6376,16 +6376,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function BauerPlayerPantsJR() {
   return _objectSpread(_objectSpread({}, _BauerBase.PlayerPants), {}, {
     input: {
-      waist: 56
+      waist: 61
     },
     rangeFrom: {
-      waist: 56
+      waist: 61
     },
     rangeTo: {
       waist: 72
     },
     getResult: function getResult() {
-      var waist = this.invert(parseInt(this.input.waist, 10));
+      var waist = this.invert(parseFloat(this.input.waist, 10));
 
       if (waist >= 61 && waist <= 64) {
         return 'S';
@@ -6416,16 +6416,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function BauerPlayerPantsINT() {
   return _objectSpread(_objectSpread({}, _BauerBase.PlayerPants), {}, {
     input: {
-      waist: 71
+      waist: 72
     },
     rangeFrom: {
-      waist: 71
+      waist: 72
     },
     rangeTo: {
-      waist: 86
+      waist: 82
     },
     getResult: function getResult() {
-      var waist = this.invert(parseInt(this.input.waist, 10));
+      var waist = this.invert(parseFloat(this.input.waist, 10));
 
       if (waist >= 72 && waist <= 78) {
         return 'M';
@@ -6454,14 +6454,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function BauerPlayerPantsSR() {
   return _objectSpread(_objectSpread({}, _BauerBase.PlayerPants), {}, {
     input: {
-      waist: 81
+      waist: 82
     },
     rangeFrom: {
-      waist: 81
+      waist: 82
     },
     rangeTo: {
-      waist: 115 // THIS IS NOT ACCURATE VALUE
-
+      waist: 102
     },
     getResult: function getResult() {
       var waist = this.invert(parseInt(this.input.waist, 10));
@@ -6504,7 +6503,7 @@ function BauerPlayerPantsWOMEN() {
       waist: 84
     },
     getResult: function getResult() {
-      var waist = this.invert(parseInt(this.input.waist, 10));
+      var waist = this.invert(parseFloat(this.input.waist, 10));
 
       if (waist >= 61 && waist <= 69) {
         return 'XS';
@@ -7004,7 +7003,7 @@ function BauerShinGuardsYT() {
       length: 33.5
     },
     getResult: function getResult() {
-      var length = this.invert(parseInt(this.input.length, 10));
+      var length = this.invert(parseFloat(this.input.length, 10));
 
       if (length >= 25.5 && length <= 28) {
         return '8';
@@ -7082,7 +7081,7 @@ function BauerShinGuardsINT() {
       length: 43.5
     },
     getResult: function getResult() {
-      var length = this.invert(parseInt(this.input.length, 10));
+      var length = this.invert(parseFloat(this.input.length, 10));
 
       if (length >= 38.5 && length <= 41) {
         return '13';
@@ -7117,11 +7116,10 @@ function BauerShinGuardsSR() {
       length: 43.5
     },
     rangeTo: {
-      length: 60 // not accurate value
-
+      length: 51.5
     },
     getResult: function getResult() {
-      var length = this.invert(parseInt(this.input.length, 10));
+      var length = this.invert(parseFloat(this.input.length, 10));
 
       if (length >= 43.5 && length <= 46) {
         return '15';
@@ -7662,11 +7660,11 @@ function BauerShoulderPadsYT() {
     getResult: function getResult() {
       var chest = this.invert(parseInt(this.input.chest, 10));
 
-      if (chest >= 51 && chest <= 56) {
+      if (chest >= 51 && chest <= 55) {
         return 'S';
-      } else if (chest >= 56 && chest <= 61) {
+      } else if (chest >= 56 && chest <= 60) {
         return 'M';
-      } else if (chest >= 59 && chest <= 64) {
+      } else if (chest >= 61 && chest <= 64) {
         return 'L';
       }
     }
@@ -7691,20 +7689,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function BauerShoulderPadsJR() {
   return _objectSpread(_objectSpread({}, _BauerBase.ShoulderPads), {}, {
     input: {
-      chest: 61
+      chest: 65
     },
     rangeFrom: {
-      chest: 61
+      chest: 65
     },
     rangeTo: {
-      chest: 71
+      chest: 72
     },
     getResult: function getResult() {
       var chest = this.invert(parseInt(this.input.chest, 10));
 
-      if (chest >= 61 && chest <= 66) {
+      if (chest >= 65 && chest <= 68) {
         return 'S';
-      } else if (chest >= 67 && chest <= 71) {
+      } else if (chest >= 69 && chest <= 72) {
         return 'M';
       }
     }
@@ -7729,20 +7727,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function BauerShoulderPadsINT() {
   return _objectSpread(_objectSpread({}, _BauerBase.ShoulderPads), {}, {
     input: {
-      chest: 71
+      chest: 73
     },
     rangeFrom: {
-      chest: 71
+      chest: 73
     },
     rangeTo: {
-      chest: 102
+      chest: 96
     },
     getResult: function getResult() {
       var chest = this.invert(parseInt(this.input.chest, 10));
 
-      if (chest >= 71 && chest <= 81) {
+      if (chest >= 73 && chest <= 81) {
         return 'M';
-      } else if (chest >= 81 && chest <= 102) {
+      } else if (chest >= 82 && chest <= 96) {
         return 'L';
       }
     }
@@ -7773,17 +7771,16 @@ function BauerShoulderPadsSR() {
       chest: 97
     },
     rangeTo: {
-      chest: 120 // max value is not specific in the given data
-
+      chest: 117
     },
     getResult: function getResult() {
       var chest = parseInt(this.input.chest, 10);
 
-      if (chest >= 97 && chest <= 107) {
+      if (chest >= 97 && chest <= 103) {
         return 'M';
-      } else if (chest >= 102 && chest <= 112) {
+      } else if (chest >= 104 && chest <= 111) {
         return 'L';
-      } else if (chest >= 107 && chest <= 117) {
+      } else if (chest >= 112 && chest <= 117) {
         return 'XL';
       }
     }
@@ -8094,7 +8091,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60916" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50200" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

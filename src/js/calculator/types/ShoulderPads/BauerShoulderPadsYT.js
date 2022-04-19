@@ -15,11 +15,11 @@ export function BauerShoulderPadsYT() {
     getResult() {
       const chest = this.invert(parseInt(this.input.chest, 10));
 
-      if (chest >= 51 && chest <= 56) {
+      if (chest >= 51 && chest <= 55) {
         return 'S';
-      } else if (chest >= 56 && chest <= 61) {
+      } else if (chest >= 56 && chest <= 60) {
         return 'M';
-      } else if (chest >= 59 && chest <= 64) {
+      } else if (chest >= 61 && chest <= 64) {
         return 'L';
       }
     },

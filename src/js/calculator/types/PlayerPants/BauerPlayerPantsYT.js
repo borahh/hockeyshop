@@ -11,10 +11,10 @@ export function BauerPlayerPantsYT() {
       waist: 48,
     },
     rangeTo: {
-      waist: 62,
+      waist: 61,
     },
     getResult() {
-      const waist = this.invert(parseInt(this.input.waist, 10));
+      const waist = this.invert(parseFloat(this.input.waist, 10));
 
       if (waist >= 48 && waist <= 52) {
         return 'S';

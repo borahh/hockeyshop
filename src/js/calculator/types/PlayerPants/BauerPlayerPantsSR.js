@@ -5,14 +5,13 @@ export function BauerPlayerPantsSR() {
     ...PlayerPants,
 
     input: {
-      waist: 81,
+      waist: 82,
     },
     rangeFrom: {
-      waist: 81,
+      waist: 82,
     },
     rangeTo: {
-      waist: 115,
-      // THIS IS NOT ACCURATE VALUE
+      waist: 102,
     },
     getResult() {
       const waist = this.invert(parseInt(this.input.waist, 10));

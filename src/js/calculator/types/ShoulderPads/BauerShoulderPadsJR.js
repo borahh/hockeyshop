@@ -4,20 +4,20 @@ export function BauerShoulderPadsJR() {
   return {
     ...ShoulderPads,
     input: {
-      chest: 61,
+      chest: 65,
     },
     rangeFrom: {
-      chest: 61,
+      chest: 65,
     },
     rangeTo: {
-      chest: 71,
+      chest: 72,
     },
     getResult() {
       const chest = this.invert(parseInt(this.input.chest, 10));
 
-      if (chest >= 61 && chest <= 66) {
+      if (chest >= 65 && chest <= 68) {
         return 'S';
-      } else if (chest >= 67 && chest <= 71) {
+      } else if (chest >= 69 && chest <= 72) {
         return 'M';
       }
     },

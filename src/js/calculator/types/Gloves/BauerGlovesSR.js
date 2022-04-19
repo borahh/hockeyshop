@@ -4,10 +4,10 @@ export function BauerGlovesSR() {
   return {
     ...Gloves,
     input: {
-      length: 18,
+      length: 19.5,
     },
     rangeFrom: {
-      length: 18,
+      length: 19.5,
     },
     rangeTo: {
       length: 22,
