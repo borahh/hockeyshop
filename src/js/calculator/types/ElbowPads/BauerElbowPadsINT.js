@@ -14,7 +14,7 @@ export function BauerElbowPadsINT() {
       length: 29,
     },
     getResult() {
-      const length = this.invert(parseInt(this.input.length, 10));
+      const length = this.invert(parseFloat(this.input.length, 10));
 
       if (length >= 24 && length <= 26) {
         return 'M';

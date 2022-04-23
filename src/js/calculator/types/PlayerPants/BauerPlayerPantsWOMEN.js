@@ -3,7 +3,6 @@ import { PlayerPants } from './BauerBase';
 export function BauerPlayerPantsWOMEN() {
   return {
     ...PlayerPants,
-
     input: {
       waist: 61,
     },

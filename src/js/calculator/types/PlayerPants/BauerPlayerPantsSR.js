@@ -3,12 +3,11 @@ import { PlayerPants } from './BauerBase';
 export function BauerPlayerPantsSR() {
   return {
     ...PlayerPants,
-
     input: {
-      waist: 82,
+      waist: 86,
     },
     rangeFrom: {
-      waist: 82,
+      waist: 86,
     },
     rangeTo: {
       waist: 102,
@@ -16,11 +15,11 @@ export function BauerPlayerPantsSR() {
     getResult() {
       const waist = this.invert(parseInt(this.input.waist, 10));
 
-      if (waist >= 82 && waist <= 88) {
+      if (waist >= 86 && waist <= 91) {
         return 'M';
-      } else if (waist >= 89 && waist <= 96) {
+      } else if (waist >= 92 && waist <= 97) {
         return 'L';
-      } else if (waist >= 97 && waist <= 102) {
+      } else if (waist >= 98 && waist <= 102) {
         return 'XL';
       }
     },

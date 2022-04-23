@@ -13,7 +13,7 @@ export function BauerShoulderPadsINT() {
       chest: 96,
     },
     getResult() {
-      const chest = this.invert(parseInt(this.input.chest, 10));
+      const chest = this.invert(parseFloat(this.input.chest, 10));
 
       if (chest >= 73 && chest <= 81) {
         return 'M';

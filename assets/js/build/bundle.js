@@ -5214,7 +5214,7 @@ function BauerElbowPadsINT() {
       length: 29
     },
     getResult: function getResult() {
-      var length = this.invert(parseInt(this.input.length, 10));
+      var length = this.invert(parseFloat(this.input.length, 10));
 
       if (length >= 24 && length <= 26) {
         return 'M';
@@ -5252,7 +5252,7 @@ function BauerElbowPadsJR() {
       length: 25
     },
     getResult: function getResult() {
-      var Length = this.invert(parseInt(this.input.length, 10));
+      var Length = this.invert(parseFloat(this.input.length, 10));
 
       if (Length >= 20 && Length <= 22) {
         return 'S';
@@ -5290,7 +5290,7 @@ function BauerElbowPadsSR() {
       length: 37
     },
     getResult: function getResult() {
-      var length = this.invert(parseInt(this.input.length, 10));
+      var length = this.invert(parseFloat(this.input.length, 10));
 
       if (length >= 27 && length <= 31) {
         return 'M';
@@ -5414,7 +5414,7 @@ function BauerElbowPadsYT() {
       length: 20
     },
     getResult: function getResult() {
-      var Length = this.invert(parseInt(this.input.length, 10));
+      var Length = this.invert(parseFloat(this.input.length, 10));
 
       if (Length >= 15 && Length <= 16) {
         return 'S';
@@ -6422,14 +6422,14 @@ function BauerPlayerPantsINT() {
       waist: 72
     },
     rangeTo: {
-      waist: 82
+      waist: 86
     },
     getResult: function getResult() {
       var waist = this.invert(parseFloat(this.input.waist, 10));
 
       if (waist >= 72 && waist <= 78) {
         return 'M';
-      } else if (waist >= 73 && waist <= 82) {
+      } else if (waist >= 79 && waist <= 86) {
         return 'L';
       }
     }
@@ -6454,10 +6454,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function BauerPlayerPantsSR() {
   return _objectSpread(_objectSpread({}, _BauerBase.PlayerPants), {}, {
     input: {
-      waist: 82
+      waist: 86
     },
     rangeFrom: {
-      waist: 82
+      waist: 86
     },
     rangeTo: {
       waist: 102
@@ -6465,11 +6465,11 @@ function BauerPlayerPantsSR() {
     getResult: function getResult() {
       var waist = this.invert(parseInt(this.input.waist, 10));
 
-      if (waist >= 82 && waist <= 88) {
+      if (waist >= 86 && waist <= 91) {
         return 'M';
-      } else if (waist >= 89 && waist <= 96) {
+      } else if (waist >= 92 && waist <= 97) {
         return 'L';
-      } else if (waist >= 97 && waist <= 102) {
+      } else if (waist >= 98 && waist <= 102) {
         return 'XL';
       }
     }
@@ -7658,7 +7658,7 @@ function BauerShoulderPadsYT() {
       chest: 64
     },
     getResult: function getResult() {
-      var chest = this.invert(parseInt(this.input.chest, 10));
+      var chest = this.invert(parseFloat(this.input.chest, 10));
 
       if (chest >= 51 && chest <= 55) {
         return 'S';
@@ -7698,7 +7698,7 @@ function BauerShoulderPadsJR() {
       chest: 72
     },
     getResult: function getResult() {
-      var chest = this.invert(parseInt(this.input.chest, 10));
+      var chest = this.invert(parseFloat(this.input.chest, 10));
 
       if (chest >= 65 && chest <= 68) {
         return 'S';
@@ -7736,7 +7736,7 @@ function BauerShoulderPadsINT() {
       chest: 96
     },
     getResult: function getResult() {
-      var chest = this.invert(parseInt(this.input.chest, 10));
+      var chest = this.invert(parseFloat(this.input.chest, 10));
 
       if (chest >= 73 && chest <= 81) {
         return 'M';
@@ -7774,7 +7774,7 @@ function BauerShoulderPadsSR() {
       chest: 117
     },
     getResult: function getResult() {
-      var chest = parseInt(this.input.chest, 10);
+      var chest = this.invert(parseFloat(this.input.chest, 10));
 
       if (chest >= 97 && chest <= 103) {
         return 'M';
@@ -7814,7 +7814,7 @@ function BauerShoulderPadsWOMEN() {
       chest: 102
     },
     getResult: function getResult() {
-      var chest = this.invert(parseInt(this.input.chest, 10));
+      var chest = this.invert(parseFloat(this.input.chest, 10));
 
       if (chest >= 76 && chest <= 86) {
         return 'XS';
@@ -8091,7 +8091,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50200" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53530" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

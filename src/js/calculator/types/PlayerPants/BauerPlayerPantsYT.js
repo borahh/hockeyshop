@@ -3,7 +3,6 @@ import { PlayerPants } from './BauerBase';
 export function BauerPlayerPantsYT() {
   return {
     ...PlayerPants,
-
     input: {
       waist: 48,
     },
