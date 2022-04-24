@@ -36,6 +36,15 @@ if ( ! defined( 'BORAHH_HOCKEYSHOP_IMG_URL' ) ) {
 	define( 'BORAHH_HOCKEYSHOP_IMG_URL', get_stylesheet_directory_uri(). '/assets/images/' );
 }
 
+/**
+ * Register Custom Mega Menu
+ */
+add_action( 'after_setup_theme', 'hockeyshop_mega_menu' );
+ 
+function hockeyshop_mega_menu() {
+    register_nav_menu( 'megamenu', __( 'Mega Menu', 'hockeyshop-theme' ) );
+}
+
 
 /**
  * Load child theme css and optional scripts
