@@ -42,7 +42,12 @@ if ( ! defined( 'BORAHH_HOCKEYSHOP_IMG_URL' ) ) {
 add_action( 'after_setup_theme', 'hockeyshop_mega_menu' );
  
 function hockeyshop_mega_menu() {
-    register_nav_menu( 'megamenu', __( 'Mega Menu', 'hockeyshop-theme' ) );
+    register_nav_menu( 'skojter_mega', __( 'Skojter --- Mega Menu', 'hockeyshop-theme' ) );
+    register_nav_menu( 'ishockeyudstyr_mega', __( 'Ishockeyudstyr --- Mega Menu', 'hockeyshop-theme' ) );
+    register_nav_menu( 'ishockeystave_mega', __( 'Ishockeystave --- Mega Menu', 'hockeyshop-theme' ) );
+    register_nav_menu( 'rulleskojter_mega', __( 'Rulleskojter --- Mega Menu', 'hockeyshop-theme' ) );
+    register_nav_menu( 'streethockey_mega', __( 'Streethockey --- Mega Menu', 'hockeyshop-theme' ) );
+    register_nav_menu( 'udstyr_mega', __( 'Udstyr --- Mega Menu', 'hockeyshop-theme' ) );
 }
 
 
