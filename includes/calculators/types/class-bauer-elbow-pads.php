@@ -43,7 +43,7 @@ class BauerElbowPads extends BorahhCalculatorBase {
             <span>INCH</span>
         </div>
         
-        <img height="200" width="300" src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'elbow.svg'; ?>"> 
+        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'elbow.svg'; ?>"> 
         
         <h2>
             <?php _e("Længde", "hockeyshop-theme"); ?>
@@ -63,7 +63,7 @@ class BauerElbowPads extends BorahhCalculatorBase {
      protected function steps() {
         ob_start();
         ?>
-            <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length calculator__wraper__content__form__tab--length-multi" x-show="currentStep === 0">
+            <div class="calculator__wraper__content__form__tab calculator__wraper__content__form__tab--length calculator__wraper__content__form__tab--length-elbow calculator__wraper__content__form__tab--length-multi" x-show="currentStep === 0">
                 <?php echo $this->lengthOptions(); ?>
             </div>
             
