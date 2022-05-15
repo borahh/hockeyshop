@@ -44,7 +44,7 @@ class BauerElbowPads extends BorahhCalculatorBase {
         </div>
         
         <h2>
-            <?php _e("Longueur", "hockeyshop-theme"); ?>
+            <?php _e("Længde", "hockeyshop-theme"); ?>
         </h2>
         <div class="calculator__wraper__content__form__tab--length__input">
             <input type="text" :value="getLengthValue" >            

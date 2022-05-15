@@ -133,7 +133,6 @@ function woo_remove_wc_breadcrumbs() {
 /**
  * Enque admin styles 
  */
-
 function admin_style() {
   wp_enqueue_style('admin-styles', BORAHH_HOCKEYSHOP_URL.'/admin.css');
 }
