@@ -2,13 +2,13 @@
 
 //[foobar]
 function foobar_func( $atts ){ ?>
-	<?php if( have_rows('repeater', 'option') ): ?>
+	<?php if( have_rows('hbdv_mega_primary_levels', 'option') ): ?>
 
         <ul>
         
-        <?php while( have_rows('repeater', 'option') ): the_row(); ?>
+        <?php while( have_rows('hbdv_mega_primary_levels', 'option') ): the_row(); ?>
         
-            <li><?php the_sub_field('title'); ?></li>
+            <li><?php the_sub_field('hbdv_mega_primary_level_title'); ?></li>
         
         <?php endwhile; ?>
         
