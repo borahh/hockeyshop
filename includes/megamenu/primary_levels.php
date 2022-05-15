@@ -1,5 +1,16 @@
 <?php
 
+function get_hockeyshop_primary_levels() {
+    $levels = array();
+    if( have_rows('hbdv_mega_primary_levels', 'option') ):  
+        while( have_rows('hbdv_mega_primary_levels', 'option') ): the_row();
+           array_push($levels,the_sub_field('hbdv_mega_primary_level_id'));       
+        endwhile;  
+    endif;
+    print_r($levels);
+}
+add_shortcode( 'foobar', 'get_hockeyshop_primary_levels' );
+
 //[foobar]
 function foobar_func( $atts ){ ?>
 	<?php if( have_rows('hbdv_mega_primary_levels', 'option') ): ?>
@@ -17,7 +28,7 @@ function foobar_func( $atts ){ ?>
         <?php endif; ?>
         <?php
 }
-add_shortcode( 'foobar', 'foobar_func' );
+add_shortcode( 'foobarx', 'foobar_func' );
 
 
 
