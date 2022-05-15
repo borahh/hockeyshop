@@ -4,7 +4,7 @@ function get_hockeyshop_primary_levels() {
     $levels = array();
     if( have_rows('hbdv_mega_primary_levels', 'option') ):  
         while( have_rows('hbdv_mega_primary_levels', 'option') ): the_row();
-           array_push($levels,the_sub_field('hbdv_mega_primary_level_id'));       
+           array_push($levels,get_sub_field('hbdv_mega_primary_level_id'));       
         endwhile;  
     endif;
     print_r($levels);
