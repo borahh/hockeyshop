@@ -6,7 +6,7 @@ function get_hockeyshop_primary_levels() {
         while( have_rows('hbdv_mega_primary_levels', 'option') ): the_row();
         // $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $string)));
            $name='MegaMenu --- '. get_sub_field('hbdv_mega_primary_level_id');
-           array_push($name);       
+           array_push($levels,$name);       
         endwhile;  
     endif;
     print_r($levels);
