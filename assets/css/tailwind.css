@@ -284,8 +284,13 @@
             }
             &--length {
               @apply text-center;
+
               img {
                 @apply w-3/4 mb-10 text-center;
+              }
+
+              img.small {
+                @apply w-[40%] mb-5;
               }
 
               &__input {
