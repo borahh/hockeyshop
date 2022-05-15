@@ -10,6 +10,11 @@ if ( ! defined( 'BORAHH_HOCKEYSHOP_DIR_CALCULATORS' ) ) {
 	define( 'BORAHH_HOCKEYSHOP_DIR_CALCULATORS', get_stylesheet_directory() . '/includes/calculators/' );
 }
 
+// Define includes/megamenu path
+if ( ! defined( 'BORAHH_HOCKEYSHOP_DIR_MEGAMENU' ) ) {
+	define( 'BORAHH_HOCKEYSHOP_DIR_MEGAMENU', get_stylesheet_directory() . '/includes/megamenu/' );
+}
+
 // Define includes/woocommerce path
 if ( ! defined( 'BORAHH_HOCKEYSHOP_DIR_WOO' ) ) {
 	define( 'BORAHH_HOCKEYSHOP_DIR_WOO', get_stylesheet_directory() . '/includes/woocommerce/' );
@@ -37,7 +42,7 @@ if ( ! defined( 'BORAHH_HOCKEYSHOP_IMG_URL' ) ) {
 }
 
 /**
- * Register Custom Mega Menu
+ * Register Custom Mega Menu Location
  */
 add_action( 'after_setup_theme', 'hockeyshop_mega_menu' );
  
@@ -104,6 +109,7 @@ add_action( 'wp_enqueue_scripts', 'hockeyshop_enqueue_scripts', 999 );
 // Include Files
 include BORAHH_HOCKEYSHOP_DIR_CALCULATORS . 'index.php';    
 include BORAHH_HOCKEYSHOP_DIR_WOO . 'index.php';    
+include BORAHH_HOCKEYSHOP_DIR_MEGAMENU . 'primary_levels.php';    
 
 
 
