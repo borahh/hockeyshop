@@ -45,6 +45,8 @@ class BauerGloves extends BorahhCalculatorBase {
             <span>INCH</span>
         </div>
         
+        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'palm.svg'; ?>"> 
+        
         <h2>
             <?php _e("Højde", "hockeyshop-theme"); ?>
         </h2>
