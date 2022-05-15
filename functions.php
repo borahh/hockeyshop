@@ -41,6 +41,8 @@ if ( ! defined( 'BORAHH_HOCKEYSHOP_IMG_URL' ) ) {
 	define( 'BORAHH_HOCKEYSHOP_IMG_URL', get_stylesheet_directory_uri(). '/assets/images/' );
 }
 
+include BORAHH_HOCKEYSHOP_DIR_MEGAMENU . 'primary_levels.php';    
+
 /**
  * Register Custom Mega Menu Location
  */
@@ -48,7 +50,12 @@ add_action( 'after_setup_theme', 'hockeyshop_mega_menu' );
  
 function hockeyshop_mega_menu() {
     register_nav_menu( 'hockeyshop_mega', __( 'Hockeyshop -- Mega Menu', 'hockeyshop-theme' ) );
-   
+	
+	$levels=get_hockeyshop_primary_levels();
+    foreach ($levels as $level) {
+        $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $level)));
+        register_nav_menu( $slug, __( $level, 'hockeyshop-theme' ) );
+    }
 }
 
 /**
@@ -109,7 +116,6 @@ add_action( 'wp_enqueue_scripts', 'hockeyshop_enqueue_scripts', 999 );
 // Include Files
 include BORAHH_HOCKEYSHOP_DIR_CALCULATORS . 'index.php';    
 include BORAHH_HOCKEYSHOP_DIR_WOO . 'index.php';    
-include BORAHH_HOCKEYSHOP_DIR_MEGAMENU . 'primary_levels.php';    
 
 
 

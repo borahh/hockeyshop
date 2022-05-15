@@ -12,14 +12,7 @@ function get_hockeyshop_primary_levels() {
 }
 add_shortcode( 'foobar', 'get_hockeyshop_primary_levels' );
 
-function get_hockeyshop_primary_levels_menus() {
-    $levels=get_hockeyshop_primary_levels();
-    foreach ($levels as $level) {
-        $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $level)));
-        register_nav_menu( $slug, __( $level, 'hockeyshop-theme' ) );
-    }
 
-}
 //[foobar]
 function foobar_func( $atts ){ ?>
 	<?php if( have_rows('hbdv_mega_primary_levels', 'option') ): ?>
