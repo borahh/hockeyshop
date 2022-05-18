@@ -54,7 +54,7 @@ function borahh_get_calculator() {
     // Get calculator type from product field 'hbdv_load_calculator'
 	$value = get_field('hbdv_load_calculator', $post->ID);
 
-    if(!$value || $value === '') {
+    if(!$value || $value === '' || $value === 'disabled') {
         return;
     }
 

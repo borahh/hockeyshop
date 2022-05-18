@@ -43,6 +43,8 @@ class CCMElbowPads extends BorahhCalculatorBase {
             <span>INCH</span>
         </div>
         
+        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'elbow.svg'; ?>" class="small"> 
+
         <h2>
             <?php _e("Højde", "hockeyshop-theme"); ?>
         </h2>
