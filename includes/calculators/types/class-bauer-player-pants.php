@@ -42,6 +42,8 @@ class BauerPlayerPants extends BorahhCalculatorBase {
             </div>
             <span>INCH</span>
         </div>
+
+        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'waist.svg'; ?>" class="small"> 
         
         <h2>
             <?php _e("Hoftmål", "hockeyshop-theme"); ?>
