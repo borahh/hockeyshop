@@ -62,7 +62,7 @@ class CCMPlayerPants extends BorahhCalculatorBase {
 
         // Fix from here
         ?>
-        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'waist.svg'; ?>" class="vsmall"> 
+        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'waist.svg'; ?>" class="small"> 
         
 
         <h2>
