@@ -43,7 +43,7 @@ class BauerShoulderPads extends BorahhCalculatorBase {
             <span>INCH</span>
         </div>
         
-        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'forearm.svg'; ?>" class="small"> 
+        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'chest.svg'; ?>" class="small"> 
         
         <h2>
             <?php _e("Brystomkreds", "hockeyshop-theme"); ?>

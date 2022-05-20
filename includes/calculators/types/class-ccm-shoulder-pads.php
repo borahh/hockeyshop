@@ -64,7 +64,7 @@ class CCMShoulderPads extends BorahhCalculatorBase {
         // Fix from here
         ?>
         
-        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'forearm.svg'; ?>" class="small"> 
+        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'chest.svg'; ?>" class="small"> 
      
 
         <h2>
