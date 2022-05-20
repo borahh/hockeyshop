@@ -42,6 +42,7 @@ class CCMShoulderPads extends BorahhCalculatorBase {
             </div>
             <span>INCH</span>
         </div>
+        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'height.svg'; ?>" class="small"> 
         
         <h2>
             <?php _e("Højde", "hockeyshop-theme"); ?>
