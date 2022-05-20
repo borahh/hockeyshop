@@ -63,7 +63,7 @@ class CCMShinGuards extends BorahhCalculatorBase {
         // Fix from here
         ?>
         
-        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'shin.svg'; ?>" class="small"> 
+        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'shin.svg'; ?>" class="vsmall"> 
 
         <h2>
             <?php _e("Underben", "hockeyshop-theme"); ?>

@@ -305,7 +305,7 @@
                 }
 
                 input {
-                  @apply w-[35px] border-none bg-transparent text-2xl leading-7 p-0;
+                  @apply w-[40px] border-none bg-transparent text-2xl leading-7 p-0;
                 }
               }
               &__switcher {
