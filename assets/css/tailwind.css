@@ -297,6 +297,9 @@
                 @apply w-[30%] mb-3;
               }
 
+              img.vvsmall {
+                @apply w-[20%] mb-3;
+              }
               &__input {
                 @apply flex items-center justify-center mt-6 mb-5 capitalize justify-items-center;
 

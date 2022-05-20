@@ -582,6 +582,10 @@
     margin-bottom: 0.75rem;
     width: 30%;
 }
+.calculator__wraper__content__form__tab--length img.vvsmall {
+    margin-bottom: 0.75rem;
+    width: 20%;
+}
 .calculator__wraper__content__form__tab--length__input {
     margin-top: 1.5rem;
     margin-bottom: 1.25rem;

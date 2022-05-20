@@ -43,7 +43,7 @@ class BauerShinGuards extends BorahhCalculatorBase {
             <span>INCH</span>
         </div>
         
-        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'shin.svg'; ?>" class="vsmall"> 
+        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'shin.svg'; ?>" class="vvsmall"> 
 
         <h2>
             <?php _e("Længde", "hockeyshop-theme"); ?>
