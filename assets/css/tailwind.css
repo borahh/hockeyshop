@@ -293,6 +293,10 @@
                 @apply w-[40%] mb-5;
               }
 
+              img.min {
+                @apply w-[30%] mb-5;
+              }
+
               &__input {
                 @apply flex items-center justify-center mt-6 mb-5 capitalize justify-items-center;
 
