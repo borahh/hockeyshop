@@ -43,7 +43,7 @@ class CCMElbowPads extends BorahhCalculatorBase {
             <span>INCH</span>
         </div>
         
-        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'elbow.svg'; ?>" class="vsmall"> 
+        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'forearm.svg'; ?>" class="vsmall"> 
 
         <h2>
             <?php _e("Højde", "hockeyshop-theme"); ?>
@@ -75,6 +75,7 @@ class CCMElbowPads extends BorahhCalculatorBase {
         
         <input id="foreArmLength" type="range" class="calculator-range sm:w-5/6" x-model="input.foreArmLength" step="1">
         
+        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'bicep.svg'; ?>" class="vsmall"> 
         <h2>
             <?php _e("Biceps Omkreds", "hockeyshop-theme"); ?>
         </h2>

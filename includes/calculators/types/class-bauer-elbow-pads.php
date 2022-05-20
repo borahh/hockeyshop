@@ -43,7 +43,7 @@ class BauerElbowPads extends BorahhCalculatorBase {
             <span>INCH</span>
         </div>
         
-        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'elbow.svg'; ?>" class="vsmall"> 
+        <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'forearm.svg'; ?>" class="vsmall"> 
         
         <h2>
             <?php _e("Længde", "hockeyshop-theme"); ?>
