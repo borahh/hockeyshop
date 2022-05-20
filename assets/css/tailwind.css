@@ -293,8 +293,8 @@
                 @apply w-[40%] mb-5;
               }
 
-              img.min {
-                @apply w-[30%] mb-5;
+              img.vsmall {
+                @apply w-[30%] mb-3;
               }
 
               &__input {

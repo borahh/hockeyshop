@@ -578,8 +578,8 @@
     margin-bottom: 1.25rem;
     width: 40%;
 }
-.calculator__wraper__content__form__tab--length img.min {
-    margin-bottom: 1.25rem;
+.calculator__wraper__content__form__tab--length img.vsmall {
+    margin-bottom: 0.75rem;
     width: 30%;
 }
 .calculator__wraper__content__form__tab--length__input {
