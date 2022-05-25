@@ -5,7 +5,7 @@ function get_hockeyshop_all_primary_levels() {
         return strpos($key, 'megamenu---') === 0;
     }, ARRAY_FILTER_USE_KEY);
     
-    print_r($levels);
+    return $levels;
 }
 
 
