@@ -29,7 +29,6 @@ hello_elementor_body_open(); ?>
 foreach ($megamenu as $name => $value) {
     wp_nav_menu( array(
 		'theme_location' => $name,
-		'items_wrap'     => '<ul><li id="item-id"><?php __( 'Menu:', 'textdomain' ); ?></li>%3$s</ul>'
 	) );
 }
 
