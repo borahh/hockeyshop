@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php
 hello_elementor_body_open(); ?>
 
-<?php print_r(get_nav_menu_locations());
+<?php print_r(get_hockeyshop_all_primary_levels());
 if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'header' ) ) {
 	if ( did_action( 'elementor/loaded' ) && hello_header_footer_experiment_active() ) {
 		get_template_part( 'template-parts/dynamic-header' );

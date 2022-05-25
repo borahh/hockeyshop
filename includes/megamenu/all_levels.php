@@ -1,13 +1,13 @@
 <?php
 
-function get_hockeyshop_primary_menus() {
-    $levels = array();
-    if( have_rows('hbdv_mega_primary_levels', 'option') ):  
-        while( have_rows('hbdv_mega_primary_levels', 'option') ): the_row();
-           $name='MegaMenu --- '. get_sub_field('hbdv_mega_primary_level_id');
-           array_push($levels,$name);       
-        endwhile;  
-    endif;
+function get_hockeyshop_all_primary_levels() {
+    function megamenu($array) {
+      if(str_starts_with($array=>$name, 'megamenu---'))
+        return true;
+      else 
+        return false; 
+      }
+    $levels = array_filter(get_nav_menu_locations(), "Even");
     return $levels;
 }
 
