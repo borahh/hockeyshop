@@ -8,5 +8,4 @@ function get_hockeyshop_all_primary_levels() {
     return $levels;
 }
 
-
 ?>
