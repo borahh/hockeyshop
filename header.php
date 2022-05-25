@@ -25,7 +25,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php
 hello_elementor_body_open(); ?>
 
-<?php print_r(get_hockeyshop_all_primary_levels());
+<?php $megamenu = get_hockeyshop_all_primary_levels();
+foreach ($megamenu as $name => $value) {
+    wp_nav_menu( array(
+		'theme_location' => $name,
+		'items_wrap'     => '<ul><li id="item-id"><?php __( 'Menu:', 'textdomain' ); ?></li>%3$s</ul>'
+	) );
+}
+
+ 
 if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'header' ) ) {
 	if ( did_action( 'elementor/loaded' ) && hello_header_footer_experiment_active() ) {
 		get_template_part( 'template-parts/dynamic-header' );
