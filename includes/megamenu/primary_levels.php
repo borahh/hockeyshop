@@ -21,7 +21,7 @@ function get_hockeyshop_primary_levels() {
            echo $title.$url.$id;    
         endwhile;  
     endif;
-    return $levels;
+    
 }
 
 function foobar_func( $atts ){ 
