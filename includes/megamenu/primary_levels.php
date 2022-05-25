@@ -11,23 +11,23 @@ function get_hockeyshop_primary_menus() {
     return $levels;
 }
 
-function get_hockeyshop_primary_levels() {
+// function get_hockeyshop_primary_levels() {
     
-    if( have_rows('hbdv_mega_primary_levels', 'option') ):  
-        while( have_rows('hbdv_mega_primary_levels', 'option') ): the_row();
-           $title=get_sub_field('hbdv_mega_primary_level_title');
-           $url=get_sub_field('hbdv_mega_primary_level_url');
-           $id=get_sub_field('hbdv_mega_primary_level_id');
-           echo $title.$url.$id;    
-        endwhile;  
-    endif;
+//     if( have_rows('hbdv_mega_primary_levels', 'option') ):  
+//         while( have_rows('hbdv_mega_primary_levels', 'option') ): the_row();
+//            $title=get_sub_field('hbdv_mega_primary_level_title');
+//            $url=get_sub_field('hbdv_mega_primary_level_url');
+//            $id=get_sub_field('hbdv_mega_primary_level_id');
+//            echo $title.$url.$id;    
+//         endwhile;  
+//     endif;
     
-}
+// }
 
-function foobar_func( $atts ){ 
-    print_r(get_hockeyshop_primary_levels());
-}
-add_shortcode( 'foobarx', 'foobar_func' );
+// function foobar_func( $atts ){ 
+//     print_r(get_hockeyshop_primary_levels());
+// }
+// add_shortcode( 'foobarx', 'foobar_func' );
 
 
 
