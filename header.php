@@ -23,8 +23,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 <body <?php body_class(); ?>>
 
 <?php
-hello_elementor_body_open();
+hello_elementor_body_open(); ?>
 
+<?php print_r(get_nav_menu_locations());
 if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'header' ) ) {
 	if ( did_action( 'elementor/loaded' ) && hello_header_footer_experiment_active() ) {
 		get_template_part( 'template-parts/dynamic-header' );

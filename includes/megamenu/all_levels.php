@@ -12,7 +12,4 @@ function get_hockeyshop_primary_menus() {
 }
 
 
-
-
-
-
+?>
