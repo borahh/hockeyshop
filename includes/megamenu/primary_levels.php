@@ -57,7 +57,7 @@ function get_hockeyshop_menu_holder() {
             </button>
      <div class="menu item  overflow-y-scroll lg:overflow-visible overflow-x-hidden  flex flex-col lg:bg-[#1d1d1d] ">
                 <div class=' p-3 px-5 flex justify-between lg:hidden'>
-                    <button class="flex items-center gap-2 hidden bg-transparent p-0 " id='back_btn'>
+                    <button class="flex items-center gap-2 hidden " id='back_btn'>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
@@ -154,6 +154,9 @@ function get_hockeyshop_main_menu() { ?>
             opened[opened.length - 1].classList.remove('opened')
             if (opened.length <= 1) {
                 changeMenuIcon(false)
+            }
+            if (opened.length <= 2) {
+               backBtn.classList.add('hidden')
             }
 
 
