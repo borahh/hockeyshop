@@ -75,7 +75,7 @@ function get_hockeyshop_menu_holder() {
                     $name=hockeyshop_create_menu_name($id);
                     ?>
                     <div class="hbdv_megamenu__primary drop_down">
-                        <a class="hbdv_megamenu__primary--btn btn" href="<?php echo $url; ?>"><?php echo $title; ?></a>
+                        <a class="hbdv_megamenu__primary--btn btn" ><?php echo $title; ?></a>
                         
                     <?php    
                         wp_nav_menu( array(
