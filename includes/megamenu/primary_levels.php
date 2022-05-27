@@ -17,7 +17,7 @@ function get_hockeyshop_primary_menus() {
 
 
 function get_hockeyshop_main_menu() { ?>
-    <div class="hbdv_megamenu--primary">
+    <div class="hbdv_megamenu">
     
     <?php
     if( have_rows('hbdv_mega_primary_levels', 'option') ):  
@@ -27,13 +27,13 @@ function get_hockeyshop_main_menu() { ?>
            $id='MegaMenu --- '. get_sub_field('hbdv_mega_primary_level_id');
            $name=hockeyshop_create_menu_name($id);
            ?>
-           <div class="hbdv_megamenu--group">
-              <a class="hbdv_menu_btn" href="<?php echo $url; ?>"><?php echo $title; ?></a>
+           <div class="hbdv_megamenu__primary">
+              <a class="hbdv_megamenu--btn" href="<?php echo $url; ?>"><?php echo $title; ?></a>
               
            <?php    
                wp_nav_menu( array(
                 'theme_location' => $name,
-                'container_class' => 'hbdv_megamenu_sub',
+                'container_class' => 'hbdv_megamenu__secondary',
                 
                ) );
             ?>
