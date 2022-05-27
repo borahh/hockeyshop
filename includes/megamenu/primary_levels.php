@@ -14,6 +14,7 @@ function get_hockeyshop_primary_menus() {
 
 function get_hockeyshop_main_menu() {
     <div class="hbdv_megamenu--primary">
+    <?php
     if( have_rows('hbdv_mega_primary_levels', 'option') ):  
         ?>
         <ul class="menu">
