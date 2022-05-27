@@ -18,7 +18,7 @@ function get_hockeyshop_primary_menus() {
 
 function get_hockeyshop_main_menu() { ?>
     <div class="hbdv_megamenu--primary">
-    <div class="hbdv_megamenu--grouo">
+    
     <?php
     if( have_rows('hbdv_mega_primary_levels', 'option') ):  
         while( have_rows('hbdv_mega_primary_levels', 'option') ): the_row();
@@ -27,6 +27,7 @@ function get_hockeyshop_main_menu() { ?>
            $id='MegaMenu --- '. get_sub_field('hbdv_mega_primary_level_id');
            $name=hockeyshop_create_menu_name($id);
            ?>
+           <div class="hbdv_megamenu--group">
               <a class="hbdv_menu_btn" href="<?php echo $url; ?>"><?php echo $title; ?></a>
               
            <?php    
@@ -35,10 +36,12 @@ function get_hockeyshop_main_menu() { ?>
                 'container_class' => 'hbdv_megamenu_sub',
                 
                ) );
+            ?>
+            </div>
+            <?php
         endwhile;
     endif;
     ?>
-    </div>
     </div>
     <?php
 }
