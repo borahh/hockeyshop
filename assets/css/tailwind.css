@@ -227,6 +227,10 @@
 }
 
 @layer components {
+  /** Menu stuff here **/
+
+  /** End Menu Stuff **/
+  /** Calculator stuff only **/
   .calculator {
     @apply font-social-gothic mt-10 max-w-[500px] bg-light;
 
