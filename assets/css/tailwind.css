@@ -231,7 +231,7 @@
 
   /* ADDED FROM HERE */
 #back_btn{
-  @apply  bg-transparent p-0;
+  @apply  bg-transparent p-0 text-black;
 }
   .btn{
     @apply w-full flex justify-between items-center py-1.5 font-medium  text-xl lg:text-2xl lg:text-[#9dbaee] lg:w-fit  2xl:text-3xl ;
