@@ -244,9 +244,9 @@
       }
     }
   }
-  
+  /* ADDED FROM HERE */
   .btn{
-    @apply w-full flex justify-between items-center py-1.5 font-medium font-['Pathway_Gothic_One'] text-xl lg:text-2xl lg:text-[#9dbaee] lg:w-fit  2xl:text-3xl ;
+    @apply w-full flex justify-between items-center py-1.5 font-medium  text-xl lg:text-2xl lg:text-[#9dbaee] lg:w-fit  2xl:text-3xl ;
 }
 
 .item a{
@@ -284,6 +284,7 @@
 .drop_down > .item svg{
       @apply lg:hidden;
 }
+/* TO HERE */
   /** End Menu Stuff **/
   /** Calculator stuff only **/
   .calculator {
