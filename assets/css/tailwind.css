@@ -228,7 +228,22 @@
 
 @layer components {
   /** Menu stuff here **/
+  .hbdv_megamenu {
+    @apply flex;
+    &__primary {
+      @apply bg-slate-400;
+      &--btn {
+        @apply text-red-700;
+      }
+    }
 
+    &__secondary {
+      @apply bg-slate-700;
+      &--list {
+        @apply list-none;
+      }
+    }
+  }
   /** End Menu Stuff **/
   /** Calculator stuff only **/
   .calculator {
