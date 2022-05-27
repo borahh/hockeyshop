@@ -577,7 +577,7 @@ nav .menu_btn, nav #close_all_opened {
     width: -moz-fit-content;
     width: fit-content;
     background-color: transparent;
-    padding: 0px;
+    padding: 0.75rem;
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
 }
