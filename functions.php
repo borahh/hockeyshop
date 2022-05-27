@@ -50,8 +50,6 @@ include BORAHH_HOCKEYSHOP_DIR_MEGAMENU . 'all_levels.php';
 add_action( 'after_setup_theme', 'hockeyshop_mega_menu' );
  
 function hockeyshop_mega_menu() {
-    register_nav_menu( 'hockeyshop_mega', __( 'Hockeyshop -- Mega Menu', 'hockeyshop-theme' ) );
-	
 	$levels=get_hockeyshop_primary_menus();
     foreach ($levels as $level) {
         $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $level)));
