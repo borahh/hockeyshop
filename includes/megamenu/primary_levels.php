@@ -12,7 +12,7 @@ function get_hockeyshop_primary_menus() {
 }
 
 
-function get_hockeyshop_main_menu() {
+function get_hockeyshop_main_menu() { ?>
     <div class="hbdv_megamenu--primary">
     <?php
     if( have_rows('hbdv_mega_primary_levels', 'option') ):  
@@ -24,7 +24,7 @@ function get_hockeyshop_main_menu() {
            $title=get_sub_field('hbdv_mega_primary_level_title');
            ?>
             <li class="menu-item menu-item-type-custom menu-item-object-custom">
-              <a href="<?php $url; ?>"><?php $title; ?></a>
+              <a href="<?php echo $url; ?>"><?php echo $title; ?></a>
             </li>
            <?php    
         endwhile;  ?>
