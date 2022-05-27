@@ -26,13 +26,13 @@ function get_hockeyshop_main_menu() { ?>
            $id='MegaMenu --- '. get_sub_field('hbdv_mega_primary_level_id');
            $name=hockeyshop_create_menu_name($id);
            ?>
-              <a href="<?php echo $url; ?>"><?php echo $title; ?></a>
+              <a class="hbdv_menu_btn" href="<?php echo $url; ?>"><?php echo $title; ?></a>
               
            <?php    
                wp_nav_menu( array(
                 'theme_location' => $name,
-                'menu_class' => 'hbdv_megamenu--sub',
-                'container' => 'false'
+                'container_class' => 'hbdv_megamenu_sub',
+                
                ) );
         endwhile;
     endif;

@@ -41,6 +41,17 @@ if ( ! defined( 'BORAHH_HOCKEYSHOP_IMG_URL' ) ) {
 	define( 'BORAHH_HOCKEYSHOP_IMG_URL', get_stylesheet_directory_uri(). '/assets/images/' );
 }
 
+
+/** Add Class to Menu anchor tag */
+function hbdv_add_additional_class_on_a($classes, $item, $args) {
+    if (isset($args->anchor)) {
+        $classes['class'] = $args->anchor;
+    }
+    return $classes;
+}
+
+add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
+
 include BORAHH_HOCKEYSHOP_DIR_MEGAMENU . 'primary_levels.php';    
 include BORAHH_HOCKEYSHOP_DIR_MEGAMENU . 'all_levels.php';    
 
