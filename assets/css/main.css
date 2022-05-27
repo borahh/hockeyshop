@@ -421,9 +421,6 @@
     width: 100%;
 }
 /** Menu stuff here **/
-.hbdv_megamenu {
-    display: flex;
-}
 .hbdv_megamenu__primary {
     --tw-bg-opacity: 1;
     background-color: rgb(148 163 184 / var(--tw-bg-opacity));

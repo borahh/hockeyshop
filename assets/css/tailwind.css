@@ -229,7 +229,7 @@
 @layer components {
   /** Menu stuff here **/
   .hbdv_megamenu {
-    @apply flex;
+    
     &__primary {
       @apply bg-slate-400;
       &--btn {
