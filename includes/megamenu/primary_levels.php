@@ -123,7 +123,60 @@ function get_hockeyshop_main_menu() { ?>
             <?php echo get_hockeyshop_menu_holder();?>
             <!-- NAVIGATION MENU ENDS -->
         </div>
+        <script>
+        const btn = document.querySelectorAll('.btn')
+        const backBtn = document.querySelector('#back_btn')
+        const closeAll = document.querySelector('#close_all_opened')
+        const menuBtn = document.querySelector('.menu_btn')
+        const changeMenuIcon = (isOpen) => {
+            if (window.innerWidth <= 1023) {
+                if (isOpen) {
+                    closeAll.style.display = 'block'
+                    menuBtn.style.display = 'none'
+                } else {
+                    closeAll.style.display = 'none'
+                    menuBtn.style.display = 'block'
+                }
+            }
+        }
+        btn.forEach(ele => {
+            ele.addEventListener('click', () => {
+                ele.nextElementSibling.classList.add('opened')
+                const opened = document.querySelectorAll('.opened')
+                changeMenuIcon(true)
+                if (opened.length <= 1 && window.length <= 1023) {
+                    backBtn.classList.add('hidden')
+                } else {
+                    backBtn.classList.remove('hidden')
+                }
+            })
+        })
 
+        backBtn.addEventListener('click', () => {
+            const opened = document.querySelectorAll('.opened')
+            opened[opened.length - 1].classList.remove('opened')
+            if (opened.length <= 1) {
+                changeMenuIcon(false)
+            }
+
+
+        })
+
+        closeAll.addEventListener('click', () => {
+            const opened = document.querySelectorAll('.opened')
+            opened.forEach(ele => ele.classList.remove('opened'))
+            changeMenuIcon(false)
+        })
+
+
+        const r = document.querySelector(':root')
+        const nav = document.querySelector('nav')
+        const menuHeight = window.innerHeight - nav.scrollHeight
+        r.style.setProperty('--menu-height', menuHeight + 'px');
+        r.style.setProperty('--nav-height', nav.scrollHeight + 'px');
+
+
+    </script>
     </section>
     <!-- HTML END HERE -->
     <?php
