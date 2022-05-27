@@ -262,7 +262,7 @@
 .menu{
     @apply fixed p-0 lg:static lg:w-full h-[var(--menu-height)] lg:h-auto top-[var(--nav-height)] left-0 ;
 }
-.menu_btn{
+nav .menu_btn{
     @apply w-fit text-white bg-transparent p-0;
 }
 
