@@ -422,10 +422,6 @@
 }
 /** Menu stuff here **/
 /* ADDED FROM HERE */
-nav svg {
-    fill: currentColor;
-    stroke: currentColor;
-}
 .btn {
     display: flex;
     width: 100%;

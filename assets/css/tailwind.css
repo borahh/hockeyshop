@@ -230,9 +230,7 @@
   /** Menu stuff here **/
 
   /* ADDED FROM HERE */
-nav svg{
-  @apply fill-current stroke-current;
-}
+
   .btn{
     @apply w-full flex justify-between items-center py-1.5 font-medium  text-xl lg:text-2xl lg:text-[#9dbaee] lg:w-fit  2xl:text-3xl ;
 }
