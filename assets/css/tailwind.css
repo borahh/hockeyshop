@@ -244,6 +244,46 @@
       }
     }
   }
+  
+  .btn{
+    @apply w-full flex justify-between items-center py-1.5 font-medium font-['Pathway_Gothic_One'] text-xl lg:text-2xl lg:text-[#9dbaee] lg:w-fit  2xl:text-3xl ;
+}
+
+.item a{
+    @apply py-1.5 lg:py-0.5;
+}
+.item{
+    @apply  w-full h-full absolute p-5  flex flex-col box-border top-0 left-0 bg-white text-black lg:bg-[#2f2f2f] translate-x-full lg:translate-x-0  transition-transform duration-200 ease-linear  lg:h-auto lg:relative lg:text-white  lg:bg-transparent lg:p-0 lg:w-fit;
+}
+
+.opened{
+    @apply translate-x-0 ;
+}
+.menu{
+    @apply fixed p-0 lg:static lg:w-full h-[var(--menu-height)] lg:h-auto top-[var(--nav-height)] left-0 ;
+}
+.menu_btn{
+    @apply w-fit text-white;
+}
+
+.drop_down >.btn{
+    @apply lg:min-w-[200px] lg:justify-center lg:p-2 lg:px-4 lg:text-white lg:gap-3 lg:text-lg xl:text-xl 2xl:text-2xl;
+}
+.drop_down >.btn svg{
+    @apply lg:hidden;
+}
+.drop_down > .item{
+    @apply lg:absolute lg:top-full lg:bg-[#2f2f2f]  lg:flex lg:flex-col lg:flex-wrap lg:min-h-[300px] lg:max-h-[500px] lg:content-center lg:gap-x-20 lg:gap-y-5 lg:p-5  lg:opacity-0 lg:transition-opacity lg:duration-300 lg:pointer-events-none lg:w-full xl:p-10;
+}
+.drop_down:hover > .item{
+    @apply  lg:opacity-100 lg:pointer-events-auto;
+}
+.drop_down:hover > .btn{
+    @apply bg-[#2f2f2f];
+}
+.drop_down > .item svg{
+      @apply lg:hidden;
+}
   /** End Menu Stuff **/
   /** Calculator stuff only **/
   .calculator {
