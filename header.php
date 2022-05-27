@@ -27,13 +27,6 @@ hello_elementor_body_open(); ?>
 
 <?php 
 echo get_hockeyshop_main_menu();
-$megamenu = get_hockeyshop_all_primary_menus();
-foreach ($megamenu as $name => $value) {
-    wp_nav_menu( array(
-		'theme_location' => $name,
-		'container_class' => 'hbdv_megamenu--sub'
-	) );
-}
 
  
 if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'header' ) ) {

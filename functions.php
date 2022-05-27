@@ -52,7 +52,7 @@ add_action( 'after_setup_theme', 'hockeyshop_mega_menu' );
 function hockeyshop_mega_menu() {
 	$levels=get_hockeyshop_primary_menus();
     foreach ($levels as $level) {
-        $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $level)));
+        $slug = hockeyshop_create_menu_name($level);
         register_nav_menu( $slug, __( $level, 'hockeyshop-theme' ) );
     }
 }
