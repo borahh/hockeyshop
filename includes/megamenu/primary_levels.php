@@ -17,6 +17,9 @@ function get_hockeyshop_primary_menus() {
 
 
 function get_hockeyshop_main_menu() { ?>
+    <!-- HTML START HERE -->
+
+    <!-- NAVIGATION MENU STARTS -->
     <div class="hbdv_megamenu">
     
     <?php
@@ -43,6 +46,9 @@ function get_hockeyshop_main_menu() { ?>
     endif;
     ?>
     </div>
+    <!-- NAVIGATION MENU ENDS -->
+
+    <!-- HTML END HERE -->
     <?php
 }
 
