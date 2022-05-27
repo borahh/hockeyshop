@@ -18,36 +18,43 @@ function get_hockeyshop_primary_menus() {
 
 function get_hockeyshop_main_menu() { ?>
     <!-- HTML START HERE -->
+    <section>
 
-    <!-- NAVIGATION MENU STARTS -->
-    <div class="hbdv_megamenu">
-    
-    <?php
-    if( have_rows('hbdv_mega_primary_levels', 'option') ):  
-        while( have_rows('hbdv_mega_primary_levels', 'option') ): the_row();
-           $url=get_sub_field('hbdv_mega_primary_level_url');
-           $title=get_sub_field('hbdv_mega_primary_level_title');
-           $id='MegaMenu --- '. get_sub_field('hbdv_mega_primary_level_id');
-           $name=hockeyshop_create_menu_name($id);
-           ?>
-           <div class="hbdv_megamenu__primary">
-              <a class="hbdv_megamenu__primary--btn" href="<?php echo $url; ?>"><?php echo $title; ?></a>
-              
-           <?php    
-               wp_nav_menu( array(
-                'theme_location' => $name,
-                'container_class' => 'hbdv_megamenu__secondary',
-                'menu_class' => 'hbdv_megamenu__secondary--list'
-               ) );
-            ?>
+        <other>
+            <h1>Some stuff here</h1>
+        </other>
+
+        <div class="example nesing">
+            <!-- NAVIGATION MENU STARTS -->
+            <div class="hbdv_megamenu">
+                <?php
+                if( have_rows('hbdv_mega_primary_levels', 'option') ):  
+                    while( have_rows('hbdv_mega_primary_levels', 'option') ): the_row();
+                    $url=get_sub_field('hbdv_mega_primary_level_url');
+                    $title=get_sub_field('hbdv_mega_primary_level_title');
+                    $id='MegaMenu --- '. get_sub_field('hbdv_mega_primary_level_id');
+                    $name=hockeyshop_create_menu_name($id);
+                    ?>
+                    <div class="hbdv_megamenu__primary">
+                        <a class="hbdv_megamenu__primary--btn" href="<?php echo $url; ?>"><?php echo $title; ?></a>
+                        
+                    <?php    
+                        wp_nav_menu( array(
+                            'theme_location' => $name,
+                            'container_class' => 'hbdv_megamenu__secondary',
+                            'menu_class' => 'hbdv_megamenu__secondary--list'
+                        ) );
+                        ?>
+                        </div>
+                        <?php
+                    endwhile;
+                endif;
+                ?>
             </div>
-            <?php
-        endwhile;
-    endif;
-    ?>
-    </div>
-    <!-- NAVIGATION MENU ENDS -->
+            <!-- NAVIGATION MENU ENDS -->
+        </div>
 
+    </section>
     <!-- HTML END HERE -->
     <?php
 }
