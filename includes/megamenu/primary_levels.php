@@ -24,7 +24,7 @@ function get_hockeyshop_main_menu() { ?>
             <h1>Some stuff here</h1>
         </other>
 
-        <div class="example nesing">
+        <div class="example---nesing">
             <!-- NAVIGATION MENU STARTS -->
             <div class="hbdv_megamenu">
                 <?php
