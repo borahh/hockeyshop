@@ -18,6 +18,7 @@ function get_hockeyshop_primary_menus() {
 
 function get_hockeyshop_main_menu() { ?>
     <div class="hbdv_megamenu--primary">
+    <div class="hbdv_megamenu--grouo">
     <?php
     if( have_rows('hbdv_mega_primary_levels', 'option') ):  
         while( have_rows('hbdv_mega_primary_levels', 'option') ): the_row();
@@ -37,6 +38,7 @@ function get_hockeyshop_main_menu() { ?>
         endwhile;
     endif;
     ?>
+    </div>
     </div>
     <?php
 }
