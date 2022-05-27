@@ -422,6 +422,10 @@
 }
 /** Menu stuff here **/
 /* ADDED FROM HERE */
+nav svg {
+    fill: currentColor;
+    stroke: currentColor;
+}
 .btn {
     display: flex;
     width: 100%;
@@ -1502,47 +1506,38 @@ nav .menu_btn, nav #close_all_opened {
 .duration-150 {
     transition-duration: 150ms;
 }
-
 .hover\:bg-white:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-
 .hover\:text-black:hover {
     --tw-text-opacity: 1;
     color: rgb(0 0 0 / var(--tw-text-opacity));
 }
-
 .group:hover .group-hover\:scale-x-100 {
     --tw-scale-x: 1;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-
 .peer:checked ~ .peer-checked\:bg-accent {
     --tw-bg-opacity: 1;
     background-color: rgb(23 104 210 / var(--tw-bg-opacity));
 }
-
 .peer:checked ~ .peer-checked\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-
 .peer:checked ~ .peer-checked\:opacity-0 {
     opacity: 0;
 }
-
 .peer:checked ~ .peer-checked\:opacity-100 {
     opacity: 1;
 }
-
 @media (min-width: 640px) {
 
     .sm\:w-5\/6 {
         width: 83.333333%;
     }
 }
-
 @media (min-width: 1024px) {
 
     .lg\:static {
@@ -1639,14 +1634,12 @@ nav .menu_btn, nav #close_all_opened {
         color: rgb(0 0 0 / var(--tw-text-opacity));
     }
 }
-
 @media (min-width: 1280px) {
 
     .xl\:w-\[250px\] {
         width: 250px;
     }
 }
-
 @media (min-width: 1536px) {
 
     .\32xl\:p-8 {
