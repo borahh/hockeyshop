@@ -114,9 +114,6 @@ function get_hockeyshop_main_menu() { ?>
     <!-- HTML START HERE -->
     <section>
 
-        <other>
-            <h1>Some stuff here</h1>
-        </other>
 
         <div class="example---nesing">
             <!-- NAVIGATION MENU STARTS -->
