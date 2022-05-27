@@ -5,10 +5,60 @@ function hockeyshop_create_menu_name($level) {
 }
 
 function get_hockeyshop_menu_holder() {
-    ?>
+    ?>  <nav class="  w-full bg-[#111111] ">
+    <div class=" flex justify-between lg:block ">
+     <div
+                class="flex justify-between items-center gap-2 flex-grow p-3 pr-0 lg:pr-5 2xl:p-8 text-white lg:grid lg:grid-cols-3 lg:justify-items-center">
+                <img class="w-[90px] lg:w-[200px] xl:w-[250px] lg:order-2" src="/assets/HockeyShop.svg" alt="">
+
+
+
+                <div
+                    class=" flex  w-fit items-center lg:order-1  group transition-colors duration-150 hover:text-black hover:bg-white relative ml-auto lg:ml-0 lg:bg-white lg:text-black">
+                    <input type="text" name="search" id="search"
+                        class="bg-transparent w-[120px] absolute py-1.5 px-2 right-full transform transition-transform duration-150 origin-right scale-x-0 group-hover:scale-x-100 bg-white outline-none lg:static lg:scale-x-100 lg:w-fit "
+                        placeholder="search">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6 stroke-current block py-1.5 px-2 box-content " fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+                <div class="order-3 font-['Pathway_Gothic_One'] text-xl 2xl:text-2xl font-medium flex items-center">
+                    <a href="#" class="hidden lg:block">Login</a>
+                    <hr class='hidden lg:block h-5 border-[1px] border-solid mx-5 border-gray-500/50'>
+                    <a href="#" class="hidden lg:block">Vault</a>
+                    <hr class='hidden lg:block h-5 border-[1px] border-solid mx-5 border-gray-500/50'>
+                    <a href="#" class="flex gap-2 items-center p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-current" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <span class="hidden lg:block ">Cart</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+    <button class='hidden text-white px-2 py-1 lg:hidden' id='close_all_opened'>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <button
+                class="menu_btn   text-sm  btn text-white rounded-md flex items-center gap-1 px-2 py-1 font-medium lg:hidden ">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
      <div class="menu item  overflow-y-scroll lg:overflow-visible overflow-x-hidden  flex flex-col lg:bg-[#1d1d1d] ">
                 <div class=' p-3 px-5 flex justify-between lg:hidden'>
-                    <button class="flex items-center gap-2 hidden" id='back_btn'>
+                    <button class="flex items-center gap-2 hidden " id='back_btn'>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
@@ -42,6 +92,8 @@ function get_hockeyshop_menu_holder() {
                 ?>
             </div>
             </div>
+            </div>
+            </nav>
 
     <?php
 
