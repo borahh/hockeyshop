@@ -25,7 +25,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php
 hello_elementor_body_open(); ?>
 
-<?php $megamenu = get_hockeyshop_all_primary_menus();
+<?php 
+echo get_hockeyshop_main_menu();
+$megamenu = get_hockeyshop_all_primary_menus();
 foreach ($megamenu as $name => $value) {
     wp_nav_menu( array(
 		'theme_location' => $name,
