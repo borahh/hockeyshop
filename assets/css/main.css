@@ -572,7 +572,7 @@
         width: 100%;
     }
 }
-nav .menu_btn {
+nav .menu_btn, nav #close_all_opened {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
