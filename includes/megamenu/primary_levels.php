@@ -170,7 +170,7 @@ function get_hockeyshop_main_menu() { ?>
 
 
        
-        document.onload = () =>{
+        window.onload = () =>{
             const r = document.querySelector(':root')
         const nav = document.querySelector('nav')
         const menuHeight = window.innerHeight - nav.scrollHeight
