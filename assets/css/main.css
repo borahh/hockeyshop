@@ -1392,6 +1392,15 @@ nav .menu_btn, nav #close_all_opened {
 .relative {
     position: relative;
 }
+.left-0 {
+    left: 0px;
+}
+.top-0 {
+    top: 0px;
+}
+.z-50 {
+    z-index: 50;
+}
 .order-3 {
     order: 3;
 }
