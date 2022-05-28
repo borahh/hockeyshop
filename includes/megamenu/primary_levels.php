@@ -85,13 +85,13 @@ function get_hockeyshop_menu_holder() {
                     endwhile;
                 endif;
                 ?>
-                 <div class="absolute  bottom-0 left-0 w-full bg-gradient-to-t from-white via-white to-transparent  font-bold grid grid-cols-2 justify-items-center lg:hidden p-4 font-social-gothic ">
+                 <div class="absolute  bottom-0 left-0 w-full bg-gradient-to-t from-white via-white to-transparent  font-bold grid grid-cols-2 justify-items-center items-center lg:hidden p-4 font-social-gothic ">
                          <a href="#" class = 'flex flex-col items-center'>
-                             <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'currency.png'; ?>" alt="icon" class='w-12'>
+                             <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'currency.png'; ?>" alt="icon" class='w-10'>
                               Vault
                          </a>
                          <a href="#" class = 'flex flex-col items-center'>
-                              <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'user.png'; ?>" alt="icon" class='w-12'>
+                              <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'user.png'; ?>" alt="icon" class='w-10'>
                               My Account
                          </a>
                     </div>
