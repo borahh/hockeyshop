@@ -5,7 +5,7 @@ function hockeyshop_create_menu_name($level) {
 }
 
 function get_hockeyshop_menu_holder() {
-    ?>  <nav class="  w-full bg-[#111111] fixed lg:relative left-0 top-0 z-50 font-[var(--e-global-typography-secondary-font-family)]">
+    ?>  <nav class="  w-full bg-[#111111] fixed lg:relative left-0 top-0 z-50 ">
     <div class=" flex justify-between lg:block items-center ">
      <div class="flex justify-between items-center gap-2 flex-grow p-3 pr-0 lg:pr-5 2xl:p-8 text-white lg:grid lg:grid-cols-3 lg:justify-items-center">
                 <img class="w-[90px] lg:w-[200px] xl:w-[250px] lg:order-2" src="https://hockeyshop.dk/wp-content/uploads/2020/07/HockeyShop.svg" alt="">
@@ -24,7 +24,7 @@ function get_hockeyshop_menu_holder() {
                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                 </div>
-                <div class="order-3  text-xl 2xl:text-2xl font-medium flex items-center text-white">
+                <div class="order-3  text-xl 2xl:text-2xl font-medium flex items-center text-white font-social-gothic">
                     <a href="#" class="hidden lg:block">Login</a>
                     <hr class='hidden lg:block h-5 border-[1px] border-solid mx-5 border-gray-500/50'>
                     <a href="#" class="hidden lg:block">Vault</a>
