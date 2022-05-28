@@ -230,6 +230,9 @@
   /** Menu stuff here **/
 
   /* ADDED FROM HERE */
+  *{
+    @apply list-none;
+  }
 #back_btn{
   @apply  bg-transparent p-0 text-black;
 }
