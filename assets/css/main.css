@@ -1596,6 +1596,10 @@ nav .menu_btn, nav #close_all_opened {
         position: static;
     }
 
+    .lg\:relative {
+        position: relative;
+    }
+
     .lg\:order-2 {
         order: 2;
     }
