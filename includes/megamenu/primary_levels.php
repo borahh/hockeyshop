@@ -49,7 +49,7 @@ function get_hockeyshop_menu_holder() {
                 </svg>
             </button>
             <button
-                class="menu_btn flex flex-col justify-center  text-sm  btn text-white rounded-md flex items-center gap-1 font-medium lg:hidden  ">
+                class="menu_btn flex flex-col justify-cflex  text-sm  btn text-white rounded-md flex items-center gap-1 font-medium lg:hidden  ">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -128,11 +128,11 @@ function get_hockeyshop_main_menu() { ?>
         const changeMenuIcon = (isOpen) => {
             if (window.innerWidth <= 1023) {
                 if (isOpen) {
-                    closeAll.style.display = 'block'
+                    closeAll.style.display = 'flex'
                     menuBtn.style.display = 'none'
                 } else {
                     closeAll.style.display = 'none'
-                    menuBtn.style.display = 'block'
+                    menuBtn.style.display = 'flex'
                 }
             }
         }
