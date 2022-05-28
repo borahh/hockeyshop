@@ -1436,6 +1436,12 @@ nav a:active, nav a:hover {
     margin-left: 1.25rem;
     margin-right: 1.25rem;
 }
+.mb-1 {
+    margin-bottom: 0.25rem;
+}
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
 .inline {
     display: inline;
 }
