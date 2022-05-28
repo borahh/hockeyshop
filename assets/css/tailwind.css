@@ -238,7 +238,7 @@
 }
 
 .item a{
-    @apply py-1.5 lg:py-0.5;
+    @apply py-1.5 lg:py-0.5 text-black lg:text-white;
 }
 .item{
     @apply  w-full h-full absolute p-5  flex flex-col box-border top-0 left-0 bg-white text-black lg:bg-[#2f2f2f] translate-x-full lg:translate-x-0  transition-transform duration-200 ease-linear  lg:h-auto lg:relative lg:text-white  lg:bg-transparent lg:p-0 lg:w-fit;
