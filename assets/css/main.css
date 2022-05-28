@@ -1432,6 +1432,9 @@ nav .menu_btn, nav #close_all_opened {
 .h-7 {
     height: 1.75rem;
 }
+.h-auto {
+    height: auto;
+}
 .w-full {
     width: 100%;
 }
