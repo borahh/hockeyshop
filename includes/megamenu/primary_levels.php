@@ -13,12 +13,12 @@ function get_hockeyshop_menu_holder() {
 
 
                 <div
-                    class=" flex  w-fit items-center lg:order-1  group transition-colors duration-150 hover:text-black hover:bg-white relative ml-auto lg:ml-0 lg:bg-white lg:text-black">
+                    class="search_bar group">
                     <input type="text" name="search" id="search"
-                        class="bg-transparent h-full border-0 w-[120px] absolute py-1.5 px-2 right-full transform transition-transform duration-150 origin-right scale-x-0 group-hover:scale-x-100 bg-white outline-none lg:static lg:scale-x-100 lg:w-fit "
+                        class="group-hover:scale-x-100"
                         placeholder="search">
                     <svg xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6 stroke-current block py-1.5 px-2 box-content " fill="none" viewBox="0 0 24 24"
+                        class="" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />

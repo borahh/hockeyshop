@@ -272,6 +272,15 @@ nav .menu_btn ,nav #close_all_opened{
 .drop_down > .item svg{
       @apply lg:hidden;
 }
+.search_bar {
+  @apply  flex  w-fit items-center lg:order-1   transition-colors duration-150 hover:text-black hover:bg-white relative ml-auto lg:ml-0 lg:bg-white lg:text-black;
+}
+.search_bar input{
+  @apply bg-transparent h-full border-0 w-[120px] absolute py-1.5 px-2 right-full transform transition-transform duration-150 origin-right scale-x-0  bg-white outline-none lg:static lg:scale-x-100 lg:w-fit ;
+}
+ .search_bar svg{
+  @apply h-6 w-6 stroke-current block py-1.5 px-2 box-content ;
+}
 /* TO HERE */
   /** End Menu Stuff **/
   /** Calculator stuff only **/
