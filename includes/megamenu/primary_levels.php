@@ -169,12 +169,15 @@ function get_hockeyshop_main_menu() { ?>
         })
 
 
-        const r = document.querySelector(':root')
+       
+        document.onload = () =>{
+            const r = document.querySelector(':root')
         const nav = document.querySelector('nav')
         const menuHeight = window.innerHeight - nav.scrollHeight
-        r.style.setProperty('--menu-height', menuHeight + 'px');
-        r.style.setProperty('--nav-height', nav.scrollHeight + 'px');
+            r.style.setProperty('--menu-height', menuHeight + 'px');
+            r.style.setProperty('--nav-height', nav.scrollHeight + 'px');
 
+        }
 
     </script>
     </section>
