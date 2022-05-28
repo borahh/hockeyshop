@@ -584,7 +584,7 @@ nav .menu_btn, nav #close_all_opened {
 }
 @media (min-width: 1024px) {
 
-    nav a {
+    nav a, nav a:active {
         --tw-text-opacity: 1;
         color: rgb(255 255 255 / var(--tw-text-opacity));
     }
