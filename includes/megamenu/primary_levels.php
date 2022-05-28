@@ -85,7 +85,7 @@ function get_hockeyshop_menu_holder() {
                     endwhile;
                 endif;
                 ?>
-                 <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-white via-white to-transparent text-xl font-bold grid grid-cols-2 lg:hidden p-4 font-social-gothic ">
+                 <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-white via-white to-transparent text-lg font-bold grid grid-cols-2 lg:hidden p-4 font-social-gothic ">
                          <a href="#" class = 'flex flex-col items-center'>
                              <img src="/assets/images/currency.png" alt="icon" class='w-6'>
                               Vault
