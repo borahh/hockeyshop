@@ -1386,6 +1386,9 @@ nav .menu_btn, nav #close_all_opened {
 .invisible {
     visibility: hidden;
 }
+.fixed {
+    position: fixed;
+}
 .relative {
     position: relative;
 }
