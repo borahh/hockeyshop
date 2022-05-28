@@ -256,10 +256,12 @@
 nav .menu_btn ,nav #close_all_opened{
     @apply w-fit text-white bg-transparent p-0 px-3  ;
 }
-nav a, nav a:active{
+nav a {
   @apply lg:text-white;
 }
-
+nav a:active{
+  @apply text-current;
+}
 
 .drop_down >.btn{
     @apply lg:min-w-[200px] lg:justify-center lg:p-2 lg:px-4 lg:text-white lg:gap-3 lg:text-lg xl:text-xl 2xl:text-2xl;
