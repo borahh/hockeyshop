@@ -176,7 +176,7 @@ function get_hockeyshop_main_menu() { ?>
         const menuHeight = window.innerHeight - nav.scrollHeight
             r.style.setProperty('--menu-height', menuHeight + 'px');
             r.style.setProperty('--nav-height', nav.scrollHeight + 'px');
-
+            console.log(nav.scrollHeight)
         }
 
     </script>
