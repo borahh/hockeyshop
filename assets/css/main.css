@@ -1539,8 +1539,14 @@ nav a:active, nav a:hover {
 .to-transparent {
     --tw-gradient-to: transparent;
 }
+.fill-current {
+    fill: currentColor;
+}
 .stroke-current {
     stroke: currentColor;
+}
+.stroke-0 {
+    stroke-width: 0;
 }
 .p-3 {
     padding: 0.75rem;
