@@ -288,7 +288,7 @@ nav a:active, nav a:hover{
   @apply bg-transparent h-full border-0 w-[120px] absolute py-1.5 px-2 right-full transform transition-transform duration-150 origin-right scale-x-0  bg-white outline-none lg:static lg:scale-x-100 lg:w-fit ;
 }
  .search_bar svg{
-  @apply h-6 w-6 stroke-current block py-1.5 px-2 box-content ;
+  @apply h-6 w-6 block py-1.5 px-2 box-content ;
 }
 /* TO HERE */
   /** End Menu Stuff **/
