@@ -29,7 +29,7 @@ function get_hockeyshop_menu_holder() {
                     <hr class='hidden lg:block h-5 border-[1px] border-solid mx-5 border-gray-500/50'>
                     <a href="#" class="hidden lg:block">Vault</a>
                     <hr class='hidden lg:block h-5 border-[1px] border-solid mx-5 border-gray-500/50'>
-                    <a href="#" class="flex gap-2 items-center p-2">
+                    <a href="#" class="flex gap-2 items-center p-2 text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-current" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round"
