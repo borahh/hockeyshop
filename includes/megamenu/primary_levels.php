@@ -6,7 +6,7 @@ function hockeyshop_create_menu_name($level) {
 
 function get_hockeyshop_menu_holder() {
     ?>  <nav class="  w-full bg-[#111111] fixed left-0 top-0 z-50">
-    <div class=" flex justify-between lg:block ">
+    <div class=" flex justify-between lg:block items-center ">
      <div class="flex justify-between items-center gap-2 flex-grow p-3 pr-0 lg:pr-5 2xl:p-8 text-white lg:grid lg:grid-cols-3 lg:justify-items-center">
                 <img class="w-[90px] lg:w-[200px] xl:w-[250px] lg:order-2" src="https://hockeyshop.dk/wp-content/uploads/2020/07/HockeyShop.svg" alt="">
 
@@ -42,7 +42,7 @@ function get_hockeyshop_menu_holder() {
 
             </div>
 
-    <button class='hidden text-white px-2 py-1 lg:hidden' id='close_all_opened'>
+            <button class='hidden text-white px-2 py-1 lg:hidden' id='close_all_opened'>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
