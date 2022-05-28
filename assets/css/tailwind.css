@@ -251,7 +251,7 @@
     @apply fixed p-0 lg:static lg:w-full h-[var(--menu-height)] lg:h-auto top-[var(--nav-height)] left-0 ;
 }
 nav .menu_btn ,nav #close_all_opened{
-    @apply w-fit text-white bg-transparent p-0 px-3 ;
+    @apply w-fit text-white bg-transparent p-0 px-3 flex flex-col justify-center ;
 }
 
 .drop_down >.btn{

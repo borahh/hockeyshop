@@ -561,9 +561,12 @@
     }
 }
 nav .menu_btn, nav #close_all_opened {
+    display: flex;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    flex-direction: column;
+    justify-content: center;
     background-color: transparent;
     padding: 0px;
     padding-left: 0.75rem;
