@@ -259,7 +259,7 @@ nav .menu_btn ,nav #close_all_opened{
 nav a {
   @apply lg:text-white;
 }
-nav a:active{
+nav a:active, nav a:hover{
   @apply text-current;
 }
 

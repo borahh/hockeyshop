@@ -589,7 +589,7 @@ nav .menu_btn, nav #close_all_opened {
         color: rgb(255 255 255 / var(--tw-text-opacity));
     }
 }
-nav a:active {
+nav a:active, nav a:hover {
     color: currentColor;
 }
 @media (min-width: 1024px) {
