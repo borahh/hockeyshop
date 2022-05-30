@@ -6,8 +6,11 @@ function hockeyshop_create_menu_name($level) {
 
 function get_hockeyshop_menu_holder() {
     ?>  <nav class="  w-full bg-[#111111] fixed lg:relative left-0 top-0 z-50 ">
+        <div class = 'hidden lg:block bg-black'>
+              
+        </div>
     <div class="flex items-center justify-between lg:block">
-     <div class="flex items-center justify-between flex-grow gap-2 p-3 pr-0 text-white lg:pr-5 2xl:p-8 lg:grid lg:grid-cols-3 lg:justify-items-center">
+     <div class="flex items-center justify-between flex-grow gap-2 p-3 pr-0 text-white lg:pr-5 2xl:p-8 lg:grid lg:grid-cols-3 lg:justify-items-center max-w-[1200px]">
                 <img class="w-[90px] lg:w-[200px] xl:w-[250px] lg:order-2" src="https://hockeyshop.dk/wp-content/uploads/2020/07/HockeyShop.svg" alt="">
 
 
