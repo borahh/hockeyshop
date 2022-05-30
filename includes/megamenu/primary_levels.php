@@ -20,7 +20,7 @@ function get_hockeyshop_menu_holder() {
 
 
                 <div
-                    class="search_bar group">
+                    class="search_bar group justify-self-start">
                     <input type="text" name="search" id="search"
                         class="group-hover:scale-x-100"
                         placeholder="search">
