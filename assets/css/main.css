@@ -1436,6 +1436,9 @@ nav a:active, nav a:hover {
     margin-left: 1.25rem;
     margin-right: 1.25rem;
 }
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
 .inline {
     display: inline;
 }
@@ -1472,6 +1475,9 @@ nav a:active, nav a:hover {
 .w-7 {
     width: 1.75rem;
 }
+.w-10 {
+    width: 2.5rem;
+}
 .flex-grow {
     flex-grow: 1;
 }
@@ -1492,6 +1498,9 @@ nav a:active, nav a:hover {
 }
 .justify-between {
     justify-content: space-between;
+}
+.justify-items-center {
+    justify-items: center;
 }
 .gap-2 {
     gap: 0.5rem;
