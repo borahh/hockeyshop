@@ -291,7 +291,7 @@ nav a:active, nav a:hover{
   @apply h-6 w-6 block py-1.5 px-2 box-content ;
 }
 .hbdv_submenu_group a{
-  @apply pointer-events-none text-black font-bold lg:text-[#9dbaee] font-social-gothic;
+  @apply pointer-events-none text-black font-bold lg:text-[#9dbaee] font-social-gothic text-lg;
 }
 .hbdv_submenu_col{
   @apply flex gap-4 flex-col lg:flex-row;
