@@ -91,7 +91,7 @@ function get_hockeyshop_menu_holder() {
                               Vault
                          </a>
                          <a href="#" class = 'flex flex-col items-center'>
-                              <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'user.svg'; ?>" alt="icon" class='w-6'>
+                              <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'user.png'; ?>" alt="icon" class='w-6'>
                               My Account
                          </a>
                     </div>
