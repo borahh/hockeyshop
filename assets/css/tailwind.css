@@ -264,7 +264,7 @@ nav a:active, nav a:hover{
 }
 
 .drop_down >.btn{
-    @apply lg:min-w-[200px] lg:justify-center lg:p-2 lg:px-4 lg:text-white lg:gap-3 lg:text-lg xl:text-xl ;
+    @apply lg:min-w-[200px] lg:justify-center lg:p-2 lg:px-4 lg:text-white lg:gap-3 lg:text-lg  ;
 }
 .drop_down >.btn svg{
     @apply lg:hidden;

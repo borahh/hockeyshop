@@ -629,15 +629,6 @@ nav a:active, nav a:hover {
         --tw-text-opacity: 1;
         color: rgb(255 255 255 / var(--tw-text-opacity));
     }
-}
-@media (min-width: 1280px) {
-
-    .drop_down >.btn {
-        font-size: 1.25rem;
-        line-height: 1.75rem;
-    }
-}
-@media (min-width: 1024px) {
 
     .drop_down >.btn svg {
         display: none;
