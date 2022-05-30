@@ -1624,6 +1624,10 @@ nav a:active, nav a:hover {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
 }
+.py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
 .pr-0 {
     padding-right: 0px;
 }
@@ -1785,6 +1789,11 @@ nav a:active, nav a:hover {
 
     .\32xl\:p-8 {
         padding: 2rem;
+    }
+
+    .\32xl\:py-8 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     .\32xl\:text-2xl {
