@@ -270,7 +270,7 @@ nav a:active, nav a:hover{
     @apply lg:hidden;
 }
 .drop_down > .item{
-    @apply lg:absolute lg:top-full lg:bg-[#2f2f2f]  lg:flex lg:flex-col lg:flex-wrap lg:min-h-[300px] lg:max-h-[500px] lg:content-center lg:gap-x-20 lg:gap-y-5 lg:p-5  lg:opacity-0 lg:transition-opacity lg:duration-500 lg:pointer-events-none lg:w-full xl:p-10;
+    @apply lg:absolute lg:top-full lg:bg-[#2f2f2f]  lg:flex lg:flex-col lg:flex-wrap lg:min-h-[300px] lg:max-h-[500px] lg:content-center lg:gap-x-20 lg:gap-y-5 lg:p-5  lg:opacity-0 lg:transition-opacity lg:duration-[400] lg:pointer-events-none lg:w-full xl:p-10;
 }
 .drop_down:hover > .item{
     @apply  lg:opacity-100 lg:pointer-events-auto;
