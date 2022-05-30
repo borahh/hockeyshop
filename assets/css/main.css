@@ -834,6 +834,16 @@ nav a:active, nav a:hover {
 }
 .hbdv_submenu_group {
     pointer-events: none;
+    font-weight: 500;
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+@media (min-width: 1024px) {
+
+    .hbdv_submenu_group {
+        --tw-text-opacity: 1;
+        color: rgb(157 186 238 / var(--tw-text-opacity));
+    }
 }
 /* TO HERE */
 /** End Menu Stuff **/
