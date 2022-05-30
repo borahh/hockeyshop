@@ -293,7 +293,7 @@ nav a:active, nav a:hover{
 .hbdv_submenu_col{
   @apply flex;
 }
-.hbdv_submenu_group{
+.hbdv_submenu_group a{
   @apply pointer-events-none text-black font-medium lg:text-[#9dbaee] font-social-gothic;
 }
 
