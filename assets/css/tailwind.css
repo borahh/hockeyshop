@@ -290,7 +290,7 @@ nav a:active, nav a:hover{
  .search_bar svg{
   @apply h-6 w-6 block py-1.5 px-2 box-content ;
 }
-.hbdv_submenu_group{
+.hbdv_submenu_group a{
   @apply pointer-events-none text-black font-medium lg:text-[#9dbaee];
 }
 

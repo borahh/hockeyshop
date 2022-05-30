@@ -832,7 +832,7 @@ nav a:active, nav a:hover {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
-.hbdv_submenu_group {
+.hbdv_submenu_group a {
     pointer-events: none;
     font-weight: 500;
     --tw-text-opacity: 1;
@@ -840,7 +840,7 @@ nav a:active, nav a:hover {
 }
 @media (min-width: 1024px) {
 
-    .hbdv_submenu_group {
+    .hbdv_submenu_group a {
         --tw-text-opacity: 1;
         color: rgb(157 186 238 / var(--tw-text-opacity));
     }
