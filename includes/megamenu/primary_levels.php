@@ -143,7 +143,8 @@ function get_hockeyshop_main_menu() { ?>
             }
         }
         btn.forEach(ele => {
-            ele.addEventListener('click', () => {
+            ele.addEventListener('click', (e) => {
+                e.preventDefault();
                 ele.nextElementSibling.classList.add('opened')
                 const opened = document.querySelectorAll('.opened')
                 changeMenuIcon(true)
