@@ -77,7 +77,7 @@ function get_hockeyshop_menu_holder() {
                         wp_nav_menu( array(
                             'theme_location' => $name,
                             'container_class' => 'hbdv_megamenu__secondary item',
-                            'menu_class' => 'hbdv_megamenu__secondary--list'
+                            'menu_class' => 'hbdv_megamenu__secondary--list hbdv_submenu_col'
                         ) );
                         ?>
                         </div>
