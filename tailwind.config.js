@@ -11,6 +11,7 @@ module.exports = {
     'woocommerce-product-gallery--with-images',
     'woocommerce',
     'woo-variation-swatches',
+    'hbdv_submenu_group',
   ],
   theme: {
     extend: {
