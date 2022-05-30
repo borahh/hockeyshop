@@ -1478,6 +1478,9 @@ nav a:active, nav a:hover {
 .w-10 {
     width: 2.5rem;
 }
+.w-8 {
+    width: 2rem;
+}
 .flex-grow {
     flex-grow: 1;
 }
