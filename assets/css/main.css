@@ -1514,6 +1514,9 @@ nav a:active, nav a:hover {
 .w-10 {
     width: 2.5rem;
 }
+.w-11\/12 {
+    width: 91.666667%;
+}
 .max-w-\[1200px\] {
     max-width: 1200px;
 }
