@@ -294,7 +294,7 @@ nav a:active, nav a:hover{
   @apply pointer-events-none text-black font-bold lg:text-[#9dbaee] font-social-gothic;
 }
 .hbdv_submenu_col{
-  @apply flex gap-4;
+  @apply flex gap-4 flex-col lg:flex-row;
 }
 /* TO HERE */
   /** End Menu Stuff **/
