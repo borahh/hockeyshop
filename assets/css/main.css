@@ -530,6 +530,10 @@
     }
 
     .item {
+        overflow-y: hidden;
+    }
+
+    .item {
         --tw-bg-opacity: 1;
         background-color: rgb(47 47 47 / var(--tw-bg-opacity));
     }
@@ -846,6 +850,10 @@ nav a:active, nav a:hover {
         --tw-text-opacity: 1;
         color: rgb(157 186 238 / var(--tw-text-opacity));
     }
+}
+.hbdv_submenu_col {
+    display: flex;
+    gap: 1rem;
 }
 /* TO HERE */
 /** End Menu Stuff **/
