@@ -1468,6 +1468,10 @@ nav a:active, nav a:hover {
     margin-left: 1.25rem;
     margin-right: 1.25rem;
 }
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
 .mb-2 {
     margin-bottom: 0.5rem;
 }
@@ -1513,6 +1517,9 @@ nav a:active, nav a:hover {
 .max-w-\[1200px\] {
     max-width: 1200px;
 }
+.max-w-\[1500px\] {
+    max-width: 1500px;
+}
 .flex-grow {
     flex-grow: 1;
 }
@@ -1539,6 +1546,9 @@ nav a:active, nav a:hover {
 }
 .gap-1 {
     gap: 0.25rem;
+}
+.gap-10 {
+    gap: 2.5rem;
 }
 .overflow-x-hidden {
     overflow-x: hidden;
@@ -1624,6 +1634,9 @@ nav a:active, nav a:hover {
 }
 .font-bold {
     font-weight: 700;
+}
+.uppercase {
+    text-transform: uppercase;
 }
 .capitalize {
     text-transform: capitalize;
