@@ -236,7 +236,7 @@
 #back_btn{
   @apply  bg-transparent p-0 text-black;
 }
-  .hbdv_submenu_group{
+  .btn{
     @apply w-full flex justify-between items-center py-1.5 font-medium font-social-gothic text-xl lg:text-2xl lg:text-[#9dbaee] lg:w-fit  2xl:text-3xl ;
 }
 
@@ -263,10 +263,10 @@ nav a:active, nav a:hover{
   @apply text-current;
 }
 
-.drop_down >.hbdv_submenu_group{
+.drop_down >.btn{
     @apply lg:min-w-[200px] lg:justify-center lg:p-2 lg:px-4 lg:text-white lg:gap-3 lg:text-lg xl:text-xl 2xl:text-2xl;
 }
-.drop_down >.hbdv_submenu_group svg{
+.drop_down >.btn svg{
     @apply lg:hidden;
 }
 .drop_down > .item{
@@ -275,7 +275,7 @@ nav a:active, nav a:hover{
 .drop_down:hover > .item{
     @apply  lg:opacity-100 lg:pointer-events-auto;
 }
-.drop_down:hover > .hbdv_submenu_group{
+.drop_down:hover > .btn{
     @apply bg-[#2f2f2f];
 }
 .drop_down > .item svg{
