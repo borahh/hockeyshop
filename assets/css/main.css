@@ -497,6 +497,7 @@
     --tw-translate-x: 100%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     flex-direction: column;
+    overflow-y: auto;
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
     padding: 1.25rem;
@@ -834,7 +835,8 @@ nav a:active, nav a:hover {
 }
 .hbdv_submenu_group a {
     pointer-events: none;
-    font-weight: 500;
+    font-family: Social Gothic, sans-serif;
+    font-weight: 700;
     --tw-text-opacity: 1;
     color: rgb(0 0 0 / var(--tw-text-opacity));
 }
