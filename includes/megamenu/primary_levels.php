@@ -6,8 +6,8 @@ function hockeyshop_create_menu_name($level) {
 
 function get_hockeyshop_menu_holder() {
     ?>  <nav class="  w-full bg-[#111111] fixed lg:relative left-0 top-0 z-50 ">
-        <div class = 'hidden lg:block bg-black p-4'>
-              <div class = 'flex w-11/12 max-w-[1500px] mx-auto gap-10 font-bold font-social-gothic text-white uppercase'>
+        <div class = 'hidden lg:block bg-black '>
+              <div class = 'flex w-11/12 max-w-[1500px] mx-auto p-3 gap-10 font-bold font-social-gothic text-white uppercase'>
                    <a href="#">some link</a>
                    <a href="#">some link</a>
                    <a href="#">some link</a>
