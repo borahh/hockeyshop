@@ -29,7 +29,7 @@ function get_hockeyshop_menu_holder() {
                         </svg>
 
                 </div>
-                <div class="flex items-center order-3 text-xl font-medium text-white 2xl:text-xl font-social-gothic">
+                <div class="flex items-center order-3 text-lg font-medium text-white 2xl:text-xl font-social-gothic">
                     <a href="#" class="hidden lg:block">Login</a>
                     <hr class='hidden lg:block h-5 border-[1px] border-solid mx-5 border-gray-500/50'>
                     <a href="#" class="hidden lg:block">Vault</a>
