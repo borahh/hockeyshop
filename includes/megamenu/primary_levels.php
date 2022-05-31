@@ -6,6 +6,7 @@ function hockeyshop_create_menu_name($level) {
 
 
 function get_hockeyshop_top_link1() {
+    /* Changed*/
     $link1 = get_field('hbdv_menu_toplink1');
     if( $link1 ) {
         return $link1['url'],
