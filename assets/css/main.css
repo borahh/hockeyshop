@@ -1640,6 +1640,9 @@ nav a:active, nav a:hover {
 .place-self-start {
     place-self: start;
 }
+.justify-self-start {
+    justify-self: start;
+}
 .overflow-x-hidden {
     overflow-x: hidden;
 }
