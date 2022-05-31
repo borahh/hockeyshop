@@ -291,7 +291,7 @@ nav a:active, nav a:hover{
   @apply h-full;
 }
 .search_bar .input_field form{
-  @apply h-full;
+  @apply h-full bg-transparent;
 }
 .search_bar .input_field form input[type = "search"]{
   @apply py-1.5 px-2 border-0;

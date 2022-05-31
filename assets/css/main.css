@@ -817,6 +817,7 @@ nav a:active, nav a:hover {
 }
 .search_bar .input_field form {
     height: 100%;
+    background-color: transparent;
 }
 .search_bar .input_field form input[type = "search"] {
     border-width: 0px;
