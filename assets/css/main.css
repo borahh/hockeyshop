@@ -1565,6 +1565,9 @@ nav a:active, nav a:hover {
 .h-6 {
     height: 1.5rem;
 }
+.h-\[19px\] {
+    height: 19px;
+}
 .w-full {
     width: 100%;
 }
