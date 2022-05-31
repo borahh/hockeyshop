@@ -851,6 +851,11 @@ nav a:active, nav a:hover {
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
     }
+
+    .search_bar .input_field form input[type = "search"] {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
 }
 .search_bar svg {
     box-sizing: content-box;
@@ -1497,26 +1502,11 @@ nav a:active, nav a:hover {
 .-top-\[10px\] {
     top: -10px;
 }
-.right-0 {
-    right: 0px;
-}
-.bottom-0 {
-    bottom: 0px;
-}
-.-right-0 {
-    right: -0px;
-}
-.-right-\[10px\] {
-    right: -10px;
-}
 .-right-\[5px\] {
     right: -5px;
 }
-.-top-\[5px\] {
-    top: -5px;
-}
-.-top-\[8px\] {
-    top: -8px;
+.bottom-0 {
+    bottom: 0px;
 }
 .z-50 {
     z-index: 50;
@@ -1559,19 +1549,11 @@ nav a:active, nav a:hover {
 .h-7 {
     height: 1.75rem;
 }
-.h-\[20px\] {
-    height: 20px;
-}
-.h-6 {
-    height: 1.5rem;
-}
 .h-\[19px\] {
     height: 19px;
 }
-.h-fit {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+.h-6 {
+    height: 1.5rem;
 }
 .w-full {
     width: 100%;
@@ -1719,9 +1701,6 @@ nav a:active, nav a:hover {
     font-size: 1.125rem;
     line-height: 1.75rem;
 }
-.text-\[9px\] {
-    font-size: 9px;
-}
 .text-\[10px\] {
     font-size: 10px;
 }
@@ -1758,37 +1737,30 @@ nav a:active, nav a:hover {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
 }
-
 .group:hover .group-hover\:scale-x-100 {
     --tw-scale-x: 1;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-
 .peer:checked ~ .peer-checked\:bg-accent {
     --tw-bg-opacity: 1;
     background-color: rgb(23 104 210 / var(--tw-bg-opacity));
 }
-
 .peer:checked ~ .peer-checked\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-
 .peer:checked ~ .peer-checked\:opacity-0 {
     opacity: 0;
 }
-
 .peer:checked ~ .peer-checked\:opacity-100 {
     opacity: 1;
 }
-
 @media (min-width: 640px) {
 
     .sm\:w-5\/6 {
         width: 83.333333%;
     }
 }
-
 @media (min-width: 1024px) {
 
     .lg\:static {
@@ -1865,14 +1837,12 @@ nav a:active, nav a:hover {
         padding-right: 1.25rem;
     }
 }
-
 @media (min-width: 1280px) {
 
     .xl\:w-\[250px\] {
         width: 250px;
     }
 }
-
 @media (min-width: 1536px) {
 
     .\32xl\:py-8 {
