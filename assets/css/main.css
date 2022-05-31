@@ -872,12 +872,14 @@ nav a:active, nav a:hover {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
 
     .search_bar svg {
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
     }
+}
+@media (min-width: 1280px) {
 
     .search_bar svg {
         padding-left: 0.75rem;
