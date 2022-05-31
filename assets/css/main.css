@@ -778,6 +778,11 @@ nav a:active, nav a:hover {
         --tw-bg-opacity: 1;
         background-color: rgb(47 47 47 / var(--tw-bg-opacity));
     }
+
+    .search_bar:hover {
+        --tw-text-opacity: 1;
+        color: rgb(126 126 126 / var(--tw-text-opacity));
+    }
 }
 .search_bar .input_field {
     position: absolute;
