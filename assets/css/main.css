@@ -934,6 +934,10 @@ nav a:active, nav a:hover {
     .hbdv_submenu_col {
         flex-direction: row;
     }
+
+    .hbdv_submenu_col {
+        gap: 40px;
+    }
 }
 .hbdv_submenu_col > li > a {
     display: none;

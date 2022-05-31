@@ -303,11 +303,11 @@ nav a:active, nav a:hover{
   @apply pointer-events-none text-black font-bold lg:text-[#9dbaee] font-social-gothic lg:text-[20px];
 }
 .hbdv_submenu_col{
-  @apply flex gap-4 flex-col lg:flex-row;
+  @apply flex gap-4 lg:gap-[40px] flex-col lg:flex-row;
 }
 
 .hbdv_submenu_col > li > a{
-  @apply hidden;
+  @apply hidden ;
 }
 /* TO HERE */
   /** End Menu Stuff **/
