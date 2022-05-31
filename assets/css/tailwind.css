@@ -294,7 +294,7 @@ nav a:active, nav a:hover{
   @apply h-full bg-transparent;
 }
 .search_bar .input_field form input[type = "search"]{
-  @apply py-1.5 px-2 border-0 text-black lg:text-[#7e7e7e] xl:py-2 xl:text-base;
+  @apply py-1.5 px-2 border-0 text-black lg:text-[#7e7e7e] xl:py-2 xl:px-3 xl:text-base;
 }
  .search_bar svg{
   @apply h-6 w-6 block py-1.5 px-2 box-content lg:py-2 xl:px-3  ;

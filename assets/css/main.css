@@ -853,6 +853,11 @@ nav a:active, nav a:hover {
     }
 
     .search_bar .input_field form input[type = "search"] {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .search_bar .input_field form input[type = "search"] {
         font-size: 1rem;
         line-height: 1.5rem;
     }
