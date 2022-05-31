@@ -819,7 +819,7 @@ nav a:active, nav a:hover {
 @media (min-width: 1280px) {
 
     .search_bar .input_field {
-        width: 200px;
+        width: 300px;
     }
 }
 .search_bar .aws-container {
@@ -867,6 +867,13 @@ nav a:active, nav a:hover {
     .search_bar svg {
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
+    }
+}
+@media (min-width: 1280px) {
+
+    .search_bar svg {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
     }
 }
 .hbdv_submenu_group a {
