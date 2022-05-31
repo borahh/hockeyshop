@@ -6,42 +6,36 @@ function hockeyshop_create_menu_name($level) {
 
 
 function get_hockeyshop_top_link1() {
-    <?php
     $link1 = get_field('hbdv_menu_toplink1');
     if( $link1 ) {
         return $link1['url'],
     }
 }
 function get_hockeyshop_top_link_title1() {
-    <?php
     $link1 = get_field('hbdv_menu_toplink1');
     if( $link1 ) {
         return $link1['title'],
     }
 }
 function get_hockeyshop_top_link_title2() {
-    <?php
     $link1 = get_field('hbdv_menu_toplink2');
     if( $link1 ) {
         return $link1['title'],
     }
 }
 function get_hockeyshop_top_link_title3() {
-    <?php
     $link1 = get_field('hbdv_menu_toplink3');
     if( $link1 ) {
         return $link1['title'],
     }
 }
 function get_hockeyshop_top_link2() {
-    <?php
     $link1 = get_field('hbdv_menu_toplink2');
     if( $link1 ) {
         return $link1['url'],
     }
 }
 function get_hockeyshop_top_link3() {
-    <?php
     $link1 = get_field('hbdv_menu_toplink3');
     if( $link1 ) {
         return $link1['url'],
