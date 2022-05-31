@@ -594,7 +594,7 @@ nav a:active, nav a:hover {
     color: currentColor;
 }
 .drop_down >.btn {
-    display: flex;
+    display: block;
     text-transform: lowercase;
 }
 .drop_down >.btn::first-letter {
@@ -640,6 +640,11 @@ nav a:active, nav a:hover {
         --tw-text-opacity: 1;
         color: rgb(255 255 255 / var(--tw-text-opacity));
     }
+}
+.drop_down >.btn svg {
+    margin-left: auto;
+}
+@media (min-width: 1024px) {
 
     .drop_down >.btn svg {
         display: none;
