@@ -1739,6 +1739,9 @@ nav a:active, nav a:hover {
 .text-\[10px\] {
     font-size: 10px;
 }
+.text-\[9px\] {
+    font-size: 9px;
+}
 .font-bold {
     font-weight: 700;
 }
