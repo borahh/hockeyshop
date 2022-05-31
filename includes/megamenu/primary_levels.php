@@ -118,11 +118,11 @@ function get_hockeyshop_menu_holder() {
                 ?>
                  <div class="absolute bottom-0 left-0 grid w-full grid-cols-2 p-2 font-bold bg-white border-t-2 border-solid border-[#EEEEEE]  lg:hidden font-social-gothic text-[11px]">
                          <a href="#" class = 'flex flex-col items-center justify-end'>
-                             <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'currency.png'; ?>" alt="icon" class='w-[24px] mb-2'>
+                             <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'currency.png'; ?>" alt="icon" class='w-[24px] mb-0.5'>
                               Vault
                          </a>
                          <a href="#" class = 'flex flex-col items-center justify-end'>
-                              <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'user.png'; ?>" alt="icon" class='w-[30px] mb-2'>
+                              <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'user.png'; ?>" alt="icon" class='w-[30px] mb-0.5'>
                               My Account
                          </a>
                     </div>
