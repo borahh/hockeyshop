@@ -1515,6 +1515,9 @@ nav a:active, nav a:hover {
 .-top-\[5px\] {
     top: -5px;
 }
+.-top-\[8px\] {
+    top: -8px;
+}
 .z-50 {
     z-index: 50;
 }
