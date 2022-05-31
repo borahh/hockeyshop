@@ -1637,6 +1637,9 @@ nav a:active, nav a:hover {
 .gap-1 {
     gap: 0.25rem;
 }
+.place-self-start {
+    place-self: start;
+}
 .overflow-x-hidden {
     overflow-x: hidden;
 }
