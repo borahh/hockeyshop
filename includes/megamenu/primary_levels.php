@@ -21,7 +21,7 @@ function get_hockeyshop_menu_holder() {
 
                 <div
                     class="search_bar group justify-self-start">
-                    <?php do_shortcode('[aws_search_form id="1"]');?>
+                    <?php echo do_shortcode('[aws_search_form id="1"]');?>
 
                 </div>
                 <div class="flex items-center order-3 text-lg font-medium text-white 2xl:text-xl font-social-gothic">
