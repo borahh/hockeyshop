@@ -12,7 +12,7 @@ function get_hockeyshop_menu_holder() {
     <nav class="  w-full bg-[#111111] fixed lg:relative left-0 top-0 z-50 ">
         <div class = 'hidden bg-black lg:block '>
         
-              <div class = 'flex w-11/12 max-w-[1500px] mx-auto p-3 gap-10 font-bold font-social-gothic text-white uppercase text-sm'>
+              <div class = 'flex w-11/12 max-w-[1500px] mx-auto p-3 gap-[48px] font-bold font-social-gothic text-white uppercase text-sm'>
                    <?php 
                    // Check rows exists.
                         if( have_rows('hbdv_menu_links', 'option') ):
@@ -50,11 +50,11 @@ function get_hockeyshop_menu_holder() {
                 </div>
                 
 
-                <div class="flex items-center order-3 text-base font-medium text-white 2xl:text-xl font-social-gothic">
+                <div class="flex items-center order-3 text-base font-bold text-white 2xl:text-xl font-social-gothic">
                     <a href="#" class="hidden lg:block">Login</a>
-                    <hr class='hidden lg:block h-5 border-[1px] border-solid mx-5 border-gray-500/50'>
+                    <hr class='hidden lg:block h-5 border-[1px] border-solid mx-[26px] border-gray-500/50'>
                     <a href="#" class="hidden lg:block">Vault</a>
-                    <hr class='hidden lg:block h-5 border-[1px] border-solid mx-5 border-gray-500/50'>
+                    <hr class='hidden lg:block h-5 border-[1px] border-solid mx-[26px] border-gray-500/50'>
                     <a href="#" class="flex items-center gap-2 p-2 text-white ">
                     <div class = "relative flex items-center w-fit">
                     <svg class = 'relative fill-current h-7 w-7' viewBox="0 0 29 22" fill="none" xmlns="http://www.w3.org/2000/svg">
