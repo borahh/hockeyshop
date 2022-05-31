@@ -645,7 +645,7 @@ nav a:active, nav a:hover {
     margin-left: auto;
     margin-right: 0px;
     display: block;
-    width: 13px;
+    width: 1.5rem;
 }
 @media (min-width: 1024px) {
 
