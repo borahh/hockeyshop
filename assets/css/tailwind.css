@@ -267,7 +267,7 @@ nav a:active, nav a:hover{
     @apply block lg:min-w-[150px] relative  lg:justify-center lg:items-center lg:p-3 lg:px-4 lg:text-white  lg:text-base lg:font-bold lowercase first-letter:capitalize lg:uppercase ;
 }
 .drop_down >.btn svg{
-    @apply lg:hidden w-5 absolute right-0 top-1/2 -translate-y-1/2;
+    @apply lg:hidden w-5 absolute right-[0px] top-1/2 -translate-y-1/2;
 }
 .drop_down > .item{
     @apply lg:absolute lg:top-full lg:bg-[#2f2f2f]  lg:flex lg:flex-col lg:flex-wrap lg:min-h-[300px] lg:max-h-[500px] lg:content-center lg:gap-x-20 lg:gap-y-5 lg:p-5  lg:opacity-0 lg:transition-opacity lg:duration-500 lg:pointer-events-none lg:w-full xl:p-10;
