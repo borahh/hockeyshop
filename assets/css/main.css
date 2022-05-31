@@ -644,7 +644,7 @@ nav a:active, nav a:hover {
 }
 .drop_down >.btn svg {
     position: absolute;
-    left: 0px;
+    right: 0px;
     top: 50%;
     width: 1.25rem;
     --tw-translate-y: -50%;
