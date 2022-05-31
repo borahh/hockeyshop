@@ -1579,6 +1579,9 @@ nav a:active, nav a:hover {
 .to-transparent {
     --tw-gradient-to: transparent;
 }
+.fill-current {
+    fill: currentColor;
+}
 .p-3 {
     padding: 0.75rem;
 }
@@ -1646,6 +1649,11 @@ nav a:active, nav a:hover {
 .group:hover .group-hover\:scale-x-100 {
     --tw-scale-x: 1;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:text-black {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .peer:checked ~ .peer-checked\:bg-accent {

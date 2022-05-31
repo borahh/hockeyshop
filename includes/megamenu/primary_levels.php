@@ -61,7 +61,7 @@ function get_hockeyshop_menu_holder() {
                 <div class = 'input_field group-hover:scale-x-100'>
                 <?php echo do_shortcode('[aws_search_form id="1"]');?>
                 </div>
-                <svg  viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class = 'group-hover:text-black fill-current'  viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.8332 14.17L22 20.3368L20.3368 22L14.17 15.8332C12.686 16.9669 10.8316 17.6404 8.8202 17.6404C3.94862 17.6404 0 13.6914 0 8.8202C0 3.94862 3.94862 0 8.8202 0C13.6914 0 17.6404 3.94862 17.6404 8.8202C17.6404 10.8316 16.9669 12.686 15.8332 14.17ZM8.8202 15.288C12.3924 15.288 15.2881 12.3923 15.2881 8.8201C15.2881 5.2476 12.3924 2.35174 8.8202 2.35174C5.24771 2.35174 2.35184 5.2475 2.35184 8.8201C2.35184 12.3923 5.2476 15.288 8.8202 15.288Z" fill="white"/>
                 </svg>
 
