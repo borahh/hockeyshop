@@ -231,7 +231,7 @@
 
   /* ADDED FROM HERE */
   *{
-    @apply list-none;
+    @apply list-none m-0 p-0;
   }
 #back_btn{
   @apply  bg-transparent p-3 px-5 text-black;

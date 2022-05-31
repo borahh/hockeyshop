@@ -423,7 +423,9 @@
 /** Menu stuff here **/
 /* ADDED FROM HERE */
 * {
+    margin: 0px;
     list-style-type: none;
+    padding: 0px;
 }
 #back_btn {
     background-color: transparent;
