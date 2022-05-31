@@ -1553,6 +1553,12 @@ nav a:active, nav a:hover {
 .h-6 {
     height: 1.5rem;
 }
+.h-\[\] {
+    height: ;
+}
+.h-\[20px\] {
+    height: 20px;
+}
 .w-full {
     width: 100%;
 }
