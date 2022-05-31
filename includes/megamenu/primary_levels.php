@@ -9,37 +9,37 @@ function get_hockeyshop_top_link1() {
     /* Changed */
     $link1 = get_field('hbdv_menu_toplink1');
     if( $link1 ) {
-        return $link1['url'],
+        return $link1['url'];
     }
 }
 function get_hockeyshop_top_link_title1() {
     $link1 = get_field('hbdv_menu_toplink1');
     if( $link1 ) {
-        return $link1['title'],
+        return $link1['title'];
     }
 }
 function get_hockeyshop_top_link_title2() {
     $link1 = get_field('hbdv_menu_toplink2');
     if( $link1 ) {
-        return $link1['title'],
+        return $link1['title'];
     }
 }
 function get_hockeyshop_top_link_title3() {
     $link1 = get_field('hbdv_menu_toplink3');
     if( $link1 ) {
-        return $link1['title'],
+        return $link1['title'];
     }
 }
 function get_hockeyshop_top_link2() {
     $link1 = get_field('hbdv_menu_toplink2');
     if( $link1 ) {
-        return $link1['url'],
+        return $link1['url'];
     }
 }
 function get_hockeyshop_top_link3() {
     $link1 = get_field('hbdv_menu_toplink3');
     if( $link1 ) {
-        return $link1['url'],
+        return $link1['url'];
     }
 }
 function get_hockeyshop_menu_holder() {
