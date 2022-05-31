@@ -819,7 +819,7 @@ nav a:active, nav a:hover {
 @media (min-width: 1280px) {
 
     .search_bar .input_field {
-        width: 300px;
+        width: 250px;
     }
 }
 .search_bar .aws-container {

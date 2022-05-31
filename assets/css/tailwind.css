@@ -285,7 +285,7 @@ nav a:active, nav a:hover{
   @apply  flex  w-fit items-center lg:order-1   transition-colors duration-150 hover:text-black lg:hover:text-[#7e7e7e] hover:bg-white lg:hover:bg-[#2f2f2f] relative ml-auto lg:ml-0 lg:bg-[#2f2f2f] lg:text-[#7e7e7e];
 }
 .search_bar .input_field{
-  @apply  h-full border-0 w-[120px] absolute right-full transform transition-transform duration-150 origin-right scale-x-0  outline-none lg:static lg:scale-x-100 lg:w-fit xl:w-[300px] ;
+  @apply  h-full border-0 w-[120px] absolute right-full transform transition-transform duration-150 origin-right scale-x-0  outline-none lg:static lg:scale-x-100 lg:w-fit xl:w-[250px] ;
 }
 .search_bar .aws-container {
   @apply h-full;
