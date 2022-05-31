@@ -14,10 +14,9 @@ function get_hockeyshop_topmenu_links() {
             // Load sub field value.
             $url = get_sub_field('url');
             $title = get_sub_field('title');
-            // Do something...
-            ?>
-                <a href='<?php echo $url; ?>'><?php echo $title; ?></a>
-            <?php
+            
+            echo $title;
+            echo $url;
         // End loop.
         endwhile;
     
