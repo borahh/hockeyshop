@@ -58,7 +58,7 @@ function get_hockeyshop_menu_holder() {
                 <img class="w-[90px] lg:w-[200px] xl:w-[250px] lg:order-2" src="https://hockeyshop.dk/wp-content/uploads/2020/07/HockeyShop.svg" alt="">
 
                 <div class = 'search_bar group'>
-                <div class = 'input_field group-hover:scale-x-100'>
+                <div class = 'input_field group-hover:scale-x-100 bg-white lg:bg-[#2f2f2f]'>
                 <?php echo do_shortcode('[aws_search_form id="1"]');?>
                 </div>
                 <svg class = ' fill-current stroke-0'  viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
