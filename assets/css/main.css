@@ -594,6 +594,7 @@ nav a:active, nav a:hover {
     color: currentColor;
 }
 .drop_down >.btn {
+    position: relative;
     display: block;
     text-transform: lowercase;
 }
@@ -642,10 +643,12 @@ nav a:active, nav a:hover {
     }
 }
 .drop_down >.btn svg {
-    margin-left: auto;
-    margin-right: 0px;
-    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 50%;
     width: 1.25rem;
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 @media (min-width: 1024px) {
 
