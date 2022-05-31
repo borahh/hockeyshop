@@ -14,15 +14,12 @@ function get_hockeyshop_menu_holder() {
               </div>
         </div>
     <div class="flex items-center justify-between lg:block">
-     < class="flex items-center justify-between flex-grow gap-2 p-3 pr-0 text-white lg:pr-5 2xl:py-8 lg:grid lg:grid-cols-3 lg:justify-items-center w-11/12 max-w-[1500px] mx-auto">
+     <div class="flex items-center justify-between flex-grow gap-2 p-3 pr-0 text-white lg:pr-5 2xl:py-8 lg:grid lg:grid-cols-3 lg:justify-items-center w-11/12 max-w-[1500px] mx-auto">
                 <img class="w-[90px] lg:w-[200px] xl:w-[250px] lg:order-2" src="https://hockeyshop.dk/wp-content/uploads/2020/07/HockeyShop.svg" alt="">
 
-
-
-                
                 <?php echo do_shortcode('[aws_search_form id="1"]');?>
-
                 
+
                 <div class="flex items-center order-3 text-lg font-medium text-white 2xl:text-xl font-social-gothic">
                     <a href="#" class="hidden lg:block">Login</a>
                     <hr class='hidden lg:block h-5 border-[1px] border-solid mx-5 border-gray-500/50'>
