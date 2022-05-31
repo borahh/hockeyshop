@@ -594,7 +594,10 @@ nav a:active, nav a:hover {
     color: currentColor;
 }
 .drop_down >.btn {
-    text-transform: capitalize;
+    text-transform: lowercase;
+}
+.drop_down >.btn::first-letter {
+    text-transform: uppercase;
 }
 @media (min-width: 1024px) {
 

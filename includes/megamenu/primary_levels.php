@@ -53,7 +53,7 @@ function get_hockeyshop_menu_holder() {
                 <div class="flex items-center order-3 text-base font-bold text-white  font-social-gothic uppercase">
                     <a href="#" class="hidden lg:block">Login</a>
                     <hr class='hidden lg:block h-5 border-[1px] border-solid mx-[26px] border-gray-500/50'>
-                    <a href="#" class="hidden lg:block">Vault</a>
+                    <a href="#" class="hidden lg:block">Opret konto</a>
                     <hr class='hidden lg:block h-5 border-[1px] border-solid mx-[26px] border-gray-500/50'>
                     <a href="#" class="flex items-center gap-2 p-2 text-white ">
                     <div class = "relative flex items-center w-fit">
@@ -63,7 +63,7 @@ function get_hockeyshop_menu_holder() {
                     <span class = 'bg-[#ff0000] text-white aspect-square rounded-full absolute h-[19px] w-fit -top-[10px] -right-[5px] text-[12px] flex items-center justify-center'>0</span>
                     </div>
 
-                        <span class="hidden lg:block ">Cart</span>
+                        <span class="hidden lg:block ">Kurv</span>
                     </a>
 
                 </div>
