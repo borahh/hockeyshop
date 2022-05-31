@@ -1568,6 +1568,11 @@ nav a:active, nav a:hover {
 .h-\[19px\] {
     height: 19px;
 }
+.h-fit {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
 .w-full {
     width: 100%;
 }
