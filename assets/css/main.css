@@ -618,6 +618,10 @@ nav a:active, nav a:hover {
     }
 
     .drop_down >.btn {
+        font-weight: 700;
+    }
+
+    .drop_down >.btn {
         --tw-text-opacity: 1;
         color: rgb(255 255 255 / var(--tw-text-opacity));
     }
