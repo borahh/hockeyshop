@@ -642,8 +642,6 @@ nav a:active, nav a:hover {
     }
 }
 .drop_down >.btn svg {
-    margin-top: auto;
-    margin-bottom: auto;
     margin-left: auto;
     margin-right: 0px;
     display: block;
