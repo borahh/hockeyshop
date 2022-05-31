@@ -594,6 +594,7 @@ nav a:active, nav a:hover {
     color: currentColor;
 }
 .drop_down >.btn {
+    display: block;
     text-transform: lowercase;
 }
 .drop_down >.btn::first-letter {
