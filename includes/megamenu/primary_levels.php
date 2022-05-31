@@ -15,10 +15,10 @@ function get_hockeyshop_menu_holder() {
               <div class = 'flex w-11/12 max-w-[1500px] mx-auto p-3 gap-10 font-bold font-social-gothic text-white uppercase text-sm'>
                    <?php 
                    // Check rows exists.
-                        if( have_rows('hbdv_menu_links') ):
+                        if( have_rows('hbdv_menu_links', 'option') ):
                         
                             // Loop through rows.
-                            while( have_rows('hbdv_menu_links') ) : the_row();
+                            while( have_rows('hbdv_menu_links', 'option') ) : the_row();
                         
                                 // Load sub field value.
                                 $url = get_sub_field('url');
