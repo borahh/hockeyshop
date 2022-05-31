@@ -4,58 +4,37 @@ function hockeyshop_create_menu_name($level) {
     return strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $level)));
 }
 
-
-function get_hockeyshop_top_link1() {
-    if( have_rows('hbdv_menu_toplink1') ):
-
-        while( have_rows('hbdv_menu_toplink1') ) : the_row(); 
-        
-           return the_sub_field('hbdv_menu_toplink_url'); 
-        
+function get_hockeyshop_topmenu_links() {
+    // Check rows exists.
+    if( have_rows('hbdv_menu_links') ):
+    
+        // Loop through rows.
+        while( have_rows('hbdv_menu_links') ) : the_row();
+    
+            // Load sub field value.
+            $url = get_sub_field('url');
+            $title = get_sub_field('title');
+            // Do something...
+            ?>
+                <a href='<?php echo $url; ?>'><?php echo $title; ?></a>
+            <?php
+        // End loop.
         endwhile;
-        
-        endif;
-        
-   }
-function get_hockeyshop_top_link_title1() {
-    $link1 = get_field('hbdv_menu_toplink1');
-    if( $link1 ) {
-        return $link1['hbdv_menu_toplink_title'];
-    }
+    
+    // No value.
+    else :
+        // Do something...
+    endif;
 }
-function get_hockeyshop_top_link_title2() {
-    $link1 = get_field('hbdv_menu_toplink2');
-    if( $link1 ) {
-        return $link1['hbdv_menu_toplink_title'];
-    }
-}
-function get_hockeyshop_top_link_title3() {
-    $link1 = get_field('hbdv_menu_toplink3');
-    if( $link1 ) {
-        return $link1['hbdv_menu_toplink_title'];
-    }
-}
-function get_hockeyshop_top_link2() {
-    $link1 = get_field('hbdv_menu_toplink2');
-    if( $link1 ) {
-        return $link1['hbdv_menu_toplink_url'];
-    }
-}
-function get_hockeyshop_top_link3() {
-    $link1 = get_field('hbdv_menu_toplink3');
-    if( $link1 ) {
-        return $link1['hbdv_menu_toplink_url'];
-    }
-}
+
+
 function get_hockeyshop_menu_holder() {
     ?>  
     <nav class="  w-full bg-[#111111] fixed lg:relative left-0 top-0 z-50 ">
         <div class = 'hidden bg-black lg:block '>
         
               <div class = 'flex w-11/12 max-w-[1500px] mx-auto p-3 gap-10 font-bold font-social-gothic text-white uppercase text-sm'>
-                   <a href='<?php echo get_hockeyshop_top_link1(); ?>'><?php echo get_hockeyshop_top_link_title1(); ?></a>
-                   <a href='<?php echo get_hockeyshop_top_link2(); ?>'><?php echo get_hockeyshop_top_link_title2(); ?></a>
-                   <a href='<?php echo get_hockeyshop_top_link3(); ?>'><?php echo get_hockeyshop_top_link_title3(); ?></a>
+                   <?php echo get_hockeyshop_topmenu_links(); ?>
               </div>
         </div>
     <div class="flex items-center justify-between lg:block">
