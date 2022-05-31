@@ -47,9 +47,9 @@ function get_hockeyshop_menu_holder() {
         <div class = 'hidden bg-black lg:block '>
         
               <div class = 'flex w-11/12 max-w-[1500px] mx-auto p-3 gap-10 font-bold font-social-gothic text-white uppercase text-sm'>
-                   <a href='<?php echo get_hockeyshop_top_link1(); ?>'>some link</a>
-                   <a href='<?php echo get_hockeyshop_top_link2(); ?>'>some link</a>
-                   <a href='<?php echo get_hockeyshop_top_link3(); ?>'>some link</a>
+                   <a href='<?php echo get_hockeyshop_top_link1(); ?>'><?php echo get_hockeyshop_top_link_title1(); ?></a>
+                   <a href='<?php echo get_hockeyshop_top_link2(); ?>'><?php echo get_hockeyshop_top_link_title2(); ?></a>
+                   <a href='<?php echo get_hockeyshop_top_link3(); ?>'><?php echo get_hockeyshop_top_link_title3(); ?></a>
               </div>
         </div>
     <div class="flex items-center justify-between lg:block">
