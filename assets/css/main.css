@@ -743,12 +743,11 @@ nav a:active, nav a:hover {
     .drop_down:hover > .item {
         opacity: 1;
     }
-}
-.drop_down:hover > .btn {
-    --tw-bg-opacity: 1;
-    background-color: rgb(47 47 47 / var(--tw-bg-opacity));
-}
-@media (min-width: 1024px) {
+
+    .drop_down:hover > .btn {
+        --tw-bg-opacity: 1;
+        background-color: rgb(47 47 47 / var(--tw-bg-opacity));
+    }
 
     .drop_down > .item svg {
         display: none;
