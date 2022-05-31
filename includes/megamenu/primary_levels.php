@@ -4,13 +4,58 @@ function hockeyshop_create_menu_name($level) {
     return strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $level)));
 }
 
+
+function get_hockeyshop_top_link1() {
+    <?php
+    $link1 = get_field('hbdv_menu_toplink1');
+    if( $link1 ) {
+        return $link1['url'],
+    }
+}
+function get_hockeyshop_top_link_title1() {
+    <?php
+    $link1 = get_field('hbdv_menu_toplink1');
+    if( $link1 ) {
+        return $link1['title'],
+    }
+}
+function get_hockeyshop_top_link_title2() {
+    <?php
+    $link1 = get_field('hbdv_menu_toplink2');
+    if( $link1 ) {
+        return $link1['title'],
+    }
+}
+function get_hockeyshop_top_link_title3() {
+    <?php
+    $link1 = get_field('hbdv_menu_toplink3');
+    if( $link1 ) {
+        return $link1['title'],
+    }
+}
+function get_hockeyshop_top_link2() {
+    <?php
+    $link1 = get_field('hbdv_menu_toplink2');
+    if( $link1 ) {
+        return $link1['url'],
+    }
+}
+function get_hockeyshop_top_link3() {
+    <?php
+    $link1 = get_field('hbdv_menu_toplink3');
+    if( $link1 ) {
+        return $link1['url'],
+    }
+}
 function get_hockeyshop_menu_holder() {
-    ?>  <nav class="  w-full bg-[#111111] fixed lg:relative left-0 top-0 z-50 ">
+    ?>  
+    <nav class="  w-full bg-[#111111] fixed lg:relative left-0 top-0 z-50 ">
         <div class = 'hidden bg-black lg:block '>
+        
               <div class = 'flex w-11/12 max-w-[1500px] mx-auto p-3 gap-10 font-bold font-social-gothic text-white uppercase text-sm'>
-                   <a href="#">some link</a>
-                   <a href="#">some link</a>
-                   <a href="#">some link</a>
+                   <a href='<?php echo get_hockeyshop_top_link1(); ?>'>some link</a>
+                   <a href='<?php echo get_hockeyshop_top_link2(); ?>'>some link</a>
+                   <a href='<?php echo get_hockeyshop_top_link3(); ?>'>some link</a>
               </div>
         </div>
     <div class="flex items-center justify-between lg:block">
