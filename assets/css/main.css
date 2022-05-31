@@ -830,6 +830,7 @@ nav a:active, nav a:hover {
     padding-bottom: 0.375rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    color: inherit;
 }
 .search_bar svg {
     box-sizing: content-box;
