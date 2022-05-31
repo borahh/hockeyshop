@@ -50,7 +50,7 @@ function get_hockeyshop_menu_holder() {
                 </div>
                 
 
-                <div class="flex items-center order-3 text-base font-bold text-white  font-social-gothic">
+                <div class="flex items-center order-3 text-base font-bold text-white  font-social-gothic uppercase">
                     <a href="#" class="hidden lg:block">Login</a>
                     <hr class='hidden lg:block h-5 border-[1px] border-solid mx-[26px] border-gray-500/50'>
                     <a href="#" class="hidden lg:block">Vault</a>
