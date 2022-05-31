@@ -596,6 +596,7 @@ nav a:active, nav a:hover {
 .drop_down >.btn {
     position: relative;
     display: block;
+    font-weight: 500;
     text-transform: lowercase;
 }
 .drop_down >.btn::first-letter {
