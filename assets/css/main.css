@@ -600,11 +600,15 @@ nav a:active, nav a:hover {
     }
 
     .drop_down >.btn {
+        align-items: center;
+    }
+
+    .drop_down >.btn {
         justify-content: center;
     }
 
     .drop_down >.btn {
-        padding: 0.5rem;
+        padding: 0.75rem;
     }
 
     .drop_down >.btn {
