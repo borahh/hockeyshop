@@ -305,6 +305,10 @@ nav a:active, nav a:hover{
 .hbdv_submenu_col{
   @apply flex gap-4 flex-col lg:flex-row;
 }
+
+#menu-item-45391 > a{
+  @apply hidden;
+}
 /* TO HERE */
   /** End Menu Stuff **/
   /** Calculator stuff only **/

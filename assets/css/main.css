@@ -913,6 +913,9 @@ nav a:active, nav a:hover {
         flex-direction: row;
     }
 }
+#menu-item-45391 > a {
+    display: none;
+}
 /* TO HERE */
 /** End Menu Stuff **/
 /** Calculator stuff only **/
