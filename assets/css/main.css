@@ -593,6 +593,9 @@ nav .menu_btn, nav #close_all_opened {
 nav a:active, nav a:hover {
     color: currentColor;
 }
+.drop_down >.btn {
+    text-transform: capitalize;
+}
 @media (min-width: 1024px) {
 
     .drop_down >.btn {
@@ -623,6 +626,10 @@ nav a:active, nav a:hover {
 
     .drop_down >.btn {
         font-weight: 700;
+    }
+
+    .drop_down >.btn {
+        text-transform: uppercase;
     }
 
     .drop_down >.btn {
@@ -1557,9 +1564,6 @@ nav a:active, nav a:hover {
 .h-5 {
     height: 1.25rem;
 }
-.h-7 {
-    height: 1.75rem;
-}
 .h-\[19px\] {
     height: 19px;
 }
@@ -1580,17 +1584,14 @@ nav a:active, nav a:hover {
     width: -moz-fit-content;
     width: fit-content;
 }
-.w-7 {
-    width: 1.75rem;
+.w-\[30px\] {
+    width: 30px;
 }
 .w-6 {
     width: 1.5rem;
 }
 .w-\[24px\] {
     width: 24px;
-}
-.w-\[30px\] {
-    width: 30px;
 }
 .max-w-\[1500px\] {
     max-width: 1500px;
@@ -1712,14 +1713,11 @@ nav a:active, nav a:hover {
     font-size: 1rem;
     line-height: 1.5rem;
 }
-.text-\[10px\] {
-    font-size: 10px;
+.text-\[12px\] {
+    font-size: 12px;
 }
 .text-\[11px\] {
     font-size: 11px;
-}
-.text-\[12px\] {
-    font-size: 12px;
 }
 .font-bold {
     font-weight: 700;
@@ -1754,37 +1752,30 @@ nav a:active, nav a:hover {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
 }
-
 .group:hover .group-hover\:scale-x-100 {
     --tw-scale-x: 1;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-
 .peer:checked ~ .peer-checked\:bg-accent {
     --tw-bg-opacity: 1;
     background-color: rgb(23 104 210 / var(--tw-bg-opacity));
 }
-
 .peer:checked ~ .peer-checked\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-
 .peer:checked ~ .peer-checked\:opacity-0 {
     opacity: 0;
 }
-
 .peer:checked ~ .peer-checked\:opacity-100 {
     opacity: 1;
 }
-
 @media (min-width: 640px) {
 
     .sm\:w-5\/6 {
         width: 83.333333%;
     }
 }
-
 @media (min-width: 1024px) {
 
     .lg\:static {
@@ -1861,27 +1852,16 @@ nav a:active, nav a:hover {
         padding-right: 1.25rem;
     }
 }
-
 @media (min-width: 1280px) {
-
-    .xl\:w-\[250px\] {
-        width: 250px;
-    }
 
     .xl\:w-\[230px\] {
         width: 230px;
     }
 }
-
 @media (min-width: 1536px) {
 
     .\32xl\:py-8 {
         padding-top: 2rem;
         padding-bottom: 2rem;
-    }
-
-    .\32xl\:text-xl {
-        font-size: 1.25rem;
-        line-height: 1.75rem;
     }
 }
