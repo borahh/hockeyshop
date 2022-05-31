@@ -285,7 +285,7 @@ nav a:active, nav a:hover{
   @apply  flex  w-fit items-center lg:order-1   transition-colors duration-150 hover:text-black lg:hover:text-[#7e7e7e] hover:bg-white lg:hover:bg-[#2f2f2f] relative ml-auto lg:ml-0 lg:bg-[#2f2f2f] lg:text-[#7e7e7e];
 }
 .search_bar .input_field{
-  @apply bg-transparent h-full border-0 w-[120px] absolute right-full transform transition-transform duration-150 origin-right scale-x-0  bg-transparent outline-none lg:static lg:scale-x-100 lg:w-fit ;
+  @apply bg-transparent h-full border-0 w-[120px] absolute right-full transform transition-transform duration-150 origin-right scale-x-0  outline-none lg:static lg:scale-x-100 lg:w-fit xl:w-[200px] ;
 }
 .search_bar .aws-container {
   @apply h-full;
@@ -294,10 +294,10 @@ nav a:active, nav a:hover{
   @apply h-full bg-transparent;
 }
 .search_bar .input_field form input[type = "search"]{
-  @apply py-1.5 px-2 border-0 text-inherit;
+  @apply py-1.5 px-2 border-0 text-inherit xl:py-2;
 }
  .search_bar svg{
-  @apply h-6 w-6 block py-1.5 px-2 box-content ;
+  @apply h-6 w-6 block py-1.5 px-2 box-content lg:py-2  ;
 }
 .hbdv_submenu_group a{
   @apply pointer-events-none text-black font-bold lg:text-[#9dbaee] font-social-gothic text-lg;
