@@ -306,7 +306,7 @@ nav a:active, nav a:hover{
   @apply flex gap-4 flex-col lg:flex-row;
 }
 
-#menu-ishockey-stave > li > a{
+.hbdv_submenu_col > li > a{
   @apply hidden;
 }
 /* TO HERE */
