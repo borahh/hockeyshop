@@ -1565,6 +1565,11 @@ nav a:active, nav a:hover {
 .w-10 {
     width: 2.5rem;
 }
+.w-fit {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
 .max-w-\[1500px\] {
     max-width: 1500px;
 }
