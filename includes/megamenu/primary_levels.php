@@ -6,12 +6,17 @@ function hockeyshop_create_menu_name($level) {
 
 
 function get_hockeyshop_top_link1() {
-    /* Changed */
-    $link1 = get_field('hbdv_menu_toplink1');
-    if( $link1 ) {
-        return $link1['hbdv_menu_toplink_url'];
-    }
-}
+    if( have_rows('hbdv_menu_toplink1') ):
+
+        while( have_rows('hbdv_menu_toplink1') ) : the_row(); 
+        
+           return the_sub_field('hbdv_menu_toplink_url'); 
+        
+        endwhile;
+        
+        endif;
+        
+   }
 function get_hockeyshop_top_link_title1() {
     $link1 = get_field('hbdv_menu_toplink1');
     if( $link1 ) {
