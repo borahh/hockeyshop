@@ -162,14 +162,7 @@ function get_hockeyshop_main_menu() { ?>
         const backBtn = document.querySelector('#back_btn')
         const closeAll = document.querySelector('#close_all_opened')
         const menuBtn = document.querySelector('.menu_btn')
-        const dropDownBtn = document.querySelectorAll('.drop_down > .btn')
-        
-      
-         dropDownBtn.foreach(item =>{
-             item.insertAdjacentHTML('beforeend',  `<svg xmlns="http://www.w3.org/2000/svg" class="w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-</svg>`)
-         })   
+       
 
         const changeMenuIcon = (isOpen) => {
             if (window.innerWidth <= 1023) {
@@ -225,6 +218,14 @@ function get_hockeyshop_main_menu() { ?>
             r.style.setProperty('--nav-height', nav.scrollHeight + 'px');
             
         })
+
+
+        const dropDownBtn = document.querySelectorAll('.drop_down > .btn')
+        dropDownBtn.forEach(item =>{
+            item.insertAdjacentHTML('beforeend',  `<svg xmlns="http://www.w3.org/2000/svg" class="w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+ <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+</svg>`)
+        })   
 
     </script>
     </section>
