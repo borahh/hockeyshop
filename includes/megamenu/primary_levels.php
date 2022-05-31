@@ -4,31 +4,62 @@ function hockeyshop_create_menu_name($level) {
     return strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $level)));
 }
 
+
+function get_hockeyshop_top_link1() {
+    /* Changed */
+    $link1 = get_field('hbdv_menu_toplink1');
+    if( $link1 ) {
+        return $link1['url'];
+    }
+}
+function get_hockeyshop_top_link_title1() {
+    $link1 = get_field('hbdv_menu_toplink1');
+    if( $link1 ) {
+        return $link1['title'];
+    }
+}
+function get_hockeyshop_top_link_title2() {
+    $link1 = get_field('hbdv_menu_toplink2');
+    if( $link1 ) {
+        return $link1['title'];
+    }
+}
+function get_hockeyshop_top_link_title3() {
+    $link1 = get_field('hbdv_menu_toplink3');
+    if( $link1 ) {
+        return $link1['title'];
+    }
+}
+function get_hockeyshop_top_link2() {
+    $link1 = get_field('hbdv_menu_toplink2');
+    if( $link1 ) {
+        return $link1['url'];
+    }
+}
+function get_hockeyshop_top_link3() {
+    $link1 = get_field('hbdv_menu_toplink3');
+    if( $link1 ) {
+        return $link1['url'];
+    }
+}
 function get_hockeyshop_menu_holder() {
-    ?>  <nav class="  w-full bg-[#111111] fixed lg:relative left-0 top-0 z-50 ">
+    ?>  
+    <nav class="  w-full bg-[#111111] fixed lg:relative left-0 top-0 z-50 ">
         <div class = 'hidden bg-black lg:block '>
+        
               <div class = 'flex w-11/12 max-w-[1500px] mx-auto p-3 gap-10 font-bold font-social-gothic text-white uppercase text-sm'>
-                   <a href="#">some link</a>
-                   <a href="#">some link</a>
-                   <a href="#">some link</a>
+                   <a href='<?php echo get_hockeyshop_top_link1(); ?>'><?php echo get_hockeyshop_top_link_title1(); ?></a>
+                   <a href='<?php echo get_hockeyshop_top_link2(); ?>'><?php echo get_hockeyshop_top_link_title2(); ?></a>
+                   <a href='<?php echo get_hockeyshop_top_link3(); ?>'><?php echo get_hockeyshop_top_link_title3(); ?></a>
               </div>
         </div>
     <div class="flex items-center justify-between lg:block">
      <div class="flex items-center justify-between flex-grow gap-2 p-3 pr-0 text-white lg:pr-5 2xl:py-8 lg:grid lg:grid-cols-3 lg:justify-items-center w-11/12 max-w-[1500px] mx-auto">
                 <img class="w-[90px] lg:w-[200px] xl:w-[250px] lg:order-2" src="https://hockeyshop.dk/wp-content/uploads/2020/07/HockeyShop.svg" alt="">
 
+                <?php echo do_shortcode('[aws_search_form id="1"]');?>
+                
 
-
-                <div
-                    class="search_bar group justify-self-start">
-                    <input type="text" name="search" id="search"
-                        class="group-hover:scale-x-100"
-                        placeholder="search">
-                        <svg class ="w-6 h-6 fill-current stroke-0" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.8332 14.17L22 20.3368L20.3368 22L14.17 15.8332C12.686 16.9669 10.8316 17.6404 8.8202 17.6404C3.94862 17.6404 0 13.6914 0 8.8202C0 3.94862 3.94862 0 8.8202 0C13.6914 0 17.6404 3.94862 17.6404 8.8202C17.6404 10.8316 16.9669 12.686 15.8332 14.17ZM8.8202 15.288C12.3924 15.288 15.2881 12.3923 15.2881 8.8201C15.2881 5.2476 12.3924 2.35174 8.8202 2.35174C5.24771 2.35174 2.35184 5.2475 2.35184 8.8201C2.35184 12.3923 5.2476 15.288 8.8202 15.288Z" />
-                        </svg>
-
-                </div>
                 <div class="flex items-center order-3 text-lg font-medium text-white 2xl:text-xl font-social-gothic">
                     <a href="#" class="hidden lg:block">Login</a>
                     <hr class='hidden lg:block h-5 border-[1px] border-solid mx-5 border-gray-500/50'>
