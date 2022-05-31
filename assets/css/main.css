@@ -1497,6 +1497,12 @@ nav a:active, nav a:hover {
 .bottom-0 {
     bottom: 0px;
 }
+.bottom-full {
+    bottom: 100%;
+}
+.left-full {
+    left: 100%;
+}
 .z-50 {
     z-index: 50;
 }
@@ -1528,6 +1534,9 @@ nav a:active, nav a:hover {
 }
 .hidden {
     display: none;
+}
+.aspect-square {
+    aspect-ratio: 1 / 1;
 }
 .h-5 {
     height: 1.25rem;
@@ -1598,6 +1607,9 @@ nav a:active, nav a:hover {
 .rounded-md {
     border-radius: 0.375rem;
 }
+.rounded-full {
+    border-radius: 9999px;
+}
 .border-\[1px\] {
     border-width: 1px;
 }
@@ -1622,6 +1634,10 @@ nav a:active, nav a:hover {
 .bg-gray-200 {
     --tw-bg-opacity: 1;
     background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+.bg-\[\#ff0000\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-t {
     background-image: linear-gradient(to top, var(--tw-gradient-stops));
@@ -1705,30 +1721,37 @@ nav a:active, nav a:hover {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
 }
+
 .group:hover .group-hover\:scale-x-100 {
     --tw-scale-x: 1;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+
 .peer:checked ~ .peer-checked\:bg-accent {
     --tw-bg-opacity: 1;
     background-color: rgb(23 104 210 / var(--tw-bg-opacity));
 }
+
 .peer:checked ~ .peer-checked\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
 .peer:checked ~ .peer-checked\:opacity-0 {
     opacity: 0;
 }
+
 .peer:checked ~ .peer-checked\:opacity-100 {
     opacity: 1;
 }
+
 @media (min-width: 640px) {
 
     .sm\:w-5\/6 {
         width: 83.333333%;
     }
 }
+
 @media (min-width: 1024px) {
 
     .lg\:static {
@@ -1805,12 +1828,14 @@ nav a:active, nav a:hover {
         padding-right: 1.25rem;
     }
 }
+
 @media (min-width: 1280px) {
 
     .xl\:w-\[250px\] {
         width: 250px;
     }
 }
+
 @media (min-width: 1536px) {
 
     .\32xl\:py-8 {
