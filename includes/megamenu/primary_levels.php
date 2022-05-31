@@ -4,26 +4,7 @@ function hockeyshop_create_menu_name($level) {
     return strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $level)));
 }
 
-function get_hockeyshop_topmenu_links() {
-    // Check rows exists.
-    if( have_rows('hbdv_menu_links') ):
-    
-        // Loop through rows.
-        while( have_rows('hbdv_menu_links') ) : the_row();
-    
-            // Load sub field value.
-            $url = get_sub_field('url');
-            $title = get_sub_field('title');
-            
-            return '<a href="' . $url . '">' . $title . '</a>';
-        // End loop.
-        endwhile;
-    
-    // No value.
-    else :
-        // Do something...
-    endif;
-}
+
 
 
 function get_hockeyshop_menu_holder() {
@@ -32,7 +13,26 @@ function get_hockeyshop_menu_holder() {
         <div class = 'hidden bg-black lg:block '>
         
               <div class = 'flex w-11/12 max-w-[1500px] mx-auto p-3 gap-10 font-bold font-social-gothic text-white uppercase text-sm'>
-                   <?php echo get_hockeyshop_topmenu_links(); ?>
+                   <?php 
+                   // Check rows exists.
+                        if( have_rows('hbdv_menu_links') ):
+                        
+                            // Loop through rows.
+                            while( have_rows('hbdv_menu_links') ) : the_row();
+                        
+                                // Load sub field value.
+                                $url = get_sub_field('url');
+                                $title = get_sub_field('title');
+                                
+                                echo '<a href="' . $url . '">' . $title . '</a>';
+                            // End loop.
+                            endwhile;
+                        
+                        // No value.
+                        else :
+                            // Do something...
+                        endif;
+                   ?>
               </div>
         </div>
     <div class="flex items-center justify-between lg:block">
