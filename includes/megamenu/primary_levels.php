@@ -6,7 +6,7 @@ function hockeyshop_create_menu_name($level) {
 
 function get_hockeyshop_menu_holder() {
     ?>  <nav class="  w-full bg-[#111111] fixed lg:relative left-0 top-0 z-50 ">
-        <div class = 'hidden lg:block bg-black '>
+        <div class = 'hidden bg-black lg:block '>
               <div class = 'flex w-11/12 max-w-[1500px] mx-auto p-3 gap-10 font-bold font-social-gothic text-white uppercase text-sm'>
                    <a href="#">some link</a>
                    <a href="#">some link</a>
@@ -84,7 +84,7 @@ function get_hockeyshop_menu_holder() {
                         wp_nav_menu( array(
                             'theme_location' => $name,
                             'container_class' => 'hbdv_megamenu__secondary item',
-                            'menu_class' => 'hbdv_megamenu__secondary--list'
+                            'menu_class' => 'hbdv_submenu_col'
                         ) );
                         ?>
                         </div>
