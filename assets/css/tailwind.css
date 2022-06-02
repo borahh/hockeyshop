@@ -233,7 +233,7 @@
   *{
     @apply list-none m-0 p-0;
   }
-.back_btn{
+.drop_down > .item .back_btn{
   @apply  bg-transparent p-3 px-5 text-black;
 }
   .btn{
