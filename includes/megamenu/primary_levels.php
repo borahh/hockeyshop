@@ -181,11 +181,7 @@ function get_hockeyshop_main_menu() { ?>
                 ele.nextElementSibling.classList.add('opened')
                 const opened = document.querySelectorAll('.opened')
                 changeMenuIcon(true)
-                if (opened.length <= 1 && window.length <= 1023) {
-                    backBtn.classList.add('hidden')
-                } else {
-                    backBtn.classList.remove('hidden')
-                }
+               
             })
         })
       
