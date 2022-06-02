@@ -429,6 +429,8 @@
 }
 .drop_down > .item .back_btn {
     background-color: transparent;
+    padding-left: 0px;
+    padding-right: 0px;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
     --tw-text-opacity: 1;
