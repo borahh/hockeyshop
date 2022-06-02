@@ -608,9 +608,9 @@ nav a:active, nav a:hover {
 @media (min-width: 1024px) {
 
     .drop_down >.btn {
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
-        width: fit-content;
+        width: -webkit-min-content;
+        width: -moz-min-content;
+        width: min-content;
     }
 
     .drop_down >.btn {
