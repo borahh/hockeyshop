@@ -428,6 +428,7 @@
     padding: 0px;
 }
 .drop_down > .item .back_btn {
+    border-width: 0px;
     background-color: transparent;
     padding-left: 0px;
     padding-right: 0px;
