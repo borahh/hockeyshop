@@ -159,7 +159,7 @@ function get_hockeyshop_main_menu() { ?>
         </div>
         <script>
         const btn = document.querySelectorAll('.btn')
-        const backBtn = document.querySelectorAll('.back_btn')
+      
         const closeAll = document.querySelector('#close_all_opened')
         const menuBtn = document.querySelector('.menu_btn')
         
@@ -184,18 +184,8 @@ function get_hockeyshop_main_menu() { ?>
                
             })
         })
-       console.log(backBtn)
-        backBtn.forEach(item =>{
-            item.addEventListener('click', () => {
-            const opened = document.querySelectorAll('.opened')
-            opened[opened.length - 1].classList.remove('opened')
-            if (opened.length <= 1) {
-                changeMenuIcon(false)
-            }
-            console.log('working')
-
-        })
-        })
+      
+        
        
 
         closeAll.addEventListener('click', () => {
@@ -235,7 +225,18 @@ function get_hockeyshop_main_menu() { ?>
                     </button>
                 </div>`)
         })   
+        const backBtn = document.querySelectorAll('.back_btn')
+        backBtn.forEach(item =>{
+            item.addEventListener('click', () => {
+            const opened = document.querySelectorAll('.opened')
+            opened[opened.length - 1].classList.remove('opened')
+            if (opened.length <= 1) {
+                changeMenuIcon(false)
+            }
+            console.log('working')
 
+        })
+        })
     </script>
     </section>
     <!-- HTML END HERE -->
