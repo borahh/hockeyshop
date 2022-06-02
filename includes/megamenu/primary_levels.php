@@ -226,7 +226,7 @@ function get_hockeyshop_main_menu() { ?>
 </svg>`)
         })
 
-        const dropDownItem = document.querySelctorAll('.drop_down > .item')
+        const dropDownItem = document.querySelectorAll('.drop_down > .item')
         dropDownItem.forEach(item =>{
             item.insertAdjacentHTML('afterbegin' , ` <div class='flex justify-between  lg:hidden'>
                     <button class="flex items-center  gap-2 " id='back_btn'>
