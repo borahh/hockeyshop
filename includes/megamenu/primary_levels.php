@@ -184,7 +184,7 @@ function get_hockeyshop_main_menu() { ?>
                
             })
         })
-      
+       console.log(backBtn)
         backBtn.forEach(item =>{
             item.addEventListener('click', () => {
             const opened = document.querySelectorAll('.opened')
@@ -193,7 +193,7 @@ function get_hockeyshop_main_menu() { ?>
                 changeMenuIcon(false)
             }
             console.log('working')
-            
+
         })
         })
        
