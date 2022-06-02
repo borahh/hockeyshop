@@ -192,7 +192,8 @@ function get_hockeyshop_main_menu() { ?>
             if (opened.length <= 1) {
                 changeMenuIcon(false)
             }
-           
+            console.log('working')
+            
         })
         })
        
