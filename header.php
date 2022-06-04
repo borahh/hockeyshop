@@ -26,13 +26,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 hello_elementor_body_open(); ?>
 
 <?php 
-echo get_hockeyshop_main_menu();
+
 
  
 if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'header' ) ) {
 	if ( did_action( 'elementor/loaded' ) && hello_header_footer_experiment_active() ) {
 		get_template_part( 'template-parts/dynamic-header' );
 	} else {
-		get_template_part( 'template-parts/header' );
+		echo get_hockeyshop_main_menu();
+		// get_template_part( 'template-parts/header' );
 	}
 }
