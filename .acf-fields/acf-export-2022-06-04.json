@@ -1,0 +1,515 @@
+[
+    {
+        "key": "group_62959ac506830",
+        "title": "Menu Top Links",
+        "fields": [
+            {
+                "key": "field_6295f63810d9b",
+                "label": "Menu Links",
+                "name": "hbdv_menu_links",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "wpml_cf_preferences": 1,
+                "collapsed": "",
+                "min": 0,
+                "max": 3,
+                "layout": "row",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_6295f65b10d9c",
+                        "label": "Title",
+                        "name": "title",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "wpml_cf_preferences": 1,
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_6295f66510d9d",
+                        "label": "URL",
+                        "name": "url",
+                        "type": "link",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "wpml_cf_preferences": 1
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "mega-menu-settings"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "wpml_field_group_language": "da"
+    },
+    {
+        "key": "group_6280dd16400de",
+        "title": "Primary Menu Settings",
+        "fields": [
+            {
+                "key": "field_6280de6071e7e",
+                "label": "Primary Levels",
+                "name": "hbdv_mega_primary_levels",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "wpml_cf_preferences": 1,
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "row",
+                "button_label": "Add New Parent",
+                "sub_fields": [
+                    {
+                        "key": "field_6280e44fc7735",
+                        "label": "Title",
+                        "name": "hbdv_mega_primary_level_title",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "wpml_cf_preferences": 1,
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_6280df17fd32d",
+                        "label": "URL",
+                        "name": "hbdv_mega_primary_level_url",
+                        "type": "link",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "wpml_cf_preferences": 1
+                    },
+                    {
+                        "key": "field_6280e514361b1",
+                        "label": "ID",
+                        "name": "hbdv_mega_primary_level_id",
+                        "type": "text",
+                        "instructions": "It should be letter only unique identifier. For example, \"Gloves Menu\"",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "wpml_cf_preferences": 1,
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "mega-menu-settings"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "wpml_field_group_language": "da"
+    },
+    {
+        "key": "group_610b90e56375d",
+        "title": "Product Input Range",
+        "fields": [
+            {
+                "key": "field_61d84f8f6ea41",
+                "label": "Load Calculator",
+                "name": "hbdv_load_calculator",
+                "type": "radio",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "wpml_cf_preferences": 1,
+                "choices": {
+                    "disabled": "Disabled",
+                    "bauer_icehockey_skates": "Bauer Icehockey Skates",
+                    "ccm_skates": "CCM Skates",
+                    "bauer_gloves_sr": "Bauer Gloves SR",
+                    "bauer_gloves_jr": "Bauer Gloves JR",
+                    "bauer_gloves_yt": "Bauer Gloves YT",
+                    "bauer_gloves_int": "Bauer Gloves INT",
+                    "ccm_gloves_sr": "CCM Gloves SR",
+                    "ccm_gloves_jr": "CCM Gloves JR",
+                    "ccm_gloves_yt": "CCM Gloves YT",
+                    "bauer_shoulder_pads_jr": "Bauer Shoulder Pads JR",
+                    "bauer_shoulder_pads_sr": "Bauer Shoulder Pads SR",
+                    "bauer_shoulder_pads_int": "Bauer Shoulder Pads INT",
+                    "bauer_shoulder_pads_yt": "Bauer Shoulder Pads YT",
+                    "bauer_shoulder_pads_women": "Bauer Shoulder Pads WOMEN",
+                    "ccm_shoulder_pads_sr": "CCM Shoulder Pads SR",
+                    "ccm_shoulder_pads_jr": "CCM Shoulder Pads JR",
+                    "ccm_shoulder_pads_yt": "CCM Shoulder Pads YT",
+                    "ccm_shoulder_pads_women": "CCM Shoulder Pads WOMEN",
+                    "bauer_elbow_pads_sr": "Bauer Elbow Pads SR",
+                    "bauer_elbow_pads_jr": "Bauer Elbow Pads JR",
+                    "bauer_elbow_pads_yt": "Bauer Elbow Pads YT",
+                    "bauer_elbow_pads_int": "Bauer Elbow Pads INT",
+                    "ccm_elbow_pads_sr": "CCM Elbow Pads SR",
+                    "ccm_elbow_pads_jr": "CCM Elbow Pads JR",
+                    "ccm_elbow_pads_yt": "CCM Elbow Pads YT",
+                    "bauer_shin_guards_sr": "Bauer Shin Guards SR",
+                    "bauer_shin_guards_jr": "Bauer Shin Guards JR",
+                    "bauer_shin_guards_yt": "Bauer Shin Guards YT",
+                    "bauer_shin_guards_int": "Bauer Shin Guards INT",
+                    "ccm_shin_guards_sr": "CCM Shin Guards SR",
+                    "ccm_shin_guards_jr": "CCM Shin Guards JR",
+                    "ccm_shin_guards_yt": "CCM Shin Guards YT",
+                    "bauer_player_pants_sr": "Bauer Player Pants SR",
+                    "bauer_player_pants_jr": "Bauer Player Pants JR",
+                    "bauer_player_pants_yt": "Bauer Player Pants YT",
+                    "bauer_player_pants_int": "Bauer Player Pants INT",
+                    "bauer_player_pants_women": "Bauer Player Pants WOMEN",
+                    "ccm_player_pants_sr": "CCM Player Pants SR",
+                    "ccm_player_pants_jr": "CCM Player Pants JR",
+                    "ccm_player_pants_yt": "CCM Player Pants YT",
+                    "ccm_player_pants_women": "CCM Player Pants WOMEN"
+                },
+                "allow_null": 1,
+                "other_choice": 0,
+                "default_value": "",
+                "layout": "vertical",
+                "return_format": "value",
+                "save_other_choice": 0
+            },
+            {
+                "key": "field_610b90f8b1a12",
+                "label": "Size From",
+                "name": "hbdv_size_from",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_61d84f8f6ea41",
+                            "operator": "==",
+                            "value": "bauer_icehockey_skates"
+                        }
+                    ],
+                    [
+                        {
+                            "field": "field_61d84f8f6ea41",
+                            "operator": "==",
+                            "value": "ccm_skates"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "wpml_cf_preferences": 1,
+                "choices": [
+                    "7.0Y (24)",
+                    "7.5Y (24.5)",
+                    "8.0Y (25)",
+                    "8.5Y (25.5)",
+                    "9.0Y (26)",
+                    "9.5Y (26.5)",
+                    "10.0Y  (27)",
+                    "10.5Y (27.5)",
+                    "11.0Y (28)",
+                    "11.5Y (28.5)",
+                    "12.0Y (29)",
+                    "12.0Y (29.5)",
+                    "12.5Y (30)",
+                    "13.0Y (30.5)",
+                    "13.0Y (31)",
+                    "13.5Y (31.5)",
+                    "1.0 (32)",
+                    "1.5 (32.5)",
+                    "1.5 (33)",
+                    "2.0 (33.5)",
+                    "2.5 (34)",
+                    "3.0 (34.5)",
+                    "3.0 (35)",
+                    "3.5 (35.5)",
+                    "4.0 (36)",
+                    "4.5 (36.5)",
+                    "5.0 (37)",
+                    "5.0 (37.5)",
+                    "5.5 (38)",
+                    "6.0 (38.5)",
+                    "6.5 (39)",
+                    "7.0 (39.50)",
+                    "7.0 (40)",
+                    "7.5 (40.5)",
+                    "8.0 (41)",
+                    "8.5 (41.5)",
+                    "8.5 (42)",
+                    "9.0 (42.5)",
+                    "9.5 (43)",
+                    "10.0 (43.5)",
+                    "10.0 (44)",
+                    "10.5 (44.5)",
+                    "11.0 (45)",
+                    "11.5 (45.5)",
+                    "12.0 (46)",
+                    "12.5 (46.5)",
+                    "12.5 (47)",
+                    "13.0 (47.5)",
+                    "13.5 (48)"
+                ],
+                "default_value": false,
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_610b913ab1a13",
+                "label": "Size To",
+                "name": "hbdv_size_to",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_61d84f8f6ea41",
+                            "operator": "==",
+                            "value": "bauer_icehockey_skates"
+                        }
+                    ],
+                    [
+                        {
+                            "field": "field_61d84f8f6ea41",
+                            "operator": "==",
+                            "value": "ccm_skates"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "wpml_cf_preferences": 1,
+                "choices": {
+                    "1": "7.0Y (24)",
+                    "2": "7.5Y (24.5)",
+                    "3": "8.0Y (25)",
+                    "4": "8.5Y (25.5)",
+                    "5": "9.0Y (26)",
+                    "6": "9.5Y (26.5)",
+                    "7": "10.0Y  (27)",
+                    "8": "10.5Y (27.5)",
+                    "9": "11.0Y (28)",
+                    "10": "11.5Y (28.5)",
+                    "11": "12.0Y (29)",
+                    "12": "12.0Y (29.5)",
+                    "13": "12.5Y (30)",
+                    "14": "13.0Y (30.5)",
+                    "15": "13.0Y (31)",
+                    "16": "13.5Y (31.5)",
+                    "17": "1.0 (32)",
+                    "18": "1.5 (32.5)",
+                    "19": "1.5 (33)",
+                    "20": "2.0 (33.5)",
+                    "21": "2.5 (34)",
+                    "22": "3.0 (34.5)",
+                    "23": "3.0 (35)",
+                    "24": "3.5 (35.5)",
+                    "25": "4.0 (36)",
+                    "26": "4.5 (36.5)",
+                    "27": "5.0 (37)",
+                    "28": "5.0 (37.5)",
+                    "29": "5.5 (38)",
+                    "30": "6.0 (38.5)",
+                    "31": "6.5 (39)",
+                    "32": "7.0 (39.50)",
+                    "33": "7.0 (40)",
+                    "34": "7.5 (40.5)",
+                    "35": "8.0 (41)",
+                    "36": "8.5 (41.5)",
+                    "37": "8.5 (42)",
+                    "38": "9.0 (42.5)",
+                    "39": "9.5 (43)",
+                    "40": "10.0 (43.5)",
+                    "41": "10.0 (44)",
+                    "42": "10.5 (44.5)",
+                    "43": "11.0 (45)",
+                    "44": "11.5 (45.5)",
+                    "45": "12.0 (46)",
+                    "46": "12.5 (46.5)",
+                    "47": "12.5 (47)",
+                    "48": "13.0 (47.5)",
+                    "49": "13.5 (48)"
+                },
+                "default_value": false,
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_610b9154b1a14",
+                "label": "Choose Fit Scale",
+                "name": "hbdv_choose_fit_scale",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_61d84f8f6ea41",
+                            "operator": "==",
+                            "value": "bauer_icehockey_skates"
+                        }
+                    ],
+                    [
+                        {
+                            "field": "field_61d84f8f6ea41",
+                            "operator": "==",
+                            "value": "ccm_skates"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "wpml_cf_preferences": 1,
+                "choices": {
+                    "scale_fit": "FIT 1",
+                    "scale_ee": "EE"
+                },
+                "default_value": false,
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_61d98953f5bc9",
+                "label": "Show Sharpening Options",
+                "name": "hbdv_sharpening_options",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "",
+                "ui_off_text": "",
+                "wpml_cf_preferences": 1
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "product"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "wpml_field_group_language": "da"
+    }
+]
