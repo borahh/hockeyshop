@@ -51,10 +51,15 @@ function get_hockeyshop_menu_holder() {
                 
 
                 <div class="flex items-center order-3 text-base font-bold text-white uppercase font-social-gothic">
-                    <a href="<?php echo wp_login_url(); ?>" class="hidden lg:block"><?php _e("Login", "hockeyshop-theme"); ?></a>
-                    <hr class='hidden lg:block h-5 border-[1px] border-solid mx-[26px] border-gray-500/50'>
-                    <a href="#" class="hidden lg:block"><?php _e("Opret konto", "hockeyshop-theme"); ?></a>
-                    <hr class='hidden lg:block h-5 border-[1px] border-solid mx-[26px] border-gray-500/50'>
+                    <?php if(!is_user_logged_in()) { ?>
+                        <a href="<?php echo wp_login_url(); ?>" class="hidden lg:block"><?php _e("Login", "hockeyshop-theme"); ?></a>
+                        <hr class='hidden lg:block h-5 border-[1px] border-solid mx-[26px] border-gray-500/50'>
+                        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" class="hidden lg:block"><?php _e("Opret konto", "hockeyshop-theme"); ?></a>
+                        <hr class='hidden lg:block h-5 border-[1px] border-solid mx-[26px] border-gray-500/50'>
+                    <?php } else { ?> 
+                        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" class="hidden lg:block"><?php _e("Min konto", "hockeyshop-theme"); ?></a>
+                        <hr class='hidden lg:block h-5 border-[1px] border-solid mx-[26px] border-gray-500/50'>
+                    <?php } ?>
                     <a href="<?php echo wc_get_cart_url(); ?>" class="flex items-center gap-2 p-2 text-white ">
                     <div class = "relative flex items-center w-fit">
                     <svg class = 'relative fill-current  w-[30px]' viewBox="0 0 29 22" fill="none" xmlns="http://www.w3.org/2000/svg">
