@@ -601,64 +601,64 @@ nav .menu_btn, nav #close_all_opened {
 nav a:active, nav a:hover {
     color: currentColor;
 }
-.drop_down >.btn {
+.drop_down > .btn {
     display: block;
     font-weight: 500;
     text-transform: lowercase;
 }
-.drop_down >.btn::first-letter {
+.drop_down > .btn::first-letter {
     text-transform: capitalize;
 }
 @media (min-width: 1024px) {
 
-    .drop_down >.btn {
+    .drop_down > .btn {
         width: -webkit-fit-content;
         width: -moz-fit-content;
         width: fit-content;
     }
 
-    .drop_down >.btn {
+    .drop_down > .btn {
         align-items: center;
     }
 
-    .drop_down >.btn {
+    .drop_down > .btn {
         justify-content: center;
     }
 
-    .drop_down >.btn {
+    .drop_down > .btn {
         padding: 0.75rem;
     }
 
-    .drop_down >.btn {
+    .drop_down > .btn {
         padding-left: 1rem;
         padding-right: 1rem;
     }
 
-    .drop_down >.btn {
+    .drop_down > .btn {
         font-size: 1rem;
         line-height: 1.5rem;
     }
 
-    .drop_down >.btn {
+    .drop_down > .btn {
         font-weight: 700;
     }
 
-    .drop_down >.btn {
+    .drop_down > .btn {
         text-transform: uppercase;
     }
 
-    .drop_down >.btn {
+    .drop_down > .btn {
         --tw-text-opacity: 1;
         color: rgb(255 255 255 / var(--tw-text-opacity));
     }
 }
-.drop_down >.btn svg {
+.drop_down > .btn svg {
     float: right;
     width: 1.25rem;
 }
 @media (min-width: 1024px) {
 
-    .drop_down >.btn svg {
+    .drop_down > .btn svg {
         display: none;
     }
 
@@ -679,7 +679,7 @@ nav a:active, nav a:hover {
     }
 
     .drop_down > .item {
-        max-height: 500px;
+        max-height: 800px;
     }
 
     .drop_down > .item {
@@ -854,7 +854,7 @@ nav a:active, nav a:hover {
     height: 100%;
     background-color: transparent;
 }
-.search_bar .input_field form input[type = "search"] {
+.search_bar .input_field form input[type='search'] {
     border-width: 0px;
     padding-top: 0.375rem;
     padding-bottom: 0.375rem;
@@ -865,24 +865,24 @@ nav a:active, nav a:hover {
 }
 @media (min-width: 1024px) {
 
-    .search_bar .input_field form input[type = "search"] {
+    .search_bar .input_field form input[type='search'] {
         --tw-text-opacity: 1;
         color: rgb(126 126 126 / var(--tw-text-opacity));
     }
 }
 @media (min-width: 1280px) {
 
-    .search_bar .input_field form input[type = "search"] {
+    .search_bar .input_field form input[type='search'] {
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
     }
 
-    .search_bar .input_field form input[type = "search"] {
+    .search_bar .input_field form input[type='search'] {
         padding-left: 0.75rem;
         padding-right: 0.75rem;
     }
 
-    .search_bar .input_field form input[type = "search"] {
+    .search_bar .input_field form input[type='search'] {
         font-size: 1rem;
         line-height: 1.5rem;
     }
