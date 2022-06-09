@@ -152,17 +152,8 @@ function get_hockeyshop_primary_menus() {
 }
 
 
-function get_hockeyshop_main_menu() { ?>
-    <!-- HTML START HERE -->
-    <section>
-        <div class="example---nesing">
-            <!-- NAVIGATION MENU STARTS -->
-            <?php echo get_hockeyshop_menu_holder();?>
-            <!-- NAVIGATION MENU ENDS -->
-        </div>
-    </section>
-    <!-- HTML END HERE -->
-    <?php
+function get_hockeyshop_main_menu() { 
+    echo get_hockeyshop_menu_holder();
 }
 
 
