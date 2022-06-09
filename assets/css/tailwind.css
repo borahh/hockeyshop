@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  .site-header.hockeyshop-header {
-    @apply p-0 m-0 !important;
+  .hockeyshop-header {
+    @apply p-0 m-0 max-w-full !important;
   }
   input[type='range'].calculator-range::-ms-thumb {
     @apply w-8 h-8 rounded-[50%] bg-accent cursor-pointer appearance-none box-border;
