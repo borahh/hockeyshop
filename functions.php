@@ -43,8 +43,7 @@ if ( ! defined( 'BORAHH_HOCKEYSHOP_IMG_URL' ) ) {
 
 
 
-include BORAHH_HOCKEYSHOP_DIR_MEGAMENU . 'primary_levels.php';    
-include BORAHH_HOCKEYSHOP_DIR_MEGAMENU . 'all_levels.php';    
+include BORAHH_HOCKEYSHOP_DIR_MEGAMENU . 'main.php';    
 
 /**
  * Register Custom Mega Menu Location

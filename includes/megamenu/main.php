@@ -1,13 +1,27 @@
 <?php
 
+function get_hockeyshop_all_primary_menus() {
+    $levels = array_filter(get_nav_menu_locations(), function($key) {
+        return strpos($key, 'megamenu---') === 0;
+    }, ARRAY_FILTER_USE_KEY);
+    
+    return $levels;
+}
 function hockeyshop_create_menu_name($level) {
     return strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $level)));
 }
+function get_hockeyshop_primary_menus() {
+    $levels = array();
+    if( have_rows('hbdv_mega_primary_levels', 'option') ):  
+        while( have_rows('hbdv_mega_primary_levels', 'option') ): the_row();
+           $name='MegaMenu --- '. get_sub_field('hbdv_mega_primary_level_id');
+           array_push($levels,$name);       
+        endwhile;  
+    endif;
+    return $levels;
+}
 
-
-
-
-function get_hockeyshop_menu_holder() {
+function get_hockeyshop_main_menu() {
     ?>  
     <nav class="  w-full bg-[#111111] fixed lg:relative left-0 top-0 z-50 ">
         <div class = 'hidden bg-black lg:block '>
@@ -124,11 +138,11 @@ function get_hockeyshop_menu_holder() {
                  <div class="absolute bottom-0 left-0 grid w-full grid-cols-2 p-2 font-bold bg-white border-t-2 border-solid border-[#EEEEEE]  lg:hidden font-social-gothic text-[11px]">
                          <a href="#" class = 'flex flex-col items-center justify-end'>
                              <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'currency.png'; ?>" alt="icon" class='w-[24px] mb-0.5'>
-                              Vault
+                             <?php _e("Kurv", "hockeyshop-theme"); ?>
                          </a>
                          <a href="#" class = 'flex flex-col items-center justify-end'>
                               <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'user.png'; ?>" alt="icon" class='w-[30px] mb-0.5'>
-                              My Account
+                              <?php _e("Min konto", "hockeyshop-theme"); ?>
                          </a>
                     </div>
             </div>
@@ -140,24 +154,5 @@ function get_hockeyshop_menu_holder() {
 
 }
 
-function get_hockeyshop_primary_menus() {
-    $levels = array();
-    if( have_rows('hbdv_mega_primary_levels', 'option') ):  
-        while( have_rows('hbdv_mega_primary_levels', 'option') ): the_row();
-           $name='MegaMenu --- '. get_sub_field('hbdv_mega_primary_level_id');
-           array_push($levels,$name);       
-        endwhile;  
-    endif;
-    return $levels;
-}
 
-
-function get_hockeyshop_main_menu() { 
-    echo get_hockeyshop_menu_holder();
-}
-
-
-
-
-
-
+?>
