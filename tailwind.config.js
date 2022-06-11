@@ -13,7 +13,7 @@ module.exports = {
     'woo-variation-swatches',
     'hbdv_submenu_group',
     'hbdv_submenu_col',
-    'hockeyshop-header',
+    'main-header',
   ],
   theme: {
     extend: {
