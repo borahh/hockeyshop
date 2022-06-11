@@ -41,38 +41,6 @@ if ( ! defined( 'BORAHH_HOCKEYSHOP_IMG_URL' ) ) {
 	define( 'BORAHH_HOCKEYSHOP_IMG_URL', get_stylesheet_directory_uri(). '/assets/images/' );
 }
 
-
-
-include BORAHH_HOCKEYSHOP_DIR_MEGAMENU . 'main.php';    
-
-/**
- * Register Custom Mega Menu Location
- */
-add_action( 'after_setup_theme', 'hockeyshop_mega_menu' );
- 
-function hockeyshop_mega_menu() {
-	$levels=get_hockeyshop_primary_menus();
-    foreach ($levels as $level) {
-        $slug = hockeyshop_create_menu_name($level);
-        register_nav_menu( $slug, __( $level, 'hockeyshop-theme' ) );
-    }
-}
-
-/**
- * Mega Menu Options
- */
-if( function_exists('acf_add_options_page') ) {
-	
-	acf_add_options_page(array(
-		'page_title' 	=> 'Mega Menu',
-		'menu_title'	=> 'Mega Menu Settings',
-		'menu_slug' 	=> 'mega-menu-settings',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false
-	));
-
-}
-
 /**
  * Load child theme css and optional scripts
  *
@@ -119,6 +87,40 @@ function hockeyshop_enqueue_scripts() {
     
 }
 add_action( 'wp_enqueue_scripts', 'hockeyshop_enqueue_scripts', 999 );
+
+
+
+include BORAHH_HOCKEYSHOP_DIR_MEGAMENU . 'main.php';    
+
+/**
+ * Register Custom Mega Menu Location
+ */
+add_action( 'after_setup_theme', 'hockeyshop_mega_menu' );
+ 
+function hockeyshop_mega_menu() {
+	$levels=get_hockeyshop_primary_menus();
+    foreach ($levels as $level) {
+        $slug = hockeyshop_create_menu_name($level);
+        register_nav_menu( $slug, __( $level, 'hockeyshop-theme' ) );
+    }
+}
+
+/**
+ * Mega Menu Options
+ */
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Mega Menu',
+		'menu_title'	=> 'Mega Menu Settings',
+		'menu_slug' 	=> 'mega-menu-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+
+}
+
+
 
 // Include Files
 include BORAHH_HOCKEYSHOP_DIR_CALCULATORS . 'index.php';    
