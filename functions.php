@@ -90,7 +90,6 @@ add_action( 'wp_enqueue_scripts', 'hockeyshop_enqueue_scripts' );
 
 
 
-include BORAHH_HOCKEYSHOP_DIR_MEGAMENU . 'main.php';    
 
 /**
  * Register Custom Mega Menu Location
@@ -123,6 +122,7 @@ if( function_exists('acf_add_options_page') ) {
 
 
 // Include Files
+include BORAHH_HOCKEYSHOP_DIR_MEGAMENU . 'main.php';    
 include BORAHH_HOCKEYSHOP_DIR_CALCULATORS . 'index.php';    
 include BORAHH_HOCKEYSHOP_DIR_WOO . 'index.php';    
 
