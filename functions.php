@@ -52,7 +52,7 @@ function hockeyshop_enqueue_scripts() {
 		[
 			'hello-elementor-theme-style',
 		],
-		'2.2.5'
+		'2.5.0
 	);
     
     wp_enqueue_style(
