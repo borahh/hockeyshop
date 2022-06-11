@@ -233,7 +233,7 @@
   .hockeyshop-header {
     @apply w-full bg-[#111111] fixed lg:relative left-0 top-0 z-50;
 
-    &_topbar {
+    &__topbar {
       @apply hidden bg-black lg:block;
 
       &--contents {

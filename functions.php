@@ -91,7 +91,7 @@ function hockeyshop_enqueue_scripts() {
 		'borahh-hockeyshop-style',
 		BORAHH_HOCKEYSHOP_URL . '/assets/css/main.css',
 		null,
-		'2.2.5'
+		'2.2.7'
 	);
 
 	wp_enqueue_script(
