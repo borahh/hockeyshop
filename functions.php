@@ -91,18 +91,7 @@ add_action( 'wp_enqueue_scripts', 'hockeyshop_enqueue_scripts' );
 
 
 
-/**
- * Register Custom Mega Menu Location
- */
-add_action( 'after_setup_theme', 'hockeyshop_mega_menu' );
- 
-function hockeyshop_mega_menu() {
-	$levels=get_hockeyshop_primary_menus();
-    foreach ($levels as $level) {
-        $slug = hockeyshop_create_menu_name($level);
-        register_nav_menu( $slug, __( $level, 'hockeyshop-theme' ) );
-    }
-}
+
 
 /**
  * Mega Menu Options
