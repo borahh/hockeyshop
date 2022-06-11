@@ -22,11 +22,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 </head>
 <body <?php body_class(); ?>>
 
+	
+<?php if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); } ?>
+	
 <?php
-hello_elementor_body_open(); ?>
+hello_elementor_body_open();
 
-<?php 
- 
 if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'header' ) ) {
 	if ( did_action( 'elementor/loaded' ) && hello_header_footer_experiment_active() ) {
 		get_template_part( 'template-parts/dynamic-header' );
