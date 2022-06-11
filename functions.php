@@ -52,14 +52,14 @@ function hockeyshop_enqueue_scripts() {
 		[
 			'hello-elementor-theme-style',
 		],
-		'2.5.0
+		'2.5.0',
 	);
     
     wp_enqueue_style(
 		'borahh-hockeyshop-style',
 		BORAHH_HOCKEYSHOP_URL . '/assets/css/main.css',
 		null,
-		'2.2.7'
+		'2.6.0',
 	);
 
 	wp_enqueue_script(
