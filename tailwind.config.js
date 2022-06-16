@@ -14,6 +14,7 @@ module.exports = {
     'hbdv_submenu_group',
     'hbdv_submenu_col',
     'main-header',
+    'hockeyshop-header',
   ],
   theme: {
     extend: {
