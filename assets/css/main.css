@@ -1,18 +1,4 @@
 
-  .hockeyshop-header {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    z-index: 50;
-    width: 100%;
-    --tw-bg-opacity: 1;
-    background-color: rgb(17 17 17 / var(--tw-bg-opacity));
-}
-@media (min-width: 1024px) {
-    .hockeyshop-header {
-        position: relative;
-    }
-}
   .main-header {
     margin: 0px !important;
     max-width: 100% !important;

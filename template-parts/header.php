@@ -9,9 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 } ?>
 <header id="site-header" class="site-header main-header" role="banner">
-<nav class="hockeyshop-header">
-        <div class="hockeyshop-header__topbar">
-              <div class="hockeyshop-header__topbar--contents">
+<nav class="w-full bg-[#111111] fixed lg:relative left-0 top-0 z-50">
+        <div class="hidden bg-black lg:block">
+              <div class="flex w-11/12 max-w-[1500px] mx-auto p-3 gap-[48px] font-bold font-social-gothic text-white uppercase text-sm">
                    <?php 
                    // Check rows exists.
                         if( have_rows('hbdv_menu_links', 'option') ):
