@@ -4,7 +4,7 @@
 
 @layer base {
   .main-header {
-    @apply max-w-full p-0 m-0;
+    @apply max-w-full p-0 m-0 !important;
   }
   input[type='range'].calculator-range::-ms-thumb {
     @apply w-8 h-8 rounded-[50%] bg-accent cursor-pointer appearance-none box-border;
