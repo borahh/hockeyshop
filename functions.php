@@ -104,7 +104,7 @@ function hockeyshop_enqueue_scripts() {
 	);
 
 	wp_enqueue_script(
-		'borahh-single-product',
+		'borahh-megamenu',
 		get_stylesheet_directory_uri(). '/assets/js/' . 'megamenu.js',
 		array(),
 		'2.2.5',
