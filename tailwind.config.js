@@ -12,7 +12,8 @@ module.exports = {
     'woocommerce',
     'woo-variation-swatches',
     'hbdv_submenu_group',
-    'hbdv_submenu_col'
+    'hbdv_submenu_col',
+    'hockeyshop-header',
   ],
   theme: {
     extend: {
