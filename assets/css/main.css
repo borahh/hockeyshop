@@ -847,7 +847,7 @@ nav a:active, nav a:hover {
         padding-right: 0.75rem;
     }
 }
-.hbdv_submenu_group {
+.hbdv_submenu_group:not(:first-child) {
     margin-top: 3rem;
 }
 .hbdv_submenu_group a {

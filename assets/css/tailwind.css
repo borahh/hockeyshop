@@ -305,7 +305,7 @@
     @apply h-6 w-6 block py-1.5 px-2 box-content lg:py-2 xl:px-3;
   }
 
-  .hbdv_submenu_group {
+  .hbdv_submenu_group:not(:first-child) {
     @apply mt-12;
   }
   .hbdv_submenu_group a {
