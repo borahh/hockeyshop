@@ -309,7 +309,7 @@
     @apply mt-12;
   }
   .hbdv_submenu_group a {
-    @apply pointer-events-none uppercase text-black font-bold lg:text-[#9dbaee] font-social-gothic lg:text-[20px];
+    @apply uppercase text-black font-bold lg:text-[#9dbaee] font-social-gothic lg:text-[20px];
   }
   .hbdv_submenu_col {
     @apply flex gap-4 lg:gap-[40px] flex-col lg:flex-row;

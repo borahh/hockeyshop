@@ -851,7 +851,6 @@ nav a:active, nav a:hover {
     margin-top: 3rem;
 }
 .hbdv_submenu_group a {
-    pointer-events: none;
     font-family: Social Gothic, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
