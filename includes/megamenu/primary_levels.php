@@ -52,9 +52,9 @@ function get_hockeyshop_menu_holder() {
 
                 <div class="flex items-center order-3 text-base font-bold text-white uppercase font-social-gothic">
                     <?php if(!is_user_logged_in()) { ?>
-                        <a href="<?php echo wp_login_url(); ?>" class="hidden lg:block"><?php _e("Login", "hockeyshop-theme"); ?></a>
+                        <a href="/admin" class="hidden lg:block"><?php _e("Login", "hockeyshop-theme"); ?></a>
                         <hr class='hidden lg:block h-5 border-[1px] border-solid mx-[26px] border-gray-500/50'>
-                        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" class="hidden lg:block"><?php _e("Opret konto", "hockeyshop-theme"); ?></a>
+                        <a href="https://hockeyshop.dk/registrer-dig/" class="hidden lg:block"><?php _e("Opret konto", "hockeyshop-theme"); ?></a>
                         <hr class='hidden lg:block h-5 border-[1px] border-solid mx-[26px] border-gray-500/50'>
                     <?php } else { ?> 
                         <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" class="hidden lg:block"><?php _e("Min konto", "hockeyshop-theme"); ?></a>
@@ -124,11 +124,11 @@ function get_hockeyshop_menu_holder() {
                  <div class="absolute bottom-0 left-0 grid w-full grid-cols-2 p-2 font-bold bg-white border-t-2 border-solid border-[#EEEEEE]  lg:hidden font-social-gothic text-[11px]">
                          <a href="#" class = 'flex flex-col items-center justify-end'>
                              <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'currency.png'; ?>" alt="icon" class='w-[24px] mb-0.5'>
-                              Vault
+                             <?php _e("Vault", "hockeyshop-theme"); ?></a>
                          </a>
                          <a href="#" class = 'flex flex-col items-center justify-end'>
                               <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'user.png'; ?>" alt="icon" class='w-[30px] mb-0.5'>
-                              My Account
+                              <?php _e("My Account", "hockeyshop-theme"); ?></a>
                          </a>
                     </div>
             </div>
