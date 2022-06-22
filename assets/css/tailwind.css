@@ -305,7 +305,7 @@
     @apply h-6 w-6 block py-1.5 px-2 box-content lg:py-2 xl:px-3;
   }
   .hbdv_submenu_group a {
-    @apply pointer-events-none uppercase text-black font-bold lg:text-[#9dbaee] font-social-gothic lg:text-[20px];
+    @apply pointer-events-none uppercase text-black font-bold lg:text-[#9dbaee] font-social-gothic lg:text-[20px] mt-10;
   }
   .hbdv_submenu_col {
     @apply flex gap-4 lg:gap-[40px] flex-col lg:flex-row;
