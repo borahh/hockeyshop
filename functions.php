@@ -41,55 +41,10 @@ if ( ! defined( 'BORAHH_HOCKEYSHOP_IMG_URL' ) ) {
 	define( 'BORAHH_HOCKEYSHOP_IMG_URL', get_stylesheet_directory_uri(). '/assets/images/' );
 }
 
-/**
- * Load child theme css and optional scripts
- *
- */
-function hockeyshop_enqueue_scripts() {
-	wp_enqueue_style(
-		'hockeyshop-theme-style',
-		BORAHH_HOCKEYSHOP_URL . '/style.css',
-		[
-			'hello-elementor-theme-style',
-		],
-		'2.5.0',
-	);
-    
-    wp_enqueue_style(
-		'borahh-hockeyshop-style',
-		BORAHH_HOCKEYSHOP_URL . '/assets/css/main.css',
-		null,
-		'2.6.0',
-	);
-
-	wp_enqueue_script(
-		'borahh',
-		BORAHH_HOCKEYSHOP_JS_URL . 'bundle.js',
-		array(),
-		'2.2.5',
-        false
-	);
-
-	wp_enqueue_script(
-		'borahh-single-product',
-		get_stylesheet_directory_uri(). '/assets/js/' . 'megamenu.js',
-		array(),
-		'2.2.5',
-        true
-	);
-	wp_enqueue_script(
-		'borahh-single-product',
-		get_stylesheet_directory_uri(). '/assets/js/' . 'single-product.js',
-		array(),
-		'2.2.5',
-        true
-	);
-    
-}
-add_action( 'wp_enqueue_scripts', 'hockeyshop_enqueue_scripts' );
 
 
-
+include BORAHH_HOCKEYSHOP_DIR_MEGAMENU . 'primary_levels.php';    
+include BORAHH_HOCKEYSHOP_DIR_MEGAMENU . 'all_levels.php';    
 
 /**
  * Register Custom Mega Menu Location
@@ -119,10 +74,54 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
+/**
+ * Load child theme css and optional scripts
+ *
+ */
+function hockeyshop_enqueue_scripts() {
+	wp_enqueue_style(
+		'hockeyshop-theme-style',
+		BORAHH_HOCKEYSHOP_URL . '/style.css',
+		[
+			'hello-elementor-theme-style',
+		],
+		'2.2.5'
+	);
+    
+    wp_enqueue_style(
+		'borahh-hockeyshop-style',
+		BORAHH_HOCKEYSHOP_URL . '/assets/css/main.css',
+		null,
+		'2.2.5'
+	);
 
+	wp_enqueue_script(
+		'borahh',
+		BORAHH_HOCKEYSHOP_JS_URL . 'bundle.js',
+		array(),
+		'2.2.5',
+        false
+	);
+
+	wp_enqueue_script(
+		'borahh-single-product',
+		get_stylesheet_directory_uri(). '/assets/js/' . 'megamenu.js',
+		array(),
+		'2.2.5',
+        true
+	);
+	wp_enqueue_script(
+		'borahh-single-product',
+		get_stylesheet_directory_uri(). '/assets/js/' . 'single-product.js',
+		array(),
+		'2.2.5',
+        true
+	);
+    
+}
+add_action( 'wp_enqueue_scripts', 'hockeyshop_enqueue_scripts', 999 );
 
 // Include Files
-include BORAHH_HOCKEYSHOP_DIR_MEGAMENU . 'main.php';    
 include BORAHH_HOCKEYSHOP_DIR_CALCULATORS . 'index.php';    
 include BORAHH_HOCKEYSHOP_DIR_WOO . 'index.php';    
 
