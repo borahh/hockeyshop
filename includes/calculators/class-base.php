@@ -182,7 +182,7 @@ class BorahhCalculatorBase {
         ob_start();
         ?>
             <div @click="restart">
-                <?php _e("Größe wiederfinden", "hockeyshop-theme"); ?>
+                <?php _e("Find størrelse igen", "hockeyshop-theme"); ?>
             </div>
             <div x-show="!matchedVariations" @click="$refs.enquiryVariation.click()">
                 <?php _e("Send forespørgsel", "hockeyshop-theme"); ?>

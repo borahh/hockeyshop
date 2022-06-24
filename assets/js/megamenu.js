@@ -56,7 +56,7 @@ dropDownItem.forEach((item) => {
                             stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
                         </svg>
-                        Back
+                        Tilbage
                     </button>
                 </div>`,
   );
@@ -69,6 +69,5 @@ backBtn.forEach((item) => {
     if (opened.length <= 1) {
       changeMenuIcon(false);
     }
-    console.log('working');
   });
 });

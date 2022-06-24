@@ -37,8 +37,9 @@ function get_hockeyshop_menu_holder() {
         </div>
     <div class="flex items-center justify-between lg:block">
      <div class="flex items-center justify-between flex-grow gap-2 p-3 pr-0 text-white lg:pr-5 2xl:py-8 lg:grid lg:grid-cols-3 lg:justify-items-center w-11/12 max-w-[1500px] mx-auto">
-                <img class="w-[90px] lg:w-[200px] xl:w-[230px] lg:order-2" src="https://hockeyshop.dk/wp-content/uploads/2020/07/HockeyShop.svg" alt="">
-
+                <a href="https://hockeyshop.dk/">
+                    <img class="w-[90px] lg:w-[200px] xl:w-[230px] lg:order-2" src="https://hockeyshop.dk/wp-content/uploads/2020/07/HockeyShop.svg" alt="">
+                </a>
                 <div class = 'search_bar group justify-self-start '>
                 <div class = 'input_field group-hover:scale-x-100 bg-white lg:bg-[#2f2f2f]'>
                 <?php echo do_shortcode('[aws_search_form id="1"]');?>
@@ -94,7 +95,7 @@ function get_hockeyshop_menu_holder() {
                             stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
                         </svg>
-                        Back
+                        Tilbage
                     </button>
                 </div> -->
                <div class="relative flex-grow p-5 hbdv_megamenu lg:static lg:flex lg:p-0 lg:justify-center lg:items-center lg:w-full">
@@ -124,12 +125,25 @@ function get_hockeyshop_menu_holder() {
                  <div class="absolute bottom-0 left-0 grid w-full grid-cols-2 p-2 font-bold bg-white border-t-2 border-solid border-[#EEEEEE]  lg:hidden font-social-gothic text-[11px]">
                          <a href="#" class = 'flex flex-col items-center justify-end'>
                              <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'currency.png'; ?>" alt="icon" class='w-[24px] mb-0.5'>
-                             <?php _e("Vault", "hockeyshop-theme"); ?></a>
+                             <?php _e("Vault", "hockeyshop-theme"); ?>
                          </a>
-                         <a href="#" class = 'flex flex-col items-center justify-end'>
-                              <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'user.png'; ?>" alt="icon" class='w-[30px] mb-0.5'>
-                              <?php _e("My Account", "hockeyshop-theme"); ?></a>
-                         </a>
+                         <?php if(!is_user_logged_in()) { ?>
+							<a href="https://hockeyshop.dk/registrer-dig/" class="flex flex-col items-center justify-end uppercase">
+								  <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'Login.svg'; ?>" alt="icon" class='w-[30px] mb-0.5'>
+								  <?php _e("Login", "hockeyshop-theme"); ?>
+					        </a>
+							<a href="https://hockeyshop.dk/registrer-dig/" class="flex flex-col items-center justify-end uppercase">
+								  <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'user.png'; ?>" alt="icon" class='w-[30px] mb-0.5'>
+								  <?php _e("Opret konto", "hockeyshop-theme"); ?>
+					        </a>
+							<?php } else { ?> 
+							<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" class="flex flex-col items-center justify-end uppercase">
+								  <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'user.png'; ?>" alt="icon" class='w-[30px] mb-0.5'>
+                                  <?php _e("Min konto", "hockeyshop-theme"); ?>
+					        </a>
+							<?php 
+                        } 
+                        ?>
                     </div>
             </div>
             </div>
