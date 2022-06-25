@@ -128,7 +128,7 @@ function get_hockeyshop_menu_holder() {
                              <?php _e("Vault", "hockeyshop-theme"); ?>
                          </a>
                          <?php if(!is_user_logged_in()) { ?>
-							<a href="https://hockeyshop.dk/registrer-dig/" class="flex flex-col items-center justify-end uppercase">
+							<a href="/admin" class="flex flex-col items-center justify-end uppercase">
 								  <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'Login.svg'; ?>" alt="icon" class='w-[30px] mb-0.5'>
 								  <?php _e("Login", "hockeyshop-theme"); ?>
 					        </a>
