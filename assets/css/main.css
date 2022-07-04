@@ -71,15 +71,14 @@
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-    .single.single-product table tbody tr {
-    display: flex;
-    flex-direction: column;
-}
-
     /** Remove Tabs from single product pages **/
     .single.single-product .woocommerce-tabs.wc-tabs-wrapper ul {
     display: none !important;
 }
+
+    /* table tbody tr {
+      @apply flex flex-col;
+    } */
     .single.single-product .woocommerce-tabs.wc-tabs-wrapper div {
     display: none !important;
 }

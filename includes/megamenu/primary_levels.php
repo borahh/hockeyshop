@@ -123,10 +123,10 @@ function get_hockeyshop_menu_holder() {
                 endif;
                 ?>
                  <div class="absolute bottom-0 left-0 grid w-full grid-cols-2 p-2 font-bold bg-white border-t-2 border-solid border-[#EEEEEE]  lg:hidden font-social-gothic text-[11px]">
-                         <a href="#" style="visibility:hidden" class = 'flex flex-col items-center justify-end'>
+                        <a href="#" style="display: none;" class = 'flex flex-col items-center justify-end'>
                              <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'currency.png'; ?>" alt="icon" class='w-[24px] mb-0.5'>
                              <?php _e("Vault", "hockeyshop-theme"); ?>
-                         </a>
+                        </a>
                          <?php if(!is_user_logged_in()) { ?>
 							<a href="/admin" class="flex flex-col items-center justify-end uppercase">
 								  <img src="<?php echo BORAHH_HOCKEYSHOP_IMG_URL . 'Login.svg'; ?>" alt="icon" class='w-[30px] mb-0.5'>

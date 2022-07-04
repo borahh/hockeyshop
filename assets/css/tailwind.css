@@ -45,9 +45,9 @@
       @apply bg-white;
     }
 
-    table tbody tr {
+    /* table tbody tr {
       @apply flex flex-col;
-    }
+    } */
 
     /** Remove Tabs from single product pages **/
     .woocommerce-tabs.wc-tabs-wrapper ul {
