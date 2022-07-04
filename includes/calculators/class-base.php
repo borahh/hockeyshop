@@ -114,7 +114,7 @@ class BorahhCalculatorBase {
         <div class="calculator__wraper__content__end__unmatched__info">
             <p><?php _e("Den anbefalede størrelse er ikke på lager.", "hockeyshop-theme"); ?></p>
             <p><?php _e("Ofte kan vi bestille varen hjem i løbet af få dage.", "hockeyshop-theme"); ?></p>
-            <p><?php _e("Onsker du at blive kontaktet herom?", "hockeyshop-theme"); ?></p>
+            <p><?php _e("Ønsker du at blive kontaktet herom?", "hockeyshop-theme"); ?></p>
         </div>
         
 
