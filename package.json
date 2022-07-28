@@ -1,0 +1,27 @@
+{
+  "name": "hockeyshop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:css": "cross-env TAILWIND_MODE=watch postcss ./assets/css/tailwind.css -o ./assets/css/main.css --watch",
+    "build:js": "parcel watch ./src/js/index.js --out-dir ./assets/js/build --out-file bundle.js"
+  },
+  "devDependencies": {
+    "@types/tailwindcss": "^3.0.2",
+    "autoprefixer": "^10.4.2",
+    "cross-env": "^7.0.3",
+    "gulp": "^4.0.2",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-imagemin": "7.1.0",
+    "imagemin": "^7.0.1",
+    "imagemin-webp": "^6.0.0",
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
+    "tailwindcss": "^3.0.15"
+  },
+  "dependencies": {
+    "alpinejs": "^3.8.1"
+  }
+}

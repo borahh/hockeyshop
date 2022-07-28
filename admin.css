@@ -1,0 +1,18 @@
+/*
+    Woocommerce. Change color of status
+*/
+
+.order-status.status-completed {
+  background: #c6e1c6 !important;
+  color: #5b841b !important;
+}
+
+.order-status.status-processing {
+  background: #c8d7e1 !important;
+  color: #2e4453 !important;
+}
+
+.order-status.status-cancelled {
+  background: red !important;
+  color: white !important;
+}

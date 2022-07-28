@@ -1,0 +1,596 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .hockeyshop-header {
+    @apply p-0 m-0 max-w-full !important;
+  }
+  input[type='range'].calculator-range::-ms-thumb {
+    @apply w-8 h-8 rounded-[50%] bg-accent cursor-pointer appearance-none box-border;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.27);
+  }
+
+  input[type='range'].calculator-range::-webkit-slider-thumb {
+    @apply w-8 h-8 rounded-[50%] bg-accent cursor-pointer appearance-none box-border;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.27);
+  }
+
+  input[type='range'].calculator-range::-moz-slider-thumb {
+    @apply w-8 h-8 rounded-[50%] bg-accent cursor-pointer appearance-none box-border;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.27);
+  }
+
+  .onsale {
+    @apply hidden;
+  }
+
+  .woocommerce-product-gallery--with-images {
+    max-width: 350px;
+  }
+
+  .single.single-product {
+    /** Full Width Product Layout */
+    .product {
+      @apply w-full my-0 mx-auto mt-[50px];
+
+      .price {
+        @apply mb-[30px] font-bold text-[#54595f];
+      }
+    }
+
+    /** Add backround color to the Variation form **/
+    table tbody > tr:nth-child(odd) > td,
+    table tbody > tr:nth-child(odd) > th {
+      @apply bg-white;
+    }
+
+    /* table tbody tr {
+      @apply flex flex-col;
+    } */
+
+    /** Remove Tabs from single product pages **/
+    .woocommerce-tabs.wc-tabs-wrapper ul {
+      @apply hidden !important;
+    }
+    .woocommerce-tabs.wc-tabs-wrapper div {
+      @apply hidden !important;
+    }
+    .woocommerce-variation-add-to-cart {
+      @apply lg:inline-flex;
+
+      input[type='number'] {
+        @apply font-social-gothic font-bold uppercase text-black bg-white border-solid border-[1px] border-[#eeeef5]
+        rounded-none py-[23px] pr-[5px] pl-0 inline-block m-0 float-none text-center w-[236px];
+      }
+      .single_add_to_cart_button {
+        @apply font-social-gothic text-base font-bold leading-5 text-white inline-block rounded-none py-[26px] px-[62px] m-0 ml-[10px] !important;
+        background-color: rgb(12, 101, 213) !important;
+      }
+    }
+  }
+
+  .single-product {
+    .product_title.entry-title {
+      @apply text-3xl font-semibold leading-8 text-left font-social-gothic;
+      font-style: normal;
+      letter-spacing: 0em;
+    }
+
+    table tbody tr:hover > td,
+    table tbody tr:hover > th {
+      @apply bg-white !important;
+    }
+
+    .price .ywcrbp_regular_price {
+      @apply text-base font-normal leading-8 text-black line-through uppercase font-social-gothic;
+      font-style: normal;
+    }
+
+    .price span.ywcrbp_regular_price:only-child {
+      @apply text-xl font-normal leading-8 text-left text-black uppercase font-social-gothic !important;
+      text-decoration: none !important;
+      font-style: normal !important;
+      letter-spacing: 0em !important;
+    }
+
+    .price span.ywcrbp_regular_price:only-child span {
+      @apply font-semibold !important;
+    }
+
+    .summary .ywcrbp_sale_price {
+      @apply text-xl font-normal leading-8 text-left text-black uppercase font-social-gothic;
+      font-style: normal;
+      letter-spacing: 0em;
+    }
+
+    .ywcrbp_sale_price span {
+      @apply font-semibold;
+    }
+
+    .woocommerce-product-details__short-description p {
+      @apply font-gt-america text-base font-normal leading-[22px] text-left;
+      font-style: normal;
+      letter-spacing: 0em;
+    }
+
+    .variations tbody tr th {
+      @apply text-left;
+    }
+
+    .variations label {
+      @apply text-base font-normal leading-6 uppercase font-social-gothic text-left !important;
+      font-style: normal !important;
+      letter-spacing: 0em;
+    }
+
+    .borahh_addon_sharpening label {
+      @apply text-base font-normal leading-6 uppercase font-social-gothic !important;
+      font-style: normal;
+      letter-spacing: 0em;
+    }
+
+    .borahh_addon_sharpening {
+      @apply mb-[50px] !important;
+    }
+
+    .variations td.value.woo-variation-items-wrapper {
+      @apply pt-0 !important;
+    }
+
+    table.variations {
+      @apply mb-0 !important;
+    }
+
+    select#product_sharpening {
+      @apply p-[5px] w-3/4;
+    }
+  }
+
+  .summary {
+    .woocommerce-variation-price .ywcrbp_sale_price {
+      @apply text-xl font-normal leading-8 text-left text-black uppercase font-social-gothic;
+      font-style: normal;
+      letter-spacing: 0em;
+    }
+  }
+
+  .woocommerce-variation-price {
+    .price .ywcrbp_regular_price {
+      @apply text-base font-normal leading-8 text-black line-through uppercase font-social-gothic;
+      font-style: normal;
+    }
+  }
+
+  .product_content {
+    &__wrap {
+      @apply overflow-hidden transition-[height] duration-300;
+    }
+    &--full {
+      @apply h-auto !important;
+    }
+    &--hidden {
+      -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent);
+    }
+    &__reveal {
+      &--less,
+      &--more {
+        @apply font-gt-america pt-[1px] pb-[10px] cursor-pointer text-[14px] font-normal leading-4 text-center hover:text-[#808080d1];
+        font-style: normal;
+        letter-spacing: 0em;
+        border-bottom: 2px solid #f3f3f3;
+      }
+    }
+  }
+
+  /** 
+   *
+   * Variation Swatches 
+   *
+   **/
+
+  .woo-variation-swatches {
+    .variable-items-wrapper .variable-item:not(.radio-variable-item) {
+      @apply text-center leading-5 font-normal text-base font-gt-america w-[73px] min-w-fit shadow-none my-[15px] mx-0 !important;
+      border-right: 2px solid #cfcfcf;
+      letter-spacing: 0em;
+    }
+    .variable-items-wrapper .variable-item:not(.radio-variable-item).selected {
+      @apply text-white bg-[#808080d1];
+    }
+  }
+  .woo-variation-swatches.wvs-attr-behavior-blur
+    .variable-item:not(.radio-variable-item).disabled
+    .variable-item-contents:before {
+    @apply hidden !important;
+  }
+
+  .woo-variation-swatches.wvs-attr-behavior-blur
+    .variable-item:not(.radio-variable-item).disabled
+    .variable-item-contents:after {
+    -webkit-transform: rotate(-30deg) !important;
+    transform: rotate(-30deg) !important;
+    height: 2px !important;
+    background-color: #cfcfcf !important;
+  }
+
+  .woo-variation-swatches.wvs-style-squared
+    .variable-items-wrapper
+    .variable-item.button-variable-item
+    .variable-item-span {
+    @apply font-gt-america text-[16px] text-black;
+  }
+
+  .woo-variation-swatches.wvs-style-squared
+    .variable-items-wrapper
+    .variable-item.button-variable-item.selected
+    .variable-item-span {
+    @apply text-white;
+  }
+}
+
+@layer components {
+  /** Menu stuff here **/
+
+  /* ADDED FROM HERE */
+  * {
+    @apply p-0 m-0 list-none;
+  }
+  .drop_down > .item .back_btn {
+    @apply px-0 py-3 text-black bg-transparent border-0 outline-none;
+  }
+  .btn {
+    @apply w-full flex justify-between items-center py-1.5 font-medium font-gt-america lg:font-social-gothic text-base lg:font-bold  lg:text-[#9dbaee] lg:w-fit;
+  }
+
+  .item a {
+    @apply py-1.5 lg:py-0.5 text-black lg:text-white;
+  }
+  .item {
+    @apply w-full h-full absolute p-5 overflow-y-auto lg:overflow-y-hidden  flex flex-col box-border top-0 left-0 bg-white text-black lg:bg-[#2f2f2f] translate-x-full lg:translate-x-0  transition-transform duration-200 ease-linear  lg:h-auto lg:relative lg:text-white  lg:bg-transparent lg:p-0 lg:w-fit;
+  }
+
+  .opened {
+    @apply translate-x-0;
+  }
+  .menu {
+    @apply fixed p-0 lg:static lg:w-full h-[var(--menu-height)] lg:h-auto top-[var(--nav-height)] left-0;
+  }
+  nav .menu_btn,
+  nav #close_all_opened {
+    @apply p-0 px-3 text-white bg-transparent w-fit;
+  }
+  nav a {
+    @apply lg:text-white;
+  }
+  nav a:active,
+  nav a:hover {
+    @apply text-current;
+  }
+
+  .drop_down > .btn {
+    @apply block font-medium lowercase lg:w-fit lg:justify-center lg:items-center lg:p-3 lg:px-4 lg:text-white lg:text-base lg:font-bold first-letter:capitalize lg:uppercase;
+  }
+  .drop_down > .btn svg {
+    @apply float-right w-5 lg:hidden;
+  }
+  .drop_down > .item {
+    @apply lg:absolute lg:top-full lg:bg-[#2f2f2f]  lg:flex lg:flex-col lg:flex-wrap lg:min-h-[300px] lg:max-h-[800px] lg:content-center lg:gap-x-20 lg:gap-y-5 lg:p-5  lg:opacity-0 lg:transition-opacity lg:duration-500 lg:pointer-events-none lg:w-full xl:p-10;
+  }
+  .drop_down:hover > .item {
+    @apply lg:opacity-100 lg:pointer-events-auto;
+  }
+  .drop_down:hover > .btn {
+    @apply lg:bg-[#2f2f2f];
+  }
+  .drop_down > .item svg {
+    @apply lg:hidden;
+  }
+  .search_bar {
+    @apply flex  w-fit items-center lg:order-1   transition-colors duration-150 hover:text-black lg:hover:text-[#7e7e7e] hover:bg-white lg:hover:bg-[#2f2f2f] relative ml-auto lg:ml-0 lg:bg-[#2f2f2f] lg:text-[#7e7e7e];
+  }
+  .search_bar .input_field {
+    @apply h-full border-0 w-[120px] absolute right-full transform transition-transform duration-150 origin-right scale-x-0  outline-none lg:static lg:scale-x-100 lg:w-fit xl:w-[250px];
+  }
+  .search_bar .aws-container {
+    @apply h-full;
+  }
+  .search_bar .input_field form {
+    @apply h-full bg-transparent;
+  }
+  .search_bar .input_field form input[type='search'] {
+    @apply py-1.5 px-2 border-0 text-black lg:text-[#7e7e7e] xl:py-2 xl:px-3 xl:text-base;
+  }
+  .search_bar svg {
+    @apply h-6 w-6 block py-1.5 px-2 box-content lg:py-2 xl:px-3;
+  }
+
+  .hbdv_submenu_col li ul.sub-menu .hbdv_submenu_group:not(:first-child) {
+    @apply mt-12;
+  }
+  .hbdv_submenu_group a {
+    @apply uppercase text-black font-bold lg:text-[#9dbaee] font-social-gothic lg:text-[20px];
+  }
+  .hbdv_submenu_col {
+    @apply flex gap-4 lg:gap-[40px] flex-col lg:flex-row;
+  }
+
+  .hbdv_submenu_col > li > a {
+    @apply hidden;
+  }
+  /* TO HERE */
+  /** End Menu Stuff **/
+  /** Calculator stuff only **/
+  .calculator {
+    @apply font-social-gothic mt-10 max-w-[500px] bg-light;
+
+    &__accordion {
+      @apply flex items-center justify-between p-4 text-sm cursor-pointer;
+
+      &__info {
+        @apply flex items-center justify-start;
+
+        &__icon {
+          @apply w-6 mr-3;
+        }
+
+        &__label {
+          @apply font-gt-america after:rotate-90;
+        }
+      }
+
+      &__result {
+        @apply flex gap-5 font-bold uppercase text-accent font-gt-america;
+      }
+
+      &__toggle {
+        @apply relative w-4 h-full after:content-[''] after:rotate-90 after:absolute after:top-1/2 after:block after:h-[2px] after:w-full after:-translate-y-1/2 after:bg-black after:transition-transform after:duration-150;
+
+        &--active {
+          @apply after:rotate-180;
+        }
+
+        &__icon {
+          @apply block w-full h-[2px] my-auto bg-black;
+        }
+      }
+    }
+
+    &__wraper {
+      @apply overflow-hidden transition-all duration-150 max-h-0;
+
+      &__content {
+        @apply container p-4 pt-10 sm:p-5;
+
+        &__form {
+          @apply relative min-h-[300px];
+
+          &__tab {
+            h2 {
+              @apply mb-10 text-2xl font-normal leading-6 text-center;
+            }
+
+            /** Bauer Icehockey Skate Steps Start **/
+            &--length-multi {
+              h2 {
+                @apply mb-0;
+              }
+            }
+            &--length {
+              @apply text-center;
+
+              img {
+                @apply w-3/4 mb-10 text-center;
+              }
+
+              img.small {
+                @apply w-[40%] mb-5;
+              }
+
+              img.vsmall {
+                @apply w-[30%] mb-3;
+              }
+
+              img.vvsmall {
+                @apply w-[20%] mb-3;
+              }
+              &__input {
+                @apply flex items-center justify-center mt-6 mb-5 capitalize justify-items-center;
+
+                span {
+                  @apply mr-1 text-base font-normal leading-none;
+                }
+
+                input {
+                  @apply w-[40px] border-none bg-transparent text-2xl leading-7 p-0;
+                }
+              }
+              &__switcher {
+                @apply flex w-full items-center justify-end mb-10 text-[0.8rem];
+
+                &__inner {
+                  @apply my-auto mx-2.5 max-w-md grid grid-cols-2 gap-1 border-[1px] bg-[#c4c4c4] rounded-[40px] p-1 text-center text-base w-[61px] box-content;
+
+                  &__input {
+                    @apply w-full;
+
+                    input {
+                      @apply hidden;
+                    }
+
+                    label {
+                      @apply block w-6 h-6 rounded-full cursor-pointer;
+                    }
+                  }
+                }
+              }
+            }
+            &--fit {
+              &__option {
+                @apply min-w-[200px] mb-7;
+
+                input {
+                  @apply hidden;
+                }
+                p {
+                  @apply mt-3 ml-4 text-sm text-center font-gt-america;
+                }
+                label {
+                  @apply relative flex items-center justify-center px-5 py-4 rounded-full cursor-pointer;
+
+                  svg {
+                    @apply absolute fill-current left-4;
+                  }
+                  object {
+                    @apply absolute fill-current left-4;
+                  }
+                  div {
+                    @apply text-base uppercase md:text-[28px] md:leading-10;
+                  }
+                }
+              }
+            }
+            &--width {
+              &__inner {
+                @apply relative;
+
+                &__img {
+                  @apply absolute top-[170px];
+                }
+
+                &__options {
+                  @apply grid w-full h-full grid-cols-3 gap-5 p-5 pt-0;
+
+                  div {
+                    @apply h-[350px];
+
+                    input {
+                      @apply absolute hidden top-1/2 left-1/2;
+                    }
+
+                    img {
+                      @apply absolute top-0 transition-opacity duration-200 w-[27%];
+                    }
+
+                    label {
+                      @apply absolute top-[250px] mt-14 text-center w-[100px] rounded-full border-[1px] border-[rgba(209,213,219)] uppercase cursor-pointer py-3 md:py-4 bg-white;
+                    }
+                  }
+                }
+              }
+            }
+            &--height {
+              &__option {
+                @apply relative text-center mb-7;
+
+                input {
+                  @apply absolute hidden top-1/2 left-1/2;
+                }
+
+                &__img_active {
+                  @apply absolute top-0 left-0 transition-opacity duration-200;
+                }
+                &__img_inactive {
+                  @apply absolute top-0 left-0;
+                }
+
+                &__input {
+                  @apply absolute -translate-y-1/2 right-5 top-1/2  block w-[100px] rounded-full border-[1px] border-[rgba(209,213,219)] uppercase cursor-pointer py-3 md:py-4 bg-white;
+                }
+              }
+            }
+            /** Bauer Icehockey Skate Steps End **/
+          }
+        }
+
+        &__nav {
+          @apply grid items-center grid-cols-3 text-base uppercase mt-7 justify-items-center;
+
+          &__control {
+            @apply cursor-pointer btn-nav;
+
+            svg {
+              @apply w-4 fill-current;
+            }
+          }
+
+          &__step {
+            @apply text-sm font-gt-america;
+          }
+        }
+
+        &__end {
+          @apply p-2;
+
+          &__matched {
+            @apply text-center;
+            h2 {
+              @apply text-2xl font-normal leading-6 text-center;
+            }
+
+            &__result {
+              @apply flex justify-center gap-4 text-[1.5rem] text-accent mt-6 mb-12 lg:text-[2rem] uppercase;
+            }
+          }
+
+          &__unmatched {
+            @apply p-5;
+
+            &__content {
+              @apply mb-4 text-base leading-7 text-center uppercase lg:text-xl;
+
+              p {
+                @apply my-1 uppercase lg:text-[20.8px];
+              }
+
+              div {
+                @apply mt-6 mb-12 text-accent text-2xl lg:text-[2rem];
+
+                span {
+                  @apply mx-2;
+                }
+              }
+            }
+
+            form {
+              @apply pt-5;
+
+              input {
+                margin: 0 auto;
+                border: none;
+                outline: none;
+                font-size: 1rem;
+
+                @apply p-[10px] uppercase bg-white max-w-[350px] text-base block mb-4;
+              }
+
+              input[type='submit'] {
+                @apply hidden;
+              }
+            }
+
+            &__info {
+              @apply text-center uppercase lg:text-base;
+
+              p {
+                @apply mt-0 mb-[0.9rem];
+              }
+
+              p:nth-child(1) {
+                @apply my-1;
+              }
+            }
+          }
+
+          &__handlers {
+            @apply grid grid-cols-2 gap-8 mt-5 text-center uppercase;
+
+            div {
+              @apply cursor-pointer w-full px-5 py-2 mx-auto rounded-full first:bg-white first:text-[gray] first:whitespace-nowrap text-white bg-accent self-center whitespace-normal;
+            }
+          }
+        }
+      }
+    }
+  }
+}
