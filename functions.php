@@ -80,7 +80,7 @@ if( function_exists('acf_add_options_page') ) {
  */
 function hockeyshop_enqueue_scripts() {
 	wp_enqueue_style(
-		'hockeyshop-theme-style',
+		'hockeyshop-theme',
 		BORAHH_HOCKEYSHOP_URL . '/style.css',
 		[
 			'hello-elementor-theme-style',
@@ -89,7 +89,7 @@ function hockeyshop_enqueue_scripts() {
 	);
     
     wp_enqueue_style(
-		'borahh-hockeyshop-style',
+		'borahh-hockeyshop',
 		BORAHH_HOCKEYSHOP_URL . '/assets/css/main.css',
 		null,
 		'2.2.5'
